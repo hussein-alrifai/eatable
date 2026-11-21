@@ -1,66 +1,24 @@
-# Eatable — Functional Frontend Prototype (Phase 1)
+# Eatable v2.1 — deploy-ready (root-level files)
 
-**International cooking, Lebanese roots.** Bilingual English/Italian static prototype with a real ingredient-to-recipe matching engine.
+This ZIP has **no enclosing folder**. Unzip it and upload **all contents** into the same GitHub repository directory from which Vercel currently deploys `index.html`.
 
-## Included and working
+## Check the deployment before configuring Supabase
 
-- Responsive homepage, desktop menu and mobile tabs.
-- English/Italian switching with language-specific URLs: `/en`, `/it`.
-- Ingredient autocomplete in both languages and removable selection chips.
-- Search ranking: **Ready to cook**, **Almost there**, **More ideas**; filters by cuisine, diet and time.
-- Explore page with search and cuisine filter.
-- Dedicated Lebanese Table with Lebanese demo recipes.
-- Recipe detail pages with scalable ingredient quantities, ingredient checklist and fullscreen cooking mode.
-- Personal cookbook saved in the **current browser only** using localStorage.
-- Demonstration community page illustrating future submission/moderation workflow.
-- A future Supabase PostgreSQL schema draft, including RLS policy examples (`sql/01_schema.sql`).
+1. In GitHub, ensure `index.html`, `vercel.json`, `eatable-version.txt`, and the folders `src/`, `assets/`, `docs/`, `sql/` are at the repository root (if Vercel Root Directory is `./`). Replace the original files when committing; do not create `eatable-v2/` as a nested subfolder.
+2. In Vercel > Deployments, wait for a **new deployment** from the GitHub commit; verify status **Ready**. If needed, open the deployment's logs for errors.
+3. Open `https://YOUR-VERCEL-DOMAIN/eatable-version.txt`. It must say "Eatable v2.1". If it does not, the new files are not being served.
+4. Open `https://YOUR-VERCEL-DOMAIN/en/account`. You should see an account page. Until you configure Supabase, it displays "Your Supabase connection has not been configured yet" rather than a usable login form.
 
-## Important limitations
+## Configure Supabase (once you have confirmed deployment)
 
-**This is a working prototype, not the completed launch product.** It includes 18 demonstration recipes, not the planned 60–100 curated/verified recipe collection. These examples are for interface testing: they are not professionally tested cooking instructions, dietary/allergen data is incomplete, and icons stand in for licensed photography.
+1. Use `sql/01_schema.sql` in Supabase SQL Editor on a new project (if not already run). **Do not rerun** it after success, since it creates a trigger and tables.
+2. Edit `src/supabase-config.js` with only your Project URL (`https://...supabase.co`) and a public publishable key (`sb_publishable_...`). Never expose passwords, secret keys, or `service_role` keys.
+3. Set Supabase Auth Site URL to your Vercel origin and allow redirects to `/en/account` and `/it/account`. See `docs/SETUP_SUPABASE.md`.
+4. Commit the edited configuration to GitHub and check a fresh Vercel deployment.
+5. Reopen `/en/account`, create a test account, confirm email if required, then test saved recipes across two browsers.
 
-There is **no backend/database connection**, **no cloud synchronization**, **no real login**, **no public recipe submission**, and **no live admin dashboard** in this build. Local favorites and selected ingredients are stored on one browser/device only. If the browser storage is cleared, they disappear.
+## What is included
 
-The app's matching engine counts required ingredient IDs; it does not verify how much of each ingredient a visitor has. Salt, oil and water are *not* assumed to be available. Substitutions and allergens need proper schema/content work before production.
+Bilingual (EN/IT) recipe browsing and search, Lebanese Table, 18 demo recipes, account registration and login via Supabase Auth, password recovery, cloud-saved favorites with RLS, and deployment documentation.
 
-The SQL is a **starting security blueprint**, not a finished migration. Review policies, grants, file storage rules, role assignments and admin workflows before deployment to a production database.
-
-## Run locally
-
-Option A: with Python installed, open a terminal **inside the `eatable-starter` folder**:
-
-```bash
-python -m http.server 8000
-```
-
-Open `http://localhost:8000` in your browser. **Do not open `index.html` directly** using a `file://` URL because JavaScript modules require a local web server.
-
-Option B: use VS Code's Live Server extension with the root folder open.
-
-## Deploy to Vercel
-
-1. Extract the ZIP and keep its files together in a folder called `eatable-starter`.
-2. Add this folder to a GitHub repository. The repository root must contain **`index.html`**, **`vercel.json`**, **`assets/`**, and **`src/`**.
-3. In Vercel, choose **Add New → Project → Import Git Repository** and select that repository.
-4. **Framework Preset: Other**. No build command is needed for this dependency-free static website. Deploy.
-5. Open `/en`, `/it`, and a deep link such as `/en/recipes/hummus` to verify routing.
-
-Alternatively, if you have the Vercel CLI installed and authenticated, run `vercel --prod` inside the extracted folder.
-
-The `vercel.json` rewrite allows the client-side app to handle deep links (per Vercel's SPA routing guidance). This repository does **not** need npm installs or API keys.
-
-## Where to edit
-
-- `src/recipes.js`: recipe and ingredient data, translation, matching algorithm.
-- `src/i18n.js`: interface text in English and Italian.
-- `src/app.js`: page rendering, navigation, interactions and browser-local storage.
-- `assets/styles.css`: colors, components, responsive layout.
-- `assets/favicon.svg`: current provisional Eatable logo.
-- `sql/01_schema.sql`: future cloud database schema draft.
-- `docs/ROADMAP.md`: next development steps.
-
-## Recommended production architecture
-
-At the next milestone, migrate this dependency-free prototype to **Next.js App Router + TypeScript**, **Supabase PostgreSQL / Auth / Storage (with audited RLS)** and **Vercel**. Use `@supabase/ssr` for cookie-aware server-side sessions. Keep recipe and ingredient IDs stable. Build account registration and moderation against the database (not localStorage). A server-rendered architecture will also improve recipe SEO/social sharing.
-
-Reference docs: https://nextjs.org/docs/app/getting-started/installation, https://supabase.com/docs/guides/auth/server-side/creating-a-client, https://vercel.com/docs/routing/rewrites
+The public recipe catalog, recipe submission, and admin moderation are **not** implemented in v2.1.
