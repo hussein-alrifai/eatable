@@ -1,4 +1,4 @@
 // Your Supabase Project URL and PUBLISHABLE key are public browser credentials.
 // Edit ONLY these two strings. Never paste a secret, service_role key, or database password.
-export const SUPABASE_URL = 'PASTE_YOUR_PROJECT_URL_HERE';
-export const SUPABASE_PUBLISHABLE_KEY = 'PASTE_YOUR_PUBLISHABLE_KEY_HERE';
+export const SUPABASE_URL = 'https://rnovhpjtrfwostuubula.supabase.co';
+export const SUPABASE_PUBLISHABLE_KEY = 'Psb_publishable_txDr8Kcj6b9pgJ4V5ikXgA_O1ROshRr';
