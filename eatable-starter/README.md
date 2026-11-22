@@ -1,37 +1,37 @@
-# Eatable v3.0 — Community Submissions + Admin Review
+# Eatable v4.0 — Recipe photos and correction workflow
 
-This is an **incremental update** for the existing Eatable v2.1 site. It retains your already-working authentication and cloud favorites. In this ZIP, `src/supabase-config.js` is intentionally **not included**: keep the existing configured file in your GitHub repository. Never upload a service-role or secret key.
+**Incremental upgrade from Eatable v3.0.** Keeps your existing Vercel project, your already-configured `src/supabase-config.js`, authentication, favorites, submitted recipes, and admin roles. The ZIP deliberately excludes your Supabase config file.
 
-## Installation order
+## What v4 adds
 
-1. Confirm accounts work on your existing Supabase project. If v2.1 is operational, **do not rerun `sql/01_schema.sql`**.
-2. In Supabase > SQL Editor, create a new query with **`sql/02_community.sql`** and execute it **once**. The migration adds two tables (`recipe_submissions`, `community_recipes`), an admin-check function, RLS policies, and a publication trigger. It does not delete your existing users or favorites.
-3. Make your **own existing account** an administrator in the Supabase SQL Editor. Use your actual signup email in place of the placeholder:
+- **Real recipe photos:** Registered contributors can upload an optional image (JPEG, PNG, WebP, maximum 5 MB). Until approval, photos live in a **private** Supabase Storage bucket, accessible only to their author and admins using short-lived signed URLs.
+- **Photo publication:** When you approve a recipe, the administrator's browser copies its image to a separate public bucket, *then* saves the approval decision. Published community recipes display that public image. Only admins can write to the public bucket.
+- **Corrections:** If an admin selects **Request changes**, the contributor sees the feedback and can edit the **same submission**, replace or remove their photo, and send it back to **Pending review**. Users cannot directly approve their own submissions.
+- **Unpublication:** When an administrator rejects a previously approved recipe or requests changes, the public recipe entry is removed and the admin client attempts to delete its public photo. Previously cached public images may remain accessible temporarily.
+- **English and Italian interfaces** for the revised submission experience.
 
-```sql
-update public.profiles
-set role = 'admin'
-where id in (
-  select id from auth.users
-  where lower(email) = lower('YOUR-REGISTERED-EMAIL@example.com')
-);
-```
+## Installation — keep this order
 
-Verify exactly **one** profile was updated. Do this only in Supabase's privileged SQL editor — never in the website or GitHub. Anyone else should retain the `member` role.
-4. Extract this ZIP and upload its **contents**, not an extra outer folder, to your existing GitHub `eatable` repository. Commit changes. **Do not delete or overwrite your configured `src/supabase-config.js`.** GitHub's upload tool should keep that file because it is omitted from this ZIP.
-5. After Vercel automatically deploys, visit `https://YOUR-DOMAIN/eatable-version.txt`. Expected: `Eatable v3.0`.
-6. Sign in as your admin account. Test `https://YOUR-DOMAIN/en/submit`, `.../en/my-recipes`, and `.../en/admin`. You may need to sign out and back in after your admin role is set.
-7. Submit a test recipe with at least two ingredient lines and two cooking steps; check it appears under My Submissions but **not** Community. Approve it under Admin; then check the Community page. Reject it again to test unpublishing. Test a normal non-admin account to ensure it cannot access moderation data.
+1. **Do not create a new Supabase project. Do not rerun the v2/v3 migrations.** You must already have `public.profiles`, `public.user_favorites`, `public.recipe_submissions` and `public.community_recipes` from Eatable v3.
+2. In **Supabase → SQL Editor → New query**, paste the entire `sql/03_photos_revisions.sql` file and select **Run**. Confirm success. The migration creates storage buckets, photo columns, a revision policy, and upload/download policies. Run it only once. You should see two buckets under **Storage**: `eatable-private-photos` (**Private**) and `eatable-published-photos` (**Public**).
+3. Open your existing **GitHub `eatable` repository** and upload the *contents* of this ZIP to the same folder as your deployed `index.html`, replacing matching files. **Keep `src/supabase-config.js` exactly as it is.** The new ZIP does not contain it.
+4. Commit changes and verify Vercel reports the new production deployment **Ready**.
+5. Open `https://YOUR-DOMAIN/eatable-version.txt`. It should say **Eatable v4.0**. If not, check Vercel's root directory, current GitHub commit and production deployment before changing anything else.
 
-## Scope
+## Test end-to-end
 
-**Working when configured:** authenticated text-only recipe submissions, own submission status, admin-only approval/rejection/change-request workflow, public listing and detail pages of approved community recipes; English/Italian UI; existing Eatable v2.1 search, account, and favorites.
+Use **two accounts**: a standard member and your already-promoted admin.
 
-**Not yet included:** photo uploads, users revising existing submissions in place, editing approved recipes, integrating community recipe ingredients into the normalized matching engine, and saving community recipe favorites. The `changes_requested` status lets an admin leave feedback; for now, the contributor can resubmit a corrected recipe as a new submission.
+1. As the member, open `/en/submit`, submit a recipe with a photo; see **Pending review** in `/en/my-recipes`. The public `/en/community` page must not show it yet.
+2. As admin, open `/en/admin`. You should see a private image preview. Choose **Request changes** and add a note.
+3. As the member, open `/en/my-recipes` and select **Edit and resubmit**. Change the recipe, optionally replace the photo, then submit it. Its status should return to **Pending review**, without creating a duplicate recipe.
+4. As admin, **Approve and publish**. The image should now appear in `/en/community` and the community recipe detail page. Verify from a signed-out browser.
+5. As admin, reject that same recipe. It should disappear from the public page. Confirm the storage file is removed from the public bucket (depending on caching, an already loaded photo may still appear for a while).
+6. Verify a normal member cannot open the admin queue or change a recipe to `approved`, and that one member cannot see another member's private photos or drafts.
+7. Test both `/en/` and `/it/` interfaces, and desktop/mobile form layout.
 
-## Important security notes
+**Notes:** Uploads run from the browser: keep the tab open while uploading or approving. Image privacy is enforced in Supabase Storage policies, not just by hiding the image in the interface. The approval and photo-copy operations are not one database transaction, so a network interruption can leave an orphaned public file; the site attempts cleanup, and admins should occasionally inspect the public bucket. This is a useful MVP, not a fully hardened production media pipeline. At scale, move the photo-publication workflow into a secure server function and add automated orphan cleanup.
 
-- Supabase Row Level Security (RLS) is enforced in the **database**, not only in page navigation. Only admins can update moderation status; only approved items appear in the publicly readable table.
-- The `profiles.role` field cannot be updated by normal users through the browser. Promote administrators in the privileged SQL Editor.
-- Existing authenticated sessions may need to sign out and back in before the UI refreshes the role.
-- The front-end code has passed JavaScript syntax checks and isolated browser rendering checks (with mock data); the live Supabase SQL migration and end-to-end authentication/approval flows **must still be tested on your project**.
+## Not yet included
+
+Full drafts/autosave, multiple photos per dish, photo reordering, edits to approved recipes without unpublishing, community recipe search inside the normalized ingredient matcher, and community recipe favorites. These are subsequent milestones.

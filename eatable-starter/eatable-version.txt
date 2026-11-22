@@ -1,2 +1,2 @@
-Eatable v3.0
-Community submissions and admin moderation
+Eatable v4.0
+Recipe photographs, editable corrections and admin-controlled publication

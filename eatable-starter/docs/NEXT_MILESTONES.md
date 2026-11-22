@@ -1,15 +1,8 @@
-# Eatable v3.0 — Current scope and next milestones
+# Eatable roadmap after v4
 
-## Included in this version
-- EN/IT site, recipe discovery, 18 demo recipes, account authentication, cloud favorites.
-- Signed-in text recipe submissions with pending status and a per-author submissions list.
-- Private admin review queue; approval publishes to `community_recipes` and rejection unpublishes.
-- Public community listings and recipe details.
-
-## Later development milestones
-1. Image upload and image moderation (secure Supabase Storage bucket).
-2. Contributor editing/revision flow without bypassing approval.
-3. Full normalized ingredient mapping of community recipes and inclusion in the ingredient-matching engine.
-4. Cloud favorites for approved community recipes.
-5. Fully curated international catalog (60–100 recipes) and English/Italian content review.
-6. Restaurant connection after core platform maturity.
+1. **Production hardening:** Move media publication into a trusted server-side transaction or workflow, recover from interrupted uploads, orphaned storage objects and expired preview links.
+2. **Normalized recipe catalog:** Migrate curated demo recipes and approved community recipes into a single canonical ingredient graph so both appear in ingredient search and user favorites.
+3. **Editorial operations:** Admin recipe editing, bulk data import, translation workflow and image optimization.
+4. **Member experience:** Draft autosave, multiple photos, reviews and ratings, shopping lists.
+5. **Prelaunch:** Complete 60–100 high-quality bilingual recipes, accessibility review, legal/privacy documents, analytics and real account testing.
+6. **Restaurant integration:** Defer until core cooking platform is dependable.
