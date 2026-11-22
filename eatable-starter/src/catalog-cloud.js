@@ -6,3 +6,6 @@ export const getIngredientVocabulary=()=>db().from('eatable_ingredients').select
 export const getCommunityIndexes=()=>db().from('eatable_community_index').select('*').limit(500);
 export const saveCommunityIndex=(row)=>db().from('eatable_community_index').upsert(row,{onConflict:'community_id'}).select('community_id').single();
 export const addIngredient=(row)=>db().from('eatable_ingredients').insert(row).select('id,name_en,name_it').single();
+// Admin-only queries. Row-level security (not the UI) controls access to drafts/writes.
+export const getAdminCuratedCatalog=()=>db().from('eatable_curated_recipes').select('*').order('updated_at',{ascending:false}).limit(500);
+export const saveCuratedRecipe=(row)=>db().from('eatable_curated_recipes').upsert(row,{onConflict:'slug'}).select('slug,published').single();

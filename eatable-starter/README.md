@@ -1,50 +1,45 @@
-# Eatable v5.0 — Unified Recipe Discovery
+# Eatable v6.0 — Curated Recipe Editor
 
-An incremental upgrade from Eatable v4.0. **Keep the existing Supabase project, GitHub repository, Vercel project, accounts, favorites, photos and administrator role.**
+Incremental upgrade **from working Eatable v5.0**. Keeps your existing Supabase project, published community recipes, user accounts, photos, favorites, ingredient mapping and administrator permissions. Do not create a new Supabase project.
 
-## What changed
+## What's new
 
-- **One searchable catalog:** The first 18 demo/curated recipes are seeded into Supabase. Approved community recipes appear alongside them in **Explore** and, when their cuisine is Lebanese, **The Lebanese Table**.
-- **Ingredient-based search:** Approved community recipes can appear in What Can I Cook? after their ingredients are linked to the standardized ingredient vocabulary by an administrator. Until then, they're still public in Explore/Community, but they **cannot falsely appear as "Ready to Cook"**.
-- **Admin indexing:** `/en/admin-index` or `/it/admin-index` shows already-approved community recipes and lets you review their cuisine, dietary classification, and ingredient mapping **line by line**. New ingredient terms can be added to the vocabulary.
-- **Community recipe pages:** Use the same details and cooking-mode interface as the curated recipes; show the contributor's original ingredient quantities rather than inventing automatically scaled quantities.
-- **Favorites:** Members may save community recipes to the existing cloud-based cookbook. These save as `community-<uuid>` and remain compatible with the existing favorites table.
-- **Existing workflows retained:** Authentication, member submissions, image upload/revision, moderation, private photos and published photos.
+- A private **Curated Recipe Editor** at `/en/admin-curated` and `/it/admin-curated`.
+- **Create new recipes** with English and Italian titles, descriptions and preparation steps.
+- **Choose canonical ingredients** from the same vocabulary used by *What Can I Cook?*, with quantities and units. Add and remove rows as needed.
+- **Save as draft / Unpublish** or **Publish**. Drafts are not returned to visitors by Supabase RLS policies.
+- **Edit any existing curated recipe**, including the original 18 demonstration recipes. The slug stays fixed after creation to avoid breaking saved links.
+- Curated recipe publishing updates the public catalog, recipe pages, ingredient matching and The Lebanese Table after reload, without updating source code.
+- SQL integrity checks reject unknown ingredient IDs, invalid quantities, missing translations and malformed steps.
+- Improvements to protect unpublished curated recipes from appearing in the browser before the cloud catalog finishes loading.
 
-### Important content limitations
+**Not included:** automatic translations, AI-generated recipes, curated photo uploads, incomplete auto-saved drafts, bulk imports, editor history or audit log. Drafts currently require a complete, valid bilingual recipe; they simply remain unpublished until you choose to publish them. Diet labels require editorial review and do not certify allergens.
 
-- There are still **18 demonstration curated recipes**, not yet the 60–100 reviewed recipes planned for launch. This release seeds those recipes into Supabase using `ON CONFLICT DO NOTHING` so it does not overwrite later edits.
-- The review form needs one canonical ingredient for **every** submitted ingredient line. If an ingredient isn't listed, add it to the vocabulary first. The system won't silently guess that a compound or unrecognized ingredient is safe to match.
-- Dietary labels should be assigned only after checking every ingredient and known potential variants. They are not allergen guarantees.
-- Community recipe steps are still stored as free-text contributor content, with Italian fallback to the original wording where a separate translation isn't available.
-- The v5 admin screen is for indexing already-approved community recipes; recipe content/moderation remains in the existing v4 Admin screen. Curated recipe data can be edited in the Supabase Table Editor by a project administrator; a full curated content management screen is a later milestone.
+## Install in this order
 
-## Upgrade instructions — do these in order
+1. **Keep a backup:** Confirm your existing site is working and save a copy of the existing GitHub files (GitHub commit history is also available). Keep your original `src/supabase-config.js`—this package intentionally excludes it.
+2. **Supabase:** Open your existing Eatable project → SQL Editor → New query. Copy and run **only** `sql/05_curated_editor.sql`. Do **not** rerun SQL files 01–04. Expected: `Success. No rows returned.` The migration adds validation and keeps all existing data. You should still have all original 18 curated records and all community recipes.
+3. **GitHub:** Extract the ZIP. Upload its **contents** to the top level of your existing `eatable` repository, replacing matching files. Do not upload the outer folder. Retain `src/supabase-config.js` from the current deployment. Commit to the production branch.
+4. **Vercel:** Check that the new deployment is marked Ready. The URL `/eatable-version.txt` should show **Eatable v6.0**.
+5. **Open admin editor:** Sign in with the existing administrator account, visit `/en/admin-curated` or `/it/admin-curated`. You can also reach it from Admin → Curated Recipe Editor.
 
-1. In your existing Supabase project, go to **SQL Editor → New query**. Open `sql/04_unified_discovery.sql`, paste everything, and choose **Run**. It creates three new tables: `eatable_ingredients`, `eatable_curated_recipes`, `eatable_community_index`. It seeds **51 ingredient names** and **18 demo recipes**. It does **not** recreate v2/v3/v4 or delete any existing data. This migration is intended to be run once, after `03_photos_revisions.sql`.
-2. In the Supabase **Table Editor**, check that the three tables exist and that `eatable_curated_recipes` has 18 rows. All three have Row Level Security enabled. **Do not paste any SQL into GitHub or run the previous migrations again.**
-3. Extract `eatable-v5-unified-discovery.zip`. Upload its **contents** into the existing `eatable` GitHub repository root, where `index.html` already lives. Overwrite matching files and commit to the production branch. **KEEP your existing `src/supabase-config.js`.** The ZIP deliberately does not include that file, so your working public URL and publishable key remain intact.
-4. In Vercel → Deployments, confirm the new production deployment is **Ready**. Visit `https://YOUR-DOMAIN/eatable-version.txt` — it should say **Eatable v5.0**. Your existing Vercel Root Directory setting remains unchanged.
-5. Test `/en/recipes`, `/en/cook`, `/en/lebanese`, `/en/community`, `/en/my-kitchen`, and existing auth and admin pages.
+## Verification checklist
 
-## Test approved community recipe indexing
+1. **Save a draft:** Create a new recipe with slug `test-recipe-v6`, bilingual titles and descriptions, category/cuisine/diet, at least 1 canonical ingredient and a bilingual cooking step. Use realistic quantities. Select **Save as draft**. Check that it appears in the admin editor as *Draft*.
+2. **Privacy check:** Open `/en/recipes/test-recipe-v6` while logged out or in a private browser. It must not display the new recipe. It must not appear in public `/en/recipes` or `/en/cook`.
+3. **Publish:** Return as admin, edit the recipe and select **Publish recipe**. Check `/en/recipes/test-recipe-v6`, `/it/recipes/test-recipe-v6`, ingredient search, and relevant cuisine section. For Lebanese recipes check `/en/lebanese`.
+4. **Modify:** Reopen the recipe from the admin editor, change both language instructions or an ingredient quantity, publish and reload the public detail page. The change should appear.
+5. **Unpublish:** Edit and select **Save as draft / Unpublish**. The recipe disappears from public results, while its record remains in the admin editor for future use. Existing favorites referencing it are not deleted.
+6. **Non-admin:** Sign in as an ordinary member and visit `/en/admin-curated`. Access must be refused; direct Supabase writes must also be denied by RLS.
 
-1. Sign in with your current administrator account.
-2. Open `/en/admin-index`. Every approved community recipe appears here, with an "Indexed" or "Needs ingredient mapping" label.
-3. Select a recipe. Confirm the cuisine and dietary label. For **each** ingredient line, select its canonical counterpart. Suggested matches may be prefilled, but must be checked manually. Add missing ingredient terms in the vocabulary form on the admin index page.
-4. Save. Search by those ingredients under `/en/cook`. The recipe should now appear in the appropriate match group, among curated recipes.
-5. Confirm the recipe also appears under `/en/recipes` and `/en/lebanese` (for Lebanese cuisine). Open it, try cooking mode, and save it to My Kitchen.
-6. Sign out and verify its public detail is still readable, but `/en/admin-index` does not allow administrative access.
-7. Optional: reject or request changes to the published recipe with the existing moderation dashboard. It should disappear from public results; the search mapping is removed automatically when the published recipe is deleted. If reapproved, it must be reindexed.
+## Editorial and security notes
 
-## Deployment and security notes
+- The v5 `eatable_curated_recipes` Row Level Security policies are preserved: public SELECT sees only published records; admin SELECT/INSERT/UPDATE is guarded by `eatable_is_admin()` on the database, independently of frontend navigation.
+- The new SQL validates all INSERT and UPDATE operations on curated recipes, even if someone bypasses the form and submits directly to the Data API.
+- Do not expose your Supabase secret key or database password in GitHub. Your browser config only needs the Project URL and publishable key.
+- If an ingredient is missing in the dropdown, first add it via `/en/admin-index` using the ingredient vocabulary editor.
+- The supplied recipe catalog is **still 18 demonstration recipes** until you curate and publish more. The initial public content goal remains **60–100 reviewed bilingual recipes**.
 
-- Never upload any **secret** Supabase key or database password to GitHub. The existing `src/supabase-config.js` contains only the browser-safe URL and publishable key.
-- New tables have RLS policies: guests may read published catalog rows, known ingredients and approved recipe index metadata; only existing admins may insert/update/delete curated recipes, the vocabulary and review mappings.
-- The migration adds a trigger to validate that **every submitted ingredient line** is mapped to a known canonical ingredient. Unapproved submissions are never indexed because the index references the public approved-recipe table.
-- Only the approved public community recipe data, not private submissions or photos, enters the searchable catalog.
-- For production launch, upgrade the demonstration content, add automated migration tests and server-side pagination, and move image publication to a secure server transaction workflow.
+## Rollback
 
-## What's next
-
-The next major stage is an actual **Curated Recipe Editor** in the Admin dashboard, plus richer cuisine/ingredient management and building the target 60–100 professionally reviewed bilingual recipes.
+To revert the website, redeploy the preceding GitHub commit from Vercel. You normally do **not** need to reverse the v6 SQL: its trigger and validation are backward-compatible with the v5 catalog format. If you intentionally roll back the database validation, review dependencies first and do it as a separate audited migration.

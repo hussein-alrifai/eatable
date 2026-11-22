@@ -35,3 +35,15 @@
 .v5-map-row label{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,1fr);align-items:center;gap:16px}
 .v5-map-row select{max-width:380px}
 @media(max-width:680px){.v5-map-row label{grid-template-columns:1fr}.catalog-photo{height:165px}.detail-photo{height:260px;min-height:260px}}
+
+/* v6 — Curated Recipe Editor */
+.v6-editor-wrap{max-width:1050px}
+.v6-summary{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 18px}
+.v6-summary span{background:#f7f5ef;border:1px solid #e7e2d7;border-radius:12px;padding:12px 18px}
+.v6-form-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.v6-edit-row{display:grid;grid-template-columns:minmax(200px,2fr) minmax(100px,1fr) minmax(115px,1fr) auto;gap:12px;align-items:end;padding:14px;border:1px solid #e9e5dc;border-radius:14px;margin:10px 0;background:var(--paper,#fff)}
+.v6-edit-step{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end;padding:14px;border:1px solid #e9e5dc;border-radius:14px;margin:10px 0;background:var(--paper,#fff)}
+.v6-edit-row label,.v6-edit-step label{min-width:0}
+.v6-edit-row .input,.v6-edit-step .input{width:100%}
+.v6-edit-row .btn,.v6-edit-step .btn{min-width:38px}
+@media(max-width:760px){.v6-edit-row{grid-template-columns:1fr 1fr}.v6-edit-row label:first-child{grid-column:1/-1}.v6-edit-step{grid-template-columns:1fr}.v6-edit-step .btn{justify-self:end}}

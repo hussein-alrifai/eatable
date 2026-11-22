@@ -1,2 +1,2 @@
-Eatable v5.0
-Unified Supabase recipe catalog, reviewed community ingredient indexing, favorites and shared cooking pages
+Eatable v6.0
+Bilingual curated recipe editor, drafts, publish/unpublish and server-side ingredient validation

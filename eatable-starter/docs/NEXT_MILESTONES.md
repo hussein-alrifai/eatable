@@ -1,8 +1,11 @@
-# Eatable — after v5
+# After Eatable v6
 
-1. Admin-managed curated recipe editor with publishing status and image upload.
-2. Review and publish 60–100 bilingual curated recipes, including a dedicated Lebanese editorial collection.
-3. Expand the ingredient vocabulary, synonyms and dietary/allergen metadata. Replace the v5 simple ingredient-id mapping with a fully normalized join table if user volume grows.
-4. Improve translations of community submissions, contributor metadata and recipe search performance/pagination.
-5. Meal planning and shopping lists after core search and community moderation quality are stable.
-6. Restaurant integration remains a separate future module and is not required for the cooking platform.
+## Release 6 (this package)
+Curated Recipe Editor: bilingual titles/descriptions/steps, canonical ingredients, quantities, publishing and unpublishing.
+
+## Next recommended work
+1. Complete a review checklist and add the first 60–100 verified bilingual curated recipes (currently 18 demo recipes).
+2. Add curated photo upload, alt text, source/rights attribution, and safe editorial image moderation.
+3. Implement search synonyms, dietary/allergen editorial notes, and ingredient substitutions.
+4. Add content quality audit, regression tests and search performance improvements before public launch.
+5. Add restaurant commerce only after a stable core cooking platform.
