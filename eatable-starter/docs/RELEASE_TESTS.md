@@ -1,7 +1,9 @@
-# v6 release checks
+# Eatable v7 checks
 
-- Static JS syntax checks: `node --check` for all `src/*.js`.
-- Pure editor form tests: required language fields, ingredient identity and amounts, duplicate prevention and draft/publish payloads.
-- Client views: private admin routes and mobile form layout.
-- Live integration requires your own Supabase project. We did not remotely access user Supabase/GitHub/Vercel accounts.
-- Existing community photo approval and storage paths were deliberately left unchanged.
+1. `node --input-type=module --check < src/app.js` and similarly for all changed JS modules.
+2. `node --experimental-default-type=module tests/smoke.mjs` (requires the existing `src/supabase-config.js` file, intentionally absent from the release ZIP).
+3. Review `sql/06_curated_photography.sql` and run it once in the existing Supabase project.
+4. Test photo: new draft, existing draft preview, publish, replace, unpublish, normal-user denial.
+5. Confirm `/eatable-version.txt` displays `Eatable v7.0`.
+
+All isolated JavaScript/unit assertions passed in the build environment. Live browser testing was blocked by environment restrictions; actual Supabase RLS and image-storage flows must be verified after deploying.

@@ -47,3 +47,10 @@
 .v6-edit-row .input,.v6-edit-step .input{width:100%}
 .v6-edit-row .btn,.v6-edit-step .btn{min-width:38px}
 @media(max-width:760px){.v6-edit-row{grid-template-columns:1fr 1fr}.v6-edit-row label:first-child{grid-column:1/-1}.v6-edit-step{grid-template-columns:1fr}.v6-edit-step .btn{justify-self:end}}
+
+/* v7 — Curated photography */
+.v7-photo-section{display:grid;gap:13px;border:1px solid #e5e0d2;background:linear-gradient(145deg,#fbf8f0,#fff);padding:20px;border-radius:16px}
+.v7-photo-section h3{margin:0}.v7-current-photo{display:grid;gap:12px;justify-items:start}.v7-editor-photo{display:block;width:min(100%,440px);height:260px;object-fit:cover;border-radius:12px;background:#f1e8d8}
+.v7-preview{display:grid;justify-items:start}.v7-photo-needed{background:#fff6e8;color:#835519}
+.v7-photo-section input[type=file]{max-width:100%}
+@media(max-width:650px){.v7-photo-section{padding:15px}.v7-editor-photo{height:220px}}

@@ -1,2 +1,2 @@
-Eatable v6.0
-Bilingual curated recipe editor, drafts, publish/unpublish and server-side ingredient validation
+Eatable v7.0
+Curated recipe photos, private drafts, photo management and public catalog images

@@ -9,3 +9,7 @@ export const addIngredient=(row)=>db().from('eatable_ingredients').insert(row).s
 // Admin-only queries. Row-level security (not the UI) controls access to drafts/writes.
 export const getAdminCuratedCatalog=()=>db().from('eatable_curated_recipes').select('*').order('updated_at',{ascending:false}).limit(500);
 export const saveCuratedRecipe=(row)=>db().from('eatable_curated_recipes').upsert(row,{onConflict:'slug'}).select('slug,published').single();
+
+// Private draft photography metadata: the new table has administrator-only RLS.
+export const getAdminCuratedMedia=()=>db().from('eatable_curated_media').select('slug,photo_path').limit(500);
+export const saveAdminCuratedMedia=(slug,photo_path)=>db().from('eatable_curated_media').upsert({slug,photo_path,updated_at:new Date().toISOString()},{onConflict:'slug'}).select('slug,photo_path').single();

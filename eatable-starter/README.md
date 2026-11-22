@@ -1,45 +1,61 @@
-# Eatable v6.0 — Curated Recipe Editor
+# Eatable v7.0 — Curated Recipe Photography
 
-Incremental upgrade **from working Eatable v5.0**. Keeps your existing Supabase project, published community recipes, user accounts, photos, favorites, ingredient mapping and administrator permissions. Do not create a new Supabase project.
+Incremental release **from an already-working Eatable v6.0**. The existing Supabase project, members, published recipes, recipe submissions, favorites, and administrator roles are preserved. **Do not create a new Supabase project.**
 
-## What's new
+## What this version adds
 
-- A private **Curated Recipe Editor** at `/en/admin-curated` and `/it/admin-curated`.
-- **Create new recipes** with English and Italian titles, descriptions and preparation steps.
-- **Choose canonical ingredients** from the same vocabulary used by *What Can I Cook?*, with quantities and units. Add and remove rows as needed.
-- **Save as draft / Unpublish** or **Publish**. Drafts are not returned to visitors by Supabase RLS policies.
-- **Edit any existing curated recipe**, including the original 18 demonstration recipes. The slug stays fixed after creation to avoid breaking saved links.
-- Curated recipe publishing updates the public catalog, recipe pages, ingredient matching and The Lebanese Table after reload, without updating source code.
-- SQL integrity checks reject unknown ingredient IDs, invalid quantities, missing translations and malformed steps.
-- Improvements to protect unpublished curated recipes from appearing in the browser before the cloud catalog finishes loading.
+- Admin-only photograph upload (JPEG/PNG/WebP, max 5 MB) directly from `/en/admin-curated` or `/it/admin-curated`.
+- Local selected-file preview; existing published-image preview; signed private-draft preview on demand.
+- When saved as a **draft**, the cover remains in the existing private Supabase bucket.
+- When **published**, the photo is copied into the existing public bucket and appears on recipe cards and the recipe detail page.
+- Replacing or removing a photo cleans up obsolete private and public files after the database update. Cleanup failures are reported.
+- An admin summary shows recipes with photos; unphotographed recipes have a visible flag.
+- Separate `eatable_curated_media` table stores unpublished image paths with admin-only Row Level Security; public catalog queries do not expose them.
 
-**Not included:** automatic translations, AI-generated recipes, curated photo uploads, incomplete auto-saved drafts, bulk imports, editor history or audit log. Drafts currently require a complete, valid bilingual recipe; they simply remain unpublished until you choose to publish them. Diet labels require editorial review and do not certify allergens.
+The 18 initial sample recipes still exist. This release **does not** automatically provide 60–100 verified recipes, generate photos, validate the provenance of uploaded images, or change restaurant features.
 
-## Install in this order
+## Install in exactly this order
 
-1. **Keep a backup:** Confirm your existing site is working and save a copy of the existing GitHub files (GitHub commit history is also available). Keep your original `src/supabase-config.js`—this package intentionally excludes it.
-2. **Supabase:** Open your existing Eatable project → SQL Editor → New query. Copy and run **only** `sql/05_curated_editor.sql`. Do **not** rerun SQL files 01–04. Expected: `Success. No rows returned.` The migration adds validation and keeps all existing data. You should still have all original 18 curated records and all community recipes.
-3. **GitHub:** Extract the ZIP. Upload its **contents** to the top level of your existing `eatable` repository, replacing matching files. Do not upload the outer folder. Retain `src/supabase-config.js` from the current deployment. Commit to the production branch.
-4. **Vercel:** Check that the new deployment is marked Ready. The URL `/eatable-version.txt` should show **Eatable v6.0**.
-5. **Open admin editor:** Sign in with the existing administrator account, visit `/en/admin-curated` or `/it/admin-curated`. You can also reach it from Admin → Curated Recipe Editor.
+1. **Backup**: Confirm v6 is working and that the last GitHub commit is available to roll back. Retain the current `src/supabase-config.js` with your new Supabase project URL and publishable key.
+2. **Run only migration 06**: Open the **existing** Supabase project → SQL Editor → New query. Paste `sql/06_curated_photography.sql` and select **Run**. It adds a public cover path to existing curated rows, a private admin-only media table, RLS, and a draft-publication guard. This SQL **reuses** the two v4 buckets (`eatable-private-photos`, `eatable-published-photos`). Do **not** run earlier migrations 01–05 again.
+3. **Verify the database**: Under Table Editor, inspect `eatable_curated_recipes` (new `public_photo_path` column) and `eatable_curated_media` (RLS enabled). Under Storage, confirm the two v4 buckets remain present. Do not make the private bucket public.
+4. **Update GitHub**: Extract the v7 ZIP. Upload its **contents** into your existing `eatable` repository root, replacing matching paths. **Keep `src/supabase-config.js` unchanged**; the ZIP intentionally does not include it. Commit the changes on the branch connected to Vercel.
+5. **Verify deployment**: Vercel → Deployments → latest production deployment **Ready**. Visit `https://YOUR-DOMAIN/eatable-version.txt` and confirm **Eatable v7.0**.
+6. **Open the editor**: Sign in with your admin account and visit `https://YOUR-DOMAIN/en/admin-curated` (or `/it/admin-curated`).
 
-## Verification checklist
+## Live verification — Batata Harra (recommended)
 
-1. **Save a draft:** Create a new recipe with slug `test-recipe-v6`, bilingual titles and descriptions, category/cuisine/diet, at least 1 canonical ingredient and a bilingual cooking step. Use realistic quantities. Select **Save as draft**. Check that it appears in the admin editor as *Draft*.
-2. **Privacy check:** Open `/en/recipes/test-recipe-v6` while logged out or in a private browser. It must not display the new recipe. It must not appear in public `/en/recipes` or `/en/cook`.
-3. **Publish:** Return as admin, edit the recipe and select **Publish recipe**. Check `/en/recipes/test-recipe-v6`, `/it/recipes/test-recipe-v6`, ingredient search, and relevant cuisine section. For Lebanese recipes check `/en/lebanese`.
-4. **Modify:** Reopen the recipe from the admin editor, change both language instructions or an ingredient quantity, publish and reload the public detail page. The change should appear.
-5. **Unpublish:** Edit and select **Save as draft / Unpublish**. The recipe disappears from public results, while its record remains in the admin editor for future use. Existing favorites referencing it are not deleted.
-6. **Non-admin:** Sign in as an ordinary member and visit `/en/admin-curated`. Access must be refused; direct Supabase writes must also be denied by RLS.
+1. Edit the **Batata Harra** test recipe you created in v6.
+2. Upload a JPEG photo under 5 MB, save it as **draft**, and inspect the admin editor again. A private preview should be available after clicking **Preview private draft photo**.
+3. Open the recipe in a signed-out/private browser; it **must not** be publicly accessible while unpublished.
+4. Return as admin, select **Publish recipe**, then confirm its image appears in Explore, in The Lebanese Table, and in `/en/recipes/batata-harra`. Repeat with `/it/recipes/batata-harra`.
+5. Replace the photo with another image and publish again. Verify the new one appears. (Browsers can cache images; reload if needed.)
+6. Select **Save as draft / Unpublish**. The recipe should disappear from public search and its image should no longer be referenced from public Eatable pages.
+7. Sign in as a normal user (or use a private window) and verify they cannot read or write rows in `eatable_curated_media` through Supabase APIs. Do not rely on the admin link being hidden.
+8. Verify previously approved *community* photos and recipes still render normally.
 
-## Editorial and security notes
+**Privacy note:** An image that was previously published may remain in external caches or in saved copies. Unpublishing removes its reference from Eatable and tries to delete its public storage object; it does not guarantee deletion from third-party caches. The app will report if storage cleanup fails.
 
-- The v5 `eatable_curated_recipes` Row Level Security policies are preserved: public SELECT sees only published records; admin SELECT/INSERT/UPDATE is guarded by `eatable_is_admin()` on the database, independently of frontend navigation.
-- The new SQL validates all INSERT and UPDATE operations on curated recipes, even if someone bypasses the form and submits directly to the Data API.
-- Do not expose your Supabase secret key or database password in GitHub. Your browser config only needs the Project URL and publishable key.
-- If an ingredient is missing in the dropdown, first add it via `/en/admin-index` using the ingredient vocabulary editor.
-- The supplied recipe catalog is **still 18 demonstration recipes** until you curate and publish more. The initial public content goal remains **60–100 reviewed bilingual recipes**.
+## Security and publication notes
+
+- Uploads use the pre-existing authenticated-storage policies; public file writes are admin-only, enforced by the v4 Storage policies.
+- The v7 table uses its own admin-only RLS policies. Public visitors may only select published curated rows; the database also clears `public_photo_path` when a recipe is unpublished.
+- Storage files are handled through Supabase Storage APIs, not through direct manipulation of `storage.objects`.
+- Only upload photographs you created or are allowed to use. For third-party images, keep proof of permission and any required attribution.
+- A cover photograph does not prove a recipe was tested, safe for allergies, or historically authentic. Review the content checklist in `docs/CURATED_CONTENT_CHECKLIST.md`.
+
+## Troubleshooting
+
+- **`eatable_curated_media does not exist`**: v7 SQL was not run in the same Supabase project used by your website.
+- **`permission denied` / RLS violation**: verify you signed in with the existing administrator account and that migration 06 completed.
+- **Storage upload error**: verify v4 migration 03 and the two photo buckets are present; use JPG/PNG/WebP under 5 MB. Avoid setting a private bucket to public.
+- **Public recipe appears without a photo**: verify the recipe was actually published, reload after the new deployment, then inspect its `public_photo_path` in the published curated row.
+- **Account page says Supabase is not configured**: your existing `src/supabase-config.js` was overwritten or moved; restore it from your last working GitHub commit. Never put the Supabase secret/service-role key in browser code.
 
 ## Rollback
 
-To revert the website, redeploy the preceding GitHub commit from Vercel. You normally do **not** need to reverse the v6 SQL: its trigger and validation are backward-compatible with the v5 catalog format. If you intentionally roll back the database validation, review dependencies first and do it as a separate audited migration.
+You can redeploy your previous v6 GitHub commit. Migration 06 adds columns and an admin-only table and does not remove v6 data. A site rollback does **not** itself erase the new photo records or their Storage objects. Do not manually delete storage metadata in SQL; use Supabase Storage APIs for cleanup.
+
+## Verification scope
+
+JavaScript syntax and isolated editor, photo-path, and image-format checks passed. A full live Supabase migration / RLS / upload / publication test requires your connected Eatable project and must be performed using the steps above. The local graphical browser smoke test could not run because the execution environment blocked localhost access.

@@ -1,13 +1,7 @@
-# Eatable v6 test summary
+# Eatable v7 — Build Verification
 
-## Passed (local/static)
-- JavaScript syntax check for all site modules.
-- Node-based editor tests: bilingual form rendering, draft/publish controls, slug immutability, validation of unknown/duplicate ingredients, empty translations and admin route integration references.
-- ZIP archive verification; no Supabase secret or connection config included.
-
-## Not tested from this environment
-- A browser-level end-to-end run could not be completed because the local headless browser environment blocks test navigation. The modules passed syntax and isolated editor tests instead.
-- Live Supabase migration, RLS permissions, login, publication and Vercel deployment must be verified by the owner after installation using the README checklist.
-
-## Unchanged from v5
-- Community recipe submission, photo moderation and approved community indexing.
+- JavaScript module syntax checks passed across all `src/*.js` modules.
+- Editor template / translated photo prompts / private preview / public image path / image type and size validation checks passed using `tests/smoke.mjs` with a temporary local empty configuration file.
+- Static packaging verified: `index.html` and `vercel.json` at archive root; `src/supabase-config.js` intentionally excluded.
+- The graphical-browser smoke test was blocked by local environment access restrictions.
+- No Supabase project credentials were available for a live storage or Row Level Security end-to-end test. Complete the steps in `README.md` after deploying.

@@ -1,5 +1,5 @@
 import { t } from './i18n.js';
-import {getCuratedCatalog,getIngredientVocabulary,getCommunityIndexes,saveCommunityIndex,addIngredient,getAdminCuratedCatalog,saveCuratedRecipe} from './catalog-cloud.js';
+import {getCuratedCatalog,getIngredientVocabulary,getCommunityIndexes,saveCommunityIndex,addIngredient,getAdminCuratedCatalog,saveCuratedRecipe,getAdminCuratedMedia,saveAdminCuratedMedia} from './catalog-cloud.js';
 import {editorText,ingredientRow,stepRow,curatedListHtml,curatedEditorHtml,serializeCurated,validateCurated} from './curated-editor.js';
 import {curatedFromDb,communityFromDb,communityKey,mergeVocabulary,suggestCanonicalIngredient} from './discovery.js';
 import {getPublished,getMySubmissions,getAdminSubmissions,getIsAdmin,submitCommunityRecipe,reviseCommunityRecipe,moderateRecipe} from './community-cloud.js';
@@ -9,7 +9,7 @@ import { recipes,ingredients,ingredientById,cuisines,getRecipe,getCuisine,ingred
 
 const app=document.getElementById('app');
 const load=(key,fallback)=>{try{const v=JSON.parse(localStorage.getItem(key));return Array.isArray(v)?v:fallback}catch{return fallback}};
-const state={selected:load('eatable:ingredients',[]).filter(id=>ingredientById[id]),favorites:load('eatable:favorites',[]),user:null,cloudStatus:isCloudConfigured?'connecting':'demo',cloudError:'',passwordRecovery:false,authView:'signin',authBusy:false,authRevision:0,menuOpen:false,filters:{diet:'all',cuisine:'all',maxTime:''},exploreQuery:'',exploreCuisine:'all',servings:4,checked:new Set(),cookingStep:null,publicRecipes:[],catalog:isCloudConfigured?[]:[...recipes],communityIndexes:[],catalogLoaded:false,catalogError:'',mySubmissions:[],adminSubmissions:[],isAdmin:false,communityBusy:false,communityError:'',communityLoaded:false,photoUrls:{},curatedAdminRows:[],curatedAdminLoaded:false,curatedBusy:false};
+const state={selected:load('eatable:ingredients',[]).filter(id=>ingredientById[id]),favorites:load('eatable:favorites',[]),user:null,cloudStatus:isCloudConfigured?'connecting':'demo',cloudError:'',passwordRecovery:false,authView:'signin',authBusy:false,authRevision:0,menuOpen:false,filters:{diet:'all',cuisine:'all',maxTime:''},exploreQuery:'',exploreCuisine:'all',servings:4,checked:new Set(),cookingStep:null,publicRecipes:[],catalog:isCloudConfigured?[]:[...recipes],communityIndexes:[],catalogLoaded:false,catalogError:'',mySubmissions:[],adminSubmissions:[],isAdmin:false,communityBusy:false,communityError:'',communityLoaded:false,photoUrls:{},curatedAdminRows:[],curatedAdminLoaded:false,curatedBusy:false,curatedImagePreviewUrl:null};
 const save=()=>{try{localStorage.setItem('eatable:ingredients',JSON.stringify(state.selected));localStorage.setItem('eatable:favorites',JSON.stringify(state.user?load('eatable:favorites',[]):state.favorites))}catch{}};
 const accountText={
   en:{account:'Account',signIn:'Sign in',signUp:'Create account',signOut:'Sign out',email:'Email',password:'Password',displayName:'Display name',forgot:'Forgot password?',reset:'Reset password',sendReset:'Send reset email',changePassword:'Choose a new password',updatePassword:'Update password',checkEmail:'Check your email for the confirmation or reset link.',loginSuccess:'Signed in successfully.',logoutSuccess:'Signed out.',cloudSaveNote:'Sign in to save recipes to your account across devices.',demoSaveNote:'Demo mode: favorites are stored in this browser only.',cloudConnecting:'Connecting to Supabase…',cloudNotConfigured:'Your Supabase connection has not been configured yet. Follow the setup guide in the ZIP.',cloudFailed:'Could not connect to Supabase. Check the project URL, publishable key and database setup.',signInToSave:'Sign in to save recipes across devices.',myAccount:'My account',signedInAs:'Signed in as',authIntro:'Save your favorite dishes and access them on different devices.',goToCookbook:'Open my cookbook',pwMin:'Use at least 8 characters for your password.',submit:'Continue'},
@@ -158,12 +158,16 @@ function curatedAdminEditor(slug){
  const isNew=slug==='new';
  const recipe=isNew?null:state.curatedAdminRows.find(r=>r.slug===slug);
  if(!isNew&&!recipe)return shell(`${pageHero('Eatable',state.curatedAdminLoaded?'Recipe not found':ct('loading'),'')}<div class="container section-pad">${link('admin-curated',editorText(language(),'back'),'btn btn-outline')}</div>`,'community');
- return shell(`${pageHero('Eatable · Admin',editorText(language(),isNew?'newRecipe':'editRecipe'),editorText(language(),'intro'))}<div class="container section-pad v6-editor-wrap">${curatedEditorHtml({lang:language(),recipe,vocabulary:ingredients,cuisines,link})}</div>`,'community');
+ return shell(`${pageHero('Eatable · Admin',editorText(language(),isNew?'newRecipe':'editRecipe'),editorText(language(),'intro'))}<div class="container section-pad v6-editor-wrap">${curatedEditorHtml({lang:language(),recipe,vocabulary:ingredients,cuisines,link,getPublicUrl:getPublicPhotoUrl})}</div>`,'community');
 }
 async function refreshCuratedAdmin(){
  if(!state.isAdmin){state.curatedAdminRows=[];state.curatedAdminLoaded=false;return;}
- const {data,error}=await getAdminCuratedCatalog();if(error)throw error;
- state.curatedAdminRows=data||[];state.curatedAdminLoaded=true;
+ const [curated,media]=await Promise.all([getAdminCuratedCatalog(),getAdminCuratedMedia()]);
+ if(curated.error)throw curated.error;
+ if(media.error)throw media.error;
+ const mediaBySlug=new Map((media.data||[]).map(m=>[m.slug,m.photo_path]));
+ state.curatedAdminRows=(curated.data||[]).map(r=>({...r,photo_path:mediaBySlug.get(r.slug)||null}));
+ state.curatedAdminLoaded=true;
 }
 function kitchen(){const selected=state.favorites.map(id=>getAnyRecipe(id)).filter(Boolean);return shell(`${pageHero('Eatable · '+tr('kitchen'),tr('myCookbook'),saveNote())}<div class="container section-pad">${isCloudConfigured&&!state.user?`<div class="empty"><h3>${at('signInToSave')}</h3>${link('account',at('signIn'),'btn btn-primary space-top')}</div>`:selected.length?`<div class="grid-recipes">${selected.map(r=>card(r)).join('')}</div>`:`<div class="empty"><h3>${tr('cookbookEmpty')}</h3><p>${saveNote()}</p>${link('recipes',tr('allRecipes'),'btn btn-primary space-top')}</div>`}</div>`,'kitchen')}
 const fmt=(qty,unit)=>`${Number.isInteger(qty)?qty:Number(qty.toFixed(1))} ${unit==='pcs'?'':unit}`.trim();
@@ -194,30 +198,88 @@ function accountPage(){
 function cookingOverlay(r){const idx=Math.max(0,Math.min(r.steps.length-1,state.cookingStep??0));return `<div class="cook-overlay" role="dialog" aria-modal="true" aria-label="${tr('startCooking')}"><div class="cook-top"><div class="cook-inner inline-row"><strong>Eatable · ${label(r.name)}</strong><button class="btn btn-light btn-sm" data-action="close-cooking">✕ ${tr('close')}</button></div></div><div class="cook-inner cook-center"><div class="progress"><span style="width:${(idx+1)/r.steps.length*100}%"></span></div><p class="step-line space-top">${tr('step')} ${idx+1} ${tr('of')} ${r.steps.length}</p><h1>${tr('step')} ${idx+1}</h1><p>${label(r.steps[idx])}</p></div><div class="cook-inner cook-footer"><button class="btn btn-light" data-action="prev-step" ${idx===0?'disabled':''}>← ${tr('previous')}</button><button class="btn btn-primary" data-action="next-step">${idx===r.steps.length-1?tr('finish'):tr('next')} →</button></div></div>`}
 function active(){const pieces=location.pathname.split('/').filter(Boolean),route=pieces[0]==='it'||pieces[0]==='en'?pieces.slice(1):pieces;return route;}
 function render(){const route=active();let html;let selected='';if(!route.length){html=home();selected='home'}else if(route[0]==='cook'){html=cook();selected='cook'}else if(route[0]==='recipes'&&route[1]){const r=getAnyRecipe(route[1]);html=r?detail(r):explore();selected='explore'}else if(route[0]==='recipes'){const params=new URLSearchParams(location.search);if(params.has('cuisine'))state.exploreCuisine=params.get('cuisine');html=explore();selected='explore'}else if(route[0]==='lebanese'){html=lebanese();selected='lebanese'}else if(route[0]==='community'&&route[1]){const r=getAnyRecipe(communityKey(route[1]));html=r?detail(r):shell(pageHero('Eatable',state.communityLoaded?'404':ct('loading'),state.communityLoaded?'Recipe unavailable':'Loading approved recipes…'),'community');selected='community'}else if(route[0]==='community'){html=community();selected='community'}else if(route[0]==='submit'){html=submitPage();selected='community'}else if(route[0]==='edit'&&route[1]){html=submitPage(route[1]);selected='community'}else if(route[0]==='my-recipes'){html=mySubmissions();selected='community'}else if(route[0]==='admin-index'&&route[1]){html=adminIndexEditor(route[1]);selected='community'}else if(route[0]==='admin-index'){html=adminIndexPage();selected='community'}else if(route[0]==='admin-curated'&&route[1]){html=curatedAdminEditor(route[1]);selected='community'}else if(route[0]==='admin-curated'){html=curatedAdminPage();selected='community'}else if(route[0]==='admin'){html=adminPage();selected='community'}else if(route[0]==='my-kitchen'){html=kitchen();selected='kitchen'}else if(route[0]==='account'){html=accountPage();selected='account'}else{html=home();selected='home'}app.innerHTML=html;const r=route[1]?(route[0]==='recipes'?getAnyRecipe(route[1]):route[0]==='community'?getAnyRecipe(communityKey(route[1])):null):null;if(r&&state.cookingStep!==null){app.insertAdjacentHTML('beforeend',cookingOverlay(r));document.body.style.overflow='hidden'}else{document.body.style.overflow=''}document.documentElement.lang=language();document.title=`${r?`${r.name[language()]} | `:''}Eatable — ${tr('footer')}`;}
-function navigate(url){const u=new URL(url,location.href);if(u.origin!==location.origin){location.href=u.href;return}history.pushState(null,'',u.pathname+u.search+u.hash);state.cookingStep=null;state.checked.clear();state.servings=4;state.menuOpen=false;render();window.scrollTo(0,0)}
+function navigate(url){if(state.curatedImagePreviewUrl){URL.revokeObjectURL(state.curatedImagePreviewUrl);state.curatedImagePreviewUrl=null;}const u=new URL(url,location.href);if(u.origin!==location.origin){location.href=u.href;return}history.pushState(null,'',u.pathname+u.search+u.hash);state.cookingStep=null;state.checked.clear();state.servings=4;state.menuOpen=false;render();window.scrollTo(0,0)}
 function toast(message){document.querySelector('.toast')?.remove();const el=document.createElement('div');el.className='toast';el.textContent=message;el.setAttribute('role','status');document.body.append(el);setTimeout(()=>el.remove(),3300)}
 function suggest(input){const q=input.value,context=input.dataset.ingredientInput,target=document.getElementById(`suggestions-${context}`);if(!target)return;const matches=ingredientMatches(q).filter(i=>!state.selected.includes(i.id));if(!q.trim()){target.classList.add('hidden');target.innerHTML='';return}target.innerHTML=matches.length?matches.map(i=>`<button type="button" role="option" data-action="add-ingredient" data-id="${i.id}">${label(i.name)} <span class="muted small">+</span></button>`).join(''):`<div style="padding:12px" class="muted small">${tr('noSearch')}</div>`;target.classList.remove('hidden')}
 document.addEventListener('input',event=>{const input=event.target;if(input.matches('[data-ingredient-input]'))suggest(input)});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){const target=event.target.closest('.field-wrap');target?.querySelector('.suggestions')?.classList.add('hidden');if(state.cookingStep!==null){state.cookingStep=null;render()}}if(event.key==='Enter'&&event.target.matches('[data-ingredient-input]')){event.preventDefault();const first=ingredientMatches(event.target.value).find(i=>!state.selected.includes(i.id));if(first){state.selected.push(first.id);save();render();document.getElementById(event.target.id)?.focus()}else toast(tr('errorIngredient'))}});
-document.addEventListener('change',event=>{const target=event.target;if(target.matches('[data-filter]')){state.filters[target.dataset.filter]=target.value;render()}if(target.matches('[data-check]')){const i=Number(target.dataset.check);if(target.checked)state.checked.add(i);else state.checked.delete(i)}});
+document.addEventListener('change',event=>{
+ const target=event.target;
+ if(target.matches('#curated-photo-input')){
+   const preview=document.getElementById('curated-upload-preview');
+   if(state.curatedImagePreviewUrl){URL.revokeObjectURL(state.curatedImagePreviewUrl);state.curatedImagePreviewUrl=null;}
+   const file=target.files?.[0];
+   if(preview){const image=preview.querySelector('img');
+     if(file){try{if(!file.size)throw Error('Select a non-empty image.');validatePhoto(file);state.curatedImagePreviewUrl=URL.createObjectURL(file);image.src=state.curatedImagePreviewUrl;preview.classList.remove('hidden');}
+       catch(e){target.value='';preview.classList.add('hidden');toast(e.message);}}
+     else preview.classList.add('hidden');
+   }
+ }
+ if(target.matches('[data-filter]')){state.filters[target.dataset.filter]=target.value;render()}
+ if(target.matches('[data-check]')){const i=Number(target.dataset.check);if(target.checked)state.checked.add(i);else state.checked.delete(i)}
+});
 document.addEventListener('submit',async event=>{
  if(event.target.id==='curated-recipe-form'){
    event.preventDefault();
    if(!state.isAdmin||state.curatedBusy)return;
    const intent=event.submitter?.value==='publish'?'publish':'draft';
-   const payload=serializeCurated(event.target,intent);
+   const form=event.target;
+   const payload=serializeCurated(form,intent);
    const err=validateCurated(payload,ingredients);
    if(err){toast(err);return;}
-   const oldSlug=event.target.dataset.slug;
+   const oldSlug=form.dataset.slug;
    if(oldSlug&&payload.slug!==oldSlug){toast('The recipe URL cannot be changed.');return;}
+   const previous=state.curatedAdminRows.find(r=>r.slug===oldSlug);
+   const file=form.querySelector('[name="photo"]')?.files?.[0];
+   try{if(file){if(!file.size)throw Error('Select a non-empty image.');validatePhoto(file);}}catch(e){toast(e.message);return;}
+   const removePhoto=Boolean(form.querySelector('[name="remove_photo"]')?.checked);
    state.curatedBusy=true;
-   for(const b of event.target.querySelectorAll('button[type=submit]'))b.disabled=true;
+   for(const b of form.querySelectorAll('button[type=submit]'))b.disabled=true;
+   let newPrivate=null,newPublic=null,mediaSaved=false,finalSaved=false;
    try{
-     const result=await saveCuratedRecipe(payload);if(result.error)throw result.error;
+     const previousPrivate=previous?.photo_path||null;
+     const previousPublic=previous?.public_photo_path||null;
+     let privatePath=removePhoto?null:previousPrivate;
+     if(file){newPrivate=await uploadPrivatePhoto(state.user.id,crypto.randomUUID(),file);privatePath=newPrivate;}
+     // For a new recipe, first create a private draft to satisfy the media
+     // table's foreign key. Never publish its cover before metadata is saved.
+     if(!previous){
+       const draft=await saveCuratedRecipe({...payload,published:false,public_photo_path:null});
+       if(draft.error)throw draft.error;
+     }
+     const media=await saveAdminCuratedMedia(payload.slug,privatePath);
+     if(media.error)throw media.error;
+     mediaSaved=true;
+     let publicPath=null;
+     if(intent==='publish'&&(privatePath||previousPublic)){
+       if(newPrivate||(!previousPublic&&privatePath)){
+         newPublic=await publishPhoto({id:'curated/'+payload.slug,photo_path:privatePath});
+         publicPath=newPublic;
+       }else if(!removePhoto){publicPath=previousPublic;}
+     }
+     const updated=await saveCuratedRecipe({...payload,public_photo_path:publicPath});
+     if(updated.error)throw updated.error;
+     finalSaved=true;
+     // Clean up only after database commit. Errors are reported; the published
+     // recipe itself must not be rolled back because a cleanup failed.
+     const failedCleanup=[];
+     if(previousPrivate&&previousPrivate!==privatePath){
+       try{const result=await removePrivatePhoto(previousPrivate);if(result?.error)throw result.error;}catch(e){failedCleanup.push(e.message);}
+     }
+     if(previousPublic&&previousPublic!==publicPath){
+       try{await removePublicPhoto(previousPublic);}catch(e){failedCleanup.push(e.message);}
+     }
      await Promise.all([refreshCommunity(),refreshCuratedAdmin()]);
      navigate(path('admin-curated'));
-     toast(intent==='publish'?(language()==='it'?'Ricetta pubblicata.':'Recipe published.'):(language()==='it'?'Bozza salvata.':'Draft saved.'));
-   }catch(e){toast(e.message||ct('failed'));}
+     toast(failedCleanup.length?`Saved, but an old photo could not be deleted: ${failedCleanup.join('; ')}`:
+       intent==='publish'?(language()==='it'?'Ricetta pubblicata.':'Recipe published.'):(language()==='it'?'Bozza salvata.':'Draft saved.'));
+   }catch(e){
+     // The media row can be committed before the recipe. If this happens,
+     // preserve its new private file so editing can resume safely.
+     if(newPublic&&!finalSaved)void removePublicPhoto(newPublic).catch(()=>{});
+     if(newPrivate&&!mediaSaved)void removePrivatePhoto(newPrivate).catch(()=>{});
+     toast(e.message||ct('failed'));
+   }
    finally{state.curatedBusy=false;for(const b of document.querySelectorAll('#curated-recipe-form button[type=submit]'))b.disabled=false;}
    return;
  }
@@ -313,6 +375,18 @@ document.addEventListener('submit',async event=>{
  }
  if(event.target.id==='explore-form'){event.preventDefault();state.exploreQuery=document.getElementById('explore-query').value;state.exploreCuisine=document.getElementById('explore-cuisine').value;history.replaceState(null,'',path('recipes'));render()}});
 document.addEventListener('click',event=>{const action=event.target.closest('[data-action]');if(action){const name=action.dataset.action;const id=action.dataset.id;
+ if(name==='curated-preview-private'){
+   if(!state.isAdmin)return;
+   const slug=active()[1];const record=state.curatedAdminRows.find(r=>r.slug===slug);
+   if(!record?.photo_path)return;
+   action.disabled=true;
+   getPrivatePhotoUrl(record.photo_path).then(url=>{
+     if(active()[1]!==slug)return;
+     const img=document.getElementById('curated-private-preview');
+     if(img){img.src=url;img.classList.remove('hidden');action.classList.add('hidden');}
+   }).catch(e=>toast(e.message||'Photo preview failed.')).finally(()=>{action.disabled=false;});
+   return;
+ }
  if(name==='curated-add-ingredient'){
    const parent=document.getElementById('curated-ingredients');if(parent&&parent.children.length<50)parent.insertAdjacentHTML('beforeend',ingredientRow(language(),ingredients,{qty:1,unit:'g'}));return;
  }

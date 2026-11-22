@@ -9,7 +9,7 @@ export function curatedFromDb(r){
     cuisine:r.cuisine,category:r.category,diet:r.diet,time:r.prep_minutes,
     serves:r.servings, ingredients:Array.isArray(r.ingredients)?r.ingredients:[],
     steps:Array.isArray(r.steps)?r.steps:[],
-    emoji:r.emoji||'🍲', theme:r.theme||'cream',searchable:true
+    emoji:r.emoji||'🍲', theme:r.theme||'cream',public_photo_path:r.public_photo_path||null,searchable:true
   };
 }
 export const communityKey=uuid=>'community-'+uuid;

@@ -1,11 +1,6 @@
-# After Eatable v6
+# Eatable Roadmap After v7
 
-## Release 6 (this package)
-Curated Recipe Editor: bilingual titles/descriptions/steps, canonical ingredients, quantities, publishing and unpublishing.
-
-## Next recommended work
-1. Complete a review checklist and add the first 60–100 verified bilingual curated recipes (currently 18 demo recipes).
-2. Add curated photo upload, alt text, source/rights attribution, and safe editorial image moderation.
-3. Implement search synonyms, dietary/allergen editorial notes, and ingredient substitutions.
-4. Add content quality audit, regression tests and search performance improvements before public launch.
-5. Add restaurant commerce only after a stable core cooking platform.
+- v7 (this release): administrator-curated recipe photo uploads, private draft previews and public catalog images.
+- Next: content ingestion and editorial QA — build toward 60–100 verified bilingual recipes; improve ingredient aliases, origin taxonomy and dietary guidance.
+- Later: search refinements, advanced My Kitchen inventory, shopping lists, timers, and accessibility/performance audits.
+- Restaurant integration remains separate until the core recipe experience is dependable.
