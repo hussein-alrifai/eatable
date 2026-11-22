@@ -1,24 +1,37 @@
-# Eatable v2.1 — deploy-ready (root-level files)
+# Eatable v3.0 — Community Submissions + Admin Review
 
-This ZIP has **no enclosing folder**. Unzip it and upload **all contents** into the same GitHub repository directory from which Vercel currently deploys `index.html`.
+This is an **incremental update** for the existing Eatable v2.1 site. It retains your already-working authentication and cloud favorites. In this ZIP, `src/supabase-config.js` is intentionally **not included**: keep the existing configured file in your GitHub repository. Never upload a service-role or secret key.
 
-## Check the deployment before configuring Supabase
+## Installation order
 
-1. In GitHub, ensure `index.html`, `vercel.json`, `eatable-version.txt`, and the folders `src/`, `assets/`, `docs/`, `sql/` are at the repository root (if Vercel Root Directory is `./`). Replace the original files when committing; do not create `eatable-v2/` as a nested subfolder.
-2. In Vercel > Deployments, wait for a **new deployment** from the GitHub commit; verify status **Ready**. If needed, open the deployment's logs for errors.
-3. Open `https://YOUR-VERCEL-DOMAIN/eatable-version.txt`. It must say "Eatable v2.1". If it does not, the new files are not being served.
-4. Open `https://YOUR-VERCEL-DOMAIN/en/account`. You should see an account page. Until you configure Supabase, it displays "Your Supabase connection has not been configured yet" rather than a usable login form.
+1. Confirm accounts work on your existing Supabase project. If v2.1 is operational, **do not rerun `sql/01_schema.sql`**.
+2. In Supabase > SQL Editor, create a new query with **`sql/02_community.sql`** and execute it **once**. The migration adds two tables (`recipe_submissions`, `community_recipes`), an admin-check function, RLS policies, and a publication trigger. It does not delete your existing users or favorites.
+3. Make your **own existing account** an administrator in the Supabase SQL Editor. Use your actual signup email in place of the placeholder:
 
-## Configure Supabase (once you have confirmed deployment)
+```sql
+update public.profiles
+set role = 'admin'
+where id in (
+  select id from auth.users
+  where lower(email) = lower('YOUR-REGISTERED-EMAIL@example.com')
+);
+```
 
-1. Use `sql/01_schema.sql` in Supabase SQL Editor on a new project (if not already run). **Do not rerun** it after success, since it creates a trigger and tables.
-2. Edit `src/supabase-config.js` with only your Project URL (`https://...supabase.co`) and a public publishable key (`sb_publishable_...`). Never expose passwords, secret keys, or `service_role` keys.
-3. Set Supabase Auth Site URL to your Vercel origin and allow redirects to `/en/account` and `/it/account`. See `docs/SETUP_SUPABASE.md`.
-4. Commit the edited configuration to GitHub and check a fresh Vercel deployment.
-5. Reopen `/en/account`, create a test account, confirm email if required, then test saved recipes across two browsers.
+Verify exactly **one** profile was updated. Do this only in Supabase's privileged SQL editor — never in the website or GitHub. Anyone else should retain the `member` role.
+4. Extract this ZIP and upload its **contents**, not an extra outer folder, to your existing GitHub `eatable` repository. Commit changes. **Do not delete or overwrite your configured `src/supabase-config.js`.** GitHub's upload tool should keep that file because it is omitted from this ZIP.
+5. After Vercel automatically deploys, visit `https://YOUR-DOMAIN/eatable-version.txt`. Expected: `Eatable v3.0`.
+6. Sign in as your admin account. Test `https://YOUR-DOMAIN/en/submit`, `.../en/my-recipes`, and `.../en/admin`. You may need to sign out and back in after your admin role is set.
+7. Submit a test recipe with at least two ingredient lines and two cooking steps; check it appears under My Submissions but **not** Community. Approve it under Admin; then check the Community page. Reject it again to test unpublishing. Test a normal non-admin account to ensure it cannot access moderation data.
 
-## What is included
+## Scope
 
-Bilingual (EN/IT) recipe browsing and search, Lebanese Table, 18 demo recipes, account registration and login via Supabase Auth, password recovery, cloud-saved favorites with RLS, and deployment documentation.
+**Working when configured:** authenticated text-only recipe submissions, own submission status, admin-only approval/rejection/change-request workflow, public listing and detail pages of approved community recipes; English/Italian UI; existing Eatable v2.1 search, account, and favorites.
 
-The public recipe catalog, recipe submission, and admin moderation are **not** implemented in v2.1.
+**Not yet included:** photo uploads, users revising existing submissions in place, editing approved recipes, integrating community recipe ingredients into the normalized matching engine, and saving community recipe favorites. The `changes_requested` status lets an admin leave feedback; for now, the contributor can resubmit a corrected recipe as a new submission.
+
+## Important security notes
+
+- Supabase Row Level Security (RLS) is enforced in the **database**, not only in page navigation. Only admins can update moderation status; only approved items appear in the publicly readable table.
+- The `profiles.role` field cannot be updated by normal users through the browser. Promote administrators in the privileged SQL Editor.
+- Existing authenticated sessions may need to sign out and back in before the UI refreshes the role.
+- The front-end code has passed JavaScript syntax checks and isolated browser rendering checks (with mock data); the live Supabase SQL migration and end-to-end authentication/approval flows **must still be tested on your project**.

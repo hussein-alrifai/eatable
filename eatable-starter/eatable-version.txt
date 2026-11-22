@@ -1,3 +1,2 @@
-Eatable v2.1 — account page and Supabase integration
-Deployment check: if this file is accessible at /eatable-version.txt, the updated website files are live.
-Account page: /en/account or /it/account
+Eatable v3.0
+Community submissions and admin moderation

@@ -4,6 +4,7 @@ export const isCloudConfigured = /^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test
   && /^sb_publishable_[a-zA-Z0-9_-]+$/.test(SUPABASE_PUBLISHABLE_KEY);
 
 let client;
+export const getCloudClient = () => client;
 
 export async function initializeCloud(onAuthChange) {
   if (!isCloudConfigured) return false;
