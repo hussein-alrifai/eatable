@@ -56,10 +56,10 @@ export function ingredientMatches(query){
  const value=normalize(query); if(!value)return [];
  return ingredients.filter(item=>normalize(item.name.en).includes(value)||normalize(item.name.it).includes(value)||item.id.replaceAll('_',' ').includes(value)).slice(0,8);
 }
-export function matchRecipes(selected,filters={}){
+export function matchRecipes(selected,filters={},collection=recipes){
  const set=new Set(selected);
  const hasIngredients=set.size>0;
- return recipes.filter(r=>(!filters.diet||filters.diet==='all'||filters.diet===r.diet||filters.diet==='vegetarian'&&r.diet==='vegan')&&(!filters.cuisine||filters.cuisine==='all'||r.cuisine===filters.cuisine)&&(!filters.maxTime||r.time<=Number(filters.maxTime)))
+ return collection.filter(r=>(!filters.diet||filters.diet==='all'||filters.diet===r.diet||filters.diet==='vegetarian'&&r.diet==='vegan')&&(!filters.cuisine||filters.cuisine==='all'||r.cuisine===filters.cuisine)&&(!filters.maxTime||r.time<=Number(filters.maxTime)))
  .map(recipe=>{
   const missing=recipe.ingredients.filter(i=>!set.has(i.id));
   return {...recipe,missing,matchCount:recipe.ingredients.length-missing.length,categoryScore:hasIngredients?(missing.length===0?0:missing.length<=2?1:2):2};

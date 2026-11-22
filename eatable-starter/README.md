@@ -1,37 +1,50 @@
-# Eatable v4.0 — Recipe photos and correction workflow
+# Eatable v5.0 — Unified Recipe Discovery
 
-**Incremental upgrade from Eatable v3.0.** Keeps your existing Vercel project, your already-configured `src/supabase-config.js`, authentication, favorites, submitted recipes, and admin roles. The ZIP deliberately excludes your Supabase config file.
+An incremental upgrade from Eatable v4.0. **Keep the existing Supabase project, GitHub repository, Vercel project, accounts, favorites, photos and administrator role.**
 
-## What v4 adds
+## What changed
 
-- **Real recipe photos:** Registered contributors can upload an optional image (JPEG, PNG, WebP, maximum 5 MB). Until approval, photos live in a **private** Supabase Storage bucket, accessible only to their author and admins using short-lived signed URLs.
-- **Photo publication:** When you approve a recipe, the administrator's browser copies its image to a separate public bucket, *then* saves the approval decision. Published community recipes display that public image. Only admins can write to the public bucket.
-- **Corrections:** If an admin selects **Request changes**, the contributor sees the feedback and can edit the **same submission**, replace or remove their photo, and send it back to **Pending review**. Users cannot directly approve their own submissions.
-- **Unpublication:** When an administrator rejects a previously approved recipe or requests changes, the public recipe entry is removed and the admin client attempts to delete its public photo. Previously cached public images may remain accessible temporarily.
-- **English and Italian interfaces** for the revised submission experience.
+- **One searchable catalog:** The first 18 demo/curated recipes are seeded into Supabase. Approved community recipes appear alongside them in **Explore** and, when their cuisine is Lebanese, **The Lebanese Table**.
+- **Ingredient-based search:** Approved community recipes can appear in What Can I Cook? after their ingredients are linked to the standardized ingredient vocabulary by an administrator. Until then, they're still public in Explore/Community, but they **cannot falsely appear as "Ready to Cook"**.
+- **Admin indexing:** `/en/admin-index` or `/it/admin-index` shows already-approved community recipes and lets you review their cuisine, dietary classification, and ingredient mapping **line by line**. New ingredient terms can be added to the vocabulary.
+- **Community recipe pages:** Use the same details and cooking-mode interface as the curated recipes; show the contributor's original ingredient quantities rather than inventing automatically scaled quantities.
+- **Favorites:** Members may save community recipes to the existing cloud-based cookbook. These save as `community-<uuid>` and remain compatible with the existing favorites table.
+- **Existing workflows retained:** Authentication, member submissions, image upload/revision, moderation, private photos and published photos.
 
-## Installation — keep this order
+### Important content limitations
 
-1. **Do not create a new Supabase project. Do not rerun the v2/v3 migrations.** You must already have `public.profiles`, `public.user_favorites`, `public.recipe_submissions` and `public.community_recipes` from Eatable v3.
-2. In **Supabase → SQL Editor → New query**, paste the entire `sql/03_photos_revisions.sql` file and select **Run**. Confirm success. The migration creates storage buckets, photo columns, a revision policy, and upload/download policies. Run it only once. You should see two buckets under **Storage**: `eatable-private-photos` (**Private**) and `eatable-published-photos` (**Public**).
-3. Open your existing **GitHub `eatable` repository** and upload the *contents* of this ZIP to the same folder as your deployed `index.html`, replacing matching files. **Keep `src/supabase-config.js` exactly as it is.** The new ZIP does not contain it.
-4. Commit changes and verify Vercel reports the new production deployment **Ready**.
-5. Open `https://YOUR-DOMAIN/eatable-version.txt`. It should say **Eatable v4.0**. If not, check Vercel's root directory, current GitHub commit and production deployment before changing anything else.
+- There are still **18 demonstration curated recipes**, not yet the 60–100 reviewed recipes planned for launch. This release seeds those recipes into Supabase using `ON CONFLICT DO NOTHING` so it does not overwrite later edits.
+- The review form needs one canonical ingredient for **every** submitted ingredient line. If an ingredient isn't listed, add it to the vocabulary first. The system won't silently guess that a compound or unrecognized ingredient is safe to match.
+- Dietary labels should be assigned only after checking every ingredient and known potential variants. They are not allergen guarantees.
+- Community recipe steps are still stored as free-text contributor content, with Italian fallback to the original wording where a separate translation isn't available.
+- The v5 admin screen is for indexing already-approved community recipes; recipe content/moderation remains in the existing v4 Admin screen. Curated recipe data can be edited in the Supabase Table Editor by a project administrator; a full curated content management screen is a later milestone.
 
-## Test end-to-end
+## Upgrade instructions — do these in order
 
-Use **two accounts**: a standard member and your already-promoted admin.
+1. In your existing Supabase project, go to **SQL Editor → New query**. Open `sql/04_unified_discovery.sql`, paste everything, and choose **Run**. It creates three new tables: `eatable_ingredients`, `eatable_curated_recipes`, `eatable_community_index`. It seeds **51 ingredient names** and **18 demo recipes**. It does **not** recreate v2/v3/v4 or delete any existing data. This migration is intended to be run once, after `03_photos_revisions.sql`.
+2. In the Supabase **Table Editor**, check that the three tables exist and that `eatable_curated_recipes` has 18 rows. All three have Row Level Security enabled. **Do not paste any SQL into GitHub or run the previous migrations again.**
+3. Extract `eatable-v5-unified-discovery.zip`. Upload its **contents** into the existing `eatable` GitHub repository root, where `index.html` already lives. Overwrite matching files and commit to the production branch. **KEEP your existing `src/supabase-config.js`.** The ZIP deliberately does not include that file, so your working public URL and publishable key remain intact.
+4. In Vercel → Deployments, confirm the new production deployment is **Ready**. Visit `https://YOUR-DOMAIN/eatable-version.txt` — it should say **Eatable v5.0**. Your existing Vercel Root Directory setting remains unchanged.
+5. Test `/en/recipes`, `/en/cook`, `/en/lebanese`, `/en/community`, `/en/my-kitchen`, and existing auth and admin pages.
 
-1. As the member, open `/en/submit`, submit a recipe with a photo; see **Pending review** in `/en/my-recipes`. The public `/en/community` page must not show it yet.
-2. As admin, open `/en/admin`. You should see a private image preview. Choose **Request changes** and add a note.
-3. As the member, open `/en/my-recipes` and select **Edit and resubmit**. Change the recipe, optionally replace the photo, then submit it. Its status should return to **Pending review**, without creating a duplicate recipe.
-4. As admin, **Approve and publish**. The image should now appear in `/en/community` and the community recipe detail page. Verify from a signed-out browser.
-5. As admin, reject that same recipe. It should disappear from the public page. Confirm the storage file is removed from the public bucket (depending on caching, an already loaded photo may still appear for a while).
-6. Verify a normal member cannot open the admin queue or change a recipe to `approved`, and that one member cannot see another member's private photos or drafts.
-7. Test both `/en/` and `/it/` interfaces, and desktop/mobile form layout.
+## Test approved community recipe indexing
 
-**Notes:** Uploads run from the browser: keep the tab open while uploading or approving. Image privacy is enforced in Supabase Storage policies, not just by hiding the image in the interface. The approval and photo-copy operations are not one database transaction, so a network interruption can leave an orphaned public file; the site attempts cleanup, and admins should occasionally inspect the public bucket. This is a useful MVP, not a fully hardened production media pipeline. At scale, move the photo-publication workflow into a secure server function and add automated orphan cleanup.
+1. Sign in with your current administrator account.
+2. Open `/en/admin-index`. Every approved community recipe appears here, with an "Indexed" or "Needs ingredient mapping" label.
+3. Select a recipe. Confirm the cuisine and dietary label. For **each** ingredient line, select its canonical counterpart. Suggested matches may be prefilled, but must be checked manually. Add missing ingredient terms in the vocabulary form on the admin index page.
+4. Save. Search by those ingredients under `/en/cook`. The recipe should now appear in the appropriate match group, among curated recipes.
+5. Confirm the recipe also appears under `/en/recipes` and `/en/lebanese` (for Lebanese cuisine). Open it, try cooking mode, and save it to My Kitchen.
+6. Sign out and verify its public detail is still readable, but `/en/admin-index` does not allow administrative access.
+7. Optional: reject or request changes to the published recipe with the existing moderation dashboard. It should disappear from public results; the search mapping is removed automatically when the published recipe is deleted. If reapproved, it must be reindexed.
 
-## Not yet included
+## Deployment and security notes
 
-Full drafts/autosave, multiple photos per dish, photo reordering, edits to approved recipes without unpublishing, community recipe search inside the normalized ingredient matcher, and community recipe favorites. These are subsequent milestones.
+- Never upload any **secret** Supabase key or database password to GitHub. The existing `src/supabase-config.js` contains only the browser-safe URL and publishable key.
+- New tables have RLS policies: guests may read published catalog rows, known ingredients and approved recipe index metadata; only existing admins may insert/update/delete curated recipes, the vocabulary and review mappings.
+- The migration adds a trigger to validate that **every submitted ingredient line** is mapped to a known canonical ingredient. Unapproved submissions are never indexed because the index references the public approved-recipe table.
+- Only the approved public community recipe data, not private submissions or photos, enters the searchable catalog.
+- For production launch, upgrade the demonstration content, add automated migration tests and server-side pagination, and move image publication to a secure server transaction workflow.
+
+## What's next
+
+The next major stage is an actual **Curated Recipe Editor** in the Admin dashboard, plus richer cuisine/ingredient management and building the target 60–100 professionally reviewed bilingual recipes.

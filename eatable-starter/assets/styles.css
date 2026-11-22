@@ -23,3 +23,15 @@
 .v3-card>.v4-photo{margin-bottom:15px}
 .v3-entry .v4-photo{max-width:350px}
 @media(max-width:600px){.v3-detail>.v4-photo{height:240px}.v4-photo{height:160px}}
+
+/* Eatable v5 — catalog photographs and administrator indexing */
+.catalog-photo{display:block;width:100%;height:190px;object-fit:cover;background:#f1eadc;border-radius:14px 14px 0 0}
+.detail-photo{height:100%;min-height:300px;border-radius:20px}
+.v5-summary{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:24px;color:#285943}
+.v5-summary strong{font-size:1.4em}
+.v5-vocab{border-top:1px solid #ddd5ca;margin-top:38px;padding-top:25px}
+.v5-vocab .v3-form{margin-top:18px}
+.v5-map-row{padding:10px 0;border-bottom:1px solid #e8e2d6}
+.v5-map-row label{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,1fr);align-items:center;gap:16px}
+.v5-map-row select{max-width:380px}
+@media(max-width:680px){.v5-map-row label{grid-template-columns:1fr}.catalog-photo{height:165px}.detail-photo{height:260px;min-height:260px}}

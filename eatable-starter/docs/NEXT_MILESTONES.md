@@ -1,8 +1,8 @@
-# Eatable roadmap after v4
+# Eatable — after v5
 
-1. **Production hardening:** Move media publication into a trusted server-side transaction or workflow, recover from interrupted uploads, orphaned storage objects and expired preview links.
-2. **Normalized recipe catalog:** Migrate curated demo recipes and approved community recipes into a single canonical ingredient graph so both appear in ingredient search and user favorites.
-3. **Editorial operations:** Admin recipe editing, bulk data import, translation workflow and image optimization.
-4. **Member experience:** Draft autosave, multiple photos, reviews and ratings, shopping lists.
-5. **Prelaunch:** Complete 60–100 high-quality bilingual recipes, accessibility review, legal/privacy documents, analytics and real account testing.
-6. **Restaurant integration:** Defer until core cooking platform is dependable.
+1. Admin-managed curated recipe editor with publishing status and image upload.
+2. Review and publish 60–100 bilingual curated recipes, including a dedicated Lebanese editorial collection.
+3. Expand the ingredient vocabulary, synonyms and dietary/allergen metadata. Replace the v5 simple ingredient-id mapping with a fully normalized join table if user volume grows.
+4. Improve translations of community submissions, contributor metadata and recipe search performance/pagination.
+5. Meal planning and shopping lists after core search and community moderation quality are stable.
+6. Restaurant integration remains a separate future module and is not required for the cooking platform.

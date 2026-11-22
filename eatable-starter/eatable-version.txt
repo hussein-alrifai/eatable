@@ -1,2 +1,2 @@
-Eatable v4.0
-Recipe photographs, editable corrections and admin-controlled publication
+Eatable v5.0
+Unified Supabase recipe catalog, reviewed community ingredient indexing, favorites and shared cooking pages
