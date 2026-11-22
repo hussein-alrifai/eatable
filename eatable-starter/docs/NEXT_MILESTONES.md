@@ -1,6 +1,6 @@
-# Eatable Roadmap After v7
+# Eatable Roadmap After v8
 
-- v7 (this release): administrator-curated recipe photo uploads, private draft previews and public catalog images.
-- Next: content ingestion and editorial QA — build toward 60–100 verified bilingual recipes; improve ingredient aliases, origin taxonomy and dietary guidance.
-- Later: search refinements, advanced My Kitchen inventory, shopping lists, timers, and accessibility/performance audits.
-- Restaurant integration remains separate until the core recipe experience is dependable.
+- v8: Editorial quality dashboard, manual checklists and a realistic 80-candidate content backlog.
+- Content sprint: convert the best 60–100 candidates into tested, detailed EN/IT recipes with real photographs.
+- Later: ingredient synonyms and substitutions; better optional ingredient handling; saved pantry/shopping lists; recipe SEO; accessibility and performance audits.
+- Restaurant integration: planned after the recipe platform is dependable; restaurant orders and payments remain separate from recipe data.

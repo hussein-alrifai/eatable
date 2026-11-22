@@ -1,7 +1,7 @@
-# Eatable v7 — Build Verification
+# Eatable v8 — Build verification
 
-- JavaScript module syntax checks passed across all `src/*.js` modules.
-- Editor template / translated photo prompts / private preview / public image path / image type and size validation checks passed using `tests/smoke.mjs` with a temporary local empty configuration file.
-- Static packaging verified: `index.html` and `vercel.json` at archive root; `src/supabase-config.js` intentionally excluded.
-- The graphical-browser smoke test was blocked by local environment access restrictions.
-- No Supabase project credentials were available for a live storage or Row Level Security end-to-end test. Complete the steps in `README.md` after deploying.
+- All JavaScript source modules passed `node --check`.
+- `tests/quality.mjs` passed for QA completion, missing-photo and incomplete-content flags, dashboard filters, English/Italian UI and formula-safe CSV export.
+- `tests/smoke.mjs` (v7 regression) passed with an intentionally empty temporary configuration module, removed before packaging.
+- v8 SQL migration adds a private admin-only review table and resets stale attestations when recipe data/images change. SQL has been reviewed statically but not run against a live Supabase project in this environment.
+- A live browser/authorization/end-to-end Supabase test must be carried out after installation.
