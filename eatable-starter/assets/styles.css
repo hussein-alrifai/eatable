@@ -142,3 +142,50 @@
 .v11-item-actions{display:flex;gap:7px;flex-wrap:wrap;flex-shrink:0}
 @media(max-width:780px){.v11-shopping-item{flex-direction:column;align-items:stretch}.v11-item-actions{width:100%}.v11-item-actions .btn{flex:1}}
 @media(max-width:540px){.v11-stats>div{padding:12px 10px}.v11-stats strong{font-size:1.7rem}.v11-stats span{font-size:.72rem}.v11-entry{flex-direction:column}.v11-entry .v11-input{min-width:0}.v11-entry .btn{width:100%}.v11-panel{padding:16px}.v11-item-actions{flex-direction:column}}
+/* Eatable v12 — Mobile-first cooking mode; isolated from admin/recipe page styles. */
+.v12-cook{background:#faf8f3;overscroll-behavior:contain}
+.v12-cook-header{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.v12-cook-brand{min-width:0;display:flex;align-items:center;gap:12px;font-weight:800;color:var(--pine)}
+.v12-brand-icon{display:grid;place-items:center;flex-shrink:0;width:34px;height:34px;background:var(--pine);color:#fff;border-radius:11px;font-size:1.4rem}
+.v12-recipe-name{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:48vw}
+.v12-cook-main{padding:20px 0 28px;overflow:auto;overscroll-behavior:contain;justify-content:flex-start;min-height:0}
+.v12-tools{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.v12-tools .btn{padding:10px 13px;font-size:.88rem}
+.v12-progress{height:9px;flex-shrink:0}
+.v12-step-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px;color:var(--wine);font-size:.88rem;font-weight:800}
+.v12-step-meta label{font-size:.81rem;color:var(--pine);display:flex;gap:9px;align-items:center}
+.v12-step-meta select{color:var(--ink);border:1px solid #c3d1c5;background:#fff;padding:7px 10px;border-radius:10px;max-width:125px}
+.v12-cook-main h1{font-size:clamp(2.1rem,5vw,3.4rem);margin:18px 0 14px;line-height:1.12}
+.v12-step-body{font-size:clamp(1.22rem,2.4vw,1.66rem);line-height:1.75;max-width:68ch;white-space:pre-wrap;overflow-wrap:anywhere}
+.v12-large-text .v12-step-body{font-size:clamp(1.55rem,3.5vw,2.15rem);line-height:1.65}
+.v12-local-hint{font-size:.75rem!important;color:var(--muted);line-height:1.5!important;margin-top:25px}
+.v12-ingredients-panel{margin-top:24px;padding:20px 22px;background:#fff;border:1px solid var(--line);border-radius:17px}
+.v12-ingredients-panel[hidden]{display:none}
+.v12-ingredients-panel h2{font-size:1.35rem;margin:0 0 10px}
+.v12-ingredient-list{max-height:220px;overflow:auto;gap:3px}
+.v12-ingredient-list li{list-style:none}
+.v12-ingredient-list span{font-size:.94rem}
+.v12-serving{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.v12-serving button{border:1px solid #cbd9d0;background:#fafbf8;color:var(--pine);width:38px;height:38px;border-radius:10px;font-weight:800}
+.v12-footer-wrap{background:#faf8f3;border-top:1px solid var(--line);box-shadow:0 -8px 30px rgba(32,44,33,.035);padding-bottom:env(safe-area-inset-bottom,0px)}
+.v12-cook .cook-footer{border:0;align-items:center;padding:15px 0}
+.v12-cook .cook-footer .btn{min-width:150px}
+.v12-cook :focus-visible{outline:3px solid #81b597;outline-offset:3px}
+@media(max-width:620px){
+ .v12-cook .cook-top{height:68px;flex-shrink:0}
+ .v12-cook .cook-inner{width:calc(100% - 32px)}
+ .v12-recipe-name{max-width:48vw;font-size:.88rem}
+ .v12-cook-header .btn{padding:8px 11px;min-height:39px}
+ .v12-tools{margin-bottom:20px}
+ .v12-cook-main{padding-top:18px;padding-bottom:20px}
+ .v12-step-meta{align-items:flex-start}
+ .v12-step-meta label{gap:5px;flex-wrap:wrap;justify-content:flex-end}
+ .v12-cook-main h1{font-size:clamp(2rem,10vw,2.7rem);margin:18px 0}
+ .v12-step-body{font-size:1.3rem;line-height:1.65}
+ .v12-large-text .v12-step-body{font-size:1.65rem}
+ .v12-ingredients-panel{padding:16px}
+ .v12-cook .cook-footer{gap:9px;padding:12px 0}
+ .v12-cook .cook-footer .btn{min-width:0;flex:1;padding:14px 10px;min-height:52px}
+}
+@media(max-height:520px){.v12-cook .cook-top{height:54px}.v12-cook-main{padding-top:10px}.v12-tools{margin-bottom:12px}.v12-cook-main h1{margin:10px 0}.v12-cook .cook-footer{padding:8px 0}}
+@media(prefers-reduced-motion:reduce){.v12-cook .progress span{transition:none}}
