@@ -100,3 +100,18 @@
 .v9-results{margin:0}
 .v9-results ul{padding-left:22px;overflow-wrap:anywhere}
 @media(max-width:650px){.v9-wrap{gap:15px}.v9-row{padding:14px 0}.v9-preview .v3-actions{display:flex;flex-direction:column;align-items:stretch}.v9-preview .v3-actions>*{text-align:center}}
+
+/* v10: explainable, quantity-aware-by-disclaimer ingredient discovery */
+.v10-coverage{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px;font-size:.8rem;color:#415d4c}
+.v10-coverage strong{font-weight:750;color:#285943}
+.v10-meter{height:5px;border-radius:9px;background:#e6e8df;overflow:hidden;margin-top:5px}
+.v10-meter>span{display:block;background:#285943;height:100%;border-radius:9px}
+.v10-swaps{font-size:.78rem;line-height:1.5;margin-top:8px;padding:8px 10px;border-radius:8px;background:#f5eee2;color:#594b37}
+.v10-option{border-top:1px solid #e0ded5;margin-top:16px;padding-top:15px}
+.v10-check{display:flex;align-items:center;gap:9px;font-size:.86rem;cursor:pointer;line-height:1.45}
+.v10-check input{accent-color:#285943;width:17px;height:17px;flex:none}
+.v10-disclaimer{font-size:.78rem;line-height:1.5;color:#706c64;margin:5px 0 12px}
+.v10-detail-swaps{margin-top:20px;padding:15px;border:1px solid #decdb4;border-radius:10px;background:#f8f1e5;color:#564b40;font-size:.83rem}
+.v10-detail-swaps ul{padding-left:20px;margin:10px 0}
+.v10-detail-swaps li{margin-bottom:8px}
+.v10-detail-swaps p{font-size:.75rem;line-height:1.5;margin:6px 0 0}
