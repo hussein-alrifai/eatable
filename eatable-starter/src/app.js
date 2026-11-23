@@ -7,7 +7,7 @@ import {editorText,ingredientRow,stepRow,curatedListHtml,curatedEditorHtml,seria
 import {curatedFromDb,communityFromDb,communityKey,mergeVocabulary,suggestCanonicalIngredient} from './discovery.js';
 import {getPublished,getMySubmissions,getAdminSubmissions,getIsAdmin,submitCommunityRecipe,reviseCommunityRecipe,moderateRecipe} from './community-cloud.js';
 import {uploadPrivatePhoto,removePrivatePhoto,getPrivatePhotoUrl,getPublicPhotoUrl,publishPhoto,removePublicPhoto,validatePhoto} from './photo-cloud.js';
-import {isCloudConfigured,initializeCloud,signIn,signUp,signOut,requestPasswordReset,updatePassword,readFavorites,addFavorite,removeFavorite} from './cloud.js';
+import {isCloudConfigured,getCloudClient,initializeCloud,signIn,signUp,signOut,requestPasswordReset,updatePassword,readFavorites,addFavorite,removeFavorite} from './cloud.js';
 import { recipes,ingredients,ingredientById,cuisines,getRecipe,getCuisine,ingredientMatches,matchRecipes,substitutionFor,normalize } from './recipes.js';
 import {requiredMissing,shoppingLinesForRecipe,canonicalIngredientId} from './kitchen.js';
 import {cookText,clampCookingStep,readCookingProgress,writeCookingProgress,clearCookingProgress} from './cooking-mode.js';
