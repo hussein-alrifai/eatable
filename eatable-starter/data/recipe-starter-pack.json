@@ -1,0 +1,552 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "slug": "mujaddara-rice-lentils",
+      "title_en": "Mujaddara with rice and lentils",
+      "title_it": "Mujaddara con riso e lenticchie",
+      "description_en": "A Lebanese-style lentil and rice dish topped with deeply caramelized onions.",
+      "description_it": "Un piatto libanese di riso e lenticchie con cipolle lentamente caramellate.",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "lentils",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "rice",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 950,
+          "unit": "ml"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse the lentils and simmer in part of the water for about 15–20 minutes until almost tender.",
+          "it": "Sciacqua le lenticchie e falle sobbollire in parte dell’acqua per circa 15–20 minuti, finché sono quasi tenere."
+        },
+        {
+          "en": "Slice the onions thinly. Slowly cook them in olive oil, stirring regularly, until deeply golden, about 25–30 minutes.",
+          "it": "Affetta finemente le cipolle. Cuocile lentamente nell’olio, mescolando spesso, fino a una doratura intensa, per circa 25–30 minuti."
+        },
+        {
+          "en": "Add rinsed rice, cumin, salt and enough remaining water to the lentils. Cover and simmer until the rice is tender; add small splashes of water if needed.",
+          "it": "Aggiungi alle lenticchie il riso sciacquato, il cumino, il sale e l’acqua rimasta necessaria. Copri e cuoci finché il riso è tenero, aggiungendo poca acqua se serve."
+        },
+        {
+          "en": "Rest off the heat for five minutes, fluff with a fork and serve topped with the caramelized onions.",
+          "it": "Lascia riposare cinque minuti fuori dal fuoco, sgrana con una forchetta e servi con le cipolle caramellate."
+        }
+      ],
+      "theme": "ochre"
+    },
+    {
+      "slug": "balila-warm-chickpeas",
+      "title_en": "Balila — warm Lebanese chickpeas",
+      "title_it": "Balila — ceci caldi alla libanese",
+      "description_en": "Warm chickpeas gently seasoned with lemon, garlic, cumin and olive oil.",
+      "description_it": "Ceci caldi conditi delicatamente con limone, aglio, cumino e olio d’oliva.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "parsley",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 100,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Use cooked or canned chickpeas. If canned, drain and rinse well.",
+          "it": "Usa ceci già cotti o in scatola. Se in scatola, scolali e sciacquali bene."
+        },
+        {
+          "en": "Warm the chickpeas with the water in a saucepan over low heat for 5–8 minutes.",
+          "it": "Scalda i ceci con l’acqua in un pentolino a fuoco basso per 5–8 minuti."
+        },
+        {
+          "en": "Mash the garlic with salt, then mix in cumin, lemon juice and olive oil.",
+          "it": "Schiaccia l’aglio con il sale, poi aggiungi cumino, succo di limone e olio d’oliva."
+        },
+        {
+          "en": "Drain the chickpeas lightly, toss with the dressing and finish with chopped parsley. Serve warm.",
+          "it": "Scola leggermente i ceci, condiscili con la salsa e completa con il prezzemolo tritato. Servi caldo."
+        }
+      ],
+      "theme": "gold"
+    },
+    {
+      "slug": "laban-bi-khiyar",
+      "title_en": "Laban bi Khiyar — yogurt and cucumber",
+      "title_it": "Laban bi Khiyar — yogurt e cetriolo",
+      "description_en": "A refreshing Lebanese yogurt and cucumber mezze with garlic and fresh mint.",
+      "description_it": "Un fresco mezze libanese a base di yogurt e cetriolo con aglio e menta.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "yogurt",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "cucumber",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "mint",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 15,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Wash the cucumbers. Dice them finely or grate them; squeeze out excess liquid if using a grater.",
+          "it": "Lava i cetrioli. Tagliali a dadini piccoli o grattugiali; se li grattugi, elimina il liquido in eccesso."
+        },
+        {
+          "en": "Crush the garlic and finely chop the mint leaves.",
+          "it": "Schiaccia l’aglio e trita finemente le foglie di menta."
+        },
+        {
+          "en": "Stir the cucumber, garlic, mint and salt into the plain yogurt until evenly combined.",
+          "it": "Mescola cetriolo, aglio, menta e sale nello yogurt bianco fino a ottenere un composto omogeneo."
+        },
+        {
+          "en": "Chill until serving. Finish with olive oil immediately before bringing to the table.",
+          "it": "Conserva in frigorifero fino al momento di servire. Completa con olio d’oliva appena prima di portare in tavola."
+        }
+      ],
+      "theme": "green"
+    },
+    {
+      "slug": "salatet-banadoura",
+      "title_en": "Salatet Banadoura — Lebanese tomato salad",
+      "title_it": "Salatet Banadoura — insalata libanese di pomodori",
+      "description_en": "A simple chopped tomato salad with parsley, onion, lemon and olive oil.",
+      "description_it": "Una semplice insalata di pomodori con prezzemolo, cipolla, limone e olio d’oliva.",
+      "cuisine": "Lebanese",
+      "category": "Salad",
+      "diet": "vegan",
+      "prep_minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Wash and chop the tomatoes into small pieces, keeping their juices.",
+          "it": "Lava e taglia i pomodori a pezzetti, conservandone il succo."
+        },
+        {
+          "en": "Finely dice the onion and chop the parsley.",
+          "it": "Taglia finemente la cipolla e trita il prezzemolo."
+        },
+        {
+          "en": "Mix the vegetables with lemon juice, olive oil and salt just before serving.",
+          "it": "Mescola le verdure con succo di limone, olio d’oliva e sale poco prima di servire."
+        },
+        {
+          "en": "Taste and adjust lemon or salt. Serve immediately with bread or as a side dish.",
+          "it": "Assaggia e regola limone o sale. Servi subito con il pane o come contorno."
+        }
+      ],
+      "theme": "tomato"
+    },
+    {
+      "slug": "pasta-e-ceci-soup",
+      "title_en": "Pasta e ceci — Italian chickpea pasta",
+      "title_it": "Pasta e ceci — pasta e ceci italiana",
+      "description_en": "A comforting Italian one-pot pasta with chickpeas, tomatoes and herbs.",
+      "description_it": "Un piatto italiano confortante di pasta e ceci con pomodoro ed erbe aromatiche.",
+      "cuisine": "Italian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "broth",
+          "qty": 750,
+          "unit": "ml"
+        },
+        {
+          "id": "parsley",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Drain the cooked chickpeas and chop the tomatoes and garlic.",
+          "it": "Scola i ceci già cotti e trita pomodori e aglio."
+        },
+        {
+          "en": "Warm the olive oil in a pot and gently cook the garlic for about one minute without browning it.",
+          "it": "Scalda l’olio in una pentola e cuoci dolcemente l’aglio per circa un minuto, senza farlo dorare."
+        },
+        {
+          "en": "Add tomatoes, chickpeas and broth. Simmer for ten minutes; mash a small portion of chickpeas for a thicker texture.",
+          "it": "Aggiungi pomodori, ceci e brodo. Fai sobbollire dieci minuti; schiaccia una parte dei ceci per una consistenza più densa."
+        },
+        {
+          "en": "Add pasta and cook until al dente, stirring and adding water if it becomes too thick.",
+          "it": "Aggiungi la pasta e cuoci al dente, mescolando e aggiungendo acqua se il composto diventa troppo denso."
+        },
+        {
+          "en": "Season with salt, add chopped parsley and serve hot.",
+          "it": "Regola di sale, aggiungi prezzemolo tritato e servi caldo."
+        }
+      ],
+      "theme": "tomato"
+    },
+    {
+      "slug": "pollo-al-limone",
+      "title_en": "Pollo al limone — lemon chicken",
+      "title_it": "Pollo al limone",
+      "description_en": "Italian-style chicken with a bright lemon-garlic pan sauce.",
+      "description_it": "Pollo in stile italiano con una salsa in padella al limone e aglio.",
+      "cuisine": "Italian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "butter",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 0.75,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut the chicken into evenly sized pieces and lightly season with salt.",
+          "it": "Taglia il pollo in pezzi di dimensioni uniformi e condisci leggermente con sale."
+        },
+        {
+          "en": "Heat olive oil in a wide pan and brown the chicken on both sides.",
+          "it": "Scalda l’olio in una padella larga e fai dorare il pollo su entrambi i lati."
+        },
+        {
+          "en": "Add garlic and a splash of water, cover and cook until the chicken reaches 74°C at the thickest part.",
+          "it": "Aggiungi aglio e un goccio d’acqua, copri e cuoci finché il pollo raggiunge 74 °C nella parte più spessa."
+        },
+        {
+          "en": "Remove from the heat and stir in lemon juice and butter to make a light sauce.",
+          "it": "Togli dal fuoco e incorpora succo di limone e burro per ottenere una salsa leggera."
+        },
+        {
+          "en": "Finish with parsley and serve while hot.",
+          "it": "Completa con il prezzemolo e servi ben caldo."
+        }
+      ],
+      "theme": "gold"
+    },
+    {
+      "slug": "champinones-al-ajillo",
+      "title_en": "Champiñones al ajillo — garlic mushrooms",
+      "title_it": "Champiñones al ajillo — funghi all’aglio",
+      "description_en": "Spanish-style sautéed mushrooms with garlic, parsley and a little chili.",
+      "description_it": "Funghi saltati alla spagnola con aglio, prezzemolo e un tocco di peperoncino.",
+      "cuisine": "Spanish",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "mushrooms",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 40,
+          "unit": "ml"
+        },
+        {
+          "id": "chili",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Clean the mushrooms and slice larger ones so the pieces are evenly sized.",
+          "it": "Pulisci i funghi e taglia quelli più grandi per ottenere pezzi uniformi."
+        },
+        {
+          "en": "Heat olive oil over medium-high heat and sauté mushrooms in batches until their moisture evaporates and they brown.",
+          "it": "Scalda l’olio a fuoco medio-alto e salta i funghi in più riprese finché l’acqua evapora e iniziano a dorare."
+        },
+        {
+          "en": "Lower the heat, add sliced garlic and a little chopped chili, and cook briefly without burning the garlic.",
+          "it": "Abbassa il fuoco, aggiungi aglio a fettine e poco peperoncino tritato e cuoci brevemente senza bruciare l’aglio."
+        },
+        {
+          "en": "Season with salt, parsley and a squeeze of lemon. Serve immediately.",
+          "it": "Condisci con sale, prezzemolo e una spruzzata di limone. Servi subito."
+        }
+      ],
+      "theme": "ochre"
+    },
+    {
+      "slug": "greek-lemon-potatoes",
+      "title_en": "Greek-style lemon roasted potatoes",
+      "title_it": "Patate arrosto al limone in stile greco",
+      "description_en": "Oven-roasted potatoes with lemon, garlic and olive oil, inspired by Greek home cooking.",
+      "description_it": "Patate al forno con limone, aglio e olio d’oliva, ispirate alla cucina casalinga greca.",
+      "cuisine": "Greek",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 70,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "broth",
+          "qty": 150,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Preheat the oven to 210°C. Wash and cut the potatoes into evenly sized wedges.",
+          "it": "Preriscalda il forno a 210 °C. Lava e taglia le patate a spicchi uniformi."
+        },
+        {
+          "en": "Mix lemon juice, olive oil, crushed garlic, broth and salt in a baking dish. Toss with the potatoes.",
+          "it": "Mescola succo di limone, olio, aglio schiacciato, brodo e sale in una teglia. Condisci le patate."
+        },
+        {
+          "en": "Roast for about 50–60 minutes, turning once and adding a little water if the tray dries before the potatoes are tender.",
+          "it": "Cuoci in forno per circa 50–60 minuti, girando una volta e aggiungendo poca acqua se il fondo si asciuga prima che le patate siano tenere."
+        },
+        {
+          "en": "Serve when the centers are soft and the edges lightly browned.",
+          "it": "Servi quando l’interno è morbido e i bordi sono leggermente dorati."
+        }
+      ],
+      "theme": "gold"
+    }
+  ]
+}

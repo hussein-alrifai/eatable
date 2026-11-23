@@ -1,7 +1,8 @@
 import { t } from './i18n.js';
+import {parseRecipeImport,importPageHtml,importText} from './bulk-import.js';
 import {getCuratedReviews,upsertCuratedReview} from './quality-cloud.js';
 import {qualityText,reviewFields,qualityDashboardHtml,qualityReviewHtml,qualityCsv} from './quality.js';
-import {getCuratedCatalog,getIngredientVocabulary,getCommunityIndexes,saveCommunityIndex,addIngredient,getAdminCuratedCatalog,saveCuratedRecipe,getAdminCuratedMedia,saveAdminCuratedMedia} from './catalog-cloud.js';
+import {getCuratedCatalog,getIngredientVocabulary,getCommunityIndexes,saveCommunityIndex,addIngredient,getAdminCuratedCatalog,saveCuratedRecipe,getAdminCuratedMedia,saveAdminCuratedMedia,insertCuratedDraft} from './catalog-cloud.js';
 import {editorText,ingredientRow,stepRow,curatedListHtml,curatedEditorHtml,serializeCurated,validateCurated} from './curated-editor.js';
 import {curatedFromDb,communityFromDb,communityKey,mergeVocabulary,suggestCanonicalIngredient} from './discovery.js';
 import {getPublished,getMySubmissions,getAdminSubmissions,getIsAdmin,submitCommunityRecipe,reviseCommunityRecipe,moderateRecipe} from './community-cloud.js';
@@ -11,7 +12,7 @@ import { recipes,ingredients,ingredientById,cuisines,getRecipe,getCuisine,ingred
 
 const app=document.getElementById('app');
 const load=(key,fallback)=>{try{const v=JSON.parse(localStorage.getItem(key));return Array.isArray(v)?v:fallback}catch{return fallback}};
-const state={selected:load('eatable:ingredients',[]).filter(id=>ingredientById[id]),favorites:load('eatable:favorites',[]),user:null,cloudStatus:isCloudConfigured?'connecting':'demo',cloudError:'',passwordRecovery:false,authView:'signin',authBusy:false,authRevision:0,menuOpen:false,filters:{diet:'all',cuisine:'all',maxTime:''},exploreQuery:'',exploreCuisine:'all',servings:4,checked:new Set(),cookingStep:null,publicRecipes:[],catalog:isCloudConfigured?[]:[...recipes],communityIndexes:[],catalogLoaded:false,catalogError:'',mySubmissions:[],adminSubmissions:[],isAdmin:false,communityBusy:false,communityError:'',communityLoaded:false,photoUrls:{},curatedAdminRows:[],curatedAdminLoaded:false,curatedBusy:false,curatedImagePreviewUrl:null,qualityRows:[],qualityLoaded:false,qualityError:'',qualityBusy:false,qualityFilter:'needs-review'};
+const state={selected:load('eatable:ingredients',[]).filter(id=>ingredientById[id]),favorites:load('eatable:favorites',[]),user:null,cloudStatus:isCloudConfigured?'connecting':'demo',cloudError:'',passwordRecovery:false,authView:'signin',authBusy:false,authRevision:0,menuOpen:false,filters:{diet:'all',cuisine:'all',maxTime:''},exploreQuery:'',exploreCuisine:'all',servings:4,checked:new Set(),cookingStep:null,publicRecipes:[],catalog:isCloudConfigured?[]:[...recipes],communityIndexes:[],catalogLoaded:false,catalogError:'',mySubmissions:[],adminSubmissions:[],isAdmin:false,communityBusy:false,communityError:'',communityLoaded:false,photoUrls:{},curatedAdminRows:[],curatedAdminLoaded:false,curatedBusy:false,curatedImagePreviewUrl:null,qualityRows:[],qualityLoaded:false,qualityError:'',qualityBusy:false,qualityFilter:'needs-review',bulkRaw:'',bulkRows:[],bulkSelected:new Set(),bulkBusy:false,bulkResults:null};
 const save=()=>{try{localStorage.setItem('eatable:ingredients',JSON.stringify(state.selected));localStorage.setItem('eatable:favorites',JSON.stringify(state.user?load('eatable:favorites',[]):state.favorites))}catch{}};
 const accountText={
   en:{account:'Account',signIn:'Sign in',signUp:'Create account',signOut:'Sign out',email:'Email',password:'Password',displayName:'Display name',forgot:'Forgot password?',reset:'Reset password',sendReset:'Send reset email',changePassword:'Choose a new password',updatePassword:'Update password',checkEmail:'Check your email for the confirmation or reset link.',loginSuccess:'Signed in successfully.',logoutSuccess:'Signed out.',cloudSaveNote:'Sign in to save recipes to your account across devices.',demoSaveNote:'Demo mode: favorites are stored in this browser only.',cloudConnecting:'Connecting to Supabase…',cloudNotConfigured:'Your Supabase connection has not been configured yet. Follow the setup guide in the ZIP.',cloudFailed:'Could not connect to Supabase. Check the project URL, publishable key and database setup.',signInToSave:'Sign in to save recipes across devices.',myAccount:'My account',signedInAs:'Signed in as',authIntro:'Save your favorite dishes and access them on different devices.',goToCookbook:'Open my cookbook',pwMin:'Use at least 8 characters for your password.',submit:'Continue'},
@@ -19,6 +20,7 @@ const accountText={
 };
 const at=key=>accountText[language()]?.[key]||accountText.en[key]||key;
 const qt=key=>qualityText(language(),key);
+const bt=key=>importText(language(),key);
 const saveNote=()=>at(isCloudConfigured?'cloudSaveNote':'demoSaveNote');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const language=()=>window.location.pathname.startsWith('/it')?'it':'en';
@@ -35,7 +37,7 @@ const foodImage=(r,type='card')=>{
 const dishLink=r=>r.source==='community'?path(`community/${r.communityId}`):path(`recipes/${r.id}`);
 const dietBadge=r=>r.diet==='vegan'?`<span class="pill">${tr('vegan')}</span>`:r.diet==='vegetarian'?`<span class="pill">${tr('vegetarian')}</span>`:'';
 const cuisineLabel=r=>`${getCuisine(r.cuisine)?.flag||'🌍'} ${label(getCuisine(r.cuisine)?.name||r.cuisine)}`;
-function header(active){const nav=[['',tr('home'),'home'],['cook',tr('cook'),'cook'],['recipes',tr('explore'),'explore'],['lebanese',tr('lebanese'),'lebanese'],['community',tr('community'),'community']];return `<div class="topbar">${esc(tr('footer'))} &nbsp; · &nbsp; ${esc(tr('status'))}</div><header class="site-header"><div class="container nav-wrap">${link('',`<span class="logo-icon">e</span> Eatable`,'logo')}<nav class="nav-links" aria-label="Main navigation">${nav.map(([route,title,id])=>link(route,esc(title),active===id?'active':'')).join('')}</nav><div class="nav-actions"><button class="lang-switch" data-action="language" aria-label="${esc(tr('lang'))}">${language().toUpperCase()} ▾</button>${link('my-kitchen','♡','icon-button')}${state.isAdmin?link('admin','Admin','account-link'):''}${link('account',state.user?'● '+esc(state.user.email||at('myAccount')):esc(at('signIn')),'account-link')}<button class="icon-button mobile-menu-button" data-action="menu" aria-label="${tr('menu')}" aria-expanded="${state.menuOpen}">☰</button></div></div>${state.menuOpen?`<nav class="mobile-panel" aria-label="Mobile menu">${nav.map(([route,title])=>link(route,esc(title))).join('')}${link('my-kitchen',esc(tr('myCookbook')))}${link('submit',ct('contribute'))}${state.user?link('my-recipes',ct('my')):''}${state.isAdmin?link('admin',ct('admin'))+link('admin-index',ct('indexAdmin'))+link('admin-curated',editorText(language(),'hub'))+link('admin-quality',qt('heading')):''}${link('account',esc(at('account')))}</nav>`:''}</header>`}
+function header(active){const nav=[['',tr('home'),'home'],['cook',tr('cook'),'cook'],['recipes',tr('explore'),'explore'],['lebanese',tr('lebanese'),'lebanese'],['community',tr('community'),'community']];return `<div class="topbar">${esc(tr('footer'))} &nbsp; · &nbsp; ${esc(tr('status'))}</div><header class="site-header"><div class="container nav-wrap">${link('',`<span class="logo-icon">e</span> Eatable`,'logo')}<nav class="nav-links" aria-label="Main navigation">${nav.map(([route,title,id])=>link(route,esc(title),active===id?'active':'')).join('')}</nav><div class="nav-actions"><button class="lang-switch" data-action="language" aria-label="${esc(tr('lang'))}">${language().toUpperCase()} ▾</button>${link('my-kitchen','♡','icon-button')}${state.isAdmin?link('admin','Admin','account-link'):''}${link('account',state.user?'● '+esc(state.user.email||at('myAccount')):esc(at('signIn')),'account-link')}<button class="icon-button mobile-menu-button" data-action="menu" aria-label="${tr('menu')}" aria-expanded="${state.menuOpen}">☰</button></div></div>${state.menuOpen?`<nav class="mobile-panel" aria-label="Mobile menu">${nav.map(([route,title])=>link(route,esc(title))).join('')}${link('my-kitchen',esc(tr('myCookbook')))}${link('submit',ct('contribute'))}${state.user?link('my-recipes',ct('my')):''}${state.isAdmin?link('admin',ct('admin'))+link('admin-index',ct('indexAdmin'))+link('admin-curated',editorText(language(),'hub'))+link('admin-quality',qt('heading'))+link('admin-import',bt('heading')):''}${link('account',esc(at('account')))}</nav>`:''}</header>`}
 function footer(){return `<footer class="footer"><div class="container"><div class="footer-flex"><div>${link('',`<span class="logo-icon">e</span> Eatable`,'logo')}<p class="muted small" style="margin-top:9px">${tr('footer')}</p></div><div class="footer-links">${link('cook',tr('cook'))}${link('recipes',tr('explore'))}${link('lebanese',tr('lebanese'))}${link('community',tr('community'))}</div></div><div class="footer-bottom"><span>${tr('rights')}</span><span>${tr('powered')}</span></div></div></footer>`}
 function mobileTabs(active){return `<nav class="mobile-tabs" aria-label="Mobile tabs">${[['','⌂',tr('home'),'home'],['cook','♨',tr('cook'),'cook'],['recipes','◈',tr('explore'),'explore'],['lebanese','♧',tr('lebanese'),'lebanese']].map(([route,icon,title,id])=>link(route,`<span aria-hidden="true">${icon}</span>${esc(title)}`,`mobile-tab ${active===id?'active':''}`)).join('')}</nav>`}
 function shell(body,active){return `${header(active)}<main id="main">${body}</main>${footer()}${mobileTabs(active)}`}
@@ -94,7 +96,7 @@ function submitPage(editId=null){
  </form>`}</div>`,'community')
 }
 function mySubmissions(){return shell(`${pageHero('Eatable',ct('my'),ct('intro'))}<div class="container section-pad">${!state.user?link('account',at('signIn'),'btn btn-primary'):state.mySubmissions.length?`<div class="v3-list">${state.mySubmissions.map(r=>`<article class="v3-entry"><div class="inline-row"><h3>${submittedTitle(r)}</h3><span class="pill">${esc(prettyStatus(r.status))}</span></div><p>${submittedDescription(r)}</p><p class="muted small">${esc(r.origin)} · ${new Date(r.created_at).toLocaleDateString(language())}</p>${r.photo_path?`<div class="v4-preview">${photoMarkup(r)}<p class="muted small">${ct('photoPending')}</p></div>`:''}${r.moderation_note?`<p><strong>${ct('note')}:</strong> ${esc(r.moderation_note)}</p>`:''}${r.status==='changes_requested'?link('edit/'+r.id,ct('revise'),'btn btn-primary'):''}</article>`).join('')}</div>`:`<div class="empty"><h3>${ct('noMine')}</h3>${link('submit',ct('contribute'),'btn btn-primary space-top')}</div>`}</div>`,'community')}
-function adminPage(){if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}<div class="container section-pad">${link('community',tr('community'),'btn btn-outline')}</div>`,'community');return shell(`${pageHero('Eatable · Admin',ct('queue'),ct('intro'))}<div class="container section-pad"><div class="v3-actions">${link('admin-index',itx('indexAdmin'),'btn btn-outline')}${link('admin-curated',editorText(language(),'hub'),'btn btn-primary')}${link('admin-quality',qt('heading'),'btn btn-outline')}</div>${state.adminSubmissions.length?`<div class="v3-list">${state.adminSubmissions.map(r=>`<article class="v3-entry"><div class="inline-row"><h3>${submittedTitle(r)}</h3><span class="pill">${esc(prettyStatus(r.status))}</span></div><p>${submittedDescription(r)}</p><p><strong>${ct('origin')}:</strong> ${esc(r.origin)} · ${r.prep_minutes} ${tr('minutes')}</p>${r.photo_path?`<div class="v4-preview">${photoMarkup(r)}</div>`:''}<details><summary>${ct('preview')}</summary><h4>${ct('ingredients')}</h4><ol>${lines(r.ingredients).map(v=>`<li>${esc(v)}</li>`).join('')}</ol><h4>${ct('steps')}</h4><ol>${lines(r.steps).map(v=>`<li>${esc(v)}</li>`).join('')}</ol></details><label>${ct('reviewNote')}<textarea id="moderation-note-${r.id}" class="input" rows="2" maxlength="2000">${esc(r.moderation_note||'')}</textarea></label><div class="v3-actions">${r.status!=='approved'?`<button class="btn btn-primary" data-action="moderate" data-id="${r.id}" data-status="approved">${ct('approve')}</button>`:''}${r.status!=='changes_requested'?`<button class="btn btn-outline" data-action="moderate" data-id="${r.id}" data-status="changes_requested">${ct('request')}</button>`:''}<button class="btn btn-light" data-action="moderate" data-id="${r.id}" data-status="rejected">${ct('reject')}</button></div></article>`).join('')}</div>`:`<div class="empty">${ct('none')}</div>`}</div>`,'community')}
+function adminPage(){if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}<div class="container section-pad">${link('community',tr('community'),'btn btn-outline')}</div>`,'community');return shell(`${pageHero('Eatable · Admin',ct('queue'),ct('intro'))}<div class="container section-pad"><div class="v3-actions">${link('admin-index',itx('indexAdmin'),'btn btn-outline')}${link('admin-curated',editorText(language(),'hub'),'btn btn-primary')}${link('admin-quality',qt('heading'),'btn btn-outline')}${link('admin-import',bt('heading'),'btn btn-outline')}</div>${state.adminSubmissions.length?`<div class="v3-list">${state.adminSubmissions.map(r=>`<article class="v3-entry"><div class="inline-row"><h3>${submittedTitle(r)}</h3><span class="pill">${esc(prettyStatus(r.status))}</span></div><p>${submittedDescription(r)}</p><p><strong>${ct('origin')}:</strong> ${esc(r.origin)} · ${r.prep_minutes} ${tr('minutes')}</p>${r.photo_path?`<div class="v4-preview">${photoMarkup(r)}</div>`:''}<details><summary>${ct('preview')}</summary><h4>${ct('ingredients')}</h4><ol>${lines(r.ingredients).map(v=>`<li>${esc(v)}</li>`).join('')}</ol><h4>${ct('steps')}</h4><ol>${lines(r.steps).map(v=>`<li>${esc(v)}</li>`).join('')}</ol></details><label>${ct('reviewNote')}<textarea id="moderation-note-${r.id}" class="input" rows="2" maxlength="2000">${esc(r.moderation_note||'')}</textarea></label><div class="v3-actions">${r.status!=='approved'?`<button class="btn btn-primary" data-action="moderate" data-id="${r.id}" data-status="approved">${ct('approve')}</button>`:''}${r.status!=='changes_requested'?`<button class="btn btn-outline" data-action="moderate" data-id="${r.id}" data-status="changes_requested">${ct('request')}</button>`:''}<button class="btn btn-light" data-action="moderate" data-id="${r.id}" data-status="rejected">${ct('reject')}</button></div></article>`).join('')}</div>`:`<div class="empty">${ct('none')}</div>`}</div>`,'community')}
 async function refreshCommunity(){
  if(!isCloudConfigured)return;
  const [published,curated,indexed,vocabulary]=await Promise.all([getPublished(),getCuratedCatalog(),getCommunityIndexes(),getIngredientVocabulary()]);
@@ -154,7 +156,7 @@ function adminIndexEditor(id){
 function curatedAdminPage(){
  if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}`,'community');
  const title=editorText(language(),'hub');
- return shell(`${pageHero('Eatable · Admin',title,editorText(language(),'intro'))}<div class="container section-pad"><div class="v3-actions">${link('admin-quality',qt('heading'),'btn btn-outline')}</div>${!state.curatedAdminLoaded?`<p>${ct('loading')}</p>`:curatedListHtml({lang:language(),recipes:state.curatedAdminRows,link})}</div>`,'community');
+ return shell(`${pageHero('Eatable · Admin',title,editorText(language(),'intro'))}<div class="container section-pad"><div class="v3-actions">${link('admin-quality',qt('heading'),'btn btn-outline')}${link('admin-import',bt('heading'),'btn btn-outline')}</div>${!state.curatedAdminLoaded?`<p>${ct('loading')}</p>`:curatedListHtml({lang:language(),recipes:state.curatedAdminRows,link})}</div>`,'community');
 }
 function curatedAdminEditor(slug){
  if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}`,'community');
@@ -162,6 +164,10 @@ function curatedAdminEditor(slug){
  const recipe=isNew?null:state.curatedAdminRows.find(r=>r.slug===slug);
  if(!isNew&&!recipe)return shell(`${pageHero('Eatable',state.curatedAdminLoaded?'Recipe not found':ct('loading'),'')}<div class="container section-pad">${link('admin-curated',editorText(language(),'back'),'btn btn-outline')}</div>`,'community');
  return shell(`${pageHero('Eatable · Admin',editorText(language(),isNew?'newRecipe':'editRecipe'),editorText(language(),'intro'))}<div class="container section-pad v6-editor-wrap">${curatedEditorHtml({lang:language(),recipe,vocabulary:ingredients,cuisines,link,getPublicUrl:getPublicPhotoUrl})}</div>`,'community');
+}
+function adminImportPage(){
+ if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}`,'community');
+ return shell(`${pageHero('Eatable · Admin',bt('heading'),bt('intro'))}<div class="container section-pad">${!state.curatedAdminLoaded?`<p>${ct('loading')}</p>`:importPageHtml({lang:language(),rows:state.bulkRows,selected:state.bulkSelected,results:state.bulkResults,loading:state.bulkBusy,link})}</div>`,'community');
 }
 function adminQualityPage(){
  if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}`,'community');
@@ -216,7 +222,7 @@ function accountPage(){
 }
 function cookingOverlay(r){const idx=Math.max(0,Math.min(r.steps.length-1,state.cookingStep??0));return `<div class="cook-overlay" role="dialog" aria-modal="true" aria-label="${tr('startCooking')}"><div class="cook-top"><div class="cook-inner inline-row"><strong>Eatable · ${label(r.name)}</strong><button class="btn btn-light btn-sm" data-action="close-cooking">✕ ${tr('close')}</button></div></div><div class="cook-inner cook-center"><div class="progress"><span style="width:${(idx+1)/r.steps.length*100}%"></span></div><p class="step-line space-top">${tr('step')} ${idx+1} ${tr('of')} ${r.steps.length}</p><h1>${tr('step')} ${idx+1}</h1><p>${label(r.steps[idx])}</p></div><div class="cook-inner cook-footer"><button class="btn btn-light" data-action="prev-step" ${idx===0?'disabled':''}>← ${tr('previous')}</button><button class="btn btn-primary" data-action="next-step">${idx===r.steps.length-1?tr('finish'):tr('next')} →</button></div></div>`}
 function active(){const pieces=location.pathname.split('/').filter(Boolean),route=pieces[0]==='it'||pieces[0]==='en'?pieces.slice(1):pieces;return route;}
-function render(){const route=active();let html;let selected='';if(!route.length){html=home();selected='home'}else if(route[0]==='cook'){html=cook();selected='cook'}else if(route[0]==='recipes'&&route[1]){const r=getAnyRecipe(route[1]);html=r?detail(r):explore();selected='explore'}else if(route[0]==='recipes'){const params=new URLSearchParams(location.search);if(params.has('cuisine'))state.exploreCuisine=params.get('cuisine');html=explore();selected='explore'}else if(route[0]==='lebanese'){html=lebanese();selected='lebanese'}else if(route[0]==='community'&&route[1]){const r=getAnyRecipe(communityKey(route[1]));html=r?detail(r):shell(pageHero('Eatable',state.communityLoaded?'404':ct('loading'),state.communityLoaded?'Recipe unavailable':'Loading approved recipes…'),'community');selected='community'}else if(route[0]==='community'){html=community();selected='community'}else if(route[0]==='submit'){html=submitPage();selected='community'}else if(route[0]==='edit'&&route[1]){html=submitPage(route[1]);selected='community'}else if(route[0]==='my-recipes'){html=mySubmissions();selected='community'}else if(route[0]==='admin-index'&&route[1]){html=adminIndexEditor(route[1]);selected='community'}else if(route[0]==='admin-index'){html=adminIndexPage();selected='community'}else if(route[0]==='admin-quality'&&route[1]){html=adminQualityReview(route[1]);selected='community'}else if(route[0]==='admin-quality'){html=adminQualityPage();selected='community'}else if(route[0]==='admin-curated'&&route[1]){html=curatedAdminEditor(route[1]);selected='community'}else if(route[0]==='admin-curated'){html=curatedAdminPage();selected='community'}else if(route[0]==='admin'){html=adminPage();selected='community'}else if(route[0]==='my-kitchen'){html=kitchen();selected='kitchen'}else if(route[0]==='account'){html=accountPage();selected='account'}else{html=home();selected='home'}app.innerHTML=html;const r=route[1]?(route[0]==='recipes'?getAnyRecipe(route[1]):route[0]==='community'?getAnyRecipe(communityKey(route[1])):null):null;if(r&&state.cookingStep!==null){app.insertAdjacentHTML('beforeend',cookingOverlay(r));document.body.style.overflow='hidden'}else{document.body.style.overflow=''}document.documentElement.lang=language();document.title=`${r?`${r.name[language()]} | `:''}Eatable — ${tr('footer')}`;}
+function render(){const route=active();let html;let selected='';if(!route.length){html=home();selected='home'}else if(route[0]==='cook'){html=cook();selected='cook'}else if(route[0]==='recipes'&&route[1]){const r=getAnyRecipe(route[1]);html=r?detail(r):explore();selected='explore'}else if(route[0]==='recipes'){const params=new URLSearchParams(location.search);if(params.has('cuisine'))state.exploreCuisine=params.get('cuisine');html=explore();selected='explore'}else if(route[0]==='lebanese'){html=lebanese();selected='lebanese'}else if(route[0]==='community'&&route[1]){const r=getAnyRecipe(communityKey(route[1]));html=r?detail(r):shell(pageHero('Eatable',state.communityLoaded?'404':ct('loading'),state.communityLoaded?'Recipe unavailable':'Loading approved recipes…'),'community');selected='community'}else if(route[0]==='community'){html=community();selected='community'}else if(route[0]==='submit'){html=submitPage();selected='community'}else if(route[0]==='edit'&&route[1]){html=submitPage(route[1]);selected='community'}else if(route[0]==='my-recipes'){html=mySubmissions();selected='community'}else if(route[0]==='admin-index'&&route[1]){html=adminIndexEditor(route[1]);selected='community'}else if(route[0]==='admin-index'){html=adminIndexPage();selected='community'}else if(route[0]==='admin-quality'&&route[1]){html=adminQualityReview(route[1]);selected='community'}else if(route[0]==='admin-quality'){html=adminQualityPage();selected='community'}else if(route[0]==='admin-import'){html=adminImportPage();selected='community'}else if(route[0]==='admin-curated'&&route[1]){html=curatedAdminEditor(route[1]);selected='community'}else if(route[0]==='admin-curated'){html=curatedAdminPage();selected='community'}else if(route[0]==='admin'){html=adminPage();selected='community'}else if(route[0]==='my-kitchen'){html=kitchen();selected='kitchen'}else if(route[0]==='account'){html=accountPage();selected='account'}else{html=home();selected='home'}app.innerHTML=html;const r=route[1]?(route[0]==='recipes'?getAnyRecipe(route[1]):route[0]==='community'?getAnyRecipe(communityKey(route[1])):null):null;if(r&&state.cookingStep!==null){app.insertAdjacentHTML('beforeend',cookingOverlay(r));document.body.style.overflow='hidden'}else{document.body.style.overflow=''}document.documentElement.lang=language();document.title=`${r?`${r.name[language()]} | `:''}Eatable — ${tr('footer')}`;}
 function navigate(url){if(state.curatedImagePreviewUrl){URL.revokeObjectURL(state.curatedImagePreviewUrl);state.curatedImagePreviewUrl=null;}const u=new URL(url,location.href);if(u.origin!==location.origin){location.href=u.href;return}history.pushState(null,'',u.pathname+u.search+u.hash);state.cookingStep=null;state.checked.clear();state.servings=4;state.menuOpen=false;render();window.scrollTo(0,0)}
 function toast(message){document.querySelector('.toast')?.remove();const el=document.createElement('div');el.className='toast';el.textContent=message;el.setAttribute('role','status');document.body.append(el);setTimeout(()=>el.remove(),3300)}
 function suggest(input){const q=input.value,context=input.dataset.ingredientInput,target=document.getElementById(`suggestions-${context}`);if(!target)return;const matches=ingredientMatches(q).filter(i=>!state.selected.includes(i.id));if(!q.trim()){target.classList.add('hidden');target.innerHTML='';return}target.innerHTML=matches.length?matches.map(i=>`<button type="button" role="option" data-action="add-ingredient" data-id="${i.id}">${label(i.name)} <span class="muted small">+</span></button>`).join(''):`<div style="padding:12px" class="muted small">${tr('noSearch')}</div>`;target.classList.remove('hidden')}
@@ -224,6 +230,23 @@ document.addEventListener('input',event=>{const input=event.target;if(input.matc
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){const target=event.target.closest('.field-wrap');target?.querySelector('.suggestions')?.classList.add('hidden');if(state.cookingStep!==null){state.cookingStep=null;render()}}if(event.key==='Enter'&&event.target.matches('[data-ingredient-input]')){event.preventDefault();const first=ingredientMatches(event.target.value).find(i=>!state.selected.includes(i.id));if(first){state.selected.push(first.id);save();render();document.getElementById(event.target.id)?.focus()}else toast(tr('errorIngredient'))}});
 document.addEventListener('change',event=>{
  const target=event.target;
+ if(target.matches('#recipe-json-file')){
+   if(!state.isAdmin||state.bulkBusy)return;
+   const file=target.files?.[0];if(!file)return;
+   if(file.size>400000){toast('JSON file is too large (400 KB maximum).');target.value='';return;}
+   try{
+     const raw=await file.text();
+     const rows=parseRecipeImport(raw,ingredients,state.curatedAdminRows.map(r=>r.slug));
+     if(active()[0]!=='admin-import')return;
+     state.bulkRaw=raw;state.bulkRows=rows;state.bulkSelected=new Set(rows.filter(r=>r.status==='ready').map(r=>r.index));state.bulkResults=null;render();
+   }catch(e){toast(e.message||bt('failure'));target.value='';}
+   return;
+ }
+ if(target.matches('[data-import-select]')){
+   const index=Number(target.value);
+   if(target.checked)state.bulkSelected.add(index);else state.bulkSelected.delete(index);
+   render();return;
+ }
  if(target.matches('#curated-photo-input')){
    const preview=document.getElementById('curated-upload-preview');
    if(state.curatedImagePreviewUrl){URL.revokeObjectURL(state.curatedImagePreviewUrl);state.curatedImagePreviewUrl=null;}
@@ -239,6 +262,31 @@ document.addEventListener('change',event=>{
  if(target.matches('[data-check]')){const i=Number(target.dataset.check);if(target.checked)state.checked.add(i);else state.checked.delete(i)}
 });
 document.addEventListener('submit',async event=>{
+ if(event.target.id==='recipe-bulk-import-form'){
+   event.preventDefault();if(!state.isAdmin||state.bulkBusy||!state.curatedAdminLoaded)return;
+   // Revalidate the original JSON against the current vocabulary and admin catalog.
+   let fresh;
+   try{fresh=parseRecipeImport(state.bulkRaw,ingredients,state.curatedAdminRows.map(r=>r.slug));}
+   catch(e){toast(e.message);return;}
+   const selected=fresh.filter(row=>row.status==='ready'&&state.bulkSelected.has(row.index));
+   if(!selected.length){toast(bt('noSelected'));return;}
+   state.bulkBusy=true;state.bulkResults=null;render();
+   const results={created:0,skipped:0,failed:0,errors:[]};
+   try{
+     for(const row of selected){
+       const {error}=await insertCuratedDraft(row.recipe);
+       if(!error){results.created++;continue;}
+       if(error.code==='23505'){results.skipped++;continue;}
+       results.failed++;results.errors.push(`${row.recipe.slug}: ${error.message}`);
+     }
+     await Promise.all([refreshCuratedAdmin(),refreshQualityAdmin()]);
+     state.bulkRows=parseRecipeImport(state.bulkRaw,ingredients,state.curatedAdminRows.map(r=>r.slug));
+     state.bulkSelected=new Set(state.bulkRows.filter(r=>r.status==='ready').map(r=>r.index));
+     state.bulkResults=results;
+   }catch(e){results.failed++;results.errors.push(e.message||bt('failure'));state.bulkResults=results;}
+   finally{state.bulkBusy=false;render();}
+   return;
+ }
  if(event.target.id==='quality-review-form'){
    event.preventDefault();if(!state.isAdmin||state.qualityBusy||!state.qualityLoaded)return;
    const form=event.target,slug=form.dataset.slug,recipe=state.curatedAdminRows.find(r=>r.slug===slug);
@@ -411,6 +459,18 @@ document.addEventListener('submit',async event=>{
  }
  if(event.target.id==='explore-form'){event.preventDefault();state.exploreQuery=document.getElementById('explore-query').value;state.exploreCuisine=document.getElementById('explore-cuisine').value;history.replaceState(null,'',path('recipes'));render()}});
 document.addEventListener('click',event=>{const action=event.target.closest('[data-action]');if(action){const name=action.dataset.action;const id=action.dataset.id;
+ if(name==='import-sample'){
+   if(!state.isAdmin||state.bulkBusy)return;
+   action.disabled=true;
+   fetch('/data/recipe-starter-pack.json',{cache:'no-store'})
+     .then(r=>{if(!r.ok)throw Error(`Sample pack not found (${r.status}).`);return r.text()})
+     .then(raw=>{
+       if(active()[0]!=='admin-import')return;
+       const rows=parseRecipeImport(raw,ingredients,state.curatedAdminRows.map(r=>r.slug));
+       state.bulkRaw=raw;state.bulkRows=rows;state.bulkSelected=new Set(rows.filter(r=>r.status==='ready').map(r=>r.index));state.bulkResults=null;render();
+     }).catch(e=>toast(e.message||bt('failure'))).finally(()=>{if(document.contains(action))action.disabled=false;});
+   return;
+ }
  if(name==='quality-export'){
    if(!state.isAdmin||!state.qualityLoaded)return;
    const csv=qualityCsv(state.curatedAdminRows,state.qualityRows);

@@ -13,3 +13,8 @@ export const saveCuratedRecipe=(row)=>db().from('eatable_curated_recipes').upser
 // Private draft photography metadata: the new table has administrator-only RLS.
 export const getAdminCuratedMedia=()=>db().from('eatable_curated_media').select('slug,photo_path').limit(500);
 export const saveAdminCuratedMedia=(slug,photo_path)=>db().from('eatable_curated_media').upsert({slug,photo_path,updated_at:new Date().toISOString()},{onConflict:'slug'}).select('slug,photo_path').single();
+
+// v9: insert-only batch draft import. A conflict never overwrites existing content.
+export const insertCuratedDraft=(row)=>db().from('eatable_curated_recipes')
+ .insert({...row,published:false,public_photo_path:null})
+ .select('slug').single();

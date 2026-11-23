@@ -78,3 +78,25 @@
 .v8-review{max-width:850px}.v8-review h2{font-size:clamp(1.5rem,3vw,2.1rem)}.v8-review-form{margin-top:22px;display:grid;gap:13px}.v8-check{display:flex!important;align-items:flex-start;gap:12px;border:1px solid #ece8de;padding:12px;border-radius:9px;font-weight:500!important;cursor:pointer}.v8-check input{margin-top:4px;accent-color:var(--pine);width:18px;height:18px;flex-shrink:0}.v8-note{display:grid;gap:9px;margin:12px 0}.v8-note textarea{width:100%}
 @media(max-width:850px){.v8-summary{grid-template-columns:repeat(3,minmax(0,1fr))}.v8-quality-item{align-items:stretch;flex-direction:column}.v8-item-actions{justify-content:flex-start}}
 @media(max-width:560px){.v8-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.v8-toolbar{align-items:stretch;flex-direction:column}.v8-toolbar select{max-width:100%;width:100%}}
+
+/* v9: Private batch recipe import */
+.v9-wrap{display:grid;gap:24px;max-width:1060px;margin-inline:auto}
+.v9-guide,.v9-preview{background:var(--surface,#fff);border:1px solid var(--line,#e6e3dd);border-radius:18px;padding:clamp(18px,3vw,30px)}
+.v9-guide h2,.v9-preview h2{margin:0 0 10px}
+.v9-guide p{max-width:760px}
+.v9-file-label{display:grid;gap:9px;max-width:420px;margin-top:20px;font-weight:650}
+.v9-guide .notice{margin-top:12px}
+.v9-preview>.inline-row{gap:12px;flex-wrap:wrap;margin-bottom:15px}
+.v9-list{border-top:1px solid #e5e2da;margin-bottom:18px}
+.v9-row{display:flex;align-items:flex-start;gap:14px;padding:16px 7px;border-bottom:1px solid #e5e2da}
+.v9-select{padding:5px 2px;min-width:26px}
+.v9-select input{width:18px;height:18px;accent-color:#285943}
+.v9-body{min-width:0;flex:1;overflow-wrap:anywhere}
+.v9-body>strong{font-size:1.05rem}
+.v9-body p{margin:5px 0 0}
+.v9-status{font-size:.87rem;color:#285943;font-weight:600}
+.v9-disabled .v9-status{color:#9a4d3a}
+.v9-disabled{background:#fbf7f2}
+.v9-results{margin:0}
+.v9-results ul{padding-left:22px;overflow-wrap:anywhere}
+@media(max-width:650px){.v9-wrap{gap:15px}.v9-row{padding:14px 0}.v9-preview .v3-actions{display:flex;flex-direction:column;align-items:stretch}.v9-preview .v3-actions>*{text-align:center}}
