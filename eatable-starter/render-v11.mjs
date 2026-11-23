@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+const app={innerHTML:'',insertAdjacentHTML(){}};
+const store=new Map();
+globalThis.localStorage={getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v)};
+globalThis.location={pathname:'/en/my-kitchen',search:'',href:'https://eatable.example/en/my-kitchen',origin:'https://eatable.example'};
+globalThis.window={location:globalThis.location,addEventListener(){},scrollTo(){}};
+globalThis.history={replaceState(){},pushState(){}};
+globalThis.document={getElementById:()=>app,addEventListener(){},documentElement:{lang:'en'},body:{style:{}}};
+await import('../src/app.js');
+assert.match(app.innerHTML,/My Kitchen|Saved recipes/);
+assert.match(app.innerHTML,/Sign in|Demo mode/);
+console.log('PASS v11 initial render (demo mode) without blank screen');
