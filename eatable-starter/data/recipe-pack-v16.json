@@ -1,0 +1,785 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "slug": "labneh-with-zaatar",
+      "title_en": "Labneh with za’atar",
+      "title_it": "Labneh con za’atar",
+      "description_en": "Strained yogurt served with olive oil and za’atar; allow several hours of refrigerated draining.",
+      "description_it": "Yogurt colato servito con olio e za’atar; occorrono diverse ore di scolatura in frigorifero.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 380,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "yogurt",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "zaatar",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Place plain yogurt and salt in a clean fine-mesh sieve lined with cheesecloth, over a bowl. Refrigerate while it drains for 6 hours or until thick.",
+          "it": "Metti yogurt e sale in un colino fine rivestito di garza pulita sopra una ciotola. Lascia scolare in frigorifero per 6 ore o fino a quando è denso."
+        },
+        {
+          "en": "Transfer the thickened yogurt to a clean serving bowl, discarding the drained whey or reserving it for another use.",
+          "it": "Trasferisci lo yogurt addensato in una ciotola pulita, eliminando il siero oppure conservandolo per un altro uso."
+        },
+        {
+          "en": "Make a shallow swirl in the labneh, drizzle with olive oil and sprinkle with za’atar just before serving.",
+          "it": "Forma un incavo nel labneh, aggiungi l’olio d’oliva e spolvera lo za’atar poco prima di servire."
+        }
+      ],
+      "theme": "green"
+    },
+    {
+      "slug": "riz-a-djej-chicken-rice",
+      "title_en": "Riz a djej — Lebanese chicken rice",
+      "title_it": "Riz a djej — riso libanese con pollo",
+      "description_en": "A simplified Lebanese-inspired chicken and rice platter with lightly toasted pine nuts.",
+      "description_it": "Un piatto di riso e pollo ispirato alla cucina libanese, completato con pinoli leggermente tostati.",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "rice",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "broth",
+          "qty": 750,
+          "unit": "ml"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 20,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cumin",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook the chicken completely in a covered pan with the broth and onion, about 25–35 minutes depending on the pieces; check that the thickest part reaches 74°C.",
+          "it": "Cuoci completamente il pollo in una pentola coperta con brodo e cipolla, circa 25–35 minuti secondo i pezzi; verifica 74 °C nella parte più spessa."
+        },
+        {
+          "en": "Lift out the chicken. Measure the cooking broth and top up with water if needed. Rinse the rice and simmer it in the broth until tender, according to the rice package.",
+          "it": "Togli il pollo. Misura il brodo di cottura e aggiungi acqua se necessario. Sciacqua il riso e cuocilo nel brodo secondo i tempi indicati sulla confezione."
+        },
+        {
+          "en": "Toast the pine nuts briefly in butter over gentle heat until golden, watching closely to avoid burning them.",
+          "it": "Tosta brevemente i pinoli nel burro a fuoco dolce fino a doratura, controllando che non brucino."
+        },
+        {
+          "en": "Fluff the cooked rice, place the cooked chicken over it and finish with pine nuts and a little olive oil.",
+          "it": "Sgrana il riso cotto, adagia il pollo sopra e completa con pinoli e poco olio d’oliva."
+        }
+      ],
+      "theme": "gold"
+    },
+    {
+      "slug": "manakish-feta-cheese",
+      "title_en": "Feta cheese manakish — home variation",
+      "title_it": "Manakish al formaggio feta — variante casalinga",
+      "description_en": "A homemade Lebanese-inspired flatbread topped with feta; a practical variation, not a traditional cheese blend.",
+      "description_it": "Focaccine ispirate ai manakish libanesi, condite con feta: una variante pratica, non una miscela di formaggi tradizionale.",
+      "cuisine": "Lebanese",
+      "category": "Bread",
+      "diet": "vegetarian",
+      "prep_minutes": 100,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 245,
+          "unit": "ml"
+        },
+        {
+          "id": "yeast",
+          "qty": 7,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "feta",
+          "qty": 230,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Combine flour, yeast, water, salt and 15 ml olive oil. Knead to a soft smooth dough. Cover and let rise until visibly puffed, about 60 minutes.",
+          "it": "Unisci farina, lievito, acqua, sale e 15 ml di olio. Impasta fino a ottenere una pasta liscia. Copri e lascia lievitare finché cresce, circa 60 minuti."
+        },
+        {
+          "en": "Divide into four pieces and flatten into small rounds on a baking tray. Crumble feta and distribute evenly, leaving a narrow edge.",
+          "it": "Dividi in quattro pezzi e stendi dei dischi su una teglia. Sbriciola la feta e distribuiscila lasciando un piccolo bordo."
+        },
+        {
+          "en": "Drizzle with the remaining oil and bake in a preheated 220°C oven for roughly 10–14 minutes until the base is cooked and the edges turn golden.",
+          "it": "Condisci con l’olio rimasto e cuoci in forno preriscaldato a 220 °C per circa 10–14 minuti, finché la base è cotta e i bordi dorati."
+        }
+      ],
+      "theme": "gold"
+    },
+    {
+      "slug": "chickpea-herb-falafel-patties",
+      "title_en": "Quick chickpea herb patties (falafel-inspired)",
+      "title_it": "Polpette veloci di ceci ed erbe (ispirate ai falafel)",
+      "description_en": "Pan-cooked patties made with cooked chickpeas and herbs; an easy variation rather than traditional soaked-chickpea falafel.",
+      "description_it": "Polpette in padella con ceci già cotti ed erbe: variante semplice, diversa dai falafel tradizionali di ceci ammollati.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "flour",
+          "qty": 65,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Drain and dry the cooked chickpeas well. Pulse with onion, parsley, garlic and cumin to form a coarse mixture, not a completely smooth purée.",
+          "it": "Scola e asciuga bene i ceci già cotti. Frullali a impulsi con cipolla, prezzemolo, aglio e cumino, ottenendo un composto grossolano, non una crema."
+        },
+        {
+          "en": "Mix in flour and salt. Refrigerate briefly if the mixture is too soft, then form 12 small compact patties.",
+          "it": "Incorpora farina e sale. Metti brevemente in frigorifero se il composto è morbido, poi forma 12 polpettine compatte."
+        },
+        {
+          "en": "Heat a thin layer of olive oil in a pan. Cook the patties in batches for 4–5 minutes per side over medium heat until golden and heated through.",
+          "it": "Scalda un velo d’olio in padella. Cuoci le polpettine in più riprese per 4–5 minuti per lato a fuoco medio, finché sono dorate e ben calde."
+        }
+      ],
+      "theme": "green"
+    },
+    {
+      "slug": "pasta-aglio-e-olio",
+      "title_en": "Pasta aglio e olio",
+      "title_it": "Pasta aglio e olio",
+      "description_en": "Simple pasta tossed with gently cooked garlic, olive oil and a touch of chili.",
+      "description_it": "Pasta semplice con aglio scaldato dolcemente nell’olio d’oliva e un tocco di peperoncino.",
+      "cuisine": "Italian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 75,
+          "unit": "ml"
+        },
+        {
+          "id": "chili",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Boil the pasta in plenty of salted water, stopping just before it is fully tender. Reserve a cup of cooking water.",
+          "it": "Lessa la pasta in abbondante acqua salata, scolandola leggermente al dente. Conserva una tazza di acqua di cottura."
+        },
+        {
+          "en": "Warm the sliced garlic and chili in olive oil over low heat until fragrant but not browned.",
+          "it": "Scalda aglio affettato e peperoncino nell’olio a fuoco basso fino a profumare, senza far dorare l’aglio."
+        },
+        {
+          "en": "Toss the pasta in the pan with a splash of reserved water until glossy. Add chopped parsley and serve immediately.",
+          "it": "Salta la pasta nella padella con poca acqua di cottura fino a renderla lucida. Aggiungi prezzemolo tritato e servi subito."
+        }
+      ],
+      "theme": "cream"
+    },
+    {
+      "slug": "minestrone-vegetable-soup",
+      "title_en": "Everyday vegetable minestrone",
+      "title_it": "Minestrone di verdure quotidiano",
+      "description_en": "A flexible Italian vegetable soup using potatoes, carrots, tomatoes and seasonal vegetables.",
+      "description_it": "Una zuppa italiana versatile con patate, carote, pomodori e verdure di stagione.",
+      "cuisine": "Italian",
+      "category": "Soup",
+      "diet": "vegan",
+      "prep_minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "peas",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "broth",
+          "qty": 1100,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Dice potatoes and carrots into bite-size pieces and chop the onion.",
+          "it": "Taglia patate e carote a dadini e trita la cipolla."
+        },
+        {
+          "en": "Soften the onion in olive oil over medium-low heat, then stir in carrots and potatoes for about 3 minutes.",
+          "it": "Fai appassire la cipolla nell’olio a fuoco medio-basso, poi unisci carote e patate per circa 3 minuti."
+        },
+        {
+          "en": "Add tomato and broth. Simmer for about 20 minutes, then add peas and continue until all vegetables are tender.",
+          "it": "Aggiungi pomodoro e brodo. Cuoci a fuoco lento per circa 20 minuti, poi aggiungi i piselli e prosegui finché tutte le verdure sono tenere."
+        },
+        {
+          "en": "Taste, adjust the salt and serve hot.",
+          "it": "Assaggia, regola di sale e servi caldo."
+        }
+      ],
+      "theme": "green"
+    },
+    {
+      "slug": "gazpacho-tomato",
+      "title_en": "Classic-style tomato gazpacho",
+      "title_it": "Gazpacho al pomodoro in stile classico",
+      "description_en": "A chilled Spanish-style tomato and cucumber soup, blended until smooth and served cold.",
+      "description_it": "Zuppa fredda in stile spagnolo con pomodoro e cetriolo, frullata e servita ben fresca.",
+      "cuisine": "Spanish",
+      "category": "Soup",
+      "diet": "vegan",
+      "prep_minutes": 80,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 750,
+          "unit": "g"
+        },
+        {
+          "id": "cucumber",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "pepper",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 120,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Wash the vegetables. Chop tomatoes, peeled cucumber and pepper. Remove the tough garlic germ if preferred.",
+          "it": "Lava le verdure. Taglia pomodori, cetriolo sbucciato e peperone. Se preferisci, elimina il germoglio interno dell’aglio."
+        },
+        {
+          "en": "Blend vegetables with olive oil, water, lemon juice and salt until smooth. Add a little water if necessary.",
+          "it": "Frulla le verdure con olio, acqua, succo di limone e sale fino a ottenere una crema. Aggiungi poca acqua se necessario."
+        },
+        {
+          "en": "Chill promptly in the refrigerator until cold, about 1 hour, and serve straight from the fridge.",
+          "it": "Metti subito in frigorifero fino a raffreddamento, circa 1 ora, e servi freddo."
+        }
+      ],
+      "theme": "tomato"
+    },
+    {
+      "slug": "chana-masala-simple",
+      "title_en": "Weeknight chana masala",
+      "title_it": "Chana masala veloce",
+      "description_en": "An accessible chickpea and tomato curry inspired by South Asian home cooking.",
+      "description_it": "Curry semplice di ceci e pomodoro ispirato alla cucina casalinga dell’Asia meridionale.",
+      "cuisine": "Indian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "curry",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 200,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Chop the onion and soften it in olive oil over medium heat. Add minced garlic, cumin and curry powder, stirring for 30 seconds.",
+          "it": "Trita la cipolla e falla appassire nell’olio a fuoco medio. Unisci aglio tritato, cumino e curry in polvere, mescolando per 30 secondi."
+        },
+        {
+          "en": "Add chopped tomatoes and water. Simmer gently until the sauce thickens, around 12 minutes.",
+          "it": "Aggiungi i pomodori a pezzi e l’acqua. Cuoci a fuoco lento finché la salsa si addensa, circa 12 minuti."
+        },
+        {
+          "en": "Stir in cooked, drained chickpeas and simmer 10 more minutes. Season to taste and serve with rice if desired.",
+          "it": "Unisci i ceci già cotti e scolati e continua la cottura per 10 minuti. Regola di sale e servi con riso a piacere."
+        }
+      ],
+      "theme": "spice"
+    },
+    {
+      "slug": "egg-fried-rice",
+      "title_en": "Egg fried rice with peas",
+      "title_it": "Riso saltato con uova e piselli",
+      "description_en": "Quick rice stir-fry with egg and vegetables; use rice that has been promptly refrigerated after cooking.",
+      "description_it": "Riso saltato con uova e verdure; usa riso cotto raffreddato rapidamente e conservato in frigorifero.",
+      "cuisine": "Other",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "peas",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "spring_onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "soy_sauce",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Prepare 350 g of previously cooked, chilled rice; do not leave cooked rice at room temperature. Dice carrot and spring onions.",
+          "it": "Prepara 350 g di riso già cotto e raffreddato in frigorifero; non lasciare riso cotto a temperatura ambiente. Taglia carota e cipollotti."
+        },
+        {
+          "en": "Heat part of the oil in a large pan and scramble the eggs until fully set. Transfer to a plate.",
+          "it": "Scalda parte dell’olio in una padella ampia e cuoci le uova strapazzate finché sono ben rapprese. Trasferiscile su un piatto."
+        },
+        {
+          "en": "Stir-fry the carrot and peas, add the rice and heat it thoroughly while stirring. Season with soy sauce.",
+          "it": "Salta carota e piselli, aggiungi il riso e scaldalo completamente mescolando. Condisci con salsa di soia."
+        },
+        {
+          "en": "Return eggs to the pan, stir in spring onions and serve piping hot.",
+          "it": "Rimetti le uova nella padella, aggiungi i cipollotti e servi ben caldo."
+        }
+      ],
+      "theme": "gold"
+    },
+    {
+      "slug": "pico-de-gallo-fresh",
+      "title_en": "Pico de gallo",
+      "title_it": "Pico de gallo",
+      "description_en": "Fresh Mexican-style tomato salsa with onion, cilantro, lime and chili.",
+      "description_it": "Salsa fresca in stile messicano con pomodoro, cipolla, coriandolo, lime e peperoncino.",
+      "cuisine": "Mexican",
+      "category": "Salad",
+      "diet": "vegan",
+      "prep_minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "lime",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chili",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Dice tomatoes and onion into small even pieces. Finely chop cilantro and the chili.",
+          "it": "Taglia pomodori e cipolla a piccoli cubetti regolari. Trita finemente coriandolo e peperoncino."
+        },
+        {
+          "en": "Mix the vegetables with fresh lime juice and salt, adding chili gradually according to preference.",
+          "it": "Mescola le verdure con succo di lime fresco e sale, aggiungendo peperoncino gradualmente secondo il gusto."
+        },
+        {
+          "en": "Let stand in the refrigerator for about 10 minutes, stir again and serve fresh.",
+          "it": "Lascia riposare in frigorifero per circa 10 minuti, mescola ancora e servi fresco."
+        }
+      ],
+      "theme": "tomato"
+    },
+    {
+      "slug": "vegetable-feta-quesadillas",
+      "title_en": "Vegetable quesadillas with feta",
+      "title_it": "Quesadillas alle verdure con feta",
+      "description_en": "A home-style vegetarian quesadilla variation with feta, pepper, tomato and tortillas.",
+      "description_it": "Variante casalinga di quesadilla vegetariana con feta, peperone, pomodoro e tortillas.",
+      "cuisine": "Mexican",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tortilla",
+          "qty": 8,
+          "unit": "pcs"
+        },
+        {
+          "id": "feta",
+          "qty": 230,
+          "unit": "g"
+        },
+        {
+          "id": "pepper",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 25,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Finely slice pepper and onion; dice tomato and drain excess moisture. Cook the pepper and onion briefly in olive oil until softened.",
+          "it": "Affetta finemente peperone e cipolla; taglia il pomodoro e scola l’acqua in eccesso. Cuoci brevemente peperone e cipolla nell’olio fino a renderli morbidi."
+        },
+        {
+          "en": "Spread vegetables and crumbled feta over half of each tortilla. Fold closed and press gently.",
+          "it": "Distribuisci verdure e feta sbriciolata su metà di ogni tortilla. Ripiega e premi delicatamente."
+        },
+        {
+          "en": "Cook in a non-stick pan on medium-low heat for 2–3 minutes per side until the tortilla is golden and the filling hot. Cut into wedges.",
+          "it": "Cuoci in padella antiaderente a fuoco medio-basso per 2–3 minuti per lato, finché la tortilla è dorata e il ripieno caldo. Taglia a spicchi."
+        }
+      ],
+      "theme": "spice"
+    },
+    {
+      "slug": "warm-lentil-salad",
+      "title_en": "Warm lentil and herb salad",
+      "title_it": "Insalata tiepida di lenticchie ed erbe",
+      "description_en": "Lentils with lemon, cucumber and fresh herbs, served warm or at room temperature.",
+      "description_it": "Lenticchie con limone, cetriolo ed erbe fresche, servite tiepide o a temperatura ambiente.",
+      "cuisine": "Greek",
+      "category": "Salad",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "lentils",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "cucumber",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse the dry lentils and simmer in sufficient water until tender but not falling apart, following the package timing. Drain well.",
+          "it": "Sciacqua le lenticchie secche e lessale in acqua sufficiente finché sono tenere ma non sfatte, secondo la confezione. Scolale bene."
+        },
+        {
+          "en": "Dice cucumber and onion finely and chop parsley. Whisk lemon juice with olive oil and salt.",
+          "it": "Taglia finemente cetriolo e cipolla e trita il prezzemolo. Emulsiona succo di limone, olio e sale."
+        },
+        {
+          "en": "Toss the warm drained lentils with vegetables and dressing. Taste and adjust before serving.",
+          "it": "Condisci le lenticchie tiepide e scolate con verdure e salsa. Assaggia e regola prima di servire."
+        }
+      ],
+      "theme": "green"
+    }
+  ]
+}
