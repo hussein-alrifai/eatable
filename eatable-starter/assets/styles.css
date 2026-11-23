@@ -268,3 +268,23 @@
 .v16-item p{margin:.35rem 0}.v16-item-actions{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:flex-end}
 @media(max-width:850px){.v16-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.v16-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.v16-filters{grid-template-columns:1fr}.v16-item{align-items:flex-start;flex-direction:column}.v16-item-actions{justify-content:flex-start}}
+
+/* v17 — private ingredient coverage lab */
+.v17-coverage{display:grid;gap:1.35rem}
+.v17-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.v17-summary>div{padding:1rem;background:#f9f6f0;border:1px solid #e7e4db;border-radius:13px;display:grid;gap:.3rem}
+.v17-summary small{color:#586054;font-size:.78rem;line-height:1.3}
+.v17-summary strong{font-size:1.7rem;color:#285943;font-variant-numeric:tabular-nums}
+.v17-section{padding:1.2rem;border:1px solid #e2e2dc;border-radius:14px;background:#fff}
+.v17-section h2{font-size:1.25rem;margin:0 0 .7rem}
+.v17-baskets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
+.v17-basket{padding:.9rem;background:#f9f7f2;border:1px solid #e9e4da;border-radius:10px}
+.v17-basket h3{font-size:1rem;margin:0 0 .4rem}
+.v17-basket .muted{overflow-wrap:anywhere}
+.v17-totals{display:flex;gap:1rem;color:#285943;flex-wrap:wrap;font-size:.86rem}
+.v17-bars{display:grid;gap:.65rem}
+.v17-bar-row{display:grid;grid-template-columns:minmax(130px,1.2fr) minmax(80px,2fr) 42px;align-items:center;gap:.6rem;font-size:.9rem}
+.v17-bar{height:9px;background:#f0ebe5;border-radius:999px;overflow:hidden}
+.v17-bar span{height:100%;display:block;background:#285943;border-radius:999px}
+.v17-columns{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:760px){.v17-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.v17-baskets,.v17-columns{grid-template-columns:1fr}.v17-bar-row{grid-template-columns:minmax(90px,1fr) minmax(65px,1.5fr) 40px}}
