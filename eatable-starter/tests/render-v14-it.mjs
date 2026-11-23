@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+const app={innerHTML:'',insertAdjacentHTML(){}};
+globalThis.localStorage={getItem:()=>null,setItem(){}};
+globalThis.location={pathname:'/it/lebanese',search:'',href:'https://eatable.example/it/lebanese',origin:'https://eatable.example'};
+globalThis.window={location:globalThis.location,addEventListener(){},scrollTo(){}};
+globalThis.history={replaceState(){},pushState(){}};
+globalThis.document={getElementById:()=>app,addEventListener(){},documentElement:{lang:'it'},body:{style:{}}};
+await import('../src/app.js');
+assert.match(app.innerHTML,/Ricette libanesi in evidenza/);
+assert.match(app.innerHTML,/Altre ricette libanesi/);
+assert.match(app.innerHTML,/class="grid-recipes"/);
+console.log('PASS v14 Lebanese spotlight rendered in Italian');

@@ -14,11 +14,13 @@ import {cookText,clampCookingStep,readCookingProgress,writeCookingProgress,clear
 import {fetchKitchen,insertPantry,deletePantry,insertShopping,updateShoppingChecked,deleteShopping,moveToPantry} from './kitchen-cloud.js';
 import {reviewSection,reviewTarget,reviewCacheKey,validateReview,rText} from './reviews-ui.js';
 import {readReviewBundle,saveReview,deleteReview,setReviewVisibility} from './reviews-cloud.js';
+import {fetchDiscoveryStats} from './discovery-stats-cloud.js';
+import {filterDiscovery,sortDiscovery,metricFor,lebaneseSpotlight} from './discovery-ranking.js';
 
 const app=document.getElementById('app');
 const load=(key,fallback)=>{try{const v=JSON.parse(localStorage.getItem(key));return Array.isArray(v)?v:fallback}catch{return fallback}};
 const readShowSubstitutions=()=>{try{return localStorage.getItem('eatable:show-substitutions')!=='false'}catch{return true}};
-const state={selected:load('eatable:ingredients',[]).filter(id=>ingredientById[id]),favorites:load('eatable:favorites',[]),user:null,cloudStatus:isCloudConfigured?'connecting':'demo',cloudError:'',passwordRecovery:false,authView:'signin',authBusy:false,authRevision:0,menuOpen:false,filters:{diet:'all',cuisine:'all',maxTime:''},exploreQuery:'',exploreCuisine:'all',servings:4,checked:new Set(),cookingStep:null,cookingIngredientsOpen:false,cookingTextLarge:false,publicRecipes:[],catalog:isCloudConfigured?[]:[...recipes],communityIndexes:[],catalogLoaded:false,catalogError:'',mySubmissions:[],adminSubmissions:[],isAdmin:false,communityBusy:false,communityError:'',communityLoaded:false,photoUrls:{},curatedAdminRows:[],curatedAdminLoaded:false,curatedBusy:false,curatedImagePreviewUrl:null,qualityRows:[],qualityLoaded:false,qualityError:'',qualityBusy:false,qualityFilter:'needs-review',bulkRaw:'',bulkRows:[],bulkSelected:new Set(),bulkBusy:false,bulkResults:null,showSubstitutions:readShowSubstitutions(),pantry:[],shopping:[],kitchenStatus:'idle',kitchenError:'',kitchenBusy:false,kitchenRevision:0,reviewCache:{},reviewStatus:'idle',reviewToken:0,reviewBusy:false};
+const state={selected:load('eatable:ingredients',[]).filter(id=>ingredientById[id]),favorites:load('eatable:favorites',[]),user:null,cloudStatus:isCloudConfigured?'connecting':'demo',cloudError:'',passwordRecovery:false,authView:'signin',authBusy:false,authRevision:0,menuOpen:false,filters:{diet:'all',cuisine:'all',maxTime:''},exploreQuery:'',exploreCuisine:'all',exploreDiet:'all',exploreMaxTime:'',exploreMinRating:'all',exploreSort:'recommended',discoveryStats:{},discoveryStatus:isCloudConfigured?'loading':'demo',discoveryError:'',discoveryRevision:0,servings:4,checked:new Set(),cookingStep:null,cookingIngredientsOpen:false,cookingTextLarge:false,publicRecipes:[],catalog:isCloudConfigured?[]:[...recipes],communityIndexes:[],catalogLoaded:false,catalogError:'',mySubmissions:[],adminSubmissions:[],isAdmin:false,communityBusy:false,communityError:'',communityLoaded:false,photoUrls:{},curatedAdminRows:[],curatedAdminLoaded:false,curatedBusy:false,curatedImagePreviewUrl:null,qualityRows:[],qualityLoaded:false,qualityError:'',qualityBusy:false,qualityFilter:'needs-review',bulkRaw:'',bulkRows:[],bulkSelected:new Set(),bulkBusy:false,bulkResults:null,showSubstitutions:readShowSubstitutions(),pantry:[],shopping:[],kitchenStatus:'idle',kitchenError:'',kitchenBusy:false,kitchenRevision:0,reviewCache:{},reviewStatus:'idle',reviewToken:0,reviewBusy:false};
 const save=()=>{try{localStorage.setItem('eatable:ingredients',JSON.stringify(state.selected));localStorage.setItem('eatable:favorites',JSON.stringify(state.user?load('eatable:favorites',[]):state.favorites))}catch{}};
 const accountText={
   en:{account:'Account',signIn:'Sign in',signUp:'Create account',signOut:'Sign out',email:'Email',password:'Password',displayName:'Display name',forgot:'Forgot password?',reset:'Reset password',sendReset:'Send reset email',changePassword:'Choose a new password',updatePassword:'Update password',checkEmail:'Check your email for the confirmation or reset link.',loginSuccess:'Signed in successfully.',logoutSuccess:'Signed out.',cloudSaveNote:'Sign in to save recipes to your account across devices.',demoSaveNote:'Demo mode: favorites are stored in this browser only.',cloudConnecting:'Connecting to Supabase…',cloudNotConfigured:'Your Supabase connection has not been configured yet. Follow the setup guide in the ZIP.',cloudFailed:'Could not connect to Supabase. Check the project URL, publishable key and database setup.',signInToSave:'Sign in to save recipes across devices.',myAccount:'My account',signedInAs:'Signed in as',authIntro:'Save your favorite dishes and access them on different devices.',goToCookbook:'Open my cookbook',pwMin:'Use at least 8 characters for your password.',submit:'Continue'},
@@ -36,6 +38,18 @@ const kt=key=>kitchenCopy[language()]?.[key]||kitchenCopy.en[key]||key;
 const ckt=key=>cookText(language(),key);
 const mt=key=>matchCopy[language()]?.[key]||matchCopy.en[key]||key;
 const at=key=>accountText[language()]?.[key]||accountText.en[key]||key;
+const discoveryCopy={
+ en:{sort:'Sort by',recommended:'Recommended',top:'Highest rated',popular:'Most popular',newest:'Newest',quickest:'Fastest',diet:'Diet',time:'Max cooking time',rating:'Minimum rating',anyRating:'Any rating',rating4:'4+ stars',rating3:'3+ stars',featuredLebanese:'Featured Lebanese recipes',allLebanese:'More Lebanese recipes',reviews:'reviews',saves:'saves',unrated:'Not rated yet',metricsNote:'Popularity uses total saves and visible reviews. Highest rated also considers review count.',metricsUnavailable:'Ranking statistics are unavailable. Recipes remain browsable; check that SQL migration 10 was applied.',recencyNote:'For recipes published before v14, the existing last-updated date is used as an approximate publication date.',allDiets:'All diets',allTimes:'Any time',results:'recipes',filters:'Filters'},
+ it:{sort:'Ordina per',recommended:'Consigliate',top:'Più votate',popular:'Più popolari',newest:'Più recenti',quickest:'Più veloci',diet:'Dieta',time:'Tempo massimo',rating:'Valutazione minima',anyRating:'Tutte le valutazioni',rating4:'4+ stelle',rating3:'3+ stelle',featuredLebanese:'Ricette libanesi in evidenza',allLebanese:'Altre ricette libanesi',reviews:'recensioni',saves:'salvataggi',unrated:'Non ancora valutata',metricsNote:'La popolarità si basa sui salvataggi e sulle recensioni visibili. La classifica per voto considera anche il numero di recensioni.',metricsUnavailable:'Statistiche non disponibili. Le ricette sono comunque consultabili; verifica la migrazione SQL 10.',recencyNote:'Per le ricette pubblicate prima della v14, la data dell’ultima modifica è una stima della pubblicazione.',allDiets:'Tutte le diete',allTimes:'Qualsiasi durata',results:'ricette',filters:'Filtri'}
+};
+const dt=k=>discoveryCopy[language()]?.[k]||discoveryCopy.en[k]||k;
+const discoveryMetrics=r=>metricFor(r,state.discoveryStats);
+function discoveryBadge(r){
+ if(state.discoveryStatus!=='ready')return '';
+ const m=discoveryMetrics(r);if(!m)return '';
+ const reviews=Number(m.review_count)||0,saves=Number(m.favorite_count)||0;
+ return `<div class="v14-metrics" aria-label="${reviews?`${m.average_rating} stars, ${reviews} ${dt('reviews')}`:dt('unrated')}; ${saves} ${dt('saves')}"><span>${reviews?`<span class="v14-star" aria-hidden="true">★</span> ${Number(m.average_rating).toFixed(1)} <small>(${reviews})</small>`:esc(dt('unrated'))}</span><span>♡ ${saves} <small>${esc(dt('saves'))}</small></span></div>`;
+}
 const qt=key=>qualityText(language(),key);
 const bt=key=>importText(language(),key);
 const saveNote=()=>at(isCloudConfigured?'cloudSaveNote':'demoSaveNote');
@@ -68,7 +82,7 @@ function card(r,info=null){
  const missingLabel=listed.join(', ')+(missing.length>4?' …':'');
  const swaps=matching&&state.showSubstitutions?(info.substitutions||[]):[];
  const swapHtml=swaps.length?`<div class="v10-swaps"><strong>${mt('swaps')}:</strong> ${swaps.slice(0,2).map(x=>`${label(ingredientById[x.missingId]?.name||x.missingId)} → ${label(ingredientById[x.availableId]?.name||x.availableId)}`).join(' · ')}</div>`:'';
- return `<article class="recipe-card"><a href="${dishLink(r)}" data-link aria-label="${esc(r.name[language()]||r.name.en)}">${foodImage(r)}<div class="card-content"><div class="card-top"><span>${cuisineLabel(r)}</span><span>${r.diet==='vegan'?'🌱':r.diet==='vegetarian'?'🥬':''}</span></div><h3>${label(r.name)}</h3><p>${label(r.description)}</p><div class="card-meta"><span>◷ ${r.time} ${tr('minutes')}</span><span>${esc(tr('seeRecipe'))} →</span></div>${matching?`<div class="v10-coverage"><span>${info.matchCount}/${info.totalRequired} ${mt('coverage')}</span><strong>${info.matchPercent}%</strong></div><div class="v10-meter" aria-hidden="true"><span style="width:${info.matchPercent}%"></span></div><div class="missing-note">${missing.length===0?mt('complete'):`<strong>${mt('missing')}:</strong> ${missingLabel}`}</div>${swapHtml}`:''}</div></a></article>`;
+ return `<article class="recipe-card"><a href="${dishLink(r)}" data-link aria-label="${esc(r.name[language()]||r.name.en)}">${foodImage(r)}<div class="card-content"><div class="card-top"><span>${cuisineLabel(r)}</span><span>${r.diet==='vegan'?'🌱':r.diet==='vegetarian'?'🥬':''}</span></div><h3>${label(r.name)}</h3><p>${label(r.description)}</p><div class="card-meta"><span>◷ ${r.time} ${tr('minutes')}</span><span>${esc(tr('seeRecipe'))} →</span></div>${discoveryBadge(r)}${matching?`<div class="v10-coverage"><span>${info.matchCount}/${info.totalRequired} ${mt('coverage')}</span><strong>${info.matchPercent}%</strong></div><div class="v10-meter" aria-hidden="true"><span style="width:${info.matchPercent}%"></span></div><div class="missing-note">${missing.length===0?mt('complete'):`<strong>${mt('missing')}:</strong> ${missingLabel}`}</div>${swapHtml}`:''}</div></a></article>`;
 }
 function home(){const featured=['fattet-hummus','pasta-pomodoro','chickpea-curry','fattoush'].map(getAnyRecipe).filter(Boolean);return shell(`<section class="hero"><div class="container hero-inner"><div class="hero-copy"><div class="eyebrow">✦ ${tr('heroEyebrow')}</div><h1>${language()==='en'?'Great meals begin with <span class="accent">what you have.</span>':'Un buon piatto nasce da <span class="accent">ciò che hai.</span>'}</h1><p>${tr('heroDescription')}</p>${heroInput()}<div class="hero-tip"><span>${tr('popular')}:</span>${['chicken','rice','tomato','potato'].map(id=>`<button data-action="add-ingredient" data-id="${id}">${label(ingredientById[id].name)} +</button>`).join('')}</div></div><div class="hero-art" aria-hidden="true"><span class="art-sprig one">🌿</span><span class="art-dot"></span><div class="food-plate"><span class="food">🥙</span></div><span class="art-sprig two">🍃</span></div></div></section><section class="section"><div class="container"><div class="section-heading"><div><div class="eyebrow">${tr('why')}</div><h2>${tr('featured')}</h2><p>${tr('featuredText')}</p></div>${link('recipes',`${tr('allRecipes')} →`,'text-link')}</div><div class="grid-recipes">${featured.map(r=>card(r)).join('')}</div></div></section><section class="section alt"><div class="container feature-block"><div class="feature-art"><div class="tile-pattern"></div><div class="feature-platter" aria-hidden="true"><span>🥗</span><span>🧆</span><span>🫓</span></div></div><div class="feature-copy"><div class="eyebrow">${tr('lebaneseEyebrow')}</div><h2>${tr('lebaneseTitle')}</h2><p>${tr('lebaneseText')}</p>${link('lebanese',`${tr('exploreLebanese')} →`,'btn btn-primary')}</div></div></section><section class="section"><div class="container"><div class="section-heading"><div><div class="eyebrow">Eatable across borders</div><h2>${tr('world')}</h2><p>${tr('worldText')}</p></div></div><div class="cuisines-grid">${cuisines.filter(c=>['Lebanese','Italian','Japanese','Indian','Mexican'].includes(c.id)).map(c=>`<a class="cuisine-tile" href="${path('recipes')}?cuisine=${encodeURIComponent(c.id)}" data-link><span class="flag">${c.flag}</span><strong>${label(c.name)}</strong></a>`).join('')}</div></div></section><section class="section alt"><div class="container"><div class="community-panel"><div><div class="eyebrow" style="color:#e8c9a0">FROM HOME COOKS TO HOME COOKS</div><h2>${tr('communityTitle')}</h2><p>${tr('communityText')}</p></div>${link('community',`${tr('community')} →`,'btn')}</div></div></section>`,'home')}
 function pageHero(tag,title,description){return `<section class="page-hero"><div class="container"><div class="eyebrow">${tag}</div><h1>${title}</h1><p>${description}</p></div></section>`}
@@ -76,8 +90,31 @@ function ingredientPicker(){return `<div class="selected-box"><div><strong>${tr(
 function filterOptions(items,active){return items.map(([value,name])=>`<option value="${esc(value)}" ${String(active)===String(value)?'selected':''}>${esc(name)}</option>`).join('')}
 function filters(){return `<aside class="side-panel"><h3>${tr('filters')}</h3><div class="filter-block"><label class="filter-label" for="diet-filter">${tr('diet')}</label><select class="select" id="diet-filter" data-filter="diet">${filterOptions([['all',tr('allDiets')],['vegan',tr('vegan')],['vegetarian',tr('vegetarian')]],state.filters.diet)}</select></div><div class="filter-block"><label class="filter-label" for="time-filter">${tr('time')}</label><select class="select" id="time-filter" data-filter="maxTime">${filterOptions([['',tr('anyTime')],['30',tr('under30')],['45',tr('under45')],['60',tr('under60')]],state.filters.maxTime)}</select></div><div class="filter-block"><label class="filter-label" for="cuisine-filter">${tr('cuisine')}</label><select class="select" id="cuisine-filter" data-filter="cuisine">${filterOptions([['all',tr('all')],...cuisines.map(c=>[c.id,`${c.flag} ${label(c.name)}`])],state.filters.cuisine)}</select></div><div class="v10-option"><label class="v10-check"><input type="checkbox" id="v10-swap-toggle" data-filter-substitutions ${state.showSubstitutions?'checked':''}/><span>${mt('showSwaps')}</span></label></div></aside>`}
 function cook(){const all=matchRecipes(state.selected,state.filters,state.catalog.filter(r=>r.searchable!==false)),groups=state.selected.length?[{id:0,title:tr('ready'),desc:tr('readyInfo'),recipes:all.filter(r=>r.categoryScore===0)},{id:1,title:tr('almost'),desc:tr('almostInfo'),recipes:all.filter(r=>r.categoryScore===1)},{id:2,title:tr('ideas'),desc:tr('ideasInfo'),recipes:all.filter(r=>r.categoryScore===2)}]:[{id:2,title:tr('featured'),desc:tr('noIngredient'),recipes:all.slice(0,12)}];return shell(`${pageHero('Eatable · '+tr('getStarted'),tr('cookTitle'),tr('cookSubtitle'))}<div class="container search-layout"><div>${ingredientPicker()}${filters()}</div><div>${state.catalogError?`<div class="notice">${esc(ct('catalogFallback'))}: ${esc(state.catalogError)}</div>`:''}<div class="results-count">${all.length} ${tr('results')}</div><p class="v10-disclaimer">${mt('matchNote')}</p>${state.showSubstitutions&&state.selected.length?`<p class="v10-disclaimer">${mt('swapNotice')}</p>`:''}${all.length?groups.filter(group=>group.recipes.length).map(group=>`<section class="results-group"><div class="results-group-header"><div><h2>${group.title}</h2><p>${group.desc}</p></div><span class="pill">${group.recipes.length}</span></div><div class="grid-recipes">${group.recipes.map(r=>card(r,r)).join('')}</div></section>`).join(''):`<div class="empty"><h3>${tr('noResults')}</h3><p>${tr('tryAgain')}</p><button class="btn btn-outline space-top" data-action="reset-filters">${tr('reset')}</button></div>`}</div></div>`,'cook')}
-function explore(){const query=normalize(state.exploreQuery);const shown=state.catalog.filter(r=>(state.exploreCuisine==='all'||state.exploreCuisine===r.cuisine)&&(!query||normalize(r.name.en+' '+r.name.it+' '+r.cuisine+' '+(r.rawIngredients||[]).join(' ')+' '+r.ingredients.map(i=>ingredientById[i.id]?.name.en+' '+ingredientById[i.id]?.name.it).join(' ')).includes(query)));return shell(`${pageHero('Eatable · '+tr('world'),tr('browseTitle'),tr('browseSubtitle'))}<div class="container section-pad"><form class="explore-bar" id="explore-form"><input class="input" id="explore-query" placeholder="${esc(tr('searchRecipes'))}" value="${esc(state.exploreQuery)}"/><select class="select" id="explore-cuisine">${filterOptions([['all',tr('all')],...cuisines.map(c=>[c.id,`${c.flag} ${label(c.name)}`])],state.exploreCuisine)}</select><button type="submit" class="btn btn-primary">⌕ ${tr('explore')}</button></form>${state.catalogError?`<div class="notice">${esc(ct('catalogFallback'))}: ${esc(state.catalogError)}</div>`:''}<p class="results-count">${shown.length} ${tr('results')}</p>${shown.length?`<div class="grid-recipes">${shown.map(r=>card(r)).join('')}</div>`:`<div class="empty">${tr('noResults')}<p>${tr('tryAgain')}</p></div>`}</div>`,'explore')}
-function lebanese(){const lebaneseRecipes=state.catalog.filter(r=>r.cuisine==='Lebanese');return shell(`${pageHero(tr('lebaneseEyebrow'),tr('lebanesePageTitle'),tr('lebanesePageText'))}<div class="container section-pad"><div class="lebanese-banner"><div><div class="eyebrow" style="color:#ead7b4">${tr('cultural')}</div><h2>${tr('heritage')}</h2><p>${tr('heritageText')}</p></div><div class="cedar-art" aria-hidden="true">🌲</div></div><div class="section-heading"><div><h2>${tr('lebaneseTitle')}</h2><p>${lebaneseRecipes.length} ${tr('results')}</p></div></div><div class="grid-recipes">${lebaneseRecipes.map(r=>card(r)).join('')}</div></div>`,'lebanese')}
+function explore(){
+ const filtered=filterDiscovery(state.catalog,{
+   query:state.exploreQuery,cuisine:state.exploreCuisine,diet:state.exploreDiet,
+   maxTime:state.exploreMaxTime,minRating:state.discoveryStatus==='ready'?state.exploreMinRating:'all',
+   extraText:r=>(r.ingredients||[]).map(i=>[ingredientById[i.id]?.name?.en,ingredientById[i.id]?.name?.it].join(' ')).join(' ')
+ },state.discoveryStats);
+ const shown=sortDiscovery(filtered,state.exploreSort,state.discoveryStats,language());
+ const form=`<form class="v14-discovery-form" id="explore-form">
+ <label class="v14-search"><span>${esc(tr('searchRecipes'))}</span><input class="input" id="explore-query" type="search" placeholder="${esc(tr('searchRecipes'))}" value="${esc(state.exploreQuery)}"/></label>
+ <div class="v14-discovery-filters">
+ <label><span>${esc(tr('cuisine'))}</span><select class="select" id="explore-cuisine" data-discovery-control="exploreCuisine">${filterOptions([['all',tr('all')],...cuisines.map(c=>[c.id,`${c.flag} ${label(c.name)}`])],state.exploreCuisine)}</select></label>
+ <label><span>${esc(dt('diet'))}</span><select class="select" data-discovery-control="exploreDiet">${filterOptions([['all',dt('allDiets')],['vegan',tr('vegan')],['vegetarian',tr('vegetarian')]],state.exploreDiet)}</select></label>
+ <label><span>${esc(dt('time'))}</span><select class="select" data-discovery-control="exploreMaxTime">${filterOptions([['',dt('allTimes')],['30','≤ 30 min'],['45','≤ 45 min'],['60','≤ 60 min']],state.exploreMaxTime)}</select></label>
+ <label><span>${esc(dt('rating'))}</span><select class="select" data-discovery-control="exploreMinRating">${filterOptions([['all',dt('anyRating')],['4',dt('rating4')],['3',dt('rating3')]],state.exploreMinRating)}</select></label>
+ <label><span>${esc(dt('sort'))}</span><select class="select" data-discovery-control="exploreSort">${filterOptions([['recommended',dt('recommended')],['top',dt('top')],['popular',dt('popular')],['newest',dt('newest')],['quickest',dt('quickest')]],state.exploreSort)}</select></label>
+ </div><button class="btn btn-primary" type="submit">⌕ ${esc(tr('explore'))}</button></form>`;
+ return shell(`${pageHero('Eatable · '+tr('world'),tr('browseTitle'),tr('browseSubtitle'))}<div class="container section-pad">${form}${state.catalogError?`<div class="notice">${esc(ct('catalogFallback'))}: ${esc(state.catalogError)}</div>`:''}${state.discoveryStatus==='unavailable'?`<div class="v14-notice" role="status">${esc(dt('metricsUnavailable'))}</div>`:''}<div class="v14-result-header"><p class="results-count">${shown.length} ${esc(dt('results'))}</p><p class="muted small">${esc(dt('metricsNote'))}</p></div>${shown.length?`<div class="grid-recipes">${shown.map(r=>card(r)).join('')}</div>`:`<div class="empty">${tr('noResults')}<p>${tr('tryAgain')}</p></div>`}</div>`,'explore')
+}
+function lebanese(){
+ const all=sortDiscovery(state.catalog.filter(r=>r.cuisine==='Lebanese'),'recommended',state.discoveryStats,language());
+ const spotlight=lebaneseSpotlight(all,state.discoveryStats,language());
+ const spotlightIds=new Set(spotlight.map(r=>r.id));
+ const remaining=all.filter(r=>!spotlightIds.has(r.id));
+ return shell(`${pageHero(tr('lebaneseEyebrow'),tr('lebanesePageTitle'),tr('lebanesePageText'))}<div class="container section-pad"><div class="lebanese-banner"><div><div class="eyebrow" style="color:#ead7b4">${tr('cultural')}</div><h2>${tr('heritage')}</h2><p>${tr('heritageText')}</p></div><div class="cedar-art" aria-hidden="true">🌲</div></div>${spotlight.length?`<section class="v14-spotlight"><div class="section-heading"><h2>${esc(dt('featuredLebanese'))}</h2></div><div class="grid-recipes">${spotlight.map(r=>card(r)).join('')}</div></section>`:''}<div class="section-heading"><div><h2>${esc(dt('allLebanese'))}</h2><p>${all.length} ${tr('results')}</p></div></div><div class="grid-recipes">${remaining.map(r=>card(r)).join('')}</div></div>`,'lebanese')
+}
 
 const communityCopy={
  en:{intro:'Share your family favorites. Each recipe is reviewed before it appears in the community.',
@@ -122,6 +159,20 @@ function submitPage(editId=null){
 }
 function mySubmissions(){return shell(`${pageHero('Eatable',ct('my'),ct('intro'))}<div class="container section-pad">${!state.user?link('account',at('signIn'),'btn btn-primary'):state.mySubmissions.length?`<div class="v3-list">${state.mySubmissions.map(r=>`<article class="v3-entry"><div class="inline-row"><h3>${submittedTitle(r)}</h3><span class="pill">${esc(prettyStatus(r.status))}</span></div><p>${submittedDescription(r)}</p><p class="muted small">${esc(r.origin)} · ${new Date(r.created_at).toLocaleDateString(language())}</p>${r.photo_path?`<div class="v4-preview">${photoMarkup(r)}<p class="muted small">${ct('photoPending')}</p></div>`:''}${r.moderation_note?`<p><strong>${ct('note')}:</strong> ${esc(r.moderation_note)}</p>`:''}${r.status==='changes_requested'?link('edit/'+r.id,ct('revise'),'btn btn-primary'):''}</article>`).join('')}</div>`:`<div class="empty"><h3>${ct('noMine')}</h3>${link('submit',ct('contribute'),'btn btn-primary space-top')}</div>`}</div>`,'community')}
 function adminPage(){if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}<div class="container section-pad">${link('community',tr('community'),'btn btn-outline')}</div>`,'community');return shell(`${pageHero('Eatable · Admin',ct('queue'),ct('intro'))}<div class="container section-pad"><div class="v3-actions">${link('admin-index',itx('indexAdmin'),'btn btn-outline')}${link('admin-curated',editorText(language(),'hub'),'btn btn-primary')}${link('admin-quality',qt('heading'),'btn btn-outline')}${link('admin-import',bt('heading'),'btn btn-outline')}</div>${state.adminSubmissions.length?`<div class="v3-list">${state.adminSubmissions.map(r=>`<article class="v3-entry"><div class="inline-row"><h3>${submittedTitle(r)}</h3><span class="pill">${esc(prettyStatus(r.status))}</span></div><p>${submittedDescription(r)}</p><p><strong>${ct('origin')}:</strong> ${esc(r.origin)} · ${r.prep_minutes} ${tr('minutes')}</p>${r.photo_path?`<div class="v4-preview">${photoMarkup(r)}</div>`:''}<details><summary>${ct('preview')}</summary><h4>${ct('ingredients')}</h4><ol>${lines(r.ingredients).map(v=>`<li>${esc(v)}</li>`).join('')}</ol><h4>${ct('steps')}</h4><ol>${lines(r.steps).map(v=>`<li>${esc(v)}</li>`).join('')}</ol></details><label>${ct('reviewNote')}<textarea id="moderation-note-${r.id}" class="input" rows="2" maxlength="2000">${esc(r.moderation_note||'')}</textarea></label><div class="v3-actions">${r.status!=='approved'?`<button class="btn btn-primary" data-action="moderate" data-id="${r.id}" data-status="approved">${ct('approve')}</button>`:''}${r.status!=='changes_requested'?`<button class="btn btn-outline" data-action="moderate" data-id="${r.id}" data-status="changes_requested">${ct('request')}</button>`:''}<button class="btn btn-light" data-action="moderate" data-id="${r.id}" data-status="rejected">${ct('reject')}</button></div></article>`).join('')}</div>`:`<div class="empty">${ct('none')}</div>`}</div>`,'community')}
+async function refreshDiscoveryStats(){
+ if(!isCloudConfigured||!getCloudClient())return;
+ const revision=++state.discoveryRevision;
+ try{
+   const metrics=await fetchDiscoveryStats();
+   if(revision!==state.discoveryRevision)return;
+   state.discoveryStats=metrics;state.discoveryStatus='ready';state.discoveryError='';
+ }catch(e){
+   if(revision!==state.discoveryRevision)return;
+   state.discoveryStatus='unavailable';state.discoveryError=e.message||String(e);
+   console.warn('Recipe ranking statistics unavailable:',e);
+ }
+ if(['recipes','lebanese','cook',''].includes(active()[0]||''))render();
+}
 async function refreshCommunity(){
  if(!isCloudConfigured)return;
  const [published,curated,indexed,vocabulary]=await Promise.all([getPublished(),getCuratedCatalog(),getCommunityIndexes(),getIngredientVocabulary()]);
@@ -133,6 +184,7 @@ async function refreshCommunity(){
  const lookup=new Map(state.communityIndexes.map(item=>[item.community_id,item]));
  state.catalog=[...(curated.data||[]).map(curatedFromDb),...state.publicRecipes.map(r=>communityFromDb(r,lookup.get(r.id)))];
  state.communityLoaded=true;state.catalogLoaded=true;state.catalogError='';
+ void refreshDiscoveryStats();
 }
 async function refreshPrivate(){
  if(!state.user){state.mySubmissions=[];state.adminSubmissions=[];state.isAdmin=false;state.photoUrls={};state.curatedAdminRows=[];state.curatedAdminLoaded=false;state.qualityRows=[];state.qualityLoaded=false;state.qualityError='';return;}
@@ -381,6 +433,14 @@ document.addEventListener('change',async event=>{
    catch(e){toast(e.message||kt('failed'));target.checked=!checked;}
    finally{state.kitchenBusy=false;render();}return;
  }
+ if(target.matches('[data-discovery-control]')){
+   const key=target.dataset.discoveryControl;
+   if(['exploreCuisine','exploreDiet','exploreMaxTime','exploreMinRating','exploreSort'].includes(key)){
+     state.exploreQuery=document.getElementById('explore-query')?.value??state.exploreQuery;
+     state[key]=target.value;render();
+   }
+   return;
+ }
  if(target.matches('[data-filter-substitutions]')){state.showSubstitutions=target.checked;try{localStorage.setItem('eatable:show-substitutions',String(target.checked));}catch{}render();return;}
  if(target.matches('[data-quality-filter]')){state.qualityFilter=target.value;render()}
  if(target.matches('[data-filter]')){state.filters[target.dataset.filter]=target.value;render()}
@@ -400,7 +460,7 @@ document.addEventListener('submit',async event=>{
    try{
      await saveReview(target,state.user.id,data.rating,data.body,mine);
      toast(rText(language(),'updated'));
-     await refreshReviewsForActive();
+     await refreshReviewsForActive();void refreshDiscoveryStats();
    }catch(e){toast(e.message||rText(language(),'error'));}
    finally{state.reviewBusy=false;}
    return;
@@ -620,7 +680,7 @@ document.addEventListener('click',event=>{const action=event.target.closest('[da
    if(!window.confirm(rText(language(),'deleteConfirm')))return;
    state.reviewBusy=true;action.disabled=true;
    deleteReview(mine.id,state.user.id).then(async()=>{
-     toast(rText(language(),'deleted'));await refreshReviewsForActive();
+     toast(rText(language(),'deleted'));await refreshReviewsForActive();void refreshDiscoveryStats();
    }).catch(e=>toast(e.message||rText(language(),'error')))
      .finally(()=>{state.reviewBusy=false;if(document.contains(action))action.disabled=false;});
    return;
@@ -632,7 +692,7 @@ document.addEventListener('click',event=>{const action=event.target.closest('[da
    if(!review)return;
    state.reviewBusy=true;action.disabled=true;
    setReviewVisibility(review.id,action.dataset.reviewVisible==='true').then(async()=>{
-     toast(rText(language(),'moderated'));await refreshReviewsForActive();
+     toast(rText(language(),'moderated'));await refreshReviewsForActive();void refreshDiscoveryStats();
    }).catch(e=>toast(e.message||rText(language(),'error')))
      .finally(()=>{state.reviewBusy=false;if(document.contains(action))action.disabled=false;});
    return;

@@ -218,3 +218,20 @@
 .v13-review-body{white-space:pre-wrap;overflow-wrap:anywhere;margin:12px 0 0;line-height:1.65}
 .v13-review-moderate{margin-top:12px;font-size:.84rem;color:#8a3a35}
 @media(max-width:620px){.v13-review-form,.v13-review-item{padding:16px}.v13-review-buttons .btn{flex:1}.v13-star-option span{padding:9px 10px}.v13-reviews{padding-top:24px}}
+
+/* Eatable v14 — Discovery filters, public aggregate rating badges, Lebanese spotlight */
+.v14-discovery-form{background:#faf8f3;border:1px solid var(--line);border-radius:19px;padding:20px;margin:0 0 21px;display:grid;gap:15px}
+.v14-discovery-form label{display:grid;gap:6px;min-width:0;color:var(--pine);font-size:.85rem;font-weight:700}
+.v14-discovery-form .input,.v14-discovery-form .select{min-width:0;width:100%;min-height:43px}
+.v14-discovery-filters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.v14-discovery-form>.btn{justify-self:start;min-width:150px}
+.v14-result-header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:5px 0 19px}
+.v14-result-header .results-count{margin:0}.v14-result-header .small{max-width:540px;margin:0}
+.v14-metrics{display:flex;align-items:center;flex-wrap:wrap;gap:8px 15px;padding-top:8px;margin:8px 0 0;border-top:1px solid #e9e6df;font-size:.83rem;color:#486353;font-weight:700}
+.v14-metrics small{font-size:.76rem;font-weight:500;color:#6d776c}
+.v14-star{color:#b37720;font-size:1.1rem}
+.v14-notice{border:1px solid #e5d5af;background:#fffbef;padding:14px 16px;border-radius:12px;margin:0 0 20px;color:#735a22;font-size:.9rem}
+.v14-spotlight{margin:30px 0 46px}.v14-spotlight>.section-heading{margin-bottom:22px}
+@media(max-width:1080px){.v14-discovery-filters{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.v14-discovery-form{padding:15px}.v14-discovery-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.v14-discovery-form>.btn{width:100%}}
+@media(max-width:360px){.v14-discovery-filters{grid-template-columns:1fr}}
