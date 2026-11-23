@@ -189,3 +189,32 @@
 }
 @media(max-height:520px){.v12-cook .cook-top{height:54px}.v12-cook-main{padding-top:10px}.v12-tools{margin-bottom:12px}.v12-cook-main h1{margin:10px 0}.v12-cook .cook-footer{padding:8px 0}}
 @media(prefers-reduced-motion:reduce){.v12-cook .progress span{transition:none}}
+
+/* Eatable v13 — Recipe ratings and reviews */
+.v13-reviews{margin-top:28px;border-top:1px solid var(--line);padding-top:30px}
+.v13-reviews .section-heading{margin-bottom:16px}
+.v13-review-overview{background:#f7f8f2;border:1px solid #dce3d9;border-radius:16px;padding:20px;margin-bottom:22px}
+.v13-average{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.v13-average>strong{font:700 3rem Georgia,serif;color:var(--pine)}
+.v13-average p{margin:4px 0}
+.v13-stars{color:#a76b21;font-size:1.1rem;letter-spacing:2px;white-space:nowrap}
+.v13-review-form{border:1px solid var(--line);border-radius:16px;background:#fff;padding:22px;margin:20px 0 24px;max-width:760px}
+.v13-review-form h3{margin:0 0 16px;font-size:1.32rem}
+.v13-star-field{padding:0;border:0;margin:0 0 16px}
+.v13-star-field legend{font-weight:700;margin-bottom:10px}
+.v13-star-options{display:flex;gap:8px;flex-wrap:wrap}
+.v13-star-option{position:relative;cursor:pointer}
+.v13-star-option input{position:absolute;opacity:0;top:7px;left:5px}
+.v13-star-option span{display:block;padding:9px 13px;background:#f6f7f1;border:1px solid #cdd7ca;border-radius:11px;font-size:.9rem;font-weight:700}
+.v13-star-option input:checked+span{background:#295842;color:#fff;border-color:#295842}
+.v13-star-option input:focus-visible+span{outline:3px solid #7aa88d;outline-offset:3px}
+.v13-review-form>label{display:block;margin-bottom:9px;font-weight:700}
+.v13-review-form textarea{width:100%;min-height:112px;resize:vertical}
+.v13-review-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.v13-review-list{display:grid;gap:12px;max-width:760px;margin-top:20px}
+.v13-review-item{border:1px solid var(--line);background:#fff;padding:18px 20px;border-radius:14px}
+.v13-review-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.v13-review-head .small{margin-left:auto}
+.v13-review-body{white-space:pre-wrap;overflow-wrap:anywhere;margin:12px 0 0;line-height:1.65}
+.v13-review-moderate{margin-top:12px;font-size:.84rem;color:#8a3a35}
+@media(max-width:620px){.v13-review-form,.v13-review-item{padding:16px}.v13-review-buttons .btn{flex:1}.v13-star-option span{padding:9px 10px}.v13-reviews{padding-top:24px}}

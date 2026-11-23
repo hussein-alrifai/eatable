@@ -12,11 +12,13 @@ import { recipes,ingredients,ingredientById,cuisines,getRecipe,getCuisine,ingred
 import {requiredMissing,shoppingLinesForRecipe,canonicalIngredientId} from './kitchen.js';
 import {cookText,clampCookingStep,readCookingProgress,writeCookingProgress,clearCookingProgress} from './cooking-mode.js';
 import {fetchKitchen,insertPantry,deletePantry,insertShopping,updateShoppingChecked,deleteShopping,moveToPantry} from './kitchen-cloud.js';
+import {reviewSection,reviewTarget,reviewCacheKey,validateReview,rText} from './reviews-ui.js';
+import {readReviewBundle,saveReview,deleteReview,setReviewVisibility} from './reviews-cloud.js';
 
 const app=document.getElementById('app');
 const load=(key,fallback)=>{try{const v=JSON.parse(localStorage.getItem(key));return Array.isArray(v)?v:fallback}catch{return fallback}};
 const readShowSubstitutions=()=>{try{return localStorage.getItem('eatable:show-substitutions')!=='false'}catch{return true}};
-const state={selected:load('eatable:ingredients',[]).filter(id=>ingredientById[id]),favorites:load('eatable:favorites',[]),user:null,cloudStatus:isCloudConfigured?'connecting':'demo',cloudError:'',passwordRecovery:false,authView:'signin',authBusy:false,authRevision:0,menuOpen:false,filters:{diet:'all',cuisine:'all',maxTime:''},exploreQuery:'',exploreCuisine:'all',servings:4,checked:new Set(),cookingStep:null,cookingIngredientsOpen:false,cookingTextLarge:false,publicRecipes:[],catalog:isCloudConfigured?[]:[...recipes],communityIndexes:[],catalogLoaded:false,catalogError:'',mySubmissions:[],adminSubmissions:[],isAdmin:false,communityBusy:false,communityError:'',communityLoaded:false,photoUrls:{},curatedAdminRows:[],curatedAdminLoaded:false,curatedBusy:false,curatedImagePreviewUrl:null,qualityRows:[],qualityLoaded:false,qualityError:'',qualityBusy:false,qualityFilter:'needs-review',bulkRaw:'',bulkRows:[],bulkSelected:new Set(),bulkBusy:false,bulkResults:null,showSubstitutions:readShowSubstitutions(),pantry:[],shopping:[],kitchenStatus:'idle',kitchenError:'',kitchenBusy:false,kitchenRevision:0};
+const state={selected:load('eatable:ingredients',[]).filter(id=>ingredientById[id]),favorites:load('eatable:favorites',[]),user:null,cloudStatus:isCloudConfigured?'connecting':'demo',cloudError:'',passwordRecovery:false,authView:'signin',authBusy:false,authRevision:0,menuOpen:false,filters:{diet:'all',cuisine:'all',maxTime:''},exploreQuery:'',exploreCuisine:'all',servings:4,checked:new Set(),cookingStep:null,cookingIngredientsOpen:false,cookingTextLarge:false,publicRecipes:[],catalog:isCloudConfigured?[]:[...recipes],communityIndexes:[],catalogLoaded:false,catalogError:'',mySubmissions:[],adminSubmissions:[],isAdmin:false,communityBusy:false,communityError:'',communityLoaded:false,photoUrls:{},curatedAdminRows:[],curatedAdminLoaded:false,curatedBusy:false,curatedImagePreviewUrl:null,qualityRows:[],qualityLoaded:false,qualityError:'',qualityBusy:false,qualityFilter:'needs-review',bulkRaw:'',bulkRows:[],bulkSelected:new Set(),bulkBusy:false,bulkResults:null,showSubstitutions:readShowSubstitutions(),pantry:[],shopping:[],kitchenStatus:'idle',kitchenError:'',kitchenBusy:false,kitchenRevision:0,reviewCache:{},reviewStatus:'idle',reviewToken:0,reviewBusy:false};
 const save=()=>{try{localStorage.setItem('eatable:ingredients',JSON.stringify(state.selected));localStorage.setItem('eatable:favorites',JSON.stringify(state.user?load('eatable:favorites',[]):state.favorites))}catch{}};
 const accountText={
   en:{account:'Account',signIn:'Sign in',signUp:'Create account',signOut:'Sign out',email:'Email',password:'Password',displayName:'Display name',forgot:'Forgot password?',reset:'Reset password',sendReset:'Send reset email',changePassword:'Choose a new password',updatePassword:'Update password',checkEmail:'Check your email for the confirmation or reset link.',loginSuccess:'Signed in successfully.',logoutSuccess:'Signed out.',cloudSaveNote:'Sign in to save recipes to your account across devices.',demoSaveNote:'Demo mode: favorites are stored in this browser only.',cloudConnecting:'Connecting to Supabase…',cloudNotConfigured:'Your Supabase connection has not been configured yet. Follow the setup guide in the ZIP.',cloudFailed:'Could not connect to Supabase. Check the project URL, publishable key and database setup.',signInToSave:'Sign in to save recipes across devices.',myAccount:'My account',signedInAs:'Signed in as',authIntro:'Save your favorite dishes and access them on different devices.',goToCookbook:'Open my cookbook',pwMin:'Use at least 8 characters for your password.',submit:'Continue'},
@@ -246,7 +248,7 @@ function detail(r){
  const possibleSwaps=state.showSubstitutions&&state.selected.length?r.ingredients.map(i=>!state.selected.includes(i.id)?substitutionFor(i.id,state.selected):null).filter(Boolean):[];
  const swapDetail=possibleSwaps.length?`<div class="v10-detail-swaps"><strong>${mt('swaps')}</strong><ul>${possibleSwaps.map(x=>`<li>${label(ingredientById[x.missingId]?.name||x.missingId)} → ${label(ingredientById[x.availableId]?.name||x.availableId)} — ${label(x.note)}</li>`).join('')}</ul><p>${mt('swapNotice')}</p></div>`:'';
  const ingredientsHtml=isCommunity?`<ul class="ingredient-list">${r.rawIngredients.map((value,index)=>`<li><label><input type="checkbox" data-check="${index}" ${state.checked.has(index)?'checked':''}/><span>${esc(value)}</span></label></li>`).join('')}</ul>`:`<div class="servings-control"><span class="muted">${tr('servings')}:</span><button data-action="minus-serving" aria-label="Reduce servings">−</button><strong>${state.servings}</strong><button data-action="plus-serving" aria-label="Increase servings">+</button></div><ul class="ingredient-list">${r.ingredients.map((i,index)=>`<li><label><input type="checkbox" data-check="${index}" ${state.checked.has(index)?'checked':''}/><span>${fmt(i.qty*state.servings/(r.serves||4),i.unit)} ${label(ingredientById[i.id]?.name||i.id)}</span></label></li>`).join('')}</ul>`;
- return shell(`<div class="container detail-wrap"><div class="breadcrumb">${link('',tr('home'))} / ${link('recipes',tr('explore'))} / <span>${label(r.name)}</span></div><div class="detail-head">${foodImage(r,'detail')}<div><div class="detail-tags"><span class="pill">${cuisineLabel(r)}</span>${dietBadge(r)}<span class="pill">${esc(r.category)}</span>${isCommunity?`<span class="pill">${esc(ct('communityRecipe'))}</span>`:''}</div><h1>${label(r.name)}</h1><p class="detail-description">${label(r.description)}</p><div class="stat-row"><div class="stat"><strong>${r.time} ${tr('minutes')}</strong><small>${tr('timeLabel')}</small></div><div class="stat"><strong>${r.serves??4}</strong><small>${tr('servings')}</small></div><div class="stat"><strong>${tr('easy')}</strong><small>${tr('difficulty')}</small></div></div><div class="detail-actions"><button class="btn btn-primary" data-action="start-cooking">${tr('startCooking')} →</button>${readCookingProgress(r)!==null?`<button class="btn btn-outline" data-action="resume-cooking">↻ ${ckt('resume')} (${tr('step')} ${readCookingProgress(r)+1})</button>`:''}<button class="btn btn-outline" data-action="favorite" data-id="${esc(r.id)}">${state.favorites.includes(r.id)?'♥ '+tr('saved'):'♡ '+tr('save')}</button><button class="btn btn-light" data-action="share">↗ ${tr('share')}</button>${r.ingredients.length&&r.searchable!==false?`<button class="btn btn-outline" data-action="shopping-from-recipe" data-id="${esc(r.id)}" ${state.kitchenBusy?'disabled':''}>🛒 ${kt('fromRecipe')}</button>`:''}</div><p class="muted small" style="margin-top:13px">${saveNote()}</p></div></div><div class="recipe-body"><aside class="ingredient-panel"><h2>${tr('requiredIngredients')}</h2>${ingredientsHtml}${swapDetail}</aside><div class="instructions"><h2>${tr('steps')}</h2>${r.steps.map((step,i)=>`<div class="instruction-step"><div class="number-circle">${i+1}</div><div><strong>${tr('step')} ${i+1}</strong><p>${label(step)}</p></div></div>`).join('')}<div class="editorial-note"><strong>${tr('story')}</strong><p class="space-top">${label(r.description)}</p></div><div class="notice"><p>${tr('recipeNote')}</p><p class="muted small">${tr('photoNote')}</p></div></div></div><section class="section" style="padding-bottom:0"><div class="section-heading"><h2>${tr('featured')}</h2>${link('recipes',`${tr('allRecipes')} →`,'text-link')}</div><div class="grid-recipes">${related.map(x=>card(x)).join('')}</div></section></div>`,'explore');
+ return shell(`<div class="container detail-wrap"><div class="breadcrumb">${link('',tr('home'))} / ${link('recipes',tr('explore'))} / <span>${label(r.name)}</span></div><div class="detail-head">${foodImage(r,'detail')}<div><div class="detail-tags"><span class="pill">${cuisineLabel(r)}</span>${dietBadge(r)}<span class="pill">${esc(r.category)}</span>${isCommunity?`<span class="pill">${esc(ct('communityRecipe'))}</span>`:''}</div><h1>${label(r.name)}</h1><p class="detail-description">${label(r.description)}</p><div class="stat-row"><div class="stat"><strong>${r.time} ${tr('minutes')}</strong><small>${tr('timeLabel')}</small></div><div class="stat"><strong>${r.serves??4}</strong><small>${tr('servings')}</small></div><div class="stat"><strong>${tr('easy')}</strong><small>${tr('difficulty')}</small></div></div><div class="detail-actions"><button class="btn btn-primary" data-action="start-cooking">${tr('startCooking')} →</button>${readCookingProgress(r)!==null?`<button class="btn btn-outline" data-action="resume-cooking">↻ ${ckt('resume')} (${tr('step')} ${readCookingProgress(r)+1})</button>`:''}<button class="btn btn-outline" data-action="favorite" data-id="${esc(r.id)}">${state.favorites.includes(r.id)?'♥ '+tr('saved'):'♡ '+tr('save')}</button><button class="btn btn-light" data-action="share">↗ ${tr('share')}</button>${r.ingredients.length&&r.searchable!==false?`<button class="btn btn-outline" data-action="shopping-from-recipe" data-id="${esc(r.id)}" ${state.kitchenBusy?'disabled':''}>🛒 ${kt('fromRecipe')}</button>`:''}</div><p class="muted small" style="margin-top:13px">${saveNote()}</p></div></div><div class="recipe-body"><aside class="ingredient-panel"><h2>${tr('requiredIngredients')}</h2>${ingredientsHtml}${swapDetail}</aside><div class="instructions"><h2>${tr('steps')}</h2>${r.steps.map((step,i)=>`<div class="instruction-step"><div class="number-circle">${i+1}</div><div><strong>${tr('step')} ${i+1}</strong><p>${label(step)}</p></div></div>`).join('')}<div class="editorial-note"><strong>${tr('story')}</strong><p class="space-top">${label(r.description)}</p></div><div class="notice"><p>${tr('recipeNote')}</p><p class="muted small">${tr('photoNote')}</p></div></div></div>${reviewSection({language:language(),recipe:r,userId:state.user?.id||null,isAdmin:state.isAdmin,cloudConfigured:isCloudConfigured,status:state.cloudStatus==='error'?'error':state.reviewStatus,data:state.reviewCache[reviewCacheKey(reviewTarget(r))]||null})}<section class="section" style="padding-bottom:0"><div class="section-heading"><h2>${tr('featured')}</h2>${link('recipes',`${tr('allRecipes')} →`,'text-link')}</div><div class="grid-recipes">${related.map(x=>card(x)).join('')}</div></section></div>`,'explore');
 }
 function accountPage(){
  const intro=pageHero('Eatable · '+at('account'),at('account'),at('authIntro'));
@@ -296,9 +298,32 @@ function changeCookingStep(r,step){
  writeCookingProgress(r,state.cookingStep);
  render();focusCookingTitle();
 }
+function activeReviewTarget(){
+ const route=active();
+ if(route[0]==='recipes'&&route[1])return reviewTarget(getAnyRecipe(route[1]));
+ if(route[0]==='community'&&route[1])return reviewTarget(getAnyRecipe(communityKey(route[1])));
+ return null;
+}
+async function refreshReviewsForActive(){
+ const target=activeReviewTarget();
+ const token=++state.reviewToken;
+ if(!target||!isCloudConfigured||!getCloudClient())return;
+ const key=reviewCacheKey(target),userId=state.user?.id||null;
+ state.reviewStatus='loading';render();
+ try{
+   const bundle=await readReviewBundle(target,userId);
+   if(token!==state.reviewToken||reviewCacheKey(activeReviewTarget())!==key||state.user?.id!==userId&&Boolean(state.user?.id||userId))return;
+   state.reviewCache[key]=bundle;
+   state.reviewStatus='ready';render();
+ }catch(e){
+   if(token!==state.reviewToken||reviewCacheKey(activeReviewTarget())!==key)return;
+   state.reviewStatus='error';render();
+   console.warn('Reviews unavailable:',e);
+ }
+}
 function active(){const pieces=location.pathname.split('/').filter(Boolean),route=pieces[0]==='it'||pieces[0]==='en'?pieces.slice(1):pieces;return route;}
 function render(){const route=active();let html;let selected='';if(!route.length){html=home();selected='home'}else if(route[0]==='cook'){html=cook();selected='cook'}else if(route[0]==='recipes'&&route[1]){const r=getAnyRecipe(route[1]);html=r?detail(r):explore();selected='explore'}else if(route[0]==='recipes'){const params=new URLSearchParams(location.search);if(params.has('cuisine'))state.exploreCuisine=params.get('cuisine');html=explore();selected='explore'}else if(route[0]==='lebanese'){html=lebanese();selected='lebanese'}else if(route[0]==='community'&&route[1]){const r=getAnyRecipe(communityKey(route[1]));html=r?detail(r):shell(pageHero('Eatable',state.communityLoaded?'404':ct('loading'),state.communityLoaded?'Recipe unavailable':'Loading approved recipes…'),'community');selected='community'}else if(route[0]==='community'){html=community();selected='community'}else if(route[0]==='submit'){html=submitPage();selected='community'}else if(route[0]==='edit'&&route[1]){html=submitPage(route[1]);selected='community'}else if(route[0]==='my-recipes'){html=mySubmissions();selected='community'}else if(route[0]==='admin-index'&&route[1]){html=adminIndexEditor(route[1]);selected='community'}else if(route[0]==='admin-index'){html=adminIndexPage();selected='community'}else if(route[0]==='admin-quality'&&route[1]){html=adminQualityReview(route[1]);selected='community'}else if(route[0]==='admin-quality'){html=adminQualityPage();selected='community'}else if(route[0]==='admin-import'){html=adminImportPage();selected='community'}else if(route[0]==='admin-curated'&&route[1]){html=curatedAdminEditor(route[1]);selected='community'}else if(route[0]==='admin-curated'){html=curatedAdminPage();selected='community'}else if(route[0]==='admin'){html=adminPage();selected='community'}else if(route[0]==='my-kitchen'){html=kitchen();selected='kitchen'}else if(route[0]==='shopping-list'){html=shoppingPage();selected='kitchen'}else if(route[0]==='account'){html=accountPage();selected='account'}else{html=home();selected='home'}app.innerHTML=html;const r=route[1]?(route[0]==='recipes'?getAnyRecipe(route[1]):route[0]==='community'?getAnyRecipe(communityKey(route[1])):null):null;if(r&&state.cookingStep!==null){app.insertAdjacentHTML('beforeend',cookingOverlay(r));document.body.style.overflow='hidden'}else{document.body.style.overflow=''}document.documentElement.lang=language();document.title=`${r?`${r.name[language()]} | `:''}Eatable — ${tr('footer')}`;}
-function navigate(url){if(state.curatedImagePreviewUrl){URL.revokeObjectURL(state.curatedImagePreviewUrl);state.curatedImagePreviewUrl=null;}const u=new URL(url,location.href);if(u.origin!==location.origin){location.href=u.href;return}history.pushState(null,'',u.pathname+u.search+u.hash);state.cookingStep=null;state.cookingIngredientsOpen=false;state.checked.clear();state.servings=4;state.menuOpen=false;render();window.scrollTo(0,0)}
+function navigate(url){if(state.curatedImagePreviewUrl){URL.revokeObjectURL(state.curatedImagePreviewUrl);state.curatedImagePreviewUrl=null;}const u=new URL(url,location.href);if(u.origin!==location.origin){location.href=u.href;return}history.pushState(null,'',u.pathname+u.search+u.hash);state.cookingStep=null;state.cookingIngredientsOpen=false;state.checked.clear();state.servings=4;state.menuOpen=false;render();window.scrollTo(0,0);void refreshReviewsForActive()}
 function toast(message){document.querySelector('.toast')?.remove();const el=document.createElement('div');el.className='toast';el.textContent=message;el.setAttribute('role','status');document.body.append(el);setTimeout(()=>el.remove(),3300)}
 function suggest(input){const q=input.value,context=input.dataset.ingredientInput,target=document.getElementById(`suggestions-${context}`);if(!target)return;const matches=ingredientMatches(q).filter(i=>!state.selected.includes(i.id));if(!q.trim()){target.classList.add('hidden');target.innerHTML='';return}target.innerHTML=matches.length?matches.map(i=>`<button type="button" role="option" data-action="add-ingredient" data-id="${i.id}">${label(i.name)} <span class="muted small">+</span></button>`).join(''):`<div style="padding:12px" class="muted small">${tr('noSearch')}</div>`;target.classList.remove('hidden')}
 document.addEventListener('input',event=>{const input=event.target;if(input.matches('[data-ingredient-input]'))suggest(input)});
@@ -362,6 +387,24 @@ document.addEventListener('change',async event=>{
  if(target.matches('[data-check]')){const i=Number(target.dataset.check);if(target.checked)state.checked.add(i);else state.checked.delete(i)}
 });
 document.addEventListener('submit',async event=>{
+ if(event.target.id==='v13-review-form'){
+   event.preventDefault();
+   if(state.reviewBusy||!state.user)return;
+   const target=activeReviewTarget();if(!target)return;
+   const key=reviewCacheKey(target),mine=state.reviewCache[key]?.mine||null;
+   const fd=new FormData(event.target);
+   let data;
+   try{data=validateReview(fd.get('rating'),fd.get('body'));}
+   catch(e){toast(rText(language(),e.message==='too-long'?'tooLong':'select'));return;}
+   state.reviewBusy=true;
+   try{
+     await saveReview(target,state.user.id,data.rating,data.body,mine);
+     toast(rText(language(),'updated'));
+     await refreshReviewsForActive();
+   }catch(e){toast(e.message||rText(language(),'error'));}
+   finally{state.reviewBusy=false;}
+   return;
+ }
  if(event.target.id==='recipe-bulk-import-form'){
    event.preventDefault();if(!state.isAdmin||state.bulkBusy||!state.curatedAdminLoaded)return;
    // Revalidate the original JSON against the current vocabulary and admin catalog.
@@ -569,6 +612,31 @@ document.addEventListener('submit',async event=>{
  }
  if(event.target.id==='explore-form'){event.preventDefault();state.exploreQuery=document.getElementById('explore-query').value;state.exploreCuisine=document.getElementById('explore-cuisine').value;history.replaceState(null,'',path('recipes'));render()}});
 document.addEventListener('click',event=>{const action=event.target.closest('[data-action]');if(action){const name=action.dataset.action;const id=action.dataset.id;
+ if(name==='review-retry'){void refreshReviewsForActive();return;}
+ if(name==='review-delete'){
+   const target=activeReviewTarget();const key=reviewCacheKey(target);
+   const mine=state.reviewCache[key]?.mine;
+   if(!state.user||!mine||state.reviewBusy)return;
+   if(!window.confirm(rText(language(),'deleteConfirm')))return;
+   state.reviewBusy=true;action.disabled=true;
+   deleteReview(mine.id,state.user.id).then(async()=>{
+     toast(rText(language(),'deleted'));await refreshReviewsForActive();
+   }).catch(e=>toast(e.message||rText(language(),'error')))
+     .finally(()=>{state.reviewBusy=false;if(document.contains(action))action.disabled=false;});
+   return;
+ }
+ if(name==='review-moderate'){
+   if(!state.isAdmin||state.reviewBusy)return;
+   const target=activeReviewTarget();const key=reviewCacheKey(target);
+   const review=state.reviewCache[key]?.rows?.find(row=>row.id===action.dataset.reviewId);
+   if(!review)return;
+   state.reviewBusy=true;action.disabled=true;
+   setReviewVisibility(review.id,action.dataset.reviewVisible==='true').then(async()=>{
+     toast(rText(language(),'moderated'));await refreshReviewsForActive();
+   }).catch(e=>toast(e.message||rText(language(),'error')))
+     .finally(()=>{state.reviewBusy=false;if(document.contains(action))action.disabled=false;});
+   return;
+ }
  if(name==='import-sample'){
    if(!state.isAdmin||state.bulkBusy)return;
    action.disabled=true;
@@ -714,17 +782,17 @@ async function onSessionChanged(user,event){
  const previousId=state.user?.id;
  state.user=user;
  state.cloudStatus='ready';
- if(!user){state.kitchenRevision++;state.pantry=[];state.shopping=[];state.kitchenStatus='idle';state.kitchenError='';state.favorites=load('eatable:favorites',[]);state.isAdmin=false;state.mySubmissions=[];state.adminSubmissions=[];state.photoUrls={};state.curatedAdminRows=[];state.curatedAdminLoaded=false;state.qualityRows=[];state.qualityLoaded=false;state.qualityError='';render();return;}
+ if(!user){state.kitchenRevision++;state.pantry=[];state.shopping=[];state.kitchenStatus='idle';state.kitchenError='';state.favorites=load('eatable:favorites',[]);state.isAdmin=false;state.mySubmissions=[];state.adminSubmissions=[];state.photoUrls={};state.curatedAdminRows=[];state.curatedAdminLoaded=false;state.qualityRows=[];state.qualityLoaded=false;state.qualityError='';render();void refreshReviewsForActive();return;}
  if(previousId!==user.id)state.favorites=[];
  const {data,error}=await readFavorites(user.id);
  if(revision!==state.authRevision)return;
  if(error){state.cloudError=error.message;toast(error.message);return;}
  state.favorites=(data||[]).map(item=>item.recipe_slug).filter(id=>typeof id==='string'&&id.length>0); 
  try{await Promise.all([refreshPrivate(),refreshKitchen()]);}catch(e){state.communityError=e.message||ct('failed');}
- if(revision===state.authRevision)render();
+ if(revision===state.authRevision){render();void refreshReviewsForActive();}
 }
 if(isCloudConfigured){
- initializeCloud(onSessionChanged).then(async()=>{try{await refreshCommunity();}catch(e){state.communityError=e.message||ct('failed');state.communityLoaded=true;state.catalogError=state.communityError;}render();}).catch(e=>{
+ initializeCloud(onSessionChanged).then(async()=>{try{await refreshCommunity();}catch(e){state.communityError=e.message||ct('failed');state.communityLoaded=true;state.catalogError=state.communityError;}render();void refreshReviewsForActive();}).catch(e=>{
    state.cloudStatus='error';state.cloudError=e.message||String(e);render();
  });
 }

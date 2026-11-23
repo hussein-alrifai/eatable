@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {recipes} from '../src/recipes.js';
+const r=recipes.find(x=>x.steps?.length>=3);
+const store=new Map(),listeners={};
+const app={innerHTML:'',insertAdjacentHTML(position,html){this.innerHTML+=html;}};
+globalThis.localStorage={getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)};
+globalThis.location={pathname:'/en/recipes/'+r.id,search:'',href:'https://eatable.example/en/recipes/'+r.id,origin:'https://eatable.example'};
+globalThis.window={location:globalThis.location,addEventListener(){},scrollTo(){},localStorage:globalThis.localStorage};
+globalThis.history={replaceState(){},pushState(){}};
+globalThis.document={createElement(){return {className:'',textContent:'',setAttribute(){},remove(){}}},getElementById:id=>id==='app'?app:{focus(){}},querySelector:()=>({focus(){},remove(){}}),addEventListener:(name,handler)=>{listeners[name]=handler},documentElement:{lang:'en'},body:{style:{},append(){}}};
+await import('../src/app.js');
+assert.match(app.innerHTML,/Ratings & Reviews/);
+assert.match(app.innerHTML,/Ratings become available when Supabase is connected/);
+assert.match(app.innerHTML,/data-action="start-cooking"/);
+const action={dataset:{action:'start-cooking'},disabled:false};
+listeners.click({target:{closest:selector=>selector==='[data-action]'?action:null},preventDefault(){}});
+assert.match(app.innerHTML,/class="cook-overlay v12-cook/);
+console.log('PASS v13 integrated recipe detail and v12 cooking overlay');
