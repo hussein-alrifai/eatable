@@ -228,7 +228,7 @@ function toast(message){document.querySelector('.toast')?.remove();const el=docu
 function suggest(input){const q=input.value,context=input.dataset.ingredientInput,target=document.getElementById(`suggestions-${context}`);if(!target)return;const matches=ingredientMatches(q).filter(i=>!state.selected.includes(i.id));if(!q.trim()){target.classList.add('hidden');target.innerHTML='';return}target.innerHTML=matches.length?matches.map(i=>`<button type="button" role="option" data-action="add-ingredient" data-id="${i.id}">${label(i.name)} <span class="muted small">+</span></button>`).join(''):`<div style="padding:12px" class="muted small">${tr('noSearch')}</div>`;target.classList.remove('hidden')}
 document.addEventListener('input',event=>{const input=event.target;if(input.matches('[data-ingredient-input]'))suggest(input)});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){const target=event.target.closest('.field-wrap');target?.querySelector('.suggestions')?.classList.add('hidden');if(state.cookingStep!==null){state.cookingStep=null;render()}}if(event.key==='Enter'&&event.target.matches('[data-ingredient-input]')){event.preventDefault();const first=ingredientMatches(event.target.value).find(i=>!state.selected.includes(i.id));if(first){state.selected.push(first.id);save();render();document.getElementById(event.target.id)?.focus()}else toast(tr('errorIngredient'))}});
-document.addEventListener('change',event=>{
+document.addEventListener('change',async event=>{
  const target=event.target;
  if(target.matches('#recipe-json-file')){
    if(!state.isAdmin||state.bulkBusy)return;
