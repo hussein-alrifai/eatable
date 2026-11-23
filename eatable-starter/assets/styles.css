@@ -235,3 +235,24 @@
 @media(max-width:1080px){.v14-discovery-filters{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:650px){.v14-discovery-form{padding:15px}.v14-discovery-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.v14-discovery-form>.btn{width:100%}}
 @media(max-width:360px){.v14-discovery-filters{grid-template-columns:1fr}}
+
+/* Eatable v15: private recipe collections and transparent recommendations */
+.v15-actions {display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:20px 0;}
+.v15-create {max-width:780px;margin:0 0 24px;padding:22px;background:var(--cream,#faf6ee);border:1px solid #e6ddd0;border-radius:18px;}
+.v15-create > label,.v15-rename label,.v15-add label {font-weight:650;display:block;margin-bottom:8px;}
+.v15-create .v15-actions {margin:0;}
+.v15-create input {flex:1;min-width:180px;}
+.v15-collections {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:20px;align-items:start;}
+.v15-collection {background:#fff;border:1px solid #e7dfd2;border-radius:18px;padding:24px;box-shadow:0 4px 15px rgba(40,39,30,.03);}
+.v15-collection h2 {margin:0 0 8px;font-size:1.45rem;overflow-wrap:anywhere;}
+.v15-collection p {margin-bottom:12px;}
+.v15-rename {display:flex;gap:10px;align-items:end;flex-wrap:wrap;border-top:1px solid #eee7df;padding-top:15px;}
+.v15-rename label {flex:1;min-width:150px;font-size:.85rem;}
+.v15-rename .input {margin-top:6px;}
+.v15-pick {min-width:0;display:flex;flex-direction:column;}
+.v15-pick .recipe-card {flex:1;}
+.v15-reason {font-size:.85rem;color:#285943;margin:10px 0 12px;}
+.v15-add {width:100%;display:flex;gap:9px;align-items:end;flex-wrap:wrap;background:#f8f4ee;border-radius:14px;padding:12px;}
+.v15-add label {font-size:.82rem;width:100%;margin:0;}
+.v15-add .select {flex:1;min-width:150px;}
+@media (max-width:720px){.v15-create {padding:16px;}.v15-actions .btn {max-width:100%;}.v15-add .btn {width:100%;}}
