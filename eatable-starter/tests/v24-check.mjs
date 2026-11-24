@@ -1,0 +1,17 @@
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const app=readFileSync('src/app.js','utf8');
+const req=readFileSync('src/account-deletion.js','utf8');
+const sql=readFileSync('sql/12_account_deletion_requests.sql','utf8');
+assert.match(app,/account\/deletion/);
+assert.match(app,/getActiveDeletionRequest/);
+assert.match(app,/eatable-account-deletion-request/);
+assert.match(req,/eatable_deletion_requests/);
+assert.doesNotMatch(req,/auth\.admin\.deleteUser|storage\.from\([^)]*\)\.remove/);
+assert.match(sql,/ON DELETE RESTRICT/);
+assert.match(sql,/ENABLE ROW LEVEL SECURITY/);
+assert.match(sql,/auth\.uid\(\)/);
+assert.match(sql,/eatable_is_admin\(\)/);
+assert.match(sql,/GRANT INSERT\(user_id,note\)/);
+assert.doesNotMatch(sql,/DELETE\s+FROM\s+(?:auth|storage)\./i);
+console.log('v24 static checks passed');
