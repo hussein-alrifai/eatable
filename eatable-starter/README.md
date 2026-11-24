@@ -1,24 +1,66 @@
-# Eatable v24 — Account deletion requests (safe beta step)
+# Eatable v24.1 — Automatic account-deletion email notifications
 
-**This is not an automatic deletion feature.** It adds an authenticated bilingual user form at `/en/account/deletion` and `/it/account/deletion`, saving pending requests in a private Supabase table; requests are handled manually by the administrator.
+**Purpose:** Send an email to `eatable.support@gmail.com` each time a NEW deletion request is inserted into `public.eatable_deletion_requests`. It reuses the Resend service already used for **Report a Problem**.
 
-## Install (order matters)
-1. Back up your Supabase project and keep the previous working GitHub commit for rollback.
-2. In Supabase SQL Editor, run `sql/12_account_deletion_requests.sql` once. Confirm successful commit. The migration enforces `community_recipes.id` → `recipe_submissions.id` with **ON DELETE RESTRICT**, because the existing publication trigger already uses identical IDs. It changes no existing account, recipe or Storage object. Your last audit found zero community recipes, so existing data should not require backfill.
-3. In GitHub replace **only** `src/app.js`, add `src/account-deletion.js` and replace `eatable-version.txt` (optional version marker). **Keep the v22 `src/public-pages.js` untouched.** Keep Supabase settings, Vercel route, API route and all other files untouched.
-4. Wait for Vercel Production deployment and visit `https://cookwitheatable.com/en/account/deletion` while signed in.
-5. Create a test deletion request with a non-production test account; verify the pending row in Supabase Table Editor. Confirm another user cannot see that row through the normal application SDK. Test Italian `/it/account/deletion`.
-6. Manually inspect the new table and routinely check it for requests: no automatic email notification is sent.
+**No SQL migration, no change to v24 account form, no change to other APIs.** The notification is server-to-server; it does not delete an account.
 
-## Important
-- Never paste the Supabase secret/service_role key in browser code or GitHub.
-- The form asks for a deletion **request** only; it never deletes any account or files.
-- Requests are private (RLS owner/admin); anonymous users cannot submit requests.
-- An admin should process identity, recipe, Storage and account cleanup using `docs/ADMIN_RUNBOOK.md`. Do not manually delete Storage metadata via SQL.
-- Request notes are optional and limited to 500 characters; no email or uploaded documents are requested.
-- This migration adds no account-deletion automation or cookie/retention controls. Keep the legal review notice until those items are fully verified.
+## Step 1 — Add the endpoint to GitHub
 
-## Automated checks
-- JS syntax checks with Node.
-- Route integration, safe request-only behavior and SQL RLS text checks in `tests/v24-check.mjs`.
-- Supabase policies and live Vercel behavior **were not tested against your account**; verify with two test accounts before beta.
+Upload **only** `api/deletion-request-notify.mjs` into your existing Eatable repository at `api/deletion-request-notify.mjs`. Keep your working `api/report-problem.mjs` untouched. Commit and wait until Vercel says **Ready**.
+
+## Step 2 — Add ONE Vercel environment variable
+
+In Vercel → Eatable project → Settings → Environment Variables, add:
+
+- Name: `EATABLE_DELETION_WEBHOOK_SECRET`
+- Value: create a long random secret of at least 32 characters (prefer 64 random hexadecimal characters, e.g. via `openssl rand -hex 32` on your own computer).
+- Environment: **Production** (and only the other environments if you deliberately test them).
+
+You already have these variables for Report a Problem, so **do not change them**:
+
+- `RESEND_API_KEY`
+- `REPORT_TO_EMAIL=eatable.support@gmail.com`
+- `REPORT_FROM_EMAIL` (your existing working sender)
+
+**Redeploy** the Production deployment after creating the new environment variable: changes to env vars do not affect previously deployed functions. Never put the webhook secret or Resend key in frontend JavaScript or GitHub.
+
+## Step 3 — Create a Supabase Database Webhook
+
+Supabase Dashboard → **Database → Webhooks** (sometimes under Integrations → Database Webhooks) → **Create webhook**:
+
+| Setting | Value |
+|---|---|
+| Name | `eatable_deletion_email_alert` |
+| Table | `public.eatable_deletion_requests` |
+| Events | **INSERT only** |
+| Type | **HTTP Request** (not Edge Function) |
+| Method | **POST** |
+| URL | `https://cookwitheatable.com/api/deletion-request-notify` |
+| HTTP header | `Content-Type: application/json` |
+| HTTP header | `x-eatable-webhook-secret: <EXACT SAME SECRET AS VERCEL>` |
+
+If Supabase pre-populates a service-role Authorization header in the HTTP Request configuration, **remove it**. Do not send service-role, JWT or Resend API keys to this endpoint. Use only the dedicated webhook secret header.
+
+Save and enable the webhook. This event runs asynchronously after the insert.
+
+### Test
+
+1. Use a **separate test account** and submit a new deletion request at `https://cookwitheatable.com/en/account/deletion` (or Italian `/it/account/deletion`).
+2. Verify the new row appears in the `eatable_deletion_requests` table.
+3. Check `eatable.support@gmail.com` inbox and spam for **[Eatable] New account deletion request**. The email has the request ID and UTC date; open Supabase to review details.
+4. If not received, check Vercel → Logs for `/api/deletion-request-notify`, the Supabase webhook call logs, and Resend → Emails/Logs. HTTP **200** means Resend accepted the request, not necessarily that the message reached the inbox.
+
+**Important:** Creating the webhook does not notify you about existing pending requests. Only **new INSERT** events cause an email. If you have already tested the form on your account, it will show a pending request instead of inserting another row; use another test user. Also inspect already-pending rows manually now.
+
+### Security and reliability
+
+- Vercel verifies a dedicated secret before accepting the webhook. Treat it like a password. Supabase dashboard-generated webhook trigger definitions may expose custom-header values in database dumps; use an independent secret, **never** a Supabase service-role key.
+- The request must be an INSERT for the expected table with a valid UUID and pending status.
+- The email contains only request ID and time, not user IDs or private notes.
+- Resend's Idempotency-Key reduces duplicate alerts for retry/replay within the provider's idempotency window.
+- The email alert is **best-effort**, not a guaranteed notification queue. Continue checking the pending-request table periodically to avoid missing failed deliveries.
+- Account deletion continues to be **manual and administrator-reviewed**. Don't send identity documents by email.
+
+## Rollback
+
+Disable the Supabase webhook and delete the new `api/deletion-request-notify.mjs` route from GitHub if needed. No database content is changed by this patch.
