@@ -310,3 +310,16 @@
 .v19-credit a:hover,.v19-credit a:focus-visible { text-decoration: underline; }
 @media (max-width: 880px) { .v19-hero-art { height: 300px; } }
 @media (max-width: 610px) { .v19-hero .hero-inner { padding-top: 33px; } .v19-greeting { margin-top: 15px; } .v19-hero .hero-copy h1 { font-size: clamp(2.35rem,8vw,3.05rem); } .v19-hero-art { height: 245px; } .v19-emblem { width: 140px; height: 140px; font-size: 6rem; } .v19-footer-bottom { align-items: flex-start; } }
+
+/* v20 Report a Problem */
+.v20-report-heading{padding-top:64px;padding-bottom:45px}
+.v20-report-section{padding-top:10px}
+.v20-report-card{max-width:790px;margin:0 auto 65px;background:#fff;border:1px solid var(--line);border-radius:23px;box-shadow:var(--shadow);padding:clamp(20px,4vw,44px)}
+#eatable-problem-report{display:grid;gap:12px}#eatable-problem-report label{font-weight:700;font-size:.9rem;margin-top:8px}
+#eatable-problem-report .input{width:100%;padding:13px 15px;border:1px solid #c8d6ce;background:#fff;border-radius:11px;color:var(--ink);font:inherit}
+#eatable-problem-report textarea.input{min-height:165px;resize:vertical}
+.v20-report-two{display:grid;grid-template-columns:1fr 1fr;gap:15px}.v20-report-two>div{display:grid;gap:8px}
+.v20-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.v20-report-status{min-height:25px;font-size:.91rem;color:var(--pine);margin:0}.v20-report-status.is-error{color:#a53642}
+#eatable-report-submit{justify-self:start;min-width:165px}#eatable-turnstile{min-height:30px}
+@media(max-width:620px){.v20-report-two{grid-template-columns:1fr}.v20-report-card{margin-bottom:40px}.v20-report-heading{padding-top:35px}}
