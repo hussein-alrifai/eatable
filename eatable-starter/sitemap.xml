@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://cookwitheatable.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cookwitheatable.com/en" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/it</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cookwitheatable.com/en" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/en/cook</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/cook" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/cook" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/it/cook</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/cook" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/cook" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/en/recipes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/recipes" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/recipes" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/it/recipes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/recipes" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/recipes" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/en/lebanese</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/lebanese" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/lebanese" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/it/lebanese</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/lebanese" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/lebanese" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/en/community</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/community" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/community" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/it/community</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/community" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/community" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/about" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/it/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/about" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/contact" />
+  </url>
+  <url>
+    <loc>https://cookwitheatable.com/it/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookwitheatable.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://cookwitheatable.com/it/contact" />
+  </url>
+</urlset>
