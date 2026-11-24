@@ -1,5 +1,6 @@
 import { t } from './i18n.js';
 import {updateSeo} from './seo.js';
+import {installImageFallbacks} from './media-polish.js';
 import {reportText,reportPageHtml,prepareReportPage,submitProblemReport} from './problem-report.js';
 import {publicText,publicPageHtml,publicMeta} from './public-pages.js';
 import {deletionText,deletionPageHtml,getActiveDeletionRequest,createDeletionRequest} from './account-deletion.js';
@@ -28,6 +29,7 @@ import {analyzeCoverage,coveragePageHtml,coverageCsv,coverageText} from './cover
 import {coverageSuggestionsHtml} from './coverage-suggestions.js';
 
 const app=document.getElementById('app');
+installImageFallbacks(document);
 const load=(key,fallback)=>{try{const v=JSON.parse(localStorage.getItem(key));return Array.isArray(v)?v:fallback}catch{return fallback}};
 const readShowSubstitutions=()=>{try{return localStorage.getItem('eatable:show-substitutions')!=='false'}catch{return true}};
 const state={selected:load('eatable:ingredients',[]).filter(id=>ingredientById[id]),favorites:load('eatable:favorites',[]),user:null,cloudStatus:isCloudConfigured?'connecting':'demo',cloudError:'',passwordRecovery:false,authView:'signin',authBusy:false,authRevision:0,menuOpen:false,filters:{diet:'all',cuisine:'all',maxTime:''},exploreQuery:'',exploreCuisine:'all',exploreDiet:'all',exploreMaxTime:'',exploreMinRating:'all',exploreSort:'recommended',discoveryStats:{},discoveryStatus:isCloudConfigured?'loading':'demo',discoveryError:'',discoveryRevision:0,servings:4,checked:new Set(),cookingStep:null,cookingIngredientsOpen:false,cookingTextLarge:false,publicRecipes:[],catalog:isCloudConfigured?[]:[...recipes],communityIndexes:[],catalogLoaded:false,catalogError:'',mySubmissions:[],adminSubmissions:[],isAdmin:false,communityBusy:false,communityError:'',communityLoaded:false,photoUrls:{},curatedAdminRows:[],curatedAdminLoaded:false,curatedBusy:false,curatedImagePreviewUrl:null,qualityRows:[],qualityLoaded:false,qualityError:'',qualityBusy:false,qualityFilter:'needs-review',launchFilter:'all',launchGroup:'all',launchQuery:'',bulkRaw:'',bulkRows:[],bulkSelected:new Set(),bulkBusy:false,bulkResults:null,showSubstitutions:readShowSubstitutions(),pantry:[],shopping:[],kitchenStatus:'idle',kitchenError:'',kitchenBusy:false,kitchenRevision:0,reviewCache:{},reviewStatus:'idle',reviewToken:0,reviewBusy:false,collections:[],collectionItems:[],collectionsStatus:'idle',collectionsError:'',collectionsBusy:false,collectionsRevision:0,deletionRequest:null,deletionStatus:'idle',deletionError:'',deletionBusy:false,deletionRevision:0};
@@ -77,7 +79,11 @@ const label=(obj)=>esc(typeof obj==='string'?obj:obj?.[language()]??obj?.en??'')
 const cssTheme=r=>['cream','green','gold','ochre','spice','tomato'].includes(r.theme)?r.theme:'cream';
 const getAnyRecipe=id=>state.catalog.find(r=>r.id===id)||(!isCloudConfigured&&!state.catalogLoaded?getRecipe(id):null);
 const foodImage=(r,type='card')=>{
-  if(r.public_photo_path){const url=getPublicPhotoUrl(r.public_photo_path);return `<img class="catalog-photo ${type==='detail'?'detail-photo':''}" src="${esc(url)}" alt="${label(r.name)}" loading="lazy"/>`;}
+  if(r.public_photo_path){
+    const url=getPublicPhotoUrl(r.public_photo_path);
+    // The fallback is DOM-generated only when a real image fails, never an inline handler.
+    return `<img class="catalog-photo ${type==='detail'?'detail-photo':''}" src="${esc(url)}" alt="${label(r.name)}" loading="lazy" decoding="async" width="${type==='detail'?960:480}" height="${type==='detail'?720:360}" data-eatable-fallback="${type}" data-fallback-theme="${cssTheme(r)}" data-fallback-emoji="${esc(r.emoji||'🍽️')}" data-fallback-name="${label(r.name)}"/>`;
+  }
   return type==='detail'?`<div class="detail-illustration recipe-art ${cssTheme(r)}" role="img" aria-label="${label(r.name)} illustration"><span>${esc(r.emoji)}</span></div>`:`<div class="recipe-art ${cssTheme(r)}" role="img" aria-label="${label(r.name)} illustration"><span class="emoji">${esc(r.emoji)}</span></div>`;
 };
 const dishLink=r=>r.source==='community'?path(`community/${r.communityId}`):path(`recipes/${r.id}`);
@@ -122,7 +128,7 @@ function home(){
  const heroPhoto=featured.find(r=>r.public_photo_path);
  const greeting=esc(greetingFor(language(),state.user));
  const heroTitle=language()==='it'?'Cosa hai voglia di cucinare oggi?':'What do you have in mind to cook today?';
- const heroMedia=heroPhoto?`<img src="${esc(getPublicPhotoUrl(heroPhoto.public_photo_path))}" alt="" class="v19-hero-image" fetchpriority="high"/>`:`<div class="v19-hero-pattern"><div class="v19-emblem" aria-hidden="true">e</div><div class="v19-pattern-caption">Eatable <span>·</span> ${language()==='it'?'Sapori dal mondo, radici libanesi':'World flavors, Lebanese roots'}</div></div>`;
+ const heroMedia=heroPhoto?`<img src="${esc(getPublicPhotoUrl(heroPhoto.public_photo_path))}" alt="" class="v19-hero-image" fetchpriority="high" decoding="async" width="900" height="700" data-eatable-fallback="hero" data-fallback-caption="${language()==='it'?'Sapori dal mondo, radici libanesi':'World flavors, Lebanese roots'}"/>`:`<div class="v19-hero-pattern"><div class="v19-emblem" aria-hidden="true">e</div><div class="v19-pattern-caption">Eatable <span>·</span> ${language()==='it'?'Sapori dal mondo, radici libanesi':'World flavors, Lebanese roots'}</div></div>`;
  return shell(`<section class="hero v19-hero"><div class="container hero-inner"><div class="hero-copy"><div class="eyebrow">✦ ${tr('heroEyebrow')}</div><p class="v19-greeting" role="status">${greeting}</p><h1>${heroTitle}</h1><p>${tr('heroDescription')}</p>${heroInput()}<div class="hero-tip"><span>${tr('popular')}:</span>${['chicken','rice','tomato','potato'].map(id=>`<button data-action="add-ingredient" data-id="${id}">${label(ingredientById[id].name)} +</button>`).join('')}</div></div><div class="hero-art v19-hero-art" aria-hidden="true">${heroMedia}</div></div></section>
  ${featured.length?`<section class="section"><div class="container"><div class="section-heading"><div><div class="eyebrow">${tr('why')}</div><h2>${tr('featured')}</h2><p>${tr('featuredText')}</p></div>${link('recipes',`${tr('allRecipes')} →`,'text-link')}</div><div class="grid-recipes">${featured.map(r=>card(r)).join('')}</div></div></section>`:''}
  <section class="section alt"><div class="container feature-block"><div class="feature-art"><div class="tile-pattern"></div><div class="feature-platter" aria-hidden="true"><span>🥗</span><span>🧆</span><span>🫓</span></div></div><div class="feature-copy"><div class="eyebrow">${tr('lebaneseEyebrow')}</div><h2>${tr('lebaneseTitle')}</h2><p>${tr('lebaneseText')}</p>${link('lebanese',`${tr('exploreLebanese')} →`,'btn btn-primary')}</div></div></section>
