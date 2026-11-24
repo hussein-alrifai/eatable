@@ -43,7 +43,17 @@ export default {
   const text=[`Category: ${labels[category]}`,`Title: ${cleanSingle(title)}`,`Page: ${page||'Not provided'}`,`Name: ${name||'Not provided'}`,`Reply email: ${email||'Not provided'}`,'', 'Description:',description,'','Sent through the Eatable problem-report form.'].join('\n');
   try{
    const result=await limitedFetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${c.key}`,'Content-Type':'application/json'},body:JSON.stringify({from:c.from,to:[c.to],subject:emailSubject,text,...(email?{reply_to:email}:{})})});
-   if(!result.ok){console.error('Eatable report delivery rejected',result.status);return failStatus('Email could not be delivered',502)}
+   if(!result.ok){
+    let providerName='unknown_error',providerMessage='No error details returned';
+    try{
+     const info=await result.json();
+     providerName=String(info?.name??info?.error??'unknown_error').slice(0,80);
+     providerMessage=String(info?.message??'No error details returned').slice(0,400);
+    }catch{}
+    const safe=s=>s.replace(/[\r\n\t]+/g,' ').replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi,'[email address]').replace(/re_[A-Za-z0-9_-]{12,}/g,'[redacted]').slice(0,400);
+    console.error('Eatable report delivery rejected',result.status,safe(providerName),safe(providerMessage));
+    return failStatus('Email could not be delivered',502)
+   }
    return reply({ok:true});
   }catch(e){console.error('Eatable report delivery unavailable');return failStatus('Email service unavailable',502)}
  }
