@@ -1,19 +1,29 @@
-# Eatable v22 — Bilingual legal notices and source-based cookie audit
+# Eatable v23 — Privacy Operations & Production Audit
 
-**This is a small, one-file website update.** It modifies `src/public-pages.js` only, preserving About/Contact, report sending, database connections, frontend functionality and your Supabase settings.
+**Status:** operational verification kit, not a website release. **Do not upload this ZIP to GitHub or change the website or Supabase schema.** Prepared 24 November 2026 for https://cookwitheatable.com, operated as a personal noncommercial project.
 
-Included:
-- `src/public-pages.js`: revised EN/IT Privacy, Terms and Cookies & Storage notices reflecting the individual noncommercial operator and inspected v21 features.
-- `docs/PRIVACY_COOKIE_AUDIT.md`: data flow inventory, browser cookie audit, legal links and essential operational confirmations.
+## What this contains
 
-## Install safely
-1. Keep the last known-good GitHub commit. **Do not** upload this ZIP as a nested folder.
-2. Replace **only** `src/public-pages.js` in your `eatable` repository with the file from this package. Keep `src/supabase-config.js`, `api/report-problem.mjs`, `src/app.js` and all other files unchanged.
-3. Commit. Vercel production deployment should rebuild automatically.
-4. Test `/en/privacy`, `/it/privacy`, `/en/terms`, `/it/terms`, `/en/cookies`, `/it/cookies` and language switching. Verify login and `/en/report` still work.
-5. Complete the checks in `docs/PRIVACY_COOKIE_AUDIT.md` **before** removing the prominently displayed publication-review notice.
+- `sql/READ_ONLY_PRIVACY_CHECKS.sql`: five read-only SQL checks for tables, RLS, foreign keys, Storage buckets, and callable public functions.
+- `docs/ACCOUNT_DELETION_RUNBOOK.md`: controlled handling of access/erasure requests, with published-contribution and photo cleanup warnings.
+- `docs/COOKIE_AUDIT.md`: step-by-step live browser inspection, without copying token values.
+- `docs/RETENTION_AND_PROCESSORS.md`: proposed retention register and actual-provider checks still required.
+- `docs/GO_NO_GO_BETA.md`: launch readiness decisions and evidence.
+- `docs/ISTRUZIONI_ITALIANO.md`: concise Italian summary.
 
-## Why a banner remains
-This patch does **not** falsely certify legal compliance. We cannot verify your live cookie inventory, provider transfers and real deletion/retention operations from the provided source alone. The warning stays visible until you have verified and updated those facts. A public noncommercial project may still be subject to the GDPR.
+## Suggested order
 
-No SQL migration; no Vercel environment-variable changes; no API-key changes.
+1. Open Supabase > Eatable > **SQL Editor > New query**. Paste and run the **read-only** SQL. Check expected tables and RLS; it changes nothing. Take screenshots of non-sensitive summaries only.
+2. Follow `docs/COOKIE_AUDIT.md` on your **real production site** in a fresh incognito browser profile, with guest, logged-in and report-form checks.
+3. Decide the support-mail retention workflow and rehearse account-erasure handling **without actually deleting an account**.
+4. Confirm the provider/transfer facts in Supabase, Vercel, Resend, Cloudflare and Google settings and revise the v22 bilingual legal pages to match.
+5. When all launch gates pass, seek suitable legal review as needed and remove the v22 draft notices in a separate, controlled versioned change.
+
+## Important facts established by source inspection
+
+- `profiles`, `user_favorites`, `recipe_submissions`, `user_pantry`, `user_shopping_items`, `eatable_recipe_reviews`, and collections have foreign keys configured to cascade or depend on cascading records when the Auth user is deleted.
+- `community_recipes` contains **published copies**, not a direct user-id foreign key. Deleting an Auth account **may leave the approved public recipe**; review publication separately.
+- Supabase Storage photo objects require separate cleanup before Auth account deletion. Public photos require extra review for removal from the site and/or attribution.
+- v22 remains a source-based *draft*: actual retention, provider transfers and live cookie behavior have NOT been independently verified.
+
+Do not run destructive SQL in a production database without a reviewed account-specific deletion procedure and a verified recovery plan.
