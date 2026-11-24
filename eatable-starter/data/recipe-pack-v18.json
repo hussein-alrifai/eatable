@@ -1,0 +1,717 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "slug": "weeknight-chicken-tomato-skillet",
+      "title_en": "Weeknight chicken and tomato skillet",
+      "title_it": "Pollo in padella con pomodoro e cipolla",
+      "description_en": "Simple home-style chicken with tomatoes, garlic and onions, designed for an everyday pantry.",
+      "description_it": "Pollo casalingo con pomodori, aglio e cipolle: una ricetta semplice con ingredienti comuni.",
+      "cuisine": "Other",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Slice the chicken into evenly sized strips and chop the onion and tomatoes.",
+          "it": "Taglia il pollo a strisce regolari e trita cipolla e pomodori."
+        },
+        {
+          "en": "Heat the oil over medium heat. Soften onion for 5 minutes, add minced garlic for 30 seconds, then add tomatoes and simmer for 8 minutes.",
+          "it": "Scalda l’olio a fuoco medio. Fai appassire la cipolla per 5 minuti, aggiungi l’aglio tritato per 30 secondi, poi i pomodori e cuoci per 8 minuti."
+        },
+        {
+          "en": "Add chicken and salt. Simmer, turning occasionally, until completely cooked; the thickest pieces must reach 74°C. Serve hot.",
+          "it": "Aggiungi pollo e sale. Cuoci mescolando di tanto in tanto fino a completa cottura; le parti più spesse devono raggiungere 74 °C. Servi caldo."
+        }
+      ],
+      "theme": "tomato"
+    },
+    {
+      "slug": "lebanese-inspired-chickpea-tomato-pan",
+      "title_en": "Chickpeas with warm tomato and garlic — Lebanese-inspired",
+      "title_it": "Ceci al pomodoro e aglio — ispirazione libanese",
+      "description_en": "A practical Lebanese-inspired chickpea pan dish; a modern home-style variation rather than a claimed traditional recipe.",
+      "description_it": "Un piatto pratico di ceci ispirato alla cucina libanese; una variante casalinga moderna, non una ricetta tradizionale certificata.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Use cooked chickpeas; if using canned chickpeas, drain and rinse. Chop the tomatoes and onion.",
+          "it": "Usa ceci già cotti; se in scatola, scolali e sciacquali. Taglia pomodori e cipolla."
+        },
+        {
+          "en": "Cook onion in olive oil for 5 minutes, add garlic briefly, then stir in tomatoes and cook until softened.",
+          "it": "Fai appassire la cipolla nell’olio per 5 minuti, aggiungi brevemente l’aglio, poi i pomodori e cuoci finché si ammorbidiscono."
+        },
+        {
+          "en": "Add chickpeas and salt, warm through for 5–7 minutes, then turn off the heat and squeeze lemon over the dish.",
+          "it": "Aggiungi ceci e sale, scalda per 5–7 minuti, poi spegni e condisci con succo di limone."
+        }
+      ],
+      "theme": "ochre"
+    },
+    {
+      "slug": "garlic-lemon-pan-potatoes",
+      "title_en": "Pan-fried garlic and lemon potatoes",
+      "title_it": "Patate in padella al limone e aglio",
+      "description_en": "An easy lemon potato skillet with garlic; a home-style variation rather than traditional Greek oven potatoes.",
+      "description_it": "Patate in padella con limone e aglio; variante casalinga, diversa dalle patate greche al forno.",
+      "cuisine": "Greek",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 700,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut potatoes into small even cubes (about 1.5 cm). Dry them well to limit splattering.",
+          "it": "Taglia le patate a cubetti regolari di circa 1,5 cm. Asciugale bene per ridurre gli schizzi."
+        },
+        {
+          "en": "Cook covered in olive oil over medium-low heat for 15–20 minutes, stirring occasionally, until tender throughout.",
+          "it": "Cuoci le patate con coperchio nell’olio a fuoco medio-basso per 15–20 minuti, mescolando ogni tanto, finché sono morbide."
+        },
+        {
+          "en": "Uncover and brown the edges. Add minced garlic for the final minute, then remove from heat and add salt and fresh lemon juice.",
+          "it": "Togli il coperchio e fai dorare i bordi. Aggiungi l’aglio tritato nell’ultimo minuto, poi spegni e unisci sale e succo di limone fresco."
+        }
+      ],
+      "theme": "gold"
+    },
+    {
+      "slug": "carrot-lentil-rice-pilaf",
+      "title_en": "Carrot, lentil and rice pilaf",
+      "title_it": "Pilaf di riso, lenticchie e carote",
+      "description_en": "A pantry-friendly pilaf inspired by Middle Eastern rice-and-lentil cooking; not a regional authenticity claim.",
+      "description_it": "Un pilaf da dispensa ispirato a riso e lenticchie mediorientali, senza pretese di autenticità regionale.",
+      "cuisine": "Middle Eastern",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "lentils",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 1000,
+          "unit": "ml"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse lentils and rice separately. Dice carrot and onion finely.",
+          "it": "Sciacqua separatamente lenticchie e riso. Taglia finemente carote e cipolla."
+        },
+        {
+          "en": "Simmer lentils in about 650 ml water for 15–20 minutes until nearly tender; adjust according to the lentil variety.",
+          "it": "Fai sobbollire le lenticchie in circa 650 ml d’acqua per 15–20 minuti, finché sono quasi tenere; regola secondo la varietà."
+        },
+        {
+          "en": "In a wide pan soften onion and carrot in olive oil, add cumin, rinsed rice and lentils with enough remaining water; cover and simmer until the rice is cooked.",
+          "it": "In una casseruola fai appassire cipolla e carote nell’olio, aggiungi cumino, riso sciacquato e lenticchie con l’acqua restante necessaria; copri e cuoci finché il riso è pronto."
+        },
+        {
+          "en": "Rest covered for 5 minutes. Fluff gently and serve; adjust seasoning to taste.",
+          "it": "Lascia riposare coperto per 5 minuti. Sgrana delicatamente e servi; regola il condimento a piacere."
+        }
+      ],
+      "theme": "ochre"
+    },
+    {
+      "slug": "herb-lettuce-cucumber-salad",
+      "title_en": "Fresh cucumber, lettuce and herb salad",
+      "title_it": "Insalata fresca di cetriolo, lattuga ed erbe",
+      "description_en": "A light Lebanese-inspired everyday salad emphasizing fresh herbs and lemon.",
+      "description_it": "Un’insalata quotidiana leggera, ispirata ai sapori libanesi con erbe fresche e limone.",
+      "cuisine": "Lebanese",
+      "category": "Salad",
+      "diet": "vegan",
+      "prep_minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "cucumber",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "lettuce",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "mint",
+          "qty": 10,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Wash produce carefully and dry the lettuce and herbs.",
+          "it": "Lava accuratamente le verdure e asciuga lattuga ed erbe."
+        },
+        {
+          "en": "Chop cucumber, tomatoes, lettuce, parsley and mint; combine in a large bowl.",
+          "it": "Taglia cetriolo, pomodori, lattuga, prezzemolo e menta; unisci in una ciotola capiente."
+        },
+        {
+          "en": "Whisk lemon juice and olive oil. Toss the salad just before serving to keep it crisp.",
+          "it": "Mescola succo di limone e olio. Condisci l’insalata appena prima di servirla, per mantenerla croccante."
+        }
+      ],
+      "theme": "green"
+    },
+    {
+      "slug": "zaatar-breadsticks",
+      "title_en": "Za’atar breadsticks — home variation",
+      "title_it": "Grissini allo za’atar — variante casalinga",
+      "description_en": "Soft-baked breadsticks with za’atar, adapted from everyday Levantine flatbread flavors.",
+      "description_it": "Grissini morbidi allo za’atar, una variante ispirata ai sapori del pane levantino.",
+      "cuisine": "Lebanese",
+      "category": "Bread",
+      "diet": "vegan",
+      "prep_minutes": 100,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "yeast",
+          "qty": 7,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 220,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "zaatar",
+          "qty": 35,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Combine flour, yeast, water, salt and 20 ml oil. Knead to a soft dough, cover and let rise until puffed, around 60 minutes.",
+          "it": "Mescola farina, lievito, acqua, sale e 20 ml di olio. Impasta, copri e lascia lievitare finché aumenta di volume, circa 60 minuti."
+        },
+        {
+          "en": "Divide the dough into 12 pieces and roll into breadsticks. Mix the remaining oil with za’atar and brush over the dough.",
+          "it": "Dividi l’impasto in 12 parti e forma dei grissini. Mescola l’olio restante con lo za’atar e spennella l’impasto."
+        },
+        {
+          "en": "Bake at 210°C in a preheated oven for around 14–18 minutes, until the sticks are baked through and lightly golden.",
+          "it": "Cuoci nel forno preriscaldato a 210 °C per circa 14–18 minuti, finché sono ben cotti e leggermente dorati."
+        }
+      ],
+      "theme": "gold"
+    },
+    {
+      "slug": "tomato-feta-olive-plate",
+      "title_en": "Tomato, feta and olive plate",
+      "title_it": "Piatto freddo di pomodoro, feta e olive",
+      "description_en": "A quick Mediterranean cold plate inspired by Greek flavors; not a replacement for a traditional village salad.",
+      "description_it": "Un piatto freddo mediterraneo rapido, ispirato ai sapori greci; non è l’insalata horiatiki tradizionale.",
+      "cuisine": "Greek",
+      "category": "Salad",
+      "diet": "vegetarian",
+      "prep_minutes": 10,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "cucumber",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "feta",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "olives",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 0.5,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 25,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Wash tomatoes and cucumber, then cut them into large chunks. Thinly slice the onion.",
+          "it": "Lava pomodori e cetriolo e tagliali a pezzi grandi. Affetta finemente la cipolla."
+        },
+        {
+          "en": "Arrange the vegetables with olives and feta on a platter.",
+          "it": "Disponi le verdure su un piatto con olive e feta."
+        },
+        {
+          "en": "Drizzle with olive oil and serve chilled or at room temperature.",
+          "it": "Condisci con olio d’oliva e servi freddo oppure a temperatura ambiente."
+        }
+      ],
+      "theme": "green"
+    },
+    {
+      "slug": "soy-tofu-rice-with-peas",
+      "title_en": "Soy tofu rice with carrots and peas",
+      "title_it": "Riso con tofu alla soia, carote e piselli",
+      "description_en": "A weeknight Japanese-inspired rice-and-tofu dish using simple pantry staples.",
+      "description_it": "Riso e tofu per tutti i giorni, ispirato ai sapori giapponesi con ingredienti semplici.",
+      "cuisine": "Japanese",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "qty": 240,
+          "unit": "g"
+        },
+        {
+          "id": "tofu",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "soy_sauce",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "peas",
+          "qty": 130,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook rice in water according to the packet instructions. Drain the tofu, pat it dry and dice it.",
+          "it": "Cuoci il riso in acqua secondo le istruzioni della confezione. Scola il tofu, asciugalo e taglialo a cubetti."
+        },
+        {
+          "en": "Use a nonstick skillet to cook diced onion and carrot with a small splash of water until tender. Add tofu and cook until lightly browned, adding water if needed.",
+          "it": "In una padella antiaderente cuoci cipolla e carota a dadini con poca acqua fino ad ammorbidirle. Aggiungi il tofu e fallo dorare leggermente, aggiungendo acqua se serve."
+        },
+        {
+          "en": "Add peas and cook until thoroughly hot; stir in cooked rice and soy sauce. Toss until evenly seasoned and serve immediately.",
+          "it": "Aggiungi i piselli e cuoci fino a quando sono ben caldi; unisci riso cotto e salsa di soia. Mescola per insaporire e servi subito."
+        }
+      ],
+      "theme": "cream"
+    },
+    {
+      "slug": "quick-yogurt-breakfast-pancakes",
+      "title_en": "Simple yogurt breakfast pancakes",
+      "title_it": "Pancake semplici allo yogurt",
+      "description_en": "Small home-style breakfast pancakes, made with familiar refrigerator ingredients.",
+      "description_it": "Piccoli pancake casalinghi per la colazione, preparati con ingredienti comuni.",
+      "cuisine": "Other",
+      "category": "Breakfast",
+      "diet": "vegetarian",
+      "prep_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggs",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "yogurt",
+          "qty": 280,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Whisk eggs with yogurt. Add flour and salt, mixing until you have a thick but spoonable batter.",
+          "it": "Sbatti le uova con lo yogurt. Aggiungi farina e sale e mescola fino a ottenere una pastella densa ma porzionabile al cucchiaio."
+        },
+        {
+          "en": "Heat a nonstick pan over medium-low heat and melt a small piece of butter. Pour small rounds of batter.",
+          "it": "Scalda una padella antiaderente a fuoco medio-basso e sciogli poco burro. Versa piccole porzioni di pastella."
+        },
+        {
+          "en": "Cook until bubbles form and the underside is golden; turn and cook through. Repeat with remaining batter and butter.",
+          "it": "Cuoci finché compaiono bollicine e il fondo è dorato; gira e completa la cottura. Ripeti con la pastella e il burro restanti."
+        }
+      ],
+      "theme": "gold"
+    },
+    {
+      "slug": "italian-tomato-basil-saute",
+      "title_en": "Warm tomato and basil topping",
+      "title_it": "Condimento caldo di pomodoro e basilico",
+      "description_en": "A quick Italian-style tomato topping for toast or cooked pasta; recipe is for the sauce itself.",
+      "description_it": "Un condimento rapido di pomodoro all’italiana per pane tostato o pasta già cotta; la ricetta riguarda solo il sugo.",
+      "cuisine": "Italian",
+      "category": "Other",
+      "diet": "vegan",
+      "prep_minutes": 18,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "basil",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Dice the tomatoes and chop garlic finely. Tear basil leaves by hand.",
+          "it": "Taglia i pomodori a dadini e trita finemente l’aglio. Spezzetta il basilico con le mani."
+        },
+        {
+          "en": "Warm olive oil on low heat and cook garlic briefly without browning. Add tomatoes and simmer gently for 10–12 minutes.",
+          "it": "Scalda l’olio a fuoco basso e cuoci brevemente l’aglio senza dorarlo. Aggiungi i pomodori e fai sobbollire per 10–12 minuti."
+        },
+        {
+          "en": "Season with salt and stir in basil off the heat. Use promptly over bread or separately prepared pasta.",
+          "it": "Regola di sale e aggiungi il basilico a fuoco spento. Usa subito su pane oppure su pasta cotta separatamente."
+        }
+      ],
+      "theme": "tomato"
+    },
+    {
+      "slug": "lemon-pea-pasta",
+      "title_en": "Lemon and pea pasta",
+      "title_it": "Pasta con piselli e limone",
+      "description_en": "A quick Italian-inspired pasta with garlic, peas and bright lemon.",
+      "description_it": "Pasta veloce ispirata alla cucina italiana con aglio, piselli e limone.",
+      "cuisine": "Italian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "peas",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook the pasta in boiling salted water according to the packet; reserve a cup of cooking water.",
+          "it": "Cuoci la pasta in acqua bollente salata secondo la confezione; conserva una tazza d’acqua di cottura."
+        },
+        {
+          "en": "Heat oil gently with crushed garlic, add peas and a little pasta water. Cook until the peas are hot and tender.",
+          "it": "Scalda dolcemente l’olio con aglio schiacciato, aggiungi i piselli e poca acqua di cottura. Cuoci finché i piselli sono caldi e teneri."
+        },
+        {
+          "en": "Toss drained pasta with peas, lemon zest and a little lemon juice. Add cooking water to coat and serve immediately.",
+          "it": "Condisci la pasta scolata con piselli, scorza e poco succo di limone. Aggiungi acqua di cottura per amalgamare e servi subito."
+        }
+      ],
+      "theme": "green"
+    },
+    {
+      "slug": "lebanese-inspired-garlic-yogurt",
+      "title_en": "Garlic and mint yogurt dip — Lebanese-inspired",
+      "title_it": "Salsa di yogurt, aglio e menta — ispirazione libanese",
+      "description_en": "A simple yogurt dip inspired by Lebanese table condiments.",
+      "description_it": "Una salsa facile allo yogurt ispirata ai condimenti della tavola libanese.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 12,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "yogurt",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "mint",
+          "qty": 12,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 15,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Wash and finely chop the mint. Crush the garlic into a paste.",
+          "it": "Lava e trita finemente la menta. Riduci l’aglio in pasta."
+        },
+        {
+          "en": "Stir yogurt, garlic and lemon juice together until smooth; add salt gradually.",
+          "it": "Mescola yogurt, aglio e succo di limone fino a ottenere una crema; aggiungi gradualmente il sale."
+        },
+        {
+          "en": "Top with mint and olive oil, cover and chill until serving. Keep refrigerated.",
+          "it": "Completa con menta e olio d’oliva, copri e conserva in frigorifero fino al servizio."
+        }
+      ],
+      "theme": "cream"
+    }
+  ]
+}

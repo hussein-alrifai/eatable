@@ -20,6 +20,7 @@ import {fetchCollections,createCollection,renameCollection,removeCollection,addT
 import {filterDiscovery,sortDiscovery,metricFor,lebaneseSpotlight} from './discovery-ranking.js';
 import {auditLaunchCatalog,launchPlannerHtml,launchCsv,launchText} from './launch-planner.js';
 import {analyzeCoverage,coveragePageHtml,coverageCsv,coverageText} from './coverage-audit.js';
+import {coverageSuggestionsHtml} from './coverage-suggestions.js';
 
 const app=document.getElementById('app');
 const load=(key,fallback)=>{try{const v=JSON.parse(localStorage.getItem(key));return Array.isArray(v)?v:fallback}catch{return fallback}};
@@ -253,7 +254,7 @@ function curatedAdminEditor(slug){
 }
 function adminImportPage(){
  if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}`,'community');
- return shell(`${pageHero('Eatable · Admin',bt('heading'),bt('intro'))}<div class="container section-pad"><div class="v3-actions"><button type="button" class="btn btn-primary" data-action="import-v16">${language()==='it'?'Carica 12 nuove bozze v16':'Load 12 new v16 drafts'}</button><a class="btn btn-outline" href="/data/recipe-pack-v16.json" download>${language()==='it'?'Scarica ricette v16 (JSON)':'Download v16 recipes (JSON)'}</a>${link('admin-launch',launchText(language(),'heading'),'btn btn-outline')}${link('admin-coverage',coverageText(language(),'title'),'btn btn-outline')}</div>${!state.curatedAdminLoaded?`<p>${ct('loading')}</p>`:importPageHtml({lang:language(),rows:state.bulkRows,selected:state.bulkSelected,results:state.bulkResults,loading:state.bulkBusy,link})}</div>`,'community');
+ return shell(`${pageHero('Eatable · Admin',bt('heading'),bt('intro'))}<div class="container section-pad"><div class="v3-actions"><button type="button" class="btn btn-primary" data-action="import-v18">${language()==='it'?'Carica 12 bozze v18':'Load 12 v18 drafts'}</button><a class="btn btn-outline" href="/data/recipe-pack-v18.json" download>${language()==='it'?'Scarica JSON v18':'Download v18 JSON'}</a><button type="button" class="btn btn-primary" data-action="import-v16">${language()==='it'?'Carica 12 nuove bozze v16':'Load 12 new v16 drafts'}</button><a class="btn btn-outline" href="/data/recipe-pack-v16.json" download>${language()==='it'?'Scarica ricette v16 (JSON)':'Download v16 recipes (JSON)'}</a>${link('admin-launch',launchText(language(),'heading'),'btn btn-outline')}${link('admin-coverage',coverageText(language(),'title'),'btn btn-outline')}</div>${!state.curatedAdminLoaded?`<p>${ct('loading')}</p>`:importPageHtml({lang:language(),rows:state.bulkRows,selected:state.bulkSelected,results:state.bulkResults,loading:state.bulkBusy,link})}</div>`,'community');
 }
 function adminLaunchPage(){
  if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}`,'community');
@@ -264,7 +265,7 @@ function adminLaunchPage(){
 function adminCoveragePage(){
  if(!state.isAdmin)return shell(`${pageHero('Eatable','Access denied','Administrator permissions required')}`,'community');
  const report=analyzeCoverage(state.catalog,ingredients);
- const body=!state.catalogLoaded?`<p>${esc(coverageText(language(),'notLoaded'))}</p>`:coveragePageHtml({report,lang:language(),link});
+ const body=!state.catalogLoaded?`<p>${esc(coverageText(language(),'notLoaded'))}</p>`:coveragePageHtml({report,lang:language(),link})+coverageSuggestionsHtml({report,lang:language(),existingSlugs:state.curatedAdminRows.map(x=>x.slug),link});
  return shell(`${pageHero('Eatable · Admin',coverageText(language(),'title'),coverageText(language(),'intro'))}<div class="container section-pad">${body}</div>`,'community');
 }
 function adminQualityPage(){
@@ -787,11 +788,11 @@ document.addEventListener('click',event=>{const action=event.target.closest('[da
    if(!state.isAdmin)return;
    state.launchFilter='all';state.launchGroup='all';state.launchQuery='';render();return;
  }
- if(name==='import-sample'||name==='import-v16'){
+ if(name==='import-sample'||name==='import-v16'||name==='import-v18'){
 
    if(!state.isAdmin||state.bulkBusy)return;
    action.disabled=true;
-   fetch(name==='import-v16'?'/data/recipe-pack-v16.json':'/data/recipe-starter-pack.json',{cache:'no-store'})
+   fetch(name==='import-v18'?'/data/recipe-pack-v18.json':name==='import-v16'?'/data/recipe-pack-v16.json':'/data/recipe-starter-pack.json',{cache:'no-store'})
      .then(r=>{if(!r.ok)throw Error(`Sample pack not found (${r.status}).`);return r.text()})
      .then(raw=>{
        if(active()[0]!=='admin-import')return;
