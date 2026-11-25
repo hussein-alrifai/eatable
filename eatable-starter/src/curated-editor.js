@@ -23,7 +23,7 @@ export function curatedEditorHtml({lang,recipe,vocabulary,cuisines,link,getPubli
  const tx=k=>editorText(lang,k);const newRecipe=!recipe;
  const val=k=>esc(recipe?.[k]||'');
  const data=recipe||{slug:'',title_en:'',title_it:'',description_en:'',description_it:'',cuisine:'Lebanese',category:'Main',diet:'unknown',prep_minutes:30,servings:4,ingredients:[{id:'',qty:1,unit:'g'}],steps:[{en:'',it:''}],emoji:'🍲',theme:'cream'};
- const cuisineOptions=[...cuisines.map(c=>[c.id,(c.flag||'')+' '+(lang==='it'?c.name.it:c.name.en)]),['Other','Other']];
+ const cuisineOptions=[...cuisines.map(c=>[c.id,(c.flag||'')+' '+(lang==='it'?c.name.it:c.name.en)]),...(data.cuisine&&!cuisines.some(c=>c.id===data.cuisine)?[[data.cuisine,data.cuisine+' (legacy — reclassify)']]:[])];
  const categories=['Main','Mezze','Salad','Breakfast','Soup','Bread','Dessert','Drink','Other'].map(x=>[x,x]);
  const diets=[['unknown',tx('unknown')],['vegan',tx('vegan')],['vegetarian',tx('vegetarian')],['none',tx('other')]];
  return `<div class="v3-actions">${link('admin-curated','← '+tx('back'),'btn btn-outline')}</div><form id="curated-recipe-form" class="v3-form" data-slug="${esc(recipe?.slug||'')}">

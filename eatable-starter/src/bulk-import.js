@@ -1,11 +1,13 @@
 // v9: Validate editorial JSON before importing. Only existing admin/RLS-controlled
 // catalog tables are written, and imports are ALWAYS unpublished drafts.
 import {validateCurated} from './curated-editor.js';
+import {cuisines} from './recipes.js';
 
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const categories=new Set(['Main','Mezze','Salad','Breakfast','Soup','Bread','Dessert','Drink','Other']);
 const allowedDiets=new Set(['vegan','vegetarian','none','unknown']);
-const supportedCuisines=new Set(['Lebanese','Italian','Middle Eastern','Indian','Japanese','Mexican','Greek','Spanish','Other']);
+// Keep importer validation aligned with cuisine choices in Explore and the recipe editor.
+const supportedCuisines=new Set(cuisines.map(c=>c.id));
 const supportedThemes=new Set(['cream','green','gold','ochre','spice','tomato']);
 const MAX_RECIPES=25;
 
@@ -35,7 +37,9 @@ export function parseRecipeImport(raw,vocabulary,existing=[]){
  return doc.recipes.map((source,index)=>{
   const recipe=cleanRecipe(source);
   let error=validateCurated(recipe,vocabulary);
-  if(!error&&(!allowedDiets.has(recipe.diet)||!categories.has(recipe.category)||!supportedCuisines.has(recipe.cuisine)))error='Invalid cuisine, category, or diet.';
+  if(!error&&!supportedCuisines.has(recipe.cuisine))error=`Unsupported cuisine: ${recipe.cuisine || '(empty)'}.`;
+  if(!error&&!categories.has(recipe.category))error=`Unsupported category: ${recipe.category || '(empty)'}.`;
+  if(!error&&!allowedDiets.has(recipe.diet))error=`Unsupported diet: ${recipe.diet || '(empty)'}.`;
   if(!error&&slugsSeen.has(recipe.slug))error='Repeated slug inside this file.';
   slugsSeen.add(recipe.slug);
   const duplicate=existingSet.has(recipe.slug);
