@@ -1,66 +1,99 @@
-# Eatable v24.1 — Automatic account-deletion email notifications
+# Eatable v28 — National Cuisines & Recipe Expansion
 
-**Purpose:** Send an email to `eatable.support@gmail.com` each time a NEW deletion request is inserted into `public.eatable_deletion_requests`. It reuses the Resend service already used for **Report a Problem**.
+Prepared for **https://cookwitheatable.com/** and the existing **Eatable Admin → Batch Recipe Import** tool.
 
-**No SQL migration, no change to v24 account form, no change to other APIs.** The notification is server-to-server; it does not delete an account.
+## Deliverables
 
-## Step 1 — Add the endpoint to GitHub
+- **236 additional ingredients**, each with a canonical ID and English/Italian translation; insert-only SQL plus JSON reference.
+- **86 new bilingual recipe drafts**: 40 recipes in national Arab cuisines and 46 in European cuisines.
+- **41 specific national cuisine options**, with English/Italian names and country flags. Of those, 37 are represented among the new 86 drafts.
+- **4 import files**, each containing 21–22 recipes (under Eatable's 25-recipe / 400-KB importer limits).
+- **Corrected v27 recipe files** assigning nine earlier broadly categorized recipe drafts to specifically named national *versions/inspirations*, plus an optional SQL update for previously imported but still-unpublished v27 drafts.
+- A minimal **three-module frontend compatibility patch**, required because the old importer rejects new nationalities.
 
-Upload **only** `api/deletion-request-notify.mjs` into your existing Eatable repository at `api/deletion-request-notify.mjs`. Keep your working `api/report-problem.mjs` untouched. Commit and wait until Vercel says **Ready**.
+There are **no recipe photos**, no user information and no API credentials in this package. All Eatable importer drafts remain **unpublished** until you approve them.
 
-## Step 2 — Add ONE Vercel environment variable
+## Files
 
-In Vercel → Eatable project → Settings → Environment Variables, add:
-
-- Name: `EATABLE_DELETION_WEBHOOK_SECRET`
-- Value: create a long random secret of at least 32 characters (prefer 64 random hexadecimal characters, e.g. via `openssl rand -hex 32` on your own computer).
-- Environment: **Production** (and only the other environments if you deliberately test them).
-
-You already have these variables for Report a Problem, so **do not change them**:
-
-- `RESEND_API_KEY`
-- `REPORT_TO_EMAIL=eatable.support@gmail.com`
-- `REPORT_FROM_EMAIL` (your existing working sender)
-
-**Redeploy** the Production deployment after creating the new environment variable: changes to env vars do not affect previously deployed functions. Never put the webhook secret or Resend key in frontend JavaScript or GitHub.
-
-## Step 3 — Create a Supabase Database Webhook
-
-Supabase Dashboard → **Database → Webhooks** (sometimes under Integrations → Database Webhooks) → **Create webhook**:
-
-| Setting | Value |
+| File | Purpose |
 |---|---|
-| Name | `eatable_deletion_email_alert` |
-| Table | `public.eatable_deletion_requests` |
-| Events | **INSERT only** |
-| Type | **HTTP Request** (not Edge Function) |
-| Method | **POST** |
-| URL | `https://cookwitheatable.com/api/deletion-request-notify` |
-| HTTP header | `Content-Type: application/json` |
-| HTTP header | `x-eatable-webhook-secret: <EXACT SAME SECRET AS VERCEL>` |
+| `cuisine-patch/src/recipes.js` | Adds the national cuisine list, flags and bilingual labels for Explore, filters and the recipe editor |
+| `cuisine-patch/src/bulk-import.js` | Accepts the expanded national cuisine identifiers in JSON imports |
+| `cuisine-patch/src/curated-editor.js` | Shows national cuisines in the editor instead of generic cuisine choices; preserves a legacy label only while editing an old entry |
+| `cuisine-patch/cuisines.json` | Human-readable country/nationality reference |
+| `ingredients/03_add_v28_ingredients.sql` | Inserts 236 additional ingredients without overwriting existing rows |
+| `ingredients/ingredients-v28-additions.json` | Ingredient names and groups for editorial review; not for the recipe importer |
+| `recipes/recipes-v28-01.json` to `04.json` | Four separate ready-to-preview recipe draft batches (22, 22, 21, 21) |
+| `recipes/v27-corrected-nations-01.json` and `02.json` | Corrected versions of the **previous** 50-recipe pack; only use for first-time v27 import |
+| `ingredients/04_optional_reclassify_v27_drafts.sql` | **Optional:** relabel only nine matching v27 drafts if you already imported them, but not published them |
+| `docs/RECIPE_INDEX.md` | All 86 new recipes by country and batch |
+| `docs/EDITORIAL_REVIEW.md` | Review and food-safety guidance |
+| `tests/validate-pack.mjs` | Offline import validation command |
 
-If Supabase pre-populates a service-role Authorization header in the HTTP Request configuration, **remove it**. Do not send service-role, JWT or Resend API keys to this endpoint. Use only the dedicated webhook secret header.
+## Installation — follow this order
 
-Save and enable the webhook. This event runs asynchronously after the insert.
+### Step 1: Update GitHub / Vercel once
 
-### Test
+Your current importer only accepts `Lebanese, Italian, Middle Eastern, Indian, Japanese, Mexican, Greek, Spanish, Other`. New nationality values would otherwise show **Invalid cuisine, category, or diet**.
 
-1. Use a **separate test account** and submit a new deletion request at `https://cookwitheatable.com/en/account/deletion` (or Italian `/it/account/deletion`).
-2. Verify the new row appears in the `eatable_deletion_requests` table.
-3. Check `eatable.support@gmail.com` inbox and spam for **[Eatable] New account deletion request**. The email has the request ID and UTC date; open Supabase to review details.
-4. If not received, check Vercel → Logs for `/api/deletion-request-notify`, the Supabase webhook call logs, and Resend → Emails/Logs. HTTP **200** means Resend accepted the request, not necessarily that the message reached the inbox.
+Back up your working GitHub revision. Replace the following **three files** in your existing repository with the contents of the `cuisine-patch/src/` folder:
 
-**Important:** Creating the webhook does not notify you about existing pending requests. Only **new INSERT** events cause an email. If you have already tested the form on your account, it will show a pending request instead of inserting another row; use another test user. Also inspect already-pending rows manually now.
+- `src/recipes.js`
+- `src/bulk-import.js`
+- `src/curated-editor.js`
 
-### Security and reliability
+Commit and wait until your Production Vercel deployment is ready. **Do not replace `src/app.js`, other website files, Supabase connection files or API endpoints.** These three files are based on your prior Eatable modules; if you edited them independently, compare and merge the changes rather than overwriting them.
 
-- Vercel verifies a dedicated secret before accepting the webhook. Treat it like a password. Supabase dashboard-generated webhook trigger definitions may expose custom-header values in database dumps; use an independent secret, **never** a Supabase service-role key.
-- The request must be an INSERT for the expected table with a valid UUID and pending status.
-- The email contains only request ID and time, not user IDs or private notes.
-- Resend's Idempotency-Key reduces duplicate alerts for retry/replay within the provider's idempotency window.
-- The email alert is **best-effort**, not a guaranteed notification queue. Continue checking the pending-request table periodically to avoid missing failed deliveries.
-- Account deletion continues to be **manual and administrator-reviewed**. Don't send identity documents by email.
+The public Explore and Search filters use the expanded `cuisines` array from `src/recipes.js` and will show the newly defined country labels. Existing legacy recipe records already stored in Supabase do **not** change automatically.
 
-## Rollback
+### Step 2: Add ingredient vocabulary in Supabase
 
-Disable the Supabase webhook and delete the new `api/deletion-request-notify.mjs` route from GitHub if needed. No database content is changed by this patch.
+If you have **not yet run the previous v27 ingredient SQL**, do that first, because new recipes use existing + v27 + v28 ingredient IDs.
+
+Go to **Supabase → SQL Editor** and run `ingredients/03_add_v28_ingredients.sql` **once**. It is insert-only with `ON CONFLICT (id) DO NOTHING`; rerunning will not overwrite an existing ingredient ID. It doesn't modify recipes or Storage.
+
+Refresh Eatable to load the new ingredient vocabulary.
+
+### Step 3: Import four batches as drafts
+
+Sign in as administrator and open: **https://cookwitheatable.com/en/admin-import**.
+
+Upload in this order, separately:
+
+1. `recipes/recipes-v28-01.json` — 22 recipes
+2. `recipes/recipes-v28-02.json` — 22 recipes
+3. `recipes/recipes-v28-03.json` — 21 recipes
+4. `recipes/recipes-v28-04.json` — 21 recipes
+
+Start with **one recipe** to confirm your live deployment accepts the new cuisine. Then upload the remaining drafts. The importer blocks overwriting an existing slug and never automatically publishes imported recipes.
+
+Visit **https://cookwitheatable.com/en/admin-curated** to review, correct and photograph each draft before publishing it.
+
+### Step 4 (only if relevant): Correct the previous v27 classifications
+
+If **v27 was never imported**, use the two `v27-corrected-nations-*.json` files **instead of** the old v27 files. These already have specific country labels.
+
+If **v27 was already imported but is still in draft**, review the mapping and optionally run `ingredients/04_optional_reclassify_v27_drafts.sql` in Supabase SQL Editor. It relabels only the nine known matching v27 records **where `published = false` and the old cuisine label still matches**. It never modifies published entries or overwrites other data.
+
+If **v27 recipes were already published**, edit their national classifications manually in the admin editor after verifying the intended national version. **Do not reimport**: Eatable intentionally skips existing slugs.
+
+Older sample recipes such as `shakshuka` may still be labeled generically in existing **database rows**. This patch doesn't silently reassign them; review these entries separately.
+
+## Quality and accuracy limits
+
+- Recipe nationalities identify a **specific regional version or inspiration**, not exclusive ownership of dishes often shared across neighboring countries.
+- 86 draft recipes have bilingual titles, descriptions, 3 preparation steps each, servings, times and quantities.
+- The recipes and translations are **editorial drafts**, not professionally tested or verified as authoritative traditional preparations.
+- Allergen, ingredient brand, rennet/vegetarian labeling and cooking safety require review. `diet: unknown` is deliberately used when a cheese may contain animal rennet.
+- Recipe photos are deliberately absent so you can take or license them yourself.
+- The importer validation was run **locally**, not on your production Supabase project. Current live catalog and ingredient collisions cannot be ruled out beyond the available original and v27 data.
+
+## Optional offline validation
+
+With Node.js installed, in the extracted folder run:
+
+```sh
+node tests/validate-pack.mjs
+```
+
+The check validates all four new recipe imports plus the corrected v27 imports against the supplied vocabulary reference and Eatable's actual importer validator. There is no network access and no database modification.

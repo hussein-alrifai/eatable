@@ -1,0 +1,1481 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "cuisine": "Lebanese",
+      "slug": "kibbeh-bil-sanieh",
+      "title_en": "Kibbeh bil sanieh",
+      "title_it": "Kibbeh al forno",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 90,
+      "servings": 4,
+      "description_en": "Baked Lebanese bulgur and beef kibbeh with a fragrant pine-nut filling.",
+      "description_it": "Kibbeh libanese al forno con bulgur, manzo e ripieno di pinoli.",
+      "steps": [
+        {
+          "en": "Soak and drain fine bulgur; knead with half the beef, one grated onion and spice.",
+          "it": "Ammolla e scola il bulgur fine; impasta con metà del manzo, una cipolla grattugiata e spezie."
+        },
+        {
+          "en": "Brown remaining beef with chopped onion and pine nuts; season and cool.",
+          "it": "Rosola il restante manzo con cipolla tritata e pinoli; insaporisci e lascia intiepidire."
+        },
+        {
+          "en": "Layer half the kibbeh in an oiled dish, spread filling, cover, score diamonds and bake at 190°C for 35–45 minutes.",
+          "it": "Stendi metà impasto in teglia unta, distribuisci il ripieno, copri, incidi a rombi e cuoci a 190 °C per 35–45 minuti."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "fine_bulgur",
+          "qty": 240,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Lebanese",
+      "slug": "moghrabieh-chicken",
+      "title_en": "Moghrabieh with chicken",
+      "title_it": "Moghrabieh con pollo",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 95,
+      "servings": 4,
+      "description_en": "Lebanese giant-couscous stew with chicken, chickpeas and warm spices.",
+      "description_it": "Stufato libanese di moghrabieh con pollo, ceci e spezie.",
+      "steps": [
+        {
+          "en": "Brown chicken and sliced onions in butter; add stock and spices and simmer gently.",
+          "it": "Rosola pollo e cipolle affettate nel burro; unisci brodo e spezie e lascia sobbollire."
+        },
+        {
+          "en": "Cook moghrabieh in seasoned liquid until tender; add cooked, drained chickpeas.",
+          "it": "Cuoci il moghrabieh nel liquido insaporito finché è tenero; aggiungi ceci già cotti e scolati."
+        },
+        {
+          "en": "Serve the couscous pearls with fully cooked chicken and enough broth to keep them moist.",
+          "it": "Servi i granelli con pollo ben cotto e brodo sufficiente a mantenerli morbidi."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "moghrabieh",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_thigh",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chicken_stock",
+          "qty": 900,
+          "unit": "ml"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "caraway",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "butter",
+          "qty": 35,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Lebanese",
+      "slug": "shish-barak-yogurt",
+      "title_en": "Shish barak in yogurt sauce",
+      "title_it": "Shish barak in salsa di yogurt",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 110,
+      "servings": 4,
+      "description_en": "Small Lebanese meat dumplings simmered in a gently seasoned yogurt sauce.",
+      "description_it": "Raviolini libanesi di carne in salsa di yogurt con aglio e menta.",
+      "steps": [
+        {
+          "en": "Knead flour and water into dough; rest, roll thin and fill small circles with lamb and minced onion.",
+          "it": "Impasta farina e acqua; fai riposare, stendi e farcisci piccoli dischi con agnello e cipolla."
+        },
+        {
+          "en": "Seal dumplings; whisk yogurt with starch and gently heat while stirring, then simmer dumplings until cooked through.",
+          "it": "Chiudi i raviolini; scalda delicatamente yogurt e amido mescolando, quindi cuoci i raviolini fino a cottura completa."
+        },
+        {
+          "en": "Sauté garlic and mint in oil and spoon over the hot shish barak.",
+          "it": "Soffriggi aglio e menta nell’olio e versa sugli shish barak caldi."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 160,
+          "unit": "ml"
+        },
+        {
+          "id": "ground_lamb",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "strained_yogurt",
+          "qty": 700,
+          "unit": "g"
+        },
+        {
+          "id": "cornstarch",
+          "qty": 18,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "dried_mint",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 25,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Lebanese",
+      "slug": "loubye-bzeit",
+      "title_en": "Loubye b zeit — green beans",
+      "title_it": "Fagiolini libanesi all’olio",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 55,
+      "servings": 4,
+      "description_en": "Slow-cooked Lebanese green beans with tomatoes and olive oil.",
+      "description_it": "Fagiolini libanesi stufati con pomodoro e olio d’oliva.",
+      "steps": [
+        {
+          "en": "Trim green beans and slice the onions.",
+          "it": "Pulisci i fagiolini e affetta le cipolle."
+        },
+        {
+          "en": "Soften onions in olive oil, add garlic, tomatoes and beans; cover and simmer 35–40 minutes.",
+          "it": "Fai appassire le cipolle nell’olio, aggiungi aglio, pomodoro e fagiolini; copri e stufa per 35–40 minuti."
+        },
+        {
+          "en": "Uncover to reduce any excess liquid, season and serve warm or at room temperature.",
+          "it": "Scopri per far evaporare il liquido in eccesso, condisci e servi tiepido o a temperatura ambiente."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "green_beans",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "canned_tomatoes",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Lebanese",
+      "slug": "sayadieh-fish-rice",
+      "title_en": "Sayadieh — fish and spiced rice",
+      "title_it": "Sayadieh — riso speziato e pesce",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 75,
+      "servings": 4,
+      "description_en": "Lebanese coastal rice with browned onions, aromatic spices and fish.",
+      "description_it": "Riso libanese della costa con cipolle dorate, spezie e pesce.",
+      "steps": [
+        {
+          "en": "Brown sliced onions deeply in oil; reserve a few for topping and blend the rest into fish stock.",
+          "it": "Dora bene le cipolle nell’olio; tienine alcune da parte e frulla le altre con il brodo di pesce."
+        },
+        {
+          "en": "Cook rice in the aromatic stock with cumin and coriander until tender.",
+          "it": "Cuoci il riso nel brodo aromatico con cumino e coriandolo fino a cottura."
+        },
+        {
+          "en": "Cook fish separately until opaque and flaky; serve over rice with onions and toasted pine nuts.",
+          "it": "Cuoci il pesce a parte finché è opaco e si sfalda; servi sul riso con cipolle e pinoli tostati."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "sea_bass",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "long_grain_rice",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "fish_stock",
+          "qty": 800,
+          "unit": "ml"
+        },
+        {
+          "id": "cumin",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "coriander_powder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 25,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Lebanese",
+      "slug": "sfouf-turmeric-cake",
+      "title_en": "Sfouf turmeric semolina cake",
+      "title_it": "Sfouf — torta libanese alla curcuma",
+      "category": "Dessert",
+      "diet": "vegan",
+      "prep_minutes": 50,
+      "servings": 4,
+      "description_en": "Golden Lebanese semolina cake scented with turmeric and topped with sesame.",
+      "description_it": "Torta libanese dorata di semola profumata alla curcuma e sesamo.",
+      "steps": [
+        {
+          "en": "Whisk semolina, flour, sugar, turmeric and baking powder.",
+          "it": "Mescola semola, farina, zucchero, curcuma e lievito per dolci."
+        },
+        {
+          "en": "Stir in oil and water until smooth; pour into a lined 22 cm tin and scatter sesame seeds.",
+          "it": "Incorpora olio e acqua fino a ottenere un composto liscio; versa in uno stampo da 22 cm e cospargi di sesamo."
+        },
+        {
+          "en": "Bake at 180°C for 30–35 minutes until a skewer comes out clean; cool before cutting.",
+          "it": "Cuoci a 180 °C per 30–35 minuti fino a stecchino asciutto; lascia raffreddare prima di tagliare."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "semolina",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "turmeric",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "baking_powder",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "sunflower_oil",
+          "qty": 100,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 320,
+          "unit": "ml"
+        },
+        {
+          "id": "sesame_seeds",
+          "qty": 25,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Syrian",
+      "slug": "muhammara-syrian",
+      "title_en": "Syrian muhammara",
+      "title_it": "Muhammara siriana",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "description_en": "Aleppo-style red pepper and walnut dip with pomegranate molasses.",
+      "description_it": "Crema siriana di peperoni rossi e noci con melassa di melagrana.",
+      "steps": [
+        {
+          "en": "Roast peppers until soft, cover briefly, then peel and remove seeds.",
+          "it": "Arrostisci i peperoni finché sono morbidi, copri brevemente, poi spellali e privali dei semi."
+        },
+        {
+          "en": "Blend peppers with walnuts, breadcrumbs, molasses, Aleppo pepper and cumin.",
+          "it": "Frulla peperoni, noci, pangrattato, melassa, peperoncino di Aleppo e cumino."
+        },
+        {
+          "en": "Stream in olive oil to make a textured dip and serve at room temperature.",
+          "it": "Unisci l’olio a filo lasciando una crema leggermente granulosa; servi a temperatura ambiente."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "pepper",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "walnuts",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "breadcrumbs",
+          "qty": 65,
+          "unit": "g"
+        },
+        {
+          "id": "pomegranate_molasses",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "aleppo_pepper",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cumin",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Syrian",
+      "slug": "harraq-osbao",
+      "title_en": "Harraq osbao lentil pasta",
+      "title_it": "Harraq osbao con lenticchie",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 65,
+      "servings": 4,
+      "description_en": "Damascus-style tangy lentils with handmade dough pieces and crisp onions.",
+      "description_it": "Lenticchie siriane agrodolci con pasta fatta a mano e cipolle croccanti.",
+      "steps": [
+        {
+          "en": "Make a firm flour-and-water dough, roll thin and cut into short strips; cook lentils until nearly tender.",
+          "it": "Prepara un impasto sodo di farina e acqua, stendilo e taglialo a strisce; lessa le lenticchie quasi a cottura."
+        },
+        {
+          "en": "Brown sliced onions separately; add dough pieces to simmering lentils with diluted tamarind and molasses.",
+          "it": "Dora a parte le cipolle; aggiungi la pasta alle lenticchie con tamarindo diluito e melassa."
+        },
+        {
+          "en": "Top with the fried onions and chopped garlic-coriander mixture; serve warm.",
+          "it": "Completa con cipolle fritte e un trito di aglio e coriandolo; servi caldo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "brown_lentils",
+          "qty": 230,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "tamarind_paste",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "pomegranate_molasses",
+          "qty": 20,
+          "unit": "ml"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 70,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Syrian",
+      "slug": "yalanji-syrian",
+      "title_en": "Syrian yalanji stuffed vine leaves",
+      "title_it": "Yalanji siriano di foglie di vite",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 100,
+      "servings": 4,
+      "description_en": "Syrian-style vine leaves filled with rice, herbs and a bright citrus dressing.",
+      "description_it": "Foglie di vite siriane ripiene di riso, erbe e condimento agrumato.",
+      "steps": [
+        {
+          "en": "Rinse preserved vine leaves; mix rinsed uncooked rice with chopped tomato, herbs, onion and oil.",
+          "it": "Sciacqua le foglie di vite conservate; mescola il riso crudo sciacquato con pomodoro, erbe, cipolla e olio."
+        },
+        {
+          "en": "Roll small portions tightly in vine leaves and arrange seam-side down in a pot.",
+          "it": "Arrotola piccole porzioni nelle foglie e sistema le chiusure verso il basso in pentola."
+        },
+        {
+          "en": "Cover with water, lemon and molasses; weigh down, simmer gently 60–70 minutes and cool before serving.",
+          "it": "Copri con acqua, limone e melassa; poni un peso, cuoci dolcemente 60–70 minuti e lascia raffreddare."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "grape_leaves",
+          "qty": 45,
+          "unit": "pcs"
+        },
+        {
+          "id": "short_grain_rice",
+          "qty": 230,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "id": "mint",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 90,
+          "unit": "ml"
+        },
+        {
+          "id": "pomegranate_molasses",
+          "qty": 25,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Syrian",
+      "slug": "kibbeh-labaniyeh",
+      "title_en": "Kibbeh labaniyeh",
+      "title_it": "Kibbeh siriano allo yogurt",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 110,
+      "servings": 4,
+      "description_en": "Syrian kibbeh dumplings poached in yogurt sauce with garlic and mint.",
+      "description_it": "Polpette siriane di kibbeh in salsa allo yogurt con aglio e menta.",
+      "steps": [
+        {
+          "en": "Knead soaked bulgur with part of the seasoned beef; form shells and fill with cooked beef and pine nuts.",
+          "it": "Impasta bulgur ammollato con parte della carne speziata; forma gusci e farcisci con manzo cotto e pinoli."
+        },
+        {
+          "en": "Whisk yogurt with starch over low heat, stirring constantly until gently simmering.",
+          "it": "Scalda yogurt e amido a fuoco dolce, mescolando continuamente fino a lieve bollore."
+        },
+        {
+          "en": "Add kibbeh carefully and simmer until cooked through; finish with sautéed garlic and mint.",
+          "it": "Immergi delicatamente le kibbeh e cuoci fino al centro; completa con aglio e menta soffritti."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "fine_bulgur",
+          "qty": 230,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "strained_yogurt",
+          "qty": 700,
+          "unit": "g"
+        },
+        {
+          "id": "cornstarch",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "dried_mint",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 25,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Palestinian",
+      "slug": "musakhan-chicken",
+      "title_en": "Palestinian musakhan",
+      "title_it": "Musakhan palestinese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 85,
+      "servings": 4,
+      "description_en": "Palestinian sumac chicken layered over olive-oil onions and flatbread.",
+      "description_it": "Pollo palestinese al sommacco su cipolle all’olio e pane arabo.",
+      "steps": [
+        {
+          "en": "Roast seasoned chicken thighs at 200°C until fully cooked, around 40–50 minutes.",
+          "it": "Arrostisci le cosce di pollo condite a 200 °C fino a cottura completa, circa 40–50 minuti."
+        },
+        {
+          "en": "Cook sliced onions slowly in olive oil until very soft; stir in sumac and allspice.",
+          "it": "Cuoci lentamente le cipolle affettate nell’olio finché sono morbide; unisci sommacco e pimento."
+        },
+        {
+          "en": "Layer warm flatbread with onions, add chicken and toasted pine nuts; serve immediately.",
+          "it": "Disponi le cipolle sul pane caldo, aggiungi pollo e pinoli tostati; servi subito."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "chicken_thigh",
+          "qty": 900,
+          "unit": "g"
+        },
+        {
+          "id": "red_onion",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "sumac",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 90,
+          "unit": "ml"
+        },
+        {
+          "id": "khubz_bread",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "allspice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "Palestinian",
+      "slug": "maqluba-eggplant",
+      "title_en": "Palestinian eggplant maqluba",
+      "title_it": "Maqluba palestinese alle melanzane",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 95,
+      "servings": 4,
+      "description_en": "Upside-down Palestinian rice pot with eggplant and chicken.",
+      "description_it": "Riso palestinese capovolto con melanzane e pollo.",
+      "steps": [
+        {
+          "en": "Roast sliced eggplant, brown chicken and rinse rice until the water runs clear.",
+          "it": "Arrostisci le melanzane a fette, rosola il pollo e lava il riso finché l’acqua è limpida."
+        },
+        {
+          "en": "Layer chicken, eggplant and rice in a heavy pot; add spiced stock to cover.",
+          "it": "Disponi pollo, melanzane e riso a strati in pentola; versa brodo speziato a copertura."
+        },
+        {
+          "en": "Cover and simmer until rice and chicken are fully cooked; rest 15 minutes and carefully invert onto a platter.",
+          "it": "Cuoci coperto fino a completa cottura di riso e pollo; riposa 15 minuti e capovolgi con cura sul vassoio."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "basmati_rice",
+          "qty": 340,
+          "unit": "g"
+        },
+        {
+          "id": "eggplant",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chicken_thigh",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "chicken_stock",
+          "qty": 750,
+          "unit": "ml"
+        },
+        {
+          "id": "allspice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Palestinian",
+      "slug": "maftoul-chicken",
+      "title_en": "Palestinian maftoul with chicken",
+      "title_it": "Maftoul palestinese con pollo",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 85,
+      "servings": 4,
+      "description_en": "Palestinian hand-rolled wheat pearls with chicken and chickpea broth.",
+      "description_it": "Granelli palestinesi di grano con pollo e brodo di ceci.",
+      "steps": [
+        {
+          "en": "Brown onions and chicken in oil, add stock and spices and simmer until chicken is fully cooked.",
+          "it": "Rosola cipolle e pollo nell’olio, unisci brodo e spezie e cuoci fino a cottura completa del pollo."
+        },
+        {
+          "en": "Cook maftoul according to package directions, using some of the fragrant broth.",
+          "it": "Cuoci il maftoul secondo le istruzioni, usando parte del brodo aromatico."
+        },
+        {
+          "en": "Warm cooked chickpeas in the remaining sauce and spoon over the maftoul with chicken.",
+          "it": "Scalda i ceci già cotti nel sugo rimasto e versa sul maftoul con il pollo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "maftoul",
+          "qty": 360,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_thigh",
+          "qty": 750,
+          "unit": "g"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 280,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chicken_stock",
+          "qty": 1000,
+          "unit": "ml"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 40,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Palestinian",
+      "slug": "knafeh-nabulsi-style",
+      "title_en": "Nablus-style knafeh",
+      "title_it": "Knafeh in stile Nablus",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 60,
+      "servings": 4,
+      "description_en": "Palestinian cheese knafeh with crisp pastry and orange-blossom syrup.",
+      "description_it": "Knafeh palestinese al formaggio con pasta croccante e sciroppo ai fiori d’arancio.",
+      "steps": [
+        {
+          "en": "Desalt Nabulsi cheese if needed; make a light syrup with sugar, water and orange-blossom water.",
+          "it": "Dissala il formaggio Nabulsi se necessario; prepara uno sciroppo leggero con zucchero, acqua e fiori d’arancio."
+        },
+        {
+          "en": "Rub shredded pastry with melted butter, press half into a baking dish and spread cheese over it.",
+          "it": "Mescola la pasta sfilacciata con burro fuso, premi metà in teglia e distribuisci il formaggio."
+        },
+        {
+          "en": "Cover with remaining pastry, bake at 190°C until golden, then spoon warm syrup over and top with pistachios.",
+          "it": "Copri con la pasta restante, cuoci a 190 °C fino a doratura, versa lo sciroppo tiepido e aggiungi pistacchi."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "kunafa_dough",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "nabulsi_cheese",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 240,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 210,
+          "unit": "ml"
+        },
+        {
+          "id": "orange_blossom_water",
+          "qty": 12,
+          "unit": "ml"
+        },
+        {
+          "id": "pistachios",
+          "qty": 40,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Jordanian",
+      "slug": "mansaf-jordanian",
+      "title_en": "Jordanian mansaf",
+      "title_it": "Mansaf giordano",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 120,
+      "servings": 4,
+      "description_en": "Jordanian lamb with jameed yogurt sauce served over rice and flatbread.",
+      "description_it": "Agnello giordano con salsa di jameed su riso e pane.",
+      "steps": [
+        {
+          "en": "Simmer lamb with water and cardamom until very tender; strain and reserve the broth.",
+          "it": "Cuoci l’agnello con acqua e cardamomo fino a tenerlo morbido; filtra e conserva il brodo."
+        },
+        {
+          "en": "Rehydrate and prepare jameed according to its instructions; warm with broth and simmer cooked lamb in the sauce.",
+          "it": "Reidrata il jameed seguendo le indicazioni; scaldalo col brodo e fai sobbollire l’agnello cotto nella salsa."
+        },
+        {
+          "en": "Cook rice separately and layer bread, rice and lamb; ladle sauce over and garnish with toasted nuts.",
+          "it": "Cuoci il riso a parte e disponi pane, riso e agnello; versa la salsa e completa con frutta secca tostata."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "lamb_shoulder",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "jameed",
+          "qty": 170,
+          "unit": "g"
+        },
+        {
+          "id": "basmati_rice",
+          "qty": 360,
+          "unit": "g"
+        },
+        {
+          "id": "khubz_bread",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "almonds",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "cardamom_pods",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "water",
+          "qty": 1200,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Jordanian",
+      "slug": "galayet-bandora",
+      "title_en": "Galayet bandora tomato skillet",
+      "title_it": "Galayet bandora giordana",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "description_en": "Jordanian home-style tomato and pepper skillet eaten with flatbread.",
+      "description_it": "Padellata giordana di pomodori, aglio e peperoncino da accompagnare al pane.",
+      "steps": [
+        {
+          "en": "Dice ripe tomatoes, slice onion and mince garlic and chili.",
+          "it": "Taglia i pomodori, affetta la cipolla e trita aglio e peperoncino."
+        },
+        {
+          "en": "Soften onion in olive oil, add garlic and chili, then tomatoes; cook uncovered until thick.",
+          "it": "Fai appassire la cipolla nell’olio, unisci aglio e peperoncino e poi pomodori; cuoci scoperto finché si addensa."
+        },
+        {
+          "en": "Season with black pepper and serve hot with Arabic flatbread.",
+          "it": "Condisci con pepe nero e servi caldo con pane arabo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "green_chili",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "khubz_bread",
+          "qty": 4,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "Iraqi",
+      "slug": "iraqi-dolma-mixed-vegetables",
+      "title_en": "Iraqi mixed vegetable dolma",
+      "title_it": "Dolma iracheno di verdure ripiene",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 120,
+      "servings": 4,
+      "description_en": "Iraqi-style vegetables packed with seasoned rice and lamb, braised in tangy sauce.",
+      "description_it": "Verdure ripiene irachene di riso e agnello, cotte in salsa agrodolce.",
+      "steps": [
+        {
+          "en": "Hollow vegetables; combine rinsed rice, lamb, onion, herbs and half the tomato paste.",
+          "it": "Scava le verdure; mescola riso sciacquato, agnello, cipolla, erbe e metà del concentrato."
+        },
+        {
+          "en": "Fill vegetables loosely and stand snugly in a deep pot; add diluted tomato paste and molasses.",
+          "it": "Farcisci senza comprimere e disponi le verdure fitte in pentola; unisci concentrato diluito e melassa."
+        },
+        {
+          "en": "Weigh down gently and simmer covered until rice and meat are fully cooked, about 70–80 minutes.",
+          "it": "Metti un peso leggero e cuoci coperto finché riso e carne sono ben cotti, circa 70–80 minuti."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "zucchini",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "pepper",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "short_grain_rice",
+          "qty": 260,
+          "unit": "g"
+        },
+        {
+          "id": "ground_lamb",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "pomegranate_molasses",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 30,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Iraqi",
+      "slug": "timman-bagilla",
+      "title_en": "Timman bagilla — dill and fava rice",
+      "title_it": "Timman bagilla iracheno",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 50,
+      "servings": 4,
+      "description_en": "Iraqi rice scented with dill and green fava beans.",
+      "description_it": "Riso iracheno al profumo di aneto con fave verdi.",
+      "steps": [
+        {
+          "en": "Rinse and soak rice; drain well and chop dill.",
+          "it": "Lava e ammolla il riso; scola bene e trita l’aneto."
+        },
+        {
+          "en": "Soften onion in oil, add fava beans and turmeric, then fold in rice and dill.",
+          "it": "Fai appassire la cipolla nell’olio, aggiungi fave e curcuma, poi incorpora riso e aneto."
+        },
+        {
+          "en": "Add hot water, cover and cook over low heat until rice is tender; rest 10 minutes before fluffing.",
+          "it": "Versa acqua calda, copri e cuoci a fuoco dolce fino a riso tenero; riposa 10 minuti e sgrana."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "basmati_rice",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "fava_beans",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "dill",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "water",
+          "qty": 650,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Iraqi",
+      "slug": "iraqi-kleicha-date",
+      "title_en": "Iraqi date kleicha biscuits",
+      "title_it": "Kleicha iracheni ai datteri",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 100,
+      "servings": 4,
+      "description_en": "Iraqi rolled biscuits filled with dates and scented with cardamom.",
+      "description_it": "Biscotti iracheni arrotolati, ripieni di datteri e cardamomo.",
+      "steps": [
+        {
+          "en": "Knead flour, butter, warm milk, yeast and sugar into a soft dough; rest until slightly risen.",
+          "it": "Impasta farina, burro, latte tiepido, lievito e zucchero; lascia riposare finché cresce leggermente."
+        },
+        {
+          "en": "Mash dates with cardamom; roll dough thin, spread filling and roll into a log.",
+          "it": "Schiaccia i datteri con cardamomo; stendi l’impasto, spalma il ripieno e arrotola."
+        },
+        {
+          "en": "Slice biscuits and bake at 180°C for 18–22 minutes until lightly golden.",
+          "it": "Taglia i biscotti e cuoci a 180 °C per 18–22 minuti fino a lieve doratura."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 430,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "dates",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 130,
+          "unit": "ml"
+        },
+        {
+          "id": "active_dry_yeast",
+          "qty": 6,
+          "unit": "g"
+        },
+        {
+          "id": "cardamom",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "sugar",
+          "qty": 40,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Egyptian",
+      "slug": "koshari-egyptian",
+      "title_en": "Egyptian koshari",
+      "title_it": "Koshari egiziano",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 70,
+      "servings": 4,
+      "description_en": "Egyptian street-food layers of rice, lentils, pasta, tomato sauce and crisp onions.",
+      "description_it": "Piatto di strada egiziano con riso, lenticchie, pasta, pomodoro e cipolle croccanti.",
+      "steps": [
+        {
+          "en": "Cook lentils, rice and pasta separately; drain cooked chickpeas.",
+          "it": "Cuoci separatamente lenticchie, riso e pasta; scola i ceci già cotti."
+        },
+        {
+          "en": "Fry thinly sliced onions until crisp; simmer tomatoes, garlic, cumin and vinegar into a sauce.",
+          "it": "Friggi cipolle affettate sottili fino a croccantezza; fai sobbollire pomodori, aglio, cumino e aceto."
+        },
+        {
+          "en": "Layer grains, pasta and chickpeas, cover with sauce and finish with crisp onions.",
+          "it": "Disponi cereali, pasta e ceci a strati, aggiungi salsa e cipolle croccanti."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "brown_lentils",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "rice",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "pasta",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "canned_tomatoes",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "white_vinegar",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 80,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Egyptian",
+      "slug": "molokhia-egyptian",
+      "title_en": "Egyptian molokhia with chicken",
+      "title_it": "Molokhia egiziana con pollo",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 55,
+      "servings": 4,
+      "description_en": "Egyptian green molokhia soup with garlic-coriander tasha and chicken.",
+      "description_it": "Zuppa verde egiziana di molokhia con soffritto di aglio e coriandolo e pollo.",
+      "steps": [
+        {
+          "en": "Cook chicken thoroughly in stock and set aside; finely chop cleaned molokhia leaves.",
+          "it": "Cuoci completamente il pollo nel brodo e mettilo da parte; trita finemente la molokhia pulita."
+        },
+        {
+          "en": "Heat molokhia gently in broth without prolonged boiling; prepare rice separately.",
+          "it": "Scalda dolcemente la molokhia nel brodo senza bollire a lungo; cuoci il riso a parte."
+        },
+        {
+          "en": "Sizzle garlic and coriander in ghee and stir into molokhia; serve with chicken and rice.",
+          "it": "Fai sfrigolare aglio e coriandolo nel ghee e unisci alla molokhia; servi con pollo e riso."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "molokhia_leaves",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_stock",
+          "qty": 950,
+          "unit": "ml"
+        },
+        {
+          "id": "chicken_thigh",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "coriander_powder",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "ghee",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "rice",
+          "qty": 300,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Egyptian",
+      "slug": "hawawshi-egyptian",
+      "title_en": "Egyptian hawawshi",
+      "title_it": "Hawawshi egiziano",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 45,
+      "servings": 4,
+      "description_en": "Egyptian spiced beef stuffed into flatbread and baked crisp.",
+      "description_it": "Pane egiziano ripieno di manzo speziato, cotto fino a croccantezza.",
+      "steps": [
+        {
+          "en": "Mince onion, pepper and parsley, then mix thoroughly with beef and spice.",
+          "it": "Trita cipolla, peperone e prezzemolo e mescola bene con manzo e spezie."
+        },
+        {
+          "en": "Split flatbreads and spread a thin layer of raw filling inside each one.",
+          "it": "Apri i pani e distribuisci all’interno uno strato sottile di ripieno crudo."
+        },
+        {
+          "en": "Brush with oil and bake at 200°C for 20–25 minutes until beef reaches 71°C in the center.",
+          "it": "Spennella con olio e cuoci a 200 °C per 20–25 minuti finché il manzo raggiunge 71 °C al centro."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "ground_beef",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "khubz_bread",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "pepper",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "baharat",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 20,
+          "unit": "ml"
+        }
+      ]
+    }
+  ]
+}

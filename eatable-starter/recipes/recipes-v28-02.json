@@ -1,0 +1,1471 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "cuisine": "Egyptian",
+      "slug": "basbousa-egyptian",
+      "title_en": "Egyptian basbousa",
+      "title_it": "Basbousa egiziana",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 65,
+      "servings": 4,
+      "description_en": "Egyptian semolina tray cake soaked in fragrant syrup.",
+      "description_it": "Dolce egiziano di semola in teglia bagnato con sciroppo.",
+      "steps": [
+        {
+          "en": "Simmer 160 g sugar with water and a little lemon juice into a light syrup; cool.",
+          "it": "Fai sobbollire 160 g di zucchero con acqua e poco limone per uno sciroppo leggero; raffredda."
+        },
+        {
+          "en": "Mix semolina with yogurt, melted butter, remaining sugar and baking powder; press into a shallow tray.",
+          "it": "Mescola semola, yogurt, burro fuso, zucchero rimasto e lievito; stendi in teglia bassa."
+        },
+        {
+          "en": "Score portions, add almonds, bake at 180°C for 30–35 minutes and pour cooled syrup over while hot.",
+          "it": "Incidi le porzioni, aggiungi mandorle, cuoci a 180 °C per 30–35 minuti e versa lo sciroppo freddo sul dolce caldo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "semolina_coarse",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "yogurt",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "baking_powder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "water",
+          "qty": 250,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "almonds",
+          "qty": 30,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Moroccan",
+      "slug": "moroccan-chicken-olive-tagine",
+      "title_en": "Moroccan chicken olive tagine",
+      "title_it": "Tajine marocchina di pollo e olive",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 80,
+      "servings": 4,
+      "description_en": "Moroccan slow-cooked chicken with olives and preserved lemon.",
+      "description_it": "Pollo marocchino cotto lentamente con olive e limone conservato.",
+      "steps": [
+        {
+          "en": "Brown seasoned chicken and onions in olive oil; add garlic, ginger and turmeric.",
+          "it": "Rosola pollo condito e cipolle nell’olio; unisci aglio, zenzero e curcuma."
+        },
+        {
+          "en": "Add a little water, cover and braise until chicken is fully cooked and tender.",
+          "it": "Aggiungi poca acqua, copri e stufa fino a pollo completamente cotto e tenero."
+        },
+        {
+          "en": "Rinse preserved lemon as needed, add its peel and olives, reduce the sauce and finish with coriander.",
+          "it": "Sciacqua il limone conservato se necessario, aggiungi scorza e olive, restringi la salsa e completa con coriandolo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "chicken_thigh",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "green_olives",
+          "qty": 170,
+          "unit": "g"
+        },
+        {
+          "id": "pickled_lemons",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "ginger_powder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "cilantro",
+          "qty": 20,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Moroccan",
+      "slug": "moroccan-harira",
+      "title_en": "Moroccan harira soup",
+      "title_it": "Harira marocchina",
+      "category": "Soup",
+      "diet": "none",
+      "prep_minutes": 80,
+      "servings": 4,
+      "description_en": "Moroccan tomato, lentil and chickpea soup with herbs and fine pasta.",
+      "description_it": "Zuppa marocchina di pomodoro, lenticchie, ceci, erbe e vermicelli.",
+      "steps": [
+        {
+          "en": "Brown lamb and onion, then add celery, tomato, lentils and water; simmer until nearly tender.",
+          "it": "Rosola agnello e cipolla, poi aggiungi sedano, pomodoro, lenticchie e acqua; cuoci quasi a tenerezza."
+        },
+        {
+          "en": "Add cooked chickpeas and vermicelli, continue until pasta and lamb are cooked.",
+          "it": "Unisci ceci già cotti e vermicelli e prosegui finché pasta e agnello sono cotti."
+        },
+        {
+          "en": "Whisk flour with cold water and stir in to thicken slightly; finish with chopped herbs.",
+          "it": "Sciogli farina in acqua fredda, incorpora per addensare leggermente e completa con erbe tritate."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "lamb",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "brown_lentils",
+          "qty": 170,
+          "unit": "g"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "celery",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "vermicelli",
+          "qty": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Moroccan",
+      "slug": "zaalouk-eggplant",
+      "title_en": "Moroccan zaalouk",
+      "title_it": "Zaalouk marocchino",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 55,
+      "servings": 4,
+      "description_en": "Moroccan mashed eggplant and tomato salad with cumin and paprika.",
+      "description_it": "Insalata marocchina di melanzane e pomodoro schiacciati con cumino e paprica.",
+      "steps": [
+        {
+          "en": "Roast or steam eggplants until completely soft and remove the flesh.",
+          "it": "Arrostisci o cuoci al vapore le melanzane fino a renderle morbidissime e preleva la polpa."
+        },
+        {
+          "en": "Simmer grated tomatoes, garlic, cumin and paprika in olive oil, then fold in eggplant.",
+          "it": "Fai sobbollire pomodori grattugiati, aglio, cumino e paprica nell’olio, poi aggiungi melanzane."
+        },
+        {
+          "en": "Mash gently over medium heat until thick and finish with coriander and lemon.",
+          "it": "Schiaccia a fuoco medio fino a consistenza densa e completa con coriandolo e limone."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "paprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cilantro",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "Tunisian",
+      "slug": "tunisian-ojja-merguez-style",
+      "title_en": "Tunisian ojja with beef sausage",
+      "title_it": "Ojja tunisina con salsiccia di manzo",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 40,
+      "servings": 4,
+      "description_en": "Tunisian spiced tomato and egg skillet with sausage.",
+      "description_it": "Padellata tunisina di pomodoro speziato, uova e salsiccia.",
+      "steps": [
+        {
+          "en": "Brown sliced beef sausage in oil; cook peppers and garlic until softened.",
+          "it": "Rosola la salsiccia di manzo affettata nell’olio; cuoci peperoni e aglio finché morbidi."
+        },
+        {
+          "en": "Add passata, harissa and cumin and simmer until thick and the sausage is thoroughly cooked.",
+          "it": "Unisci passata, harissa e cumino e riduci finché la salsiccia è ben cotta."
+        },
+        {
+          "en": "Make wells, add eggs and cover until the whites are fully set; serve hot.",
+          "it": "Crea incavi, aggiungi le uova e copri finché gli albumi sono completamente rappresi; servi caldo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "beef_sausage",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "pepper",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "harissa",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Tunisian",
+      "slug": "tunisian-brik-egg",
+      "title_en": "Tunisian brik with egg",
+      "title_it": "Brik tunisino all’uovo",
+      "category": "Mezze",
+      "diet": "none",
+      "prep_minutes": 30,
+      "servings": 4,
+      "description_en": "Crisp Tunisian brik pastry filled with egg, tuna and herbs.",
+      "description_it": "Sfoglia tunisina croccante farcita con uovo, tonno ed erbe.",
+      "steps": [
+        {
+          "en": "Drain tuna and mix with parsley and chopped capers.",
+          "it": "Scola il tonno e mescolalo con prezzemolo e capperi tritati."
+        },
+        {
+          "en": "Place filling on each thin pastry sheet, crack in an egg and fold into a sealed triangle.",
+          "it": "Disponi il ripieno su ogni sfoglia sottile, aggiungi un uovo e piega a triangolo chiudendo bene."
+        },
+        {
+          "en": "Shallow-fry carefully until pastry is crisp and the egg reaches your preferred safe doneness; serve with lemon.",
+          "it": "Friggi in poco olio con attenzione finché la sfoglia è croccante e l’uovo è cotto in sicurezza; servi con limone."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "filo_pastry",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "canned_tuna",
+          "qty": 160,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "capers",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 220,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "Tunisian",
+      "slug": "lablabi-tunisian",
+      "title_en": "Tunisian lablabi chickpea soup",
+      "title_it": "Lablabi tunisino di ceci",
+      "category": "Soup",
+      "diet": "vegetarian",
+      "prep_minutes": 35,
+      "servings": 4,
+      "description_en": "Tunisian chickpea broth ladled over bread with cumin, harissa and egg.",
+      "description_it": "Brodo tunisino di ceci versato sul pane con cumino, harissa e uovo.",
+      "steps": [
+        {
+          "en": "Warm cooked chickpeas in broth or water with garlic and cumin.",
+          "it": "Scalda i ceci già cotti con brodo o acqua, aglio e cumino."
+        },
+        {
+          "en": "Tear bread into bowls, add a little harissa and ladle chickpeas and broth over.",
+          "it": "Spezza il pane nelle ciotole, aggiungi poca harissa e versa ceci e brodo."
+        },
+        {
+          "en": "Top with fully cooked eggs, olive oil and lemon and serve immediately.",
+          "it": "Completa con uova ben cotte, olio e limone e servi subito."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "bread",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "harissa",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "Algerian",
+      "slug": "algerian-chorba-frik",
+      "title_en": "Algerian chorba frik",
+      "title_it": "Chorba frik algerina",
+      "category": "Soup",
+      "diet": "none",
+      "prep_minutes": 75,
+      "servings": 4,
+      "description_en": "Algerian tomato soup with roasted green wheat, lamb and herbs.",
+      "description_it": "Zuppa algerina di pomodoro con freekeh, agnello ed erbe.",
+      "steps": [
+        {
+          "en": "Brown lamb and onion, stir in celery, tomato and cinnamon.",
+          "it": "Rosola agnello e cipolla, unisci sedano, pomodoro e cannella."
+        },
+        {
+          "en": "Add water or stock and simmer until lamb is nearly tender; add rinsed freekeh.",
+          "it": "Versa acqua o brodo e cuoci finché l’agnello è quasi tenero; aggiungi freekeh sciacquato."
+        },
+        {
+          "en": "Cook until grains soften, stir in cooked chickpeas and finish with coriander.",
+          "it": "Cuoci fino a grani morbidi, unisci ceci già cotti e completa con coriandolo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "freekeh",
+          "qty": 170,
+          "unit": "g"
+        },
+        {
+          "id": "lamb",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "celery",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 160,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Algerian",
+      "slug": "mhajeb-algerian",
+      "title_en": "Algerian mhajeb stuffed flatbreads",
+      "title_it": "Mhajeb algerini ripieni",
+      "category": "Bread",
+      "diet": "vegan",
+      "prep_minutes": 95,
+      "servings": 4,
+      "description_en": "Folded Algerian semolina flatbreads with tomato and onion filling.",
+      "description_it": "Focacce algerine di semola ripiegate con ripieno di pomodoro e cipolla.",
+      "steps": [
+        {
+          "en": "Knead semolina, flour and water until elastic; rest in oiled portions.",
+          "it": "Impasta semola, farina e acqua fino a elasticità; fai riposare in porzioni unte."
+        },
+        {
+          "en": "Cook chopped onions, peppers and tomatoes with paprika until almost dry; cool.",
+          "it": "Cuoci cipolle, peperoni e pomodori con paprica finché quasi asciutti; raffredda."
+        },
+        {
+          "en": "Stretch dough thinly with oiled hands, add filling, fold into squares and cook on a griddle on both sides.",
+          "it": "Stendi sottilissimo con mani unte, farcisci, piega a quadrati e cuoci sulla piastra da entrambi i lati."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "semolina_fine",
+          "qty": 420,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 300,
+          "unit": "ml"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "pepper",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "paprika",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Saudi",
+      "slug": "saudi-chicken-kabsa",
+      "title_en": "Saudi chicken kabsa",
+      "title_it": "Kabsa saudita di pollo",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 90,
+      "servings": 4,
+      "description_en": "Saudi spiced chicken and rice with dried lime and warm aromatics.",
+      "description_it": "Riso saudita con pollo speziato, lime essiccato e aromi caldi.",
+      "steps": [
+        {
+          "en": "Brown chicken and onions, then add tomato paste, spices, dried lime and water; simmer until chicken is cooked.",
+          "it": "Rosola pollo e cipolle, aggiungi concentrato, spezie, lime essiccato e acqua; cuoci fino a pollo cotto."
+        },
+        {
+          "en": "Remove chicken and cook rinsed rice in measured fragrant broth until tender.",
+          "it": "Togli il pollo e cuoci riso sciacquato nel brodo aromatico dosato finché tenero."
+        },
+        {
+          "en": "Return chicken to warm through and garnish with raisins; verify chicken is fully cooked.",
+          "it": "Rimetti il pollo per scaldarlo e guarnisci con uvetta; controlla la completa cottura."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "chicken_thigh",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "basmati_rice",
+          "qty": 380,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "cardamom_pods",
+          "qty": 6,
+          "unit": "pcs"
+        },
+        {
+          "id": "cinnamon_sticks",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "black_lime",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "baharat",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "raisins",
+          "qty": 45,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Saudi",
+      "slug": "saudi-jareesh",
+      "title_en": "Saudi jareesh cracked wheat",
+      "title_it": "Jareesh saudita di grano spezzato",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 85,
+      "servings": 4,
+      "description_en": "Saudi creamy cracked-wheat porridge finished with ghee and spices.",
+      "description_it": "Porridge saudita salato di grano spezzato con ghee e spezie.",
+      "steps": [
+        {
+          "en": "Rinse cracked wheat; cook gently with water until very soft, adding water as needed.",
+          "it": "Sciacqua il grano spezzato; cuocilo dolcemente con acqua finché molto morbido, aggiungendone se serve."
+        },
+        {
+          "en": "Stir in milk and yogurt over low heat, mixing until thick and creamy.",
+          "it": "Incorpora latte e yogurt a fuoco basso fino a consistenza densa e cremosa."
+        },
+        {
+          "en": "Brown minced onion in ghee with cumin and spoon over the hot jareesh.",
+          "it": "Dora cipolla tritata nel ghee con cumino e versa sul jareesh caldo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "cracked_wheat",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "strained_yogurt",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "ghee",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "milk",
+          "qty": 300,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 600,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Yemeni",
+      "slug": "yemeni-saltah",
+      "title_en": "Yemeni saltah stew",
+      "title_it": "Saltah yemenita",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 65,
+      "servings": 4,
+      "description_en": "Yemeni hot stew topped with whipped fenugreek hilbeh.",
+      "description_it": "Stufato yemenita caldo completato con salsa spumosa di fieno greco.",
+      "steps": [
+        {
+          "en": "Soak fenugreek seeds and whip with water into a foamy hilbeh; add chili and herbs.",
+          "it": "Ammolla il fieno greco e montalo con acqua fino a hilbeh spumosa; unisci peperoncino ed erbe."
+        },
+        {
+          "en": "Brown lamb with onion, add tomatoes, diced potatoes, cumin and water and simmer until fully cooked.",
+          "it": "Rosola agnello e cipolla, aggiungi pomodori, patate a cubetti, cumino e acqua e stufa fino a cottura completa."
+        },
+        {
+          "en": "Bring stew to a lively simmer, spoon hilbeh on top and serve immediately with flatbread.",
+          "it": "Porta lo stufato a lieve bollore, completa con hilbeh e servi subito con pane."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "ground_lamb",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "potato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "green_chili",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "fenugreek",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Yemeni",
+      "slug": "bint-al-sahn-honey",
+      "title_en": "Yemeni bint al sahn",
+      "title_it": "Bint al sahn yemenita al miele",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 105,
+      "servings": 4,
+      "description_en": "Layered Yemeni honey bread with ghee and nigella seeds.",
+      "description_it": "Pane dolce yemenita a strati con miele, ghee e semi di nigella.",
+      "steps": [
+        {
+          "en": "Knead flour, eggs, milk and yeast into a soft dough; rest until relaxed.",
+          "it": "Impasta farina, uova, latte e lievito fino a morbidezza; lascia riposare."
+        },
+        {
+          "en": "Roll thin discs and stack in a greased pan, brushing ghee between layers and sprinkling nigella on top.",
+          "it": "Stendi dischi sottili e impilali in teglia unta, spennellando ghee fra gli strati e spargendo nigella."
+        },
+        {
+          "en": "Bake at 190°C until deep golden and cooked through, then drizzle with warm honey.",
+          "it": "Cuoci a 190 °C fino a doratura intensa e cottura completa, poi versa miele tiepido."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 420,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "milk",
+          "qty": 180,
+          "unit": "ml"
+        },
+        {
+          "id": "active_dry_yeast",
+          "qty": 6,
+          "unit": "g"
+        },
+        {
+          "id": "ghee",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "honey",
+          "qty": 160,
+          "unit": "g"
+        },
+        {
+          "id": "nigella_seeds",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Emirati",
+      "slug": "emirati-chicken-machboos",
+      "title_en": "Emirati chicken machboos",
+      "title_it": "Machboos emiratino di pollo",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 90,
+      "servings": 4,
+      "description_en": "Emirati spiced chicken and rice scented with dried lime.",
+      "description_it": "Riso emiratino speziato con pollo e lime essiccato.",
+      "steps": [
+        {
+          "en": "Sauté onions and chicken in ghee; add tomatoes, spices, dried lime and water.",
+          "it": "Soffriggi cipolle e pollo nel ghee; aggiungi pomodori, spezie, lime essiccato e acqua."
+        },
+        {
+          "en": "Simmer chicken until thoroughly cooked; remove it and measure cooking liquid for rice.",
+          "it": "Cuoci completamente il pollo; toglilo e dosa il brodo per il riso."
+        },
+        {
+          "en": "Cook rinsed basmati rice in broth until fluffy, then arrange chicken over the rice.",
+          "it": "Cuoci il basmati sciacquato nel brodo fino a grani soffici e sistema il pollo sopra."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "chicken_thigh",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "basmati_rice",
+          "qty": 380,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "black_lime",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cardamom_pods",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "cinnamon_sticks",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "ghee",
+          "qty": 45,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Sudanese",
+      "slug": "sudanese-ful-peanut",
+      "title_en": "Sudanese ful with peanut dressing",
+      "title_it": "Ful sudanese con arachidi",
+      "category": "Breakfast",
+      "diet": "vegan",
+      "prep_minutes": 25,
+      "servings": 4,
+      "description_en": "Sudanese-style fava beans with lemon and a peanut-enriched dressing.",
+      "description_it": "Fave in stile sudanese con limone e condimento alle arachidi.",
+      "steps": [
+        {
+          "en": "Warm cooked fava beans with a little water and gently mash some of them.",
+          "it": "Scalda le fave già cotte con poca acqua e schiacciane una parte."
+        },
+        {
+          "en": "Whisk peanut butter with lemon juice, cumin and a splash of water.",
+          "it": "Mescola burro di arachidi, succo di limone, cumino e poca acqua."
+        },
+        {
+          "en": "Spoon dressing over beans and top with diced tomato, onion and olive oil.",
+          "it": "Versa sulle fave e completa con pomodoro e cipolla a dadini e olio."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "fava_beans",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "peanut_butter",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Bahraini",
+      "slug": "bahraini-muhammar",
+      "title_en": "Bahraini muhammar sweet rice",
+      "title_it": "Muhammar bahreinita",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 45,
+      "servings": 4,
+      "description_en": "Bahraini lightly sweet, fragrant rice served with savory dishes.",
+      "description_it": "Riso bahreinita delicatamente dolce e profumato, servito con piatti salati.",
+      "steps": [
+        {
+          "en": "Rinse and parboil basmati rice until partly cooked; drain.",
+          "it": "Lava e sbollenta il basmati finché parzialmente cotto; scola."
+        },
+        {
+          "en": "Warm ghee with chopped dates, sugar, cardamom, saffron and rose water.",
+          "it": "Scalda ghee con datteri tritati, zucchero, cardamomo, zafferano e acqua di rose."
+        },
+        {
+          "en": "Fold rice into the aromatic mixture, cover and steam over low heat until tender.",
+          "it": "Incorpora il riso nella miscela profumata, copri e termina la cottura a vapore dolce."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "basmati_rice",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "dates",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "cardamom",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "rose_water",
+          "qty": 15,
+          "unit": "ml"
+        },
+        {
+          "id": "ghee",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Omani",
+      "slug": "omani-chicken-shuwa-style",
+      "title_en": "Omani-style spiced slow chicken",
+      "title_it": "Pollo speziato in stile shuwa omanita",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 130,
+      "servings": 4,
+      "description_en": "Home-oven chicken inspired by Omani shuwa spices; not the traditional underground-roasted lamb.",
+      "description_it": "Pollo al forno ispirato alle spezie dello shuwa omanita; non è la versione tradizionale di agnello.",
+      "steps": [
+        {
+          "en": "Mix garlic, lemon juice, oil and spices; coat chicken and refrigerate for at least 30 minutes.",
+          "it": "Mescola aglio, succo di limone, olio e spezie; marina il pollo in frigo per almeno 30 minuti."
+        },
+        {
+          "en": "Arrange chicken in a covered roasting dish with a little water and bake at 170°C until fully tender.",
+          "it": "Disponi il pollo in teglia coperta con poca acqua e cuoci a 170 °C finché tenero."
+        },
+        {
+          "en": "Uncover briefly to brown and serve with rice; verify the chicken reaches 74°C.",
+          "it": "Scopri brevemente per dorare e servi con riso; verifica che il pollo raggiunga 74 °C."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "chicken_thigh",
+          "qty": 900,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "coriander_powder",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "lemon",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Kuwaiti",
+      "slug": "kuwaiti-murabyan-shrimp-rice",
+      "title_en": "Kuwaiti murabyan shrimp rice",
+      "title_it": "Murabyan kuwaitiano di gamberi",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 60,
+      "servings": 4,
+      "description_en": "Kuwaiti shrimp and spiced rice with dried lime and onions.",
+      "description_it": "Riso kuwaitiano speziato ai gamberi, lime essiccato e cipolle.",
+      "steps": [
+        {
+          "en": "Sauté sliced onions in ghee and stir in diced tomatoes, spices and dried lime.",
+          "it": "Soffriggi cipolle affettate nel ghee e aggiungi pomodoro a cubetti, spezie e lime essiccato."
+        },
+        {
+          "en": "Add rice and measured water or stock, cover and cook until nearly tender.",
+          "it": "Unisci riso e acqua o brodo dosati, copri e cuoci quasi a termine."
+        },
+        {
+          "en": "Add peeled shrimp for the last few minutes and cook until opaque and firm; remove dried lime before serving.",
+          "it": "Aggiungi gamberi sgusciati negli ultimi minuti e cuoci finché opachi e sodi; elimina il lime prima di servire."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "shrimp",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "basmati_rice",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "black_lime",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "coriander_powder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "ghee",
+          "qty": 35,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Italian",
+      "slug": "pasta-alla-norma-sicilian",
+      "title_en": "Sicilian pasta alla Norma",
+      "title_it": "Pasta alla Norma siciliana",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 45,
+      "servings": 4,
+      "description_en": "Sicilian pasta with golden eggplant, tomato, basil and ricotta salata-style topping.",
+      "description_it": "Pasta siciliana con melanzane dorate, pomodoro, basilico e ricotta.",
+      "steps": [
+        {
+          "en": "Cut eggplant into cubes, salt briefly if desired, dry and roast or fry until golden.",
+          "it": "Taglia le melanzane a cubetti, salale brevemente se vuoi, asciuga e arrostisci o friggi fino a doratura."
+        },
+        {
+          "en": "Simmer garlic and tomato passata in olive oil; cook pasta al dente.",
+          "it": "Fai sobbollire aglio e passata nell’olio; cuoci la pasta al dente."
+        },
+        {
+          "en": "Toss pasta with sauce, eggplant and basil; finish with crumbled ricotta.",
+          "it": "Condisci con salsa, melanzane e basilico; completa con ricotta sbriciolata."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "pasta",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "eggplant",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 500,
+          "unit": "ml"
+        },
+        {
+          "id": "basil",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "ricotta",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Italian",
+      "slug": "cacio-e-pepe-roman",
+      "title_en": "Roman cacio e pepe",
+      "title_it": "Cacio e pepe romana",
+      "category": "Main",
+      "diet": "unknown",
+      "prep_minutes": 25,
+      "servings": 4,
+      "description_en": "Roman pasta emulsified with Pecorino Romano, black pepper and starchy water.",
+      "description_it": "Pasta romana mantecata con pecorino, pepe nero e acqua di cottura.",
+      "steps": [
+        {
+          "en": "Cook spaghetti in lightly salted water; save a cup of starchy cooking water.",
+          "it": "Cuoci gli spaghetti in acqua poco salata; conserva una tazza di acqua amidacea."
+        },
+        {
+          "en": "Toast crushed pepper briefly in a pan and add a splash of pasta water.",
+          "it": "Tosta brevemente il pepe pestato in padella e aggiungi poca acqua di cottura."
+        },
+        {
+          "en": "Off the heat, toss pasta with finely grated pecorino and enough warm water to form a smooth cream.",
+          "it": "Fuori dal fuoco, manteca la pasta con pecorino grattugiato fine e acqua tiepida fino a crema liscia."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "spaghetti",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "pecorino",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Italian",
+      "slug": "ribollita-tuscan",
+      "title_en": "Tuscan ribollita",
+      "title_it": "Ribollita toscana",
+      "category": "Soup",
+      "diet": "vegan",
+      "prep_minutes": 75,
+      "servings": 4,
+      "description_en": "Tuscan vegetable and bean soup thickened with day-old bread.",
+      "description_it": "Zuppa toscana di verdure e fagioli addensata con pane raffermo.",
+      "steps": [
+        {
+          "en": "Soften chopped onion, carrot and celery in oil; add tomatoes and chopped cavolo nero.",
+          "it": "Fai appassire cipolla, carote e sedano tritati nell’olio; unisci pomodoro e cavolo nero tagliato."
+        },
+        {
+          "en": "Add cooked beans and water; simmer until vegetables are soft, crushing some beans.",
+          "it": "Aggiungi fagioli già cotti e acqua; sobbolli finché le verdure sono morbide, schiacciando qualche fagiolo."
+        },
+        {
+          "en": "Layer soup with slices of stale bread, leave to absorb, then reheat gently before serving.",
+          "it": "Alterna zuppa e pane raffermo, lascia assorbire e riscalda dolcemente prima di servire."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "cavolo_nero",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "cannellini_beans",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "celery",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "canned_tomatoes",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "sourdough_bread",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Italian",
+      "slug": "panzanella-tuscan",
+      "title_en": "Tuscan panzanella",
+      "title_it": "Panzanella toscana",
+      "category": "Salad",
+      "diet": "vegan",
+      "prep_minutes": 20,
+      "servings": 4,
+      "description_en": "Tuscan bread-and-tomato salad with basil and vinegar.",
+      "description_it": "Insalata toscana di pane e pomodoro con basilico e aceto.",
+      "steps": [
+        {
+          "en": "Moisten stale bread briefly with water and squeeze gently; tear into pieces.",
+          "it": "Bagna brevemente il pane raffermo e strizzalo delicatamente; spezzettalo."
+        },
+        {
+          "en": "Cut tomatoes, cucumber and onion and toss with the bread.",
+          "it": "Taglia pomodori, cetriolo e cipolla e mescola con il pane."
+        },
+        {
+          "en": "Add basil, oil and vinegar and rest 15 minutes before serving.",
+          "it": "Unisci basilico, olio e aceto e lascia insaporire 15 minuti prima di servire."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "sourdough_bread",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "cucumber",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "red_onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "basil",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "red_wine_vinegar",
+          "qty": 25,
+          "unit": "ml"
+        }
+      ]
+    }
+  ]
+}

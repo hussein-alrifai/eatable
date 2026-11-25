@@ -1,0 +1,1422 @@
+{
+  "version": 1,
+  "count": 236,
+  "ingredients": [
+    {
+      "id": "fine_bulgur",
+      "name_en": "Fine bulgur",
+      "name_it": "Bulgur fine",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "coarse_bulgur",
+      "name_en": "Coarse bulgur",
+      "name_it": "Bulgur grosso",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "cracked_wheat",
+      "name_en": "Cracked wheat",
+      "name_it": "Grano spezzato",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "kishk",
+      "name_en": "Kishk fermented wheat-yogurt",
+      "name_it": "Kishk di grano e yogurt",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "jameed",
+      "name_en": "Jameed dried yogurt",
+      "name_it": "Jameed yogurt essiccato",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "maftoul",
+      "name_en": "Maftoul pearl couscous",
+      "name_it": "Maftoul palestinese",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "moghrabieh",
+      "name_en": "Moghrabieh pearl couscous",
+      "name_it": "Moghrabieh",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "vermicelli",
+      "name_en": "Vermicelli",
+      "name_it": "Vermicelli",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "short_vermicelli",
+      "name_en": "Short soup vermicelli",
+      "name_it": "Vermicelli spezzati",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "short_grain_rice",
+      "name_en": "Short-grain rice",
+      "name_it": "Riso a chicco corto",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "long_grain_rice",
+      "name_en": "Long-grain rice",
+      "name_it": "Riso a chicco lungo",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "jasmine_rice",
+      "name_en": "Jasmine rice",
+      "name_it": "Riso jasmine",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "sella_rice",
+      "name_en": "Parboiled basmati rice",
+      "name_it": "Riso basmati parboiled",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "black_lentils",
+      "name_en": "Black lentils",
+      "name_it": "Lenticchie nere",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "brown_lentils",
+      "name_en": "Brown lentils",
+      "name_it": "Lenticchie marroni",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "yellow_split_peas",
+      "name_en": "Yellow split peas",
+      "name_it": "Piselli gialli spezzati",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "white_beans",
+      "name_en": "White beans",
+      "name_it": "Fagioli bianchi",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "dried_fava_beans",
+      "name_en": "Dried fava beans",
+      "name_it": "Fave secche",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "chickpea_flakes",
+      "name_en": "Chickpea flakes",
+      "name_it": "Fiocchi di ceci",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "roasted_chickpeas",
+      "name_en": "Roasted chickpeas",
+      "name_it": "Ceci tostati",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "wheat_berries",
+      "name_en": "Whole wheat berries",
+      "name_it": "Chicchi di grano integrale",
+      "group": "Arab pantry & grains"
+    },
+    {
+      "id": "ground_mahlab",
+      "name_en": "Ground mahlab",
+      "name_it": "Mahlab macinato",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "mastic",
+      "name_en": "Mastic resin",
+      "name_it": "Mastice di Chio",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "anise_seed",
+      "name_en": "Anise seed",
+      "name_it": "Semi di anice",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "fennel_seed",
+      "name_en": "Fennel seed",
+      "name_it": "Semi di finocchio",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "fenugreek",
+      "name_en": "Fenugreek seeds",
+      "name_it": "Semi di fieno greco",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "caraway",
+      "name_en": "Caraway seeds",
+      "name_it": "Semi di carvi",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "black_lime",
+      "name_en": "Dried black lime loomi",
+      "name_it": "Lime nero essiccato loomi",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "dried_lime_powder",
+      "name_en": "Dried lime powder",
+      "name_it": "Lime essiccato in polvere",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "sumac_berries",
+      "name_en": "Whole sumac berries",
+      "name_it": "Bacche di sommacco",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "white_pepper",
+      "name_en": "White pepper",
+      "name_it": "Pepe bianco",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "hot_paprika",
+      "name_en": "Hot paprika",
+      "name_it": "Paprica piccante",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "sweet_paprika",
+      "name_en": "Sweet paprika",
+      "name_it": "Paprica dolce",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "cumin_seed",
+      "name_en": "Cumin seeds",
+      "name_it": "Semi di cumino",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "coriander_powder",
+      "name_en": "Ground coriander",
+      "name_it": "Coriandolo in polvere",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "cardamom_pods",
+      "name_en": "Cardamom pods",
+      "name_it": "Baccelli di cardamomo",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "cinnamon_sticks",
+      "name_en": "Cinnamon sticks",
+      "name_it": "Stecche di cannella",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "star_anise",
+      "name_en": "Star anise",
+      "name_it": "Anice stellato",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "fenugreek_leaves",
+      "name_en": "Dried fenugreek leaves",
+      "name_it": "Foglie di fieno greco secche",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "fenugreek_powder",
+      "name_en": "Ground fenugreek",
+      "name_it": "Fieno greco macinato",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "safflower",
+      "name_en": "Dried safflower petals",
+      "name_it": "Petali di cartamo",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "mint_dried_leaves",
+      "name_en": "Dried mint leaves",
+      "name_it": "Foglie di menta secca",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "marjoram",
+      "name_en": "Marjoram",
+      "name_it": "Maggiorana",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "summer_savory",
+      "name_en": "Summer savory",
+      "name_it": "Santoreggia",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "chamomile",
+      "name_en": "Dried chamomile",
+      "name_it": "Camomilla secca",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "sumac_mix",
+      "name_en": "Sumac seasoning",
+      "name_it": "Condimento al sommacco",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "shatta",
+      "name_en": "Shatta chili paste",
+      "name_it": "Shatta pasta di peperoncino",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "toum",
+      "name_en": "Garlic toum sauce",
+      "name_it": "Salsa toum all'aglio",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "pomegranate_juice",
+      "name_en": "Pomegranate juice",
+      "name_it": "Succo di melagrana",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "tamarind_paste",
+      "name_en": "Tamarind paste",
+      "name_it": "Pasta di tamarindo",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "tamarind",
+      "name_en": "Tamarind pulp",
+      "name_it": "Polpa di tamarindo",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "carob_molasses",
+      "name_en": "Carob molasses",
+      "name_it": "Melassa di carruba",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "grape_molasses",
+      "name_en": "Grape molasses",
+      "name_it": "Melassa d'uva",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "rose_petals",
+      "name_en": "Dried rose petals",
+      "name_it": "Petali di rosa secchi",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "orange_zest",
+      "name_en": "Orange zest",
+      "name_it": "Scorza d'arancia",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "lemon_zest",
+      "name_en": "Lemon zest",
+      "name_it": "Scorza di limone",
+      "group": "Arab herbs, spices & condiments"
+    },
+    {
+      "id": "akkawi_cheese",
+      "name_en": "Akkawi cheese",
+      "name_it": "Formaggio akkawi",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "nabulsi_cheese",
+      "name_en": "Nabulsi cheese",
+      "name_it": "Formaggio nabulsi",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "kashkaval",
+      "name_en": "Kashkaval cheese",
+      "name_it": "Formaggio kashkaval",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "shanklish",
+      "name_en": "Shanklish aged cheese",
+      "name_it": "Formaggio stagionato shanklish",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "ashta",
+      "name_en": "Ashta cream",
+      "name_it": "Crema ashta",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "clotted_cream",
+      "name_en": "Clotted cream",
+      "name_it": "Panna rappresa",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "kadayif",
+      "name_en": "Kataifi pastry",
+      "name_it": "Pasta kataifi",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "kunafa_dough",
+      "name_en": "Kunafa pastry",
+      "name_it": "Pasta per kunafa",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "sambousek_dough",
+      "name_en": "Sambousek wrappers",
+      "name_it": "Sfoglie per sambousek",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "markouk_bread",
+      "name_en": "Markouk flatbread",
+      "name_it": "Pane markouk",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "saj_bread",
+      "name_en": "Saj flatbread",
+      "name_it": "Pane saj",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "khubz_bread",
+      "name_en": "Arabic khubz bread",
+      "name_it": "Pane arabo khubz",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "phyllo_cups",
+      "name_en": "Phyllo pastry cups",
+      "name_it": "Cestini di pasta fillo",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "sujuk",
+      "name_en": "Sujuk spiced sausage",
+      "name_it": "Salsiccia speziata sujuk",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "beef_sausage",
+      "name_en": "Beef sausage",
+      "name_it": "Salsiccia di manzo",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "lamb_shank",
+      "name_en": "Lamb shank",
+      "name_it": "Stinco d'agnello",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "lamb_shoulder",
+      "name_en": "Lamb shoulder",
+      "name_it": "Spalla d'agnello",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "beef_shank",
+      "name_en": "Beef shank",
+      "name_it": "Muscolo di manzo",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "beef_liver",
+      "name_en": "Beef liver",
+      "name_it": "Fegato di manzo",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "chicken_liver",
+      "name_en": "Chicken liver",
+      "name_it": "Fegatini di pollo",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "pigeon",
+      "name_en": "Pigeon",
+      "name_it": "Piccione",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "rabbit",
+      "name_en": "Rabbit",
+      "name_it": "Coniglio",
+      "group": "Arab cheeses, breads & specialities"
+    },
+    {
+      "id": "gruyere",
+      "name_en": "Gruyère cheese",
+      "name_it": "Formaggio Gruyère",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "emmental",
+      "name_en": "Emmental cheese",
+      "name_it": "Formaggio Emmental",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "comte",
+      "name_en": "Comté cheese",
+      "name_it": "Formaggio Comté",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "brie",
+      "name_en": "Brie cheese",
+      "name_it": "Formaggio Brie",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "camembert",
+      "name_en": "Camembert cheese",
+      "name_it": "Formaggio Camembert",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "roquefort",
+      "name_en": "Roquefort blue cheese",
+      "name_it": "Formaggio Roquefort",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "gorgonzola",
+      "name_en": "Gorgonzola cheese",
+      "name_it": "Gorgonzola",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "fontina",
+      "name_en": "Fontina cheese",
+      "name_it": "Fontina",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "provolone",
+      "name_en": "Provolone cheese",
+      "name_it": "Provolone",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "burrata",
+      "name_en": "Burrata",
+      "name_it": "Burrata",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "stracciatella_cheese",
+      "name_en": "Stracciatella cheese",
+      "name_it": "Stracciatella di burrata",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "scamorza",
+      "name_en": "Scamorza cheese",
+      "name_it": "Scamorza",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "idiazabal_cheese",
+      "name_en": "Idiazabal sheep cheese",
+      "name_it": "Formaggio di pecora Idiazabal",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "manchego",
+      "name_en": "Manchego cheese",
+      "name_it": "Formaggio Manchego",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "quark",
+      "name_en": "Quark fresh cheese",
+      "name_it": "Formaggio fresco quark",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "creme_fraiche",
+      "name_en": "Crème fraîche",
+      "name_it": "Crème fraîche",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "buttermilk",
+      "name_en": "Buttermilk",
+      "name_it": "Latticello",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "kefir",
+      "name_en": "Kefir",
+      "name_it": "Kefir",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "skyr",
+      "name_en": "Skyr",
+      "name_it": "Skyr",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "strained_yogurt",
+      "name_en": "Strained yogurt",
+      "name_it": "Yogurt colato",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "unsalted_butter",
+      "name_en": "Unsalted butter",
+      "name_it": "Burro non salato",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "salted_butter",
+      "name_en": "Salted butter",
+      "name_it": "Burro salato",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "custard",
+      "name_en": "Custard",
+      "name_it": "Crema inglese",
+      "group": "European cheeses & dairy"
+    },
+    {
+      "id": "romanesco",
+      "name_en": "Romanesco cauliflower",
+      "name_it": "Cavolo romanesco",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "rapini",
+      "name_en": "Broccoli rabe",
+      "name_it": "Cime di rapa",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "cavolo_nero",
+      "name_en": "Tuscan kale",
+      "name_it": "Cavolo nero",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "savoy_cabbage",
+      "name_en": "Savoy cabbage",
+      "name_it": "Verza",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "sauerkraut",
+      "name_en": "Sauerkraut",
+      "name_it": "Crauti fermentati",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "red_beet",
+      "name_en": "Cooked beetroot",
+      "name_it": "Barbabietola cotta",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "jerusalem_artichoke",
+      "name_en": "Jerusalem artichoke",
+      "name_it": "Topinambur",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "chestnuts",
+      "name_en": "Chestnuts",
+      "name_it": "Castagne",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "wild_mushrooms",
+      "name_en": "Wild mushrooms",
+      "name_it": "Funghi selvatici",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "porcini",
+      "name_en": "Porcini mushrooms",
+      "name_it": "Funghi porcini",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "chanterelles",
+      "name_en": "Chanterelle mushrooms",
+      "name_it": "Finferli",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "truffle",
+      "name_en": "Black truffle",
+      "name_it": "Tartufo nero",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "button_mushrooms",
+      "name_en": "Button mushrooms",
+      "name_it": "Funghi champignon",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "portobello",
+      "name_en": "Portobello mushrooms",
+      "name_it": "Funghi portobello",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "red_chicory",
+      "name_en": "Radicchio",
+      "name_it": "Radicchio",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "escarole",
+      "name_en": "Escarole",
+      "name_it": "Scarola",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "frisee",
+      "name_en": "Frisée lettuce",
+      "name_it": "Insalata riccia",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "rhubarb",
+      "name_en": "Rhubarb",
+      "name_it": "Rabarbaro",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "blackcurrants",
+      "name_en": "Blackcurrants",
+      "name_it": "Ribes nero",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "redcurrants",
+      "name_en": "Redcurrants",
+      "name_it": "Ribes rosso",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "cranberries",
+      "name_en": "Cranberries",
+      "name_it": "Mirtilli rossi americani",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "lingonberries",
+      "name_en": "Lingonberries",
+      "name_it": "Mirtilli rossi nordici",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "elderflower",
+      "name_en": "Elderflower",
+      "name_it": "Fiori di sambuco",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "prunes",
+      "name_en": "Dried plums",
+      "name_it": "Prugne secche",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "hazelnuts",
+      "name_en": "Hazelnuts",
+      "name_it": "Nocciole",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "macadamia_nuts",
+      "name_en": "Macadamia nuts",
+      "name_it": "Noci macadamia",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "veal",
+      "name_en": "Veal",
+      "name_it": "Vitello",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "veal_shank",
+      "name_en": "Veal shank",
+      "name_it": "Ossobuco di vitello",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "pancetta",
+      "name_en": "Italian pancetta",
+      "name_it": "Pancetta italiana",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "guanciale",
+      "name_en": "Guanciale cured pork cheek",
+      "name_it": "Guanciale",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "prosciutto",
+      "name_en": "Prosciutto crudo",
+      "name_it": "Prosciutto crudo",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "speck",
+      "name_en": "Speck cured ham",
+      "name_it": "Speck",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "chorizo",
+      "name_en": "Spanish chorizo",
+      "name_it": "Chorizo spagnolo",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "jamon_serrano",
+      "name_en": "Jamón serrano",
+      "name_it": "Jamón serrano",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "morcilla",
+      "name_en": "Blood sausage morcilla",
+      "name_it": "Morcilla",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "smoked_sausage",
+      "name_en": "Smoked sausage",
+      "name_it": "Salsiccia affumicata",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "bratwurst",
+      "name_en": "Bratwurst sausage",
+      "name_it": "Salsiccia bratwurst",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "smoked_salmon",
+      "name_en": "Smoked salmon",
+      "name_it": "Salmone affumicato",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "herring",
+      "name_en": "Herring",
+      "name_it": "Aringa",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "smoked_herring",
+      "name_en": "Smoked herring",
+      "name_it": "Aringa affumicata",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "mackerel",
+      "name_en": "Mackerel",
+      "name_it": "Sgombro",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "haddock",
+      "name_en": "Haddock",
+      "name_it": "Eglefino",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "trout",
+      "name_en": "Trout",
+      "name_it": "Trota",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "sea_bass",
+      "name_en": "Sea bass",
+      "name_it": "Branzino",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "sea_bream",
+      "name_en": "Sea bream",
+      "name_it": "Orata",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "pollock",
+      "name_en": "Pollock",
+      "name_it": "Merluzzo carbonaro",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "scallops",
+      "name_en": "Scallops",
+      "name_it": "Capesante",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "clams",
+      "name_en": "Clams",
+      "name_it": "Vongole",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "oysters",
+      "name_en": "Oysters",
+      "name_it": "Ostriche",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "lard",
+      "name_en": "Rendered pork lard",
+      "name_it": "Strutto",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "beef_tallow",
+      "name_en": "Beef tallow",
+      "name_it": "Sego di manzo",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "rye_flour",
+      "name_en": "Rye flour",
+      "name_it": "Farina di segale",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "spelt_flour",
+      "name_en": "Spelt flour",
+      "name_it": "Farina di farro",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "durum_semolina",
+      "name_en": "Durum wheat semolina",
+      "name_it": "Semola di grano duro",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "whole_wheat_flour",
+      "name_en": "Whole wheat flour",
+      "name_it": "Farina integrale",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "self_raising_flour",
+      "name_en": "Self-raising flour",
+      "name_it": "Farina autolievitante",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "potato_starch",
+      "name_en": "Potato starch",
+      "name_it": "Fecola di patate",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "tapioca_starch",
+      "name_en": "Tapioca starch",
+      "name_it": "Amido di tapioca",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "polenta",
+      "name_en": "Polenta meal",
+      "name_it": "Farina per polenta",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "buckwheat",
+      "name_en": "Buckwheat",
+      "name_it": "Grano saraceno",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "buckwheat_flour",
+      "name_en": "Buckwheat flour",
+      "name_it": "Farina di grano saraceno",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "rye_bread",
+      "name_en": "Rye bread",
+      "name_it": "Pane di segale",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "sourdough_bread",
+      "name_en": "Sourdough bread",
+      "name_it": "Pane a lievitazione naturale",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "baguette",
+      "name_en": "Baguette bread",
+      "name_it": "Baguette",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "brioche",
+      "name_en": "Brioche",
+      "name_it": "Brioche",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "croissant",
+      "name_en": "Croissant",
+      "name_it": "Croissant",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "puff_pastry",
+      "name_en": "Puff pastry",
+      "name_it": "Pasta sfoglia",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "shortcrust_pastry",
+      "name_en": "Shortcrust pastry",
+      "name_it": "Pasta frolla",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "pizza_dough",
+      "name_en": "Pizza dough",
+      "name_it": "Impasto per pizza",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "gnocchi",
+      "name_en": "Potato gnocchi",
+      "name_it": "Gnocchi di patate",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "rigatoni",
+      "name_en": "Rigatoni pasta",
+      "name_it": "Rigatoni",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "spaghetti",
+      "name_en": "Spaghetti pasta",
+      "name_it": "Spaghetti",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "tagliatelle",
+      "name_en": "Tagliatelle pasta",
+      "name_it": "Tagliatelle",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "penne",
+      "name_en": "Penne pasta",
+      "name_it": "Penne",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "cannelloni",
+      "name_en": "Cannelloni pasta tubes",
+      "name_it": "Cannelloni",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "fregola",
+      "name_en": "Fregola pasta",
+      "name_it": "Fregola sarda",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "orzo_barley",
+      "name_en": "Pearl barley",
+      "name_it": "Orzo perlato",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "pierogi_wrappers",
+      "name_en": "Pierogi dough wrappers",
+      "name_it": "Sfoglie per pierogi",
+      "group": "European bread, flour & pasta"
+    },
+    {
+      "id": "green_olives",
+      "name_en": "Green olives",
+      "name_it": "Olive verdi",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "black_olives",
+      "name_en": "Black olives",
+      "name_it": "Olive nere",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "olive_tapenade",
+      "name_en": "Olive tapenade",
+      "name_it": "Tapenade di olive",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "pickled_cucumbers",
+      "name_en": "Pickled cucumbers",
+      "name_it": "Cetriolini sottaceto",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "cornichons",
+      "name_en": "Cornichons",
+      "name_it": "Cetriolini cornichons",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "sauerkraut_juice",
+      "name_en": "Sauerkraut brine",
+      "name_it": "Salamoia di crauti",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "vegetable_stock",
+      "name_en": "Vegetable stock",
+      "name_it": "Brodo vegetale",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "stock_cube",
+      "name_en": "Stock cube",
+      "name_it": "Dado per brodo",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "fish_stock",
+      "name_en": "Fish stock",
+      "name_it": "Brodo di pesce",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "demi_glace",
+      "name_en": "Demi-glace sauce",
+      "name_it": "Salsa demi-glace",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "worcestershire_sauce",
+      "name_en": "Worcestershire sauce",
+      "name_it": "Salsa Worcestershire",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "white_wine_vinegar",
+      "name_en": "White wine vinegar",
+      "name_it": "Aceto di vino bianco",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "sherry_vinegar",
+      "name_en": "Sherry vinegar",
+      "name_it": "Aceto di sherry",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "lemon_juice",
+      "name_en": "Lemon juice",
+      "name_it": "Succo di limone",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "lime_juice",
+      "name_en": "Lime juice",
+      "name_it": "Succo di lime",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "red_wine",
+      "name_en": "Red wine",
+      "name_it": "Vino rosso",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "white_wine",
+      "name_en": "White wine",
+      "name_it": "Vino bianco",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "brandy",
+      "name_en": "Brandy",
+      "name_it": "Brandy",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "beer",
+      "name_en": "Beer",
+      "name_it": "Birra",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "apple_juice",
+      "name_en": "Apple juice",
+      "name_it": "Succo di mela",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "apricot_jam",
+      "name_en": "Apricot jam",
+      "name_it": "Confettura di albicocche",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "strawberry_jam",
+      "name_en": "Strawberry jam",
+      "name_it": "Confettura di fragole",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "orange_marmalade",
+      "name_en": "Orange marmalade",
+      "name_it": "Marmellata d'arance",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "raspberry_jam",
+      "name_en": "Raspberry jam",
+      "name_it": "Confettura di lamponi",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "gelatin",
+      "name_en": "Gelatin",
+      "name_it": "Gelatina alimentare",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "agar_agar",
+      "name_en": "Agar agar",
+      "name_it": "Agar agar",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "active_dry_yeast",
+      "name_en": "Active dry yeast",
+      "name_it": "Lievito di birra secco",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "fresh_yeast",
+      "name_en": "Fresh baker's yeast",
+      "name_it": "Lievito di birra fresco",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "instant_yeast",
+      "name_en": "Instant yeast",
+      "name_it": "Lievito istantaneo per pane",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "powdered_gelatin",
+      "name_en": "Powdered gelatin",
+      "name_it": "Gelatina in polvere",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "candied_orange_peel",
+      "name_en": "Candied orange peel",
+      "name_it": "Scorza d'arancia candita",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "candied_lemon_peel",
+      "name_en": "Candied lemon peel",
+      "name_it": "Scorza di limone candita",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "meringue",
+      "name_en": "Meringue",
+      "name_it": "Meringa",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "bread_flour",
+      "name_en": "Strong bread flour",
+      "name_it": "Farina di forza",
+      "group": "Condiments, pantry & baking"
+    },
+    {
+      "id": "molokhia_leaves",
+      "name_en": "Molokhia leaves",
+      "name_it": "Foglie di molokhia",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "carp",
+      "name_en": "Carp fish",
+      "name_it": "Carpa",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "green_wheat_freekeh",
+      "name_en": "Green roasted wheat freekeh",
+      "name_it": "Grano verde tostato freekeh",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "semolina_fine",
+      "name_en": "Fine semolina",
+      "name_it": "Semola fine",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "semolina_coarse",
+      "name_en": "Coarse semolina",
+      "name_it": "Semola grossa",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "dried_rosebuds",
+      "name_en": "Dried rosebuds",
+      "name_it": "Boccioli di rosa secchi",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "fenugreek_paste",
+      "name_en": "Fenugreek dip hilbeh",
+      "name_it": "Salsa di fieno greco hilbeh",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "beef_bones",
+      "name_en": "Beef bones",
+      "name_it": "Ossa di manzo",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "lamb_bones",
+      "name_en": "Lamb bones",
+      "name_it": "Ossa di agnello",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "dried_oregano",
+      "name_en": "Dried oregano",
+      "name_it": "Origano secco",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "pickled_lemons",
+      "name_en": "Preserved lemons",
+      "name_it": "Limoni conservati sotto sale",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "raspberry_syrup",
+      "name_en": "Raspberry syrup",
+      "name_it": "Sciroppo di lamponi",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "pomegranate_seeds",
+      "name_en": "Pomegranate seeds",
+      "name_it": "Chicchi di melagrana",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "dried_fish",
+      "name_en": "Dried fish",
+      "name_it": "Pesce essiccato",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "cotija_cheese",
+      "name_en": "Cotija cheese",
+      "name_it": "Formaggio cotija",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "chard_stems",
+      "name_en": "Swiss chard stems",
+      "name_it": "Coste di bietola",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "chicken_wings",
+      "name_en": "Chicken wings",
+      "name_it": "Ali di pollo",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "lamb_ribs",
+      "name_en": "Lamb ribs",
+      "name_it": "Costine di agnello",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "squid_ink",
+      "name_en": "Squid ink",
+      "name_it": "Nero di seppia",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "salted_cod",
+      "name_en": "Salt cod bacalhau",
+      "name_it": "Baccalà sotto sale",
+      "group": "Regional cooking specialities"
+    },
+    {
+      "id": "ground_pork",
+      "name_en": "Ground pork",
+      "name_it": "Carne macinata di maiale",
+      "group": "European meats, fish & staples"
+    },
+    {
+      "id": "red_pepper",
+      "name_en": "Red bell pepper",
+      "name_it": "Peperone rosso",
+      "group": "European produce & aromatics"
+    },
+    {
+      "id": "fermented_cabbage_leaves",
+      "name_en": "Fermented whole cabbage leaves",
+      "name_it": "Foglie intere di cavolo fermentate",
+      "group": "European produce & aromatics"
+    }
+  ]
+}

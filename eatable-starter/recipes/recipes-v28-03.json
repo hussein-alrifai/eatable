@@ -1,0 +1,1328 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "cuisine": "Italian",
+      "slug": "arancini-sicilian-rice",
+      "title_en": "Sicilian rice arancini",
+      "title_it": "Arancini siciliani",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 95,
+      "servings": 4,
+      "description_en": "Sicilian golden rice balls filled with meat ragù, peas and cheese.",
+      "description_it": "Palline siciliane di riso dorate, ripiene di ragù, piselli e formaggio.",
+      "steps": [
+        {
+          "en": "Cook rice until tender and cool completely; simmer beef, peas and tomato paste into a thick ragù.",
+          "it": "Cuoci il riso fino a tenerezza e raffredda completamente; cuoci manzo, piselli e concentrato in un ragù denso."
+        },
+        {
+          "en": "Flatten portions of rice, fill with ragù and mozzarella and seal tightly.",
+          "it": "Appiattisci porzioni di riso, farcisci con ragù e mozzarella e chiudi bene."
+        },
+        {
+          "en": "Dip in beaten egg and breadcrumbs; fry in controlled batches until golden and heated through.",
+          "it": "Passa in uovo sbattuto e pangrattato; friggi in piccole quantità fino a doratura e centro caldo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "arborio_rice",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "peas",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "mozzarella",
+          "qty": 140,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "breadcrumbs",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 500,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Italian",
+      "slug": "tiramisu-pasteurized-eggs",
+      "title_en": "Italian tiramisù with cooked egg cream",
+      "title_it": "Tiramisù con crema cotta",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 45,
+      "servings": 4,
+      "description_en": "Italian coffee dessert using a gently cooked egg base rather than raw eggs.",
+      "description_it": "Dolce italiano al caffè con crema di uova cotta delicatamente, non cruda.",
+      "steps": [
+        {
+          "en": "Whisk eggs and sugar over a bain-marie until the mixture reaches 71°C, then cool while whisking.",
+          "it": "Monta uova e zucchero a bagnomaria fino a 71 °C e raffredda mescolando."
+        },
+        {
+          "en": "Fold in mascarpone; dip ladyfingers briefly into cooled coffee.",
+          "it": "Incorpora il mascarpone; inzuppa brevemente i savoiardi nel caffè freddo."
+        },
+        {
+          "en": "Layer biscuits and cream, chill at or below 4°C for at least four hours and dust with cocoa.",
+          "it": "Alterna biscotti e crema, raffredda a 4 °C o meno per almeno quattro ore e spolvera di cacao."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "ladyfingers",
+          "qty": 260,
+          "unit": "g"
+        },
+        {
+          "id": "mascarpone",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "sugar",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "coffee",
+          "qty": 350,
+          "unit": "ml"
+        },
+        {
+          "id": "cocoa_powder",
+          "qty": 25,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "French",
+      "slug": "quiche-lorraine-french",
+      "title_en": "French quiche Lorraine",
+      "title_it": "Quiche Lorraine francese",
+      "category": "Main",
+      "diet": "unknown",
+      "prep_minutes": 65,
+      "servings": 4,
+      "description_en": "French savory tart with eggs, cream and bacon; optional cheese variation.",
+      "description_it": "Torta salata francese con uova, panna e pancetta; variante con formaggio.",
+      "steps": [
+        {
+          "en": "Line a 24 cm tart tin with pastry and blind-bake at 190°C for 12 minutes.",
+          "it": "Rivesti uno stampo da 24 cm con la frolla salata e cuoci in bianco a 190 °C per 12 minuti."
+        },
+        {
+          "en": "Cook bacon, drain excess fat and scatter in crust with optional grated Gruyère.",
+          "it": "Rosola la pancetta, scola il grasso e distribuiscila nel guscio con Gruyère facoltativo."
+        },
+        {
+          "en": "Whisk eggs, cream and nutmeg; pour in and bake 30–35 minutes until set and lightly golden.",
+          "it": "Sbatti uova, panna e noce moscata; versa e cuoci 30–35 minuti fino a rassodamento."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "shortcrust_pastry",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "bacon",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "heavy_cream",
+          "qty": 280,
+          "unit": "ml"
+        },
+        {
+          "id": "gruyere",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "nutmeg",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "French",
+      "slug": "french-onion-soup",
+      "title_en": "French onion soup",
+      "title_it": "Zuppa di cipolle francese",
+      "category": "Soup",
+      "diet": "unknown",
+      "prep_minutes": 75,
+      "servings": 4,
+      "description_en": "French caramelized-onion soup with toasted bread and melted cheese.",
+      "description_it": "Zuppa francese di cipolle caramellate con crostini e formaggio fuso.",
+      "steps": [
+        {
+          "en": "Slice onions thinly and cook slowly in butter until deeply golden, about 35–45 minutes.",
+          "it": "Affetta finemente le cipolle e cuocile lentamente nel burro fino a doratura intensa per 35–45 minuti."
+        },
+        {
+          "en": "Stir in flour, then vegetable stock and thyme; simmer 15 minutes.",
+          "it": "Incorpora farina, poi brodo vegetale e timo; sobbolli 15 minuti."
+        },
+        {
+          "en": "Ladle into ovenproof bowls, top with toasted baguette and Gruyère, and grill until bubbling.",
+          "it": "Distribuisci in ciotole da forno, aggiungi baguette tostata e Gruyère e gratina fino a fusione."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "onion",
+          "qty": 6,
+          "unit": "pcs"
+        },
+        {
+          "id": "butter",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_stock",
+          "qty": 1200,
+          "unit": "ml"
+        },
+        {
+          "id": "baguette",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "gruyere",
+          "qty": 160,
+          "unit": "g"
+        },
+        {
+          "id": "thyme",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "French",
+      "slug": "beef-bourguignon-french",
+      "title_en": "French beef bourguignon",
+      "title_it": "Boeuf bourguignon francese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 190,
+      "servings": 4,
+      "description_en": "French slow-braised beef with mushrooms, carrots and red wine.",
+      "description_it": "Manzo francese brasato lentamente con funghi, carote e vino rosso.",
+      "steps": [
+        {
+          "en": "Dry and brown beef in batches; fry bacon and soften onions and carrots.",
+          "it": "Asciuga e rosola il manzo in più riprese; rosola la pancetta e fai appassire cipolle e carote."
+        },
+        {
+          "en": "Add wine, stock and thyme, cover and braise gently for around 2½ hours until beef is tender.",
+          "it": "Unisci vino, brodo e timo, copri e stufa dolcemente circa due ore e mezza finché il manzo è tenero."
+        },
+        {
+          "en": "Sauté mushrooms separately, add at the end and reduce sauce to desired thickness.",
+          "it": "Salta i funghi a parte, aggiungili alla fine e riduci la salsa a piacere."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "beef",
+          "qty": 900,
+          "unit": "g"
+        },
+        {
+          "id": "red_wine",
+          "qty": 600,
+          "unit": "ml"
+        },
+        {
+          "id": "beef_stock",
+          "qty": 450,
+          "unit": "ml"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "button_mushrooms",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "bacon",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "thyme",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "French",
+      "slug": "french-crepes-suzette-style",
+      "title_en": "French orange crêpes",
+      "title_it": "Crêpes francesi all’arancia",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 40,
+      "servings": 4,
+      "description_en": "French thin pancakes folded in buttery orange sauce, without flambéing.",
+      "description_it": "Crêpes francesi sottili in salsa al burro e arancia, senza flambé.",
+      "steps": [
+        {
+          "en": "Whisk flour, milk and eggs into smooth batter; rest for 15 minutes.",
+          "it": "Sbatti farina, latte e uova fino a pastella liscia; riposa 15 minuti."
+        },
+        {
+          "en": "Cook thin crêpes in a lightly buttered pan until golden on each side.",
+          "it": "Cuoci crêpes sottili in padella leggermente imburrata, dorandole sui due lati."
+        },
+        {
+          "en": "Reduce fresh orange juice with sugar, zest and butter; fold crêpes into the warm sauce.",
+          "it": "Riduci succo d’arancia fresco con zucchero, scorza e burro; ripiega le crêpes nella salsa calda."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 190,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 450,
+          "unit": "ml"
+        },
+        {
+          "id": "eggs",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "butter",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "orange",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "sugar",
+          "qty": 75,
+          "unit": "g"
+        },
+        {
+          "id": "orange_zest",
+          "qty": 1,
+          "unit": "tbsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "French",
+      "slug": "salade-nicoise-french",
+      "title_en": "French salade niçoise",
+      "title_it": "Insalata nizzarda francese",
+      "category": "Salad",
+      "diet": "none",
+      "prep_minutes": 30,
+      "servings": 4,
+      "description_en": "Nice-style salad with tuna, vegetables, eggs and olives; variations differ.",
+      "description_it": "Insalata in stile nizzardo con tonno, verdure, uova e olive; esistono varianti.",
+      "steps": [
+        {
+          "en": "Hard-boil eggs; blanch green beans until tender-crisp and cool promptly.",
+          "it": "Rassoda le uova; sbollenta i fagiolini finché croccanti e raffreddali subito."
+        },
+        {
+          "en": "Arrange tomatoes, beans, tuna, olives, anchovies and quartered eggs on a platter.",
+          "it": "Disponi pomodori, fagiolini, tonno, olive, acciughe e uova a spicchi su un piatto."
+        },
+        {
+          "en": "Whisk oil and vinegar into a dressing and spoon over just before serving.",
+          "it": "Emulsiona olio e aceto e condisci poco prima di servire."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "canned_tuna",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "green_beans",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "black_olives",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "anchovies",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "red_wine_vinegar",
+          "qty": 20,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Spanish",
+      "slug": "gazpacho-andalusian",
+      "title_en": "Andalusian gazpacho",
+      "title_it": "Gazpacho andaluso",
+      "category": "Soup",
+      "diet": "vegan",
+      "prep_minutes": 20,
+      "servings": 4,
+      "description_en": "Chilled Spanish tomato and vegetable soup with olive oil.",
+      "description_it": "Zuppa spagnola fredda di pomodoro e verdure con olio d’oliva.",
+      "steps": [
+        {
+          "en": "Chop ripe tomatoes, cucumber and pepper; soak bread briefly in water.",
+          "it": "Taglia pomodori maturi, cetriolo e peperone; bagna brevemente il pane."
+        },
+        {
+          "en": "Blend vegetables with bread, garlic, vinegar and olive oil until smooth.",
+          "it": "Frulla verdure con pane, aglio, aceto e olio fino a crema liscia."
+        },
+        {
+          "en": "Strain if desired, chill thoroughly and serve cold.",
+          "it": "Filtra a piacere, raffredda bene e servi freddo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "cucumber",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "pepper",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "bread",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "sherry_vinegar",
+          "qty": 30,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Spanish",
+      "slug": "spanish-patatas-bravas",
+      "title_en": "Spanish patatas bravas",
+      "title_it": "Patatas bravas spagnole",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 55,
+      "servings": 4,
+      "description_en": "Crisp Spanish potato cubes with smoky, spicy tomato sauce.",
+      "description_it": "Patate spagnole croccanti con salsa al pomodoro affumicata e piccante.",
+      "steps": [
+        {
+          "en": "Cut potatoes into cubes, dry well and roast with oil at 220°C until deeply golden.",
+          "it": "Taglia le patate a cubetti, asciugale e arrostiscile con olio a 220 °C fino a doratura intensa."
+        },
+        {
+          "en": "Simmer passata with garlic, smoked and hot paprika and vinegar until thick.",
+          "it": "Fai sobbollire passata con aglio, paprica affumicata e piccante e aceto finché densa."
+        },
+        {
+          "en": "Spoon warm sauce over the potatoes just before serving.",
+          "it": "Versa la salsa calda sulle patate poco prima di servire."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 280,
+          "unit": "ml"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "smoked_paprika",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "hot_paprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 75,
+          "unit": "ml"
+        },
+        {
+          "id": "white_wine_vinegar",
+          "qty": 15,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Spanish",
+      "slug": "spanish-seafood-paella",
+      "title_en": "Spanish seafood paella",
+      "title_it": "Paella spagnola di mare",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 60,
+      "servings": 4,
+      "description_en": "Valencian-inspired seafood rice cooked in a wide pan; not a claim to the traditional meat paella.",
+      "description_it": "Riso di mare ispirato alla paella valenciana; non la versione tradizionale di carne.",
+      "steps": [
+        {
+          "en": "Clean seafood safely; sauté squid in oil, then add grated tomato and rice.",
+          "it": "Pulisci con cura il pesce; salta i calamari nell’olio, poi aggiungi pomodoro grattugiato e riso."
+        },
+        {
+          "en": "Add hot fish stock with saffron, spread rice evenly and simmer without stirring until nearly tender.",
+          "it": "Versa brodo di pesce caldo allo zafferano, distribuisci il riso e cuoci senza mescolare fin quasi a cottura."
+        },
+        {
+          "en": "Add shrimp and mussels, cover briefly until shrimp are opaque and all mussels have opened; discard unopened mussels.",
+          "it": "Unisci gamberi e cozze, copri finché i gamberi sono opachi e le cozze aperte; elimina quelle chiuse."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "short_grain_rice",
+          "qty": 360,
+          "unit": "g"
+        },
+        {
+          "id": "shrimp",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "mussels",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "squid",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "fish_stock",
+          "qty": 950,
+          "unit": "ml"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 55,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Spanish",
+      "slug": "pan-con-tomate-catalan",
+      "title_en": "Catalan pan con tomate",
+      "title_it": "Pa amb tomàquet catalano",
+      "category": "Breakfast",
+      "diet": "vegan",
+      "prep_minutes": 15,
+      "servings": 4,
+      "description_en": "Catalan toasted bread rubbed with ripe tomato and olive oil.",
+      "description_it": "Pane catalano tostato strofinato con pomodoro maturo e olio.",
+      "steps": [
+        {
+          "en": "Slice thick bread and toast until lightly crisp.",
+          "it": "Affetta il pane spesso e tostalo fino a leggera croccantezza."
+        },
+        {
+          "en": "Rub each slice with the cut side of garlic and halved ripe tomato.",
+          "it": "Strofina ogni fetta con aglio tagliato e mezzo pomodoro maturo."
+        },
+        {
+          "en": "Drizzle generously with olive oil, sprinkle with salt and serve immediately.",
+          "it": "Condisci abbondantemente con olio, aggiungi sale e servi subito."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "sourdough_bread",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Portuguese",
+      "slug": "caldo-verde-portuguese",
+      "title_en": "Portuguese caldo verde",
+      "title_it": "Caldo verde portoghese",
+      "category": "Soup",
+      "diet": "none",
+      "prep_minutes": 50,
+      "servings": 4,
+      "description_en": "Portuguese potato and greens soup with smoked sausage.",
+      "description_it": "Zuppa portoghese di patate e cavolo con salsiccia affumicata.",
+      "steps": [
+        {
+          "en": "Soften onion and garlic in olive oil; add diced potatoes and stock and simmer until soft.",
+          "it": "Fai appassire cipolla e aglio nell’olio; aggiungi patate a cubetti e brodo e cuoci fino a morbidezza."
+        },
+        {
+          "en": "Blend or mash the potato broth until velvety, then add very finely shredded cavolo nero.",
+          "it": "Frulla o schiaccia il brodo con patate fino a vellutato, poi unisci cavolo nero affettato sottilissimo."
+        },
+        {
+          "en": "Simmer briefly until greens are tender and finish with cooked sliced chorizo.",
+          "it": "Cuoci brevemente il cavolo e completa con chorizo affettato già rosolato."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "cavolo_nero",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "chorizo",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "vegetable_stock",
+          "qty": 950,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Portuguese",
+      "slug": "bacalhau-a-bras-portuguese",
+      "title_en": "Portuguese bacalhau à Brás",
+      "title_it": "Bacalhau à Brás portoghese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 55,
+      "servings": 4,
+      "description_en": "Portuguese salt cod with fine fried potato strips, onions and softly set eggs.",
+      "description_it": "Baccalà portoghese con patate a fiammifero, cipolle e uova morbide.",
+      "steps": [
+        {
+          "en": "Desalt salt cod in the refrigerator according to thickness, changing water; drain and flake.",
+          "it": "Dissala il baccalà in frigorifero secondo lo spessore cambiando l’acqua; scola e sfalda."
+        },
+        {
+          "en": "Fry fine potato strips and soften sliced onions; add flaked cod and heat through.",
+          "it": "Friggi patate a fiammifero e fai appassire cipolle affettate; aggiungi baccalà e scalda bene."
+        },
+        {
+          "en": "Fold in beaten eggs over low heat until safely set but creamy; finish with olives and parsley.",
+          "it": "Incorpora uova sbattute a fuoco dolce fino a cottura sicura ma cremosa; completa con olive e prezzemolo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "salted_cod",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "potato",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "eggs",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "black_olives",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 70,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Portuguese",
+      "slug": "pasteis-de-nata-portuguese",
+      "title_en": "Portuguese pastéis de nata",
+      "title_it": "Pastéis de nata portoghesi",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 65,
+      "servings": 4,
+      "description_en": "Portuguese crisp custard tarts with caramelized tops.",
+      "description_it": "Tortine portoghesi di sfoglia croccante e crema con superficie caramellata.",
+      "steps": [
+        {
+          "en": "Line small metal muffin molds with thin puff pastry, keeping the dough chilled.",
+          "it": "Rivesti stampini metallici con sfoglia sottile, mantenendola fredda."
+        },
+        {
+          "en": "Warm milk with lemon and cinnamon; whisk egg yolks, sugar and flour, then temper with warm milk and strain.",
+          "it": "Scalda latte con limone e cannella; mescola tuorli, zucchero e farina, stempera col latte caldo e filtra."
+        },
+        {
+          "en": "Fill pastry shells and bake in a very hot oven (240–250°C) until tops spot brown and centers are set.",
+          "it": "Riempi i gusci e cuoci in forno molto caldo (240–250 °C) fino a macchie dorate e crema rappresa."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "puff_pastry",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "milk",
+          "qty": 350,
+          "unit": "ml"
+        },
+        {
+          "id": "sugar",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "flour",
+          "qty": 28,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_zest",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "id": "cinnamon_sticks",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "Greek",
+      "slug": "spanakopita-greek",
+      "title_en": "Greek spanakopita",
+      "title_it": "Spanakopita greca",
+      "category": "Main",
+      "diet": "unknown",
+      "prep_minutes": 70,
+      "servings": 4,
+      "description_en": "Greek spinach and feta pie layered with crisp filo.",
+      "description_it": "Torta greca di spinaci e feta in strati di pasta fillo croccante.",
+      "steps": [
+        {
+          "en": "Wilt spinach and squeeze out excess moisture; mix with feta, eggs, chopped scallions and dill.",
+          "it": "Fai appassire gli spinaci e strizzali bene; mescola con feta, uova, cipollotti tritati e aneto."
+        },
+        {
+          "en": "Brush half the filo sheets with oil and layer in a baking dish; add filling and cover with remaining oiled filo.",
+          "it": "Spennella metà dei fogli di fillo con olio e disponili in teglia; aggiungi ripieno e copri con fillo unto."
+        },
+        {
+          "en": "Score the top and bake at 185°C for 35–40 minutes until golden and filling is set.",
+          "it": "Incidi la superficie e cuoci a 185 °C per 35–40 minuti fino a doratura e ripieno rassodato."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "filo_pastry",
+          "qty": 10,
+          "unit": "pcs"
+        },
+        {
+          "id": "spinach",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "feta",
+          "qty": 280,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "spring_onion",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "dill",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 70,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Greek",
+      "slug": "moussaka-greek",
+      "title_en": "Greek moussaka",
+      "title_it": "Moussaka greca",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 100,
+      "servings": 4,
+      "description_en": "Greek layered eggplant, lamb ragù and baked béchamel.",
+      "description_it": "Sformato greco di melanzane, ragù d’agnello e besciamella gratinata.",
+      "steps": [
+        {
+          "en": "Roast eggplant slices until golden; brown lamb with onion and tomato into a thick ragù.",
+          "it": "Arrostisci le fette di melanzana fino a doratura; cuoci agnello con cipolla e pomodoro in un ragù denso."
+        },
+        {
+          "en": "Make béchamel by cooking flour in butter and whisking in milk; season with nutmeg.",
+          "it": "Prepara la besciamella cuocendo farina nel burro e aggiungendo latte a filo; condisci con noce moscata."
+        },
+        {
+          "en": "Layer eggplant, ragù and béchamel and bake at 190°C until bubbling and deeply golden.",
+          "it": "Alterna melanzane, ragù e besciamella e cuoci a 190 °C fino a doratura intensa."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "ground_lamb",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 350,
+          "unit": "ml"
+        },
+        {
+          "id": "milk",
+          "qty": 500,
+          "unit": "ml"
+        },
+        {
+          "id": "butter",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "nutmeg",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Greek",
+      "slug": "avgolemono-greek",
+      "title_en": "Greek avgolemono soup",
+      "title_it": "Zuppa greca avgolemono",
+      "category": "Soup",
+      "diet": "none",
+      "prep_minutes": 45,
+      "servings": 4,
+      "description_en": "Greek lemon-and-egg chicken soup with a silky, lightly thickened broth.",
+      "description_it": "Zuppa greca di pollo, limone e uova con brodo leggermente vellutato.",
+      "steps": [
+        {
+          "en": "Simmer chicken in stock until fully cooked; shred and return to the pot with cooked rice.",
+          "it": "Cuoci il pollo nel brodo fino a cottura completa; sfilaccialo e rimetti in pentola con riso cotto."
+        },
+        {
+          "en": "Whisk eggs and lemon juice, then temper gradually with hot broth.",
+          "it": "Sbatti uova e limone, poi tempera gradualmente con brodo caldo."
+        },
+        {
+          "en": "Remove soup from direct heat, stir in egg mixture without boiling and finish with dill.",
+          "it": "Togli dal fuoco diretto, incorpora il composto senza bollire e completa con aneto."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "chicken_breast",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "rice",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_stock",
+          "qty": 1100,
+          "unit": "ml"
+        },
+        {
+          "id": "eggs",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "dill",
+          "qty": 15,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "German",
+      "slug": "german-potato-salad",
+      "title_en": "German warm potato salad",
+      "title_it": "Insalata tedesca tiepida di patate",
+      "category": "Salad",
+      "diet": "none",
+      "prep_minutes": 40,
+      "servings": 4,
+      "description_en": "Southern German-style warm potatoes dressed with broth, vinegar and bacon.",
+      "description_it": "Patate tiepide in stile tedesco del sud con brodo, aceto e pancetta.",
+      "steps": [
+        {
+          "en": "Boil potatoes in their skins until tender; cool slightly, peel and slice.",
+          "it": "Lessa le patate con la buccia fino a morbidezza; intiepidisci, pela e affetta."
+        },
+        {
+          "en": "Cook bacon and onion, then add stock, vinegar and mustard to make a warm dressing.",
+          "it": "Rosola pancetta e cipolla, poi aggiungi brodo, aceto e senape per il condimento caldo."
+        },
+        {
+          "en": "Pour dressing over warm potatoes, toss gently and finish with parsley.",
+          "it": "Versa sulle patate tiepide, mescola delicatamente e completa con prezzemolo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "bacon",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "vegetable_stock",
+          "qty": 180,
+          "unit": "ml"
+        },
+        {
+          "id": "white_wine_vinegar",
+          "qty": 40,
+          "unit": "ml"
+        },
+        {
+          "id": "mustard",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 20,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "German",
+      "slug": "german-pork-schnitzel",
+      "title_en": "German pork schnitzel",
+      "title_it": "Schnitzel tedesca di maiale",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 35,
+      "servings": 4,
+      "description_en": "Thin German-style breaded pork cutlets fried until crisp.",
+      "description_it": "Cotolette tedesche di maiale sottili, impanate e croccanti.",
+      "steps": [
+        {
+          "en": "Pound pork into thin, even cutlets and season lightly.",
+          "it": "Batti il maiale in cotolette sottili e uniformi e sala leggermente."
+        },
+        {
+          "en": "Coat in flour, beaten egg and breadcrumbs without pressing too hard.",
+          "it": "Passa in farina, uovo sbattuto e pangrattato senza premere troppo."
+        },
+        {
+          "en": "Shallow-fry in hot oil until golden and the pork is safely cooked; drain and serve with lemon.",
+          "it": "Friggi in olio caldo fino a doratura e completa cottura del maiale; scola e servi con limone."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "pork",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "breadcrumbs",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 250,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "German",
+      "slug": "spatzle-german",
+      "title_en": "German buttered Spätzle",
+      "title_it": "Spätzle tedeschi al burro",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 35,
+      "servings": 4,
+      "description_en": "Southern German soft egg noodles tossed with butter and chives.",
+      "description_it": "Gnocchetti tedeschi morbidi all’uovo con burro ed erba cipollina.",
+      "steps": [
+        {
+          "en": "Beat flour, eggs, milk and nutmeg into thick, elastic batter; rest 10 minutes.",
+          "it": "Sbatti farina, uova, latte e noce moscata in pastella densa ed elastica; riposa 10 minuti."
+        },
+        {
+          "en": "Press batter through a Spätzle maker into gently boiling salted water; cook until pieces float and are firm.",
+          "it": "Fai cadere la pastella con l’apposito attrezzo in acqua salata a lieve bollore; cuoci finché gli spätzle salgono e rassodano."
+        },
+        {
+          "en": "Drain and toss with melted butter and chopped chives.",
+          "it": "Scola e condisci con burro fuso ed erba cipollina."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 360,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "milk",
+          "qty": 150,
+          "unit": "ml"
+        },
+        {
+          "id": "butter",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "nutmeg",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "id": "chives",
+          "qty": 20,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Austrian",
+      "slug": "viennese-apfelstrudel",
+      "title_en": "Austrian apple strudel",
+      "title_it": "Strudel austriaco di mele",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 75,
+      "servings": 4,
+      "description_en": "Viennese-style apple and raisin strudel with crisp, thin pastry.",
+      "description_it": "Strudel viennese di mele e uvetta in sfoglia sottile e croccante.",
+      "steps": [
+        {
+          "en": "Slice apples and toss with raisins, sugar, lemon and cinnamon; toast breadcrumbs in some butter.",
+          "it": "Affetta le mele e mescola con uvetta, zucchero, limone e cannella; tosta pangrattato in parte del burro."
+        },
+        {
+          "en": "Layer buttered pastry sheets, spread crumbs and apple filling and roll up tightly.",
+          "it": "Sovrapponi fogli di pasta imburrati, distribuisci briciole e ripieno e arrotola stretto."
+        },
+        {
+          "en": "Brush with butter and bake at 190°C for 35–40 minutes until golden; cool before slicing.",
+          "it": "Spennella con burro e cuoci a 190 °C per 35–40 minuti fino a doratura; intiepidisci prima di tagliare."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "filo_pastry",
+          "qty": 6,
+          "unit": "pcs"
+        },
+        {
+          "id": "apple",
+          "qty": 750,
+          "unit": "g"
+        },
+        {
+          "id": "raisins",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "breadcrumbs",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 110,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ]
+    }
+  ]
+}

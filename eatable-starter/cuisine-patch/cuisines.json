@@ -1,0 +1,254 @@
+[
+  {
+    "id": "Lebanese",
+    "name_en": "Lebanese",
+    "name_it": "Libanese",
+    "flag": "🇱🇧"
+  },
+  {
+    "id": "Syrian",
+    "name_en": "Syrian",
+    "name_it": "Siriana",
+    "flag": "🇸🇾"
+  },
+  {
+    "id": "Palestinian",
+    "name_en": "Palestinian",
+    "name_it": "Palestinese",
+    "flag": "🇵🇸"
+  },
+  {
+    "id": "Jordanian",
+    "name_en": "Jordanian",
+    "name_it": "Giordana",
+    "flag": "🇯🇴"
+  },
+  {
+    "id": "Iraqi",
+    "name_en": "Iraqi",
+    "name_it": "Irachena",
+    "flag": "🇮🇶"
+  },
+  {
+    "id": "Egyptian",
+    "name_en": "Egyptian",
+    "name_it": "Egiziana",
+    "flag": "🇪🇬"
+  },
+  {
+    "id": "Moroccan",
+    "name_en": "Moroccan",
+    "name_it": "Marocchina",
+    "flag": "🇲🇦"
+  },
+  {
+    "id": "Tunisian",
+    "name_en": "Tunisian",
+    "name_it": "Tunisina",
+    "flag": "🇹🇳"
+  },
+  {
+    "id": "Algerian",
+    "name_en": "Algerian",
+    "name_it": "Algerina",
+    "flag": "🇩🇿"
+  },
+  {
+    "id": "Saudi",
+    "name_en": "Saudi",
+    "name_it": "Saudita",
+    "flag": "🇸🇦"
+  },
+  {
+    "id": "Yemeni",
+    "name_en": "Yemeni",
+    "name_it": "Yemenita",
+    "flag": "🇾🇪"
+  },
+  {
+    "id": "Sudanese",
+    "name_en": "Sudanese",
+    "name_it": "Sudanese",
+    "flag": "🇸🇩"
+  },
+  {
+    "id": "Emirati",
+    "name_en": "Emirati",
+    "name_it": "Emiratina",
+    "flag": "🇦🇪"
+  },
+  {
+    "id": "Omani",
+    "name_en": "Omani",
+    "name_it": "Omanita",
+    "flag": "🇴🇲"
+  },
+  {
+    "id": "Bahraini",
+    "name_en": "Bahraini",
+    "name_it": "Bahreinita",
+    "flag": "🇧🇭"
+  },
+  {
+    "id": "Kuwaiti",
+    "name_en": "Kuwaiti",
+    "name_it": "Kuwaitiana",
+    "flag": "🇰🇼"
+  },
+  {
+    "id": "Italian",
+    "name_en": "Italian",
+    "name_it": "Italiana",
+    "flag": "🇮🇹"
+  },
+  {
+    "id": "French",
+    "name_en": "French",
+    "name_it": "Francese",
+    "flag": "🇫🇷"
+  },
+  {
+    "id": "Spanish",
+    "name_en": "Spanish",
+    "name_it": "Spagnola",
+    "flag": "🇪🇸"
+  },
+  {
+    "id": "Portuguese",
+    "name_en": "Portuguese",
+    "name_it": "Portoghese",
+    "flag": "🇵🇹"
+  },
+  {
+    "id": "Greek",
+    "name_en": "Greek",
+    "name_it": "Greca",
+    "flag": "🇬🇷"
+  },
+  {
+    "id": "German",
+    "name_en": "German",
+    "name_it": "Tedesca",
+    "flag": "🇩🇪"
+  },
+  {
+    "id": "Austrian",
+    "name_en": "Austrian",
+    "name_it": "Austriaca",
+    "flag": "🇦🇹"
+  },
+  {
+    "id": "Polish",
+    "name_en": "Polish",
+    "name_it": "Polacca",
+    "flag": "🇵🇱"
+  },
+  {
+    "id": "Ukrainian",
+    "name_en": "Ukrainian",
+    "name_it": "Ucraina",
+    "flag": "🇺🇦"
+  },
+  {
+    "id": "Hungarian",
+    "name_en": "Hungarian",
+    "name_it": "Ungherese",
+    "flag": "🇭🇺"
+  },
+  {
+    "id": "Croatian",
+    "name_en": "Croatian",
+    "name_it": "Croata",
+    "flag": "🇭🇷"
+  },
+  {
+    "id": "Swedish",
+    "name_en": "Swedish",
+    "name_it": "Svedese",
+    "flag": "🇸🇪"
+  },
+  {
+    "id": "Irish",
+    "name_en": "Irish",
+    "name_it": "Irlandese",
+    "flag": "🇮🇪"
+  },
+  {
+    "id": "British",
+    "name_en": "British",
+    "name_it": "Britannica",
+    "flag": "🇬🇧"
+  },
+  {
+    "id": "Dutch",
+    "name_en": "Dutch",
+    "name_it": "Olandese",
+    "flag": "🇳🇱"
+  },
+  {
+    "id": "Belgian",
+    "name_en": "Belgian",
+    "name_it": "Belga",
+    "flag": "🇧🇪"
+  },
+  {
+    "id": "Romanian",
+    "name_en": "Romanian",
+    "name_it": "Romena",
+    "flag": "🇷🇴"
+  },
+  {
+    "id": "Czech",
+    "name_en": "Czech",
+    "name_it": "Ceca",
+    "flag": "🇨🇿"
+  },
+  {
+    "id": "Swiss",
+    "name_en": "Swiss",
+    "name_it": "Svizzera",
+    "flag": "🇨🇭"
+  },
+  {
+    "id": "Danish",
+    "name_en": "Danish",
+    "name_it": "Danese",
+    "flag": "🇩🇰"
+  },
+  {
+    "id": "Norwegian",
+    "name_en": "Norwegian",
+    "name_it": "Norvegese",
+    "flag": "🇳🇴"
+  },
+  {
+    "id": "Turkish",
+    "name_en": "Turkish",
+    "name_it": "Turca",
+    "flag": "🇹🇷"
+  },
+  {
+    "id": "Indian",
+    "name_en": "Indian",
+    "name_it": "Indiana",
+    "flag": "🇮🇳"
+  },
+  {
+    "id": "Japanese",
+    "name_en": "Japanese",
+    "name_it": "Giapponese",
+    "flag": "🇯🇵"
+  },
+  {
+    "id": "Mexican",
+    "name_en": "Mexican",
+    "name_it": "Messicana",
+    "flag": "🇲🇽"
+  },
+  {
+    "id": "Thai",
+    "name_en": "Thai",
+    "name_it": "Thailandese",
+    "flag": "🇹🇭"
+  }
+]

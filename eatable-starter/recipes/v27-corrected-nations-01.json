@@ -1,0 +1,1610 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "slug": "malfouf-lebanese-cabbage-salad",
+      "title_en": "Malfouf — lemon cabbage salad",
+      "title_it": "Malfouf — insalata di cavolo al limone",
+      "description_en": "A crisp Lebanese-style cabbage salad with garlic, mint and lemon.",
+      "description_it": "Insalata croccante di cavolo in stile libanese con aglio, menta e limone.",
+      "cuisine": "Lebanese",
+      "category": "Salad",
+      "diet": "vegan",
+      "prep_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "white_cabbage",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "dried_mint",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "id": "parsley",
+          "qty": 20,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Shred cabbage finely, rinse and dry thoroughly; chop parsley.",
+          "it": "Affetta finemente il cavolo, lavalo e asciugalo bene; trita il prezzemolo."
+        },
+        {
+          "en": "Crush garlic with salt and whisk together with lemon juice, olive oil and dried mint.",
+          "it": "Schiaccia l’aglio con il sale e mescolalo con succo di limone, olio e menta secca."
+        },
+        {
+          "en": "Massage the dressing into the cabbage for a minute, add parsley and let rest 10 minutes before serving.",
+          "it": "Massaggia il condimento nel cavolo per un minuto, aggiungi prezzemolo e lascia riposare 10 minuti prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "baba-ghanoush-eggplant-dip",
+      "title_en": "Baba ghanoush eggplant dip",
+      "title_it": "Baba ghanoush di melanzane",
+      "description_en": "A smoky-style roasted eggplant dip with tahini and lemon.",
+      "description_it": "Crema di melanzane arrostite dal gusto affumicato con tahina e limone.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tahini",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 20,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "parsley",
+          "qty": 10,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Prick the eggplants and roast at 220°C for 35–45 minutes until collapsed and very soft.",
+          "it": "Bucherella le melanzane e arrostiscile a 220 °C per 35–45 minuti, finché risultano morbide e sgonfie."
+        },
+        {
+          "en": "Cool slightly, scoop out the flesh and let excess liquid drain before mashing.",
+          "it": "Lasciale intiepidire, estrai la polpa, elimina il liquido in eccesso e schiacciala."
+        },
+        {
+          "en": "Stir in tahini, lemon juice, crushed garlic and salt; finish with olive oil and parsley.",
+          "it": "Incorpora tahina, succo di limone, aglio schiacciato e sale; completa con olio e prezzemolo."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-lentil-eggplant-rummaniyeh-style",
+      "title_en": "Lentils and eggplant with pomegranate",
+      "title_it": "Lenticchie e melanzane alla melagrana",
+      "description_en": "A Lebanese-inspired tangy lentil and eggplant stew with pomegranate molasses.",
+      "description_it": "Stufato ispirato alla cucina libanese di lenticchie e melanzane con melassa di melagrana.",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "lentils",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "eggplant",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "pomegranate_molasses",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "water",
+          "qty": 800,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse lentils and simmer in water for 20 minutes; dice eggplant and onion.",
+          "it": "Sciacqua le lenticchie e cuocile nell’acqua per 20 minuti; taglia a dadini melanzana e cipolla."
+        },
+        {
+          "en": "Soften onion in olive oil, add eggplant and cook until beginning to brown; add garlic briefly.",
+          "it": "Fai appassire la cipolla nell’olio, aggiungi la melanzana e cuoci finché inizia a dorare; unisci brevemente l’aglio."
+        },
+        {
+          "en": "Combine vegetables and lentils, simmer until fully tender, then add pomegranate molasses, lemon juice and salt.",
+          "it": "Unisci verdure e lenticchie, cuoci finché sono completamente tenere, poi aggiungi melassa di melagrana, succo di limone e sale."
+        }
+      ]
+    },
+    {
+      "slug": "loubieh-bi-zeit-green-beans",
+      "title_en": "Loubieh bi zeit — green beans",
+      "title_it": "Loubieh bi zeit — fagiolini",
+      "description_en": "Lebanese green beans slowly cooked with tomato, onion and olive oil.",
+      "description_it": "Fagiolini libanesi cotti lentamente con pomodoro, cipolla e olio di oliva.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "green_beans",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "canned_tomatoes",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Trim the green beans and chop the onion and garlic.",
+          "it": "Spunta i fagiolini e trita cipolla e aglio."
+        },
+        {
+          "en": "Cook onion in olive oil until soft, add garlic, then add beans and tomatoes.",
+          "it": "Cuoci la cipolla nell’olio finché è morbida, aggiungi l’aglio e poi fagiolini e pomodori."
+        },
+        {
+          "en": "Cover and simmer 30–35 minutes, stirring occasionally, until the beans are tender; season and serve warm or cool.",
+          "it": "Copri e lascia sobbollire per 30–35 minuti, mescolando ogni tanto, fino a rendere teneri i fagiolini; condisci e servi tiepido o freddo."
+        }
+      ]
+    },
+    {
+      "slug": "fasolia-bi-zeit-white-beans",
+      "title_en": "Fasolia bi zeit — white beans",
+      "title_it": "Fasolia bi zeit — fagioli bianchi",
+      "description_en": "A Lebanese-style tomato and white bean stew using already-cooked beans.",
+      "description_it": "Stufato di fagioli bianchi e pomodoro in stile libanese, preparato con fagioli già cotti.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "cannellini_beans",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "paprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Use cooked or canned cannellini beans; drain and rinse canned beans.",
+          "it": "Usa fagioli cannellini già cotti o in scatola; scola e sciacqua quelli in scatola."
+        },
+        {
+          "en": "Soften chopped onion in olive oil, add garlic and paprika, then stir in tomato passata.",
+          "it": "Fai appassire la cipolla tritata nell’olio, aggiungi aglio e paprica, poi incorpora la passata."
+        },
+        {
+          "en": "Add the beans and simmer gently for 15–20 minutes until thick; adjust salt and serve.",
+          "it": "Unisci i fagioli e cuoci dolcemente per 15–20 minuti fino ad addensare; regola di sale e servi."
+        }
+      ]
+    },
+    {
+      "slug": "shish-taouk-lemon-yogurt",
+      "title_en": "Shish taouk — lemon yogurt chicken",
+      "title_it": "Shish taouk — pollo al limone e yogurt",
+      "description_en": "Lebanese-style chicken skewers marinated with lemon, garlic and yogurt.",
+      "description_it": "Spiedini di pollo in stile libanese marinati con limone, aglio e yogurt.",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 70,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken_breast",
+          "qty": 700,
+          "unit": "g"
+        },
+        {
+          "id": "yogurt",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "paprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 20,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut chicken into even pieces and coat with yogurt, lemon juice, garlic, paprika, oil and salt; refrigerate 30 minutes.",
+          "it": "Taglia il pollo in pezzi regolari e condiscilo con yogurt, limone, aglio, paprica, olio e sale; marina in frigorifero per 30 minuti."
+        },
+        {
+          "en": "Thread onto skewers or arrange on a lined tray; bake at 210°C, turning once, for about 18–25 minutes.",
+          "it": "Infilza il pollo oppure sistemalo su una teglia rivestita; cuoci a 210 °C per circa 18–25 minuti, girandolo una volta."
+        },
+        {
+          "en": "Check the thickest piece reaches 74°C before serving; discard marinade that touched raw chicken.",
+          "it": "Verifica che il pezzo più spesso raggiunga 74 °C prima di servire; elimina la marinata venuta a contatto con pollo crudo."
+        }
+      ]
+    },
+    {
+      "slug": "kafta-bil-saniyeh-baked",
+      "title_en": "Kafta bil saniyeh — baked kofta",
+      "title_it": "Kafta bil saniyeh — kafta al forno",
+      "description_en": "Lebanese-style seasoned beef baked with potatoes and tomatoes.",
+      "description_it": "Carne di manzo speziata in stile libanese cotta al forno con patate e pomodori.",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 70,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "ground_beef",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "potato",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Mix minced beef with finely chopped parsley, half the onion, seven-spice and salt; press evenly into a baking dish.",
+          "it": "Mescola il manzo macinato con prezzemolo tritato, metà cipolla, sette spezie e sale; distribuiscilo uniformemente in una pirofila."
+        },
+        {
+          "en": "Arrange thin potato and tomato slices over the meat with the remaining onion and olive oil.",
+          "it": "Disponi fette sottili di patate e pomodori sopra la carne con la cipolla rimasta e l’olio."
+        },
+        {
+          "en": "Bake covered at 200°C for 30 minutes, then uncover until potatoes are tender and minced beef reaches at least 71°C.",
+          "it": "Cuoci coperto a 200 °C per 30 minuti, poi scopri finché le patate sono tenere e il manzo macinato raggiunge almeno 71 °C."
+        }
+      ]
+    },
+    {
+      "slug": "sayadieh-fish-and-rice",
+      "title_en": "Sayadieh — spiced fish and rice",
+      "title_it": "Sayadieh — pesce e riso speziato",
+      "description_en": "A simplified Lebanese-style fish and rice dish with caramelized onions.",
+      "description_it": "Versione semplificata del pesce con riso e cipolle caramellate in stile libanese.",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "cod",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "rice",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 700,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Thinly slice onions and cook slowly in olive oil until deeply golden; set aside one third for topping.",
+          "it": "Affetta finemente le cipolle e falle dorare lentamente nell’olio; mettine da parte un terzo per guarnire."
+        },
+        {
+          "en": "Add rinsed rice, cumin, pepper and water to the remaining onion; cover and cook until the rice is tender.",
+          "it": "Aggiungi il riso sciacquato, cumino, pepe e acqua alle cipolle rimaste; copri e cuoci finché il riso è tenero."
+        },
+        {
+          "en": "Season fish and bake at 200°C until it reaches 63°C; serve over rice with reserved onions and lemon.",
+          "it": "Condisci il pesce e cuocilo al forno a 200 °C fino a raggiungere 63 °C; servi sul riso con le cipolle tenute da parte e il limone."
+        }
+      ]
+    },
+    {
+      "slug": "eggplant-chickpea-fatteh",
+      "title_en": "Eggplant and chickpea fatteh",
+      "title_it": "Fatteh di melanzane e ceci",
+      "description_en": "A layered Middle Eastern-inspired dish with toasted pita, chickpeas, eggplant and garlic yogurt.",
+      "description_it": "Piatto a strati d’ispirazione mediorientale con pita tostata, ceci, melanzane e yogurt all’aglio.",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "pita",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "yogurt",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "tahini",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cube the eggplant, toss with oil and roast at 210°C for 25 minutes until soft and browned.",
+          "it": "Taglia le melanzane a cubetti, condiscile con olio e arrostiscile a 210 °C per 25 minuti, finché sono morbide e dorate."
+        },
+        {
+          "en": "Toast pita pieces until crisp; warm already-cooked chickpeas and mix yogurt with tahini, garlic and lemon juice.",
+          "it": "Tosta la pita a pezzi fino a renderla croccante; scalda i ceci già cotti e mescola yogurt, tahina, aglio e limone."
+        },
+        {
+          "en": "Layer pita, chickpeas and eggplant, then spoon over the yogurt sauce just before serving.",
+          "it": "Disponi a strati pita, ceci e melanzane, poi aggiungi la salsa allo yogurt appena prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "sfouf-turmeric-semolina-cake",
+      "title_en": "Sfouf — turmeric semolina cake",
+      "title_it": "Sfouf — torta di semola e curcuma",
+      "description_en": "A Lebanese-style golden semolina cake with turmeric and a tender crumb.",
+      "description_it": "Dolce dorato di semola in stile libanese, profumato alla curcuma e dalla consistenza morbida.",
+      "cuisine": "Lebanese",
+      "category": "Dessert",
+      "diet": "vegan",
+      "prep_minutes": 50,
+      "servings": 8,
+      "ingredients": [
+        {
+          "id": "semolina",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 160,
+          "unit": "g"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "baking_powder",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "water",
+          "qty": 300,
+          "unit": "ml"
+        },
+        {
+          "id": "sunflower_oil",
+          "qty": 90,
+          "unit": "ml"
+        },
+        {
+          "id": "sesame_seeds",
+          "qty": 15,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Heat oven to 180°C and oil a medium baking tin. Whisk semolina, flour, sugar, turmeric and baking powder.",
+          "it": "Scalda il forno a 180 °C e ungi una teglia media. Mescola semola, farina, zucchero, curcuma e lievito per dolci."
+        },
+        {
+          "en": "Stir in water and sunflower oil until combined; pour into the tin and sprinkle sesame seeds on top.",
+          "it": "Incorpora acqua e olio di girasole, versa nella teglia e cospargi di semi di sesamo."
+        },
+        {
+          "en": "Bake for about 30–35 minutes until a skewer comes out clean; cool before cutting into squares.",
+          "it": "Cuoci per circa 30–35 minuti, finché uno stecchino esce pulito; lascia raffreddare prima di tagliare a quadrotti."
+        }
+      ]
+    },
+    {
+      "slug": "riz-bi-halib-milk-rice",
+      "title_en": "Riz bi halib — Lebanese rice pudding",
+      "title_it": "Riz bi halib — budino di riso libanese",
+      "description_en": "A creamy Lebanese-style milk rice pudding scented with rose water.",
+      "description_it": "Dessert cremoso di riso e latte in stile libanese, profumato all’acqua di rose.",
+      "cuisine": "Lebanese",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "id": "rice",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 900,
+          "unit": "ml"
+        },
+        {
+          "id": "sugar",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "cornstarch",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "rose_water",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "pistachios",
+          "qty": 20,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse the rice, then simmer in most of the milk, stirring often, until tender.",
+          "it": "Sciacqua il riso, poi cuocilo dolcemente in gran parte del latte, mescolando spesso, finché è tenero."
+        },
+        {
+          "en": "Dissolve cornstarch in the reserved cold milk; stir into the pot with sugar and cook until lightly thickened.",
+          "it": "Sciogli l’amido di mais nel latte freddo tenuto da parte; uniscilo con lo zucchero e cuoci fino a ottenere una crema leggermente densa."
+        },
+        {
+          "en": "Remove from the heat, stir in rose water, divide into dishes and chill; sprinkle pistachios before serving.",
+          "it": "Togli dal fuoco, aggiungi l’acqua di rose, distribuisci nelle coppette e raffredda; completa con pistacchi prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "spinach-fatayer-baked-triangles",
+      "title_en": "Spinach fatayer — baked triangles",
+      "title_it": "Fatayer agli spinaci — triangoli al forno",
+      "description_en": "Lebanese-style baked pastry triangles filled with spinach, onion, lemon and sumac.",
+      "description_it": "Fagottini triangolari al forno in stile libanese, ripieni di spinaci, cipolla, limone e sommacco.",
+      "cuisine": "Lebanese",
+      "category": "Bread",
+      "diet": "vegan",
+      "prep_minutes": 125,
+      "servings": 6,
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "yeast",
+          "qty": 7,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 260,
+          "unit": "ml"
+        },
+        {
+          "id": "spinach",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "sumac",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 70,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Knead flour, yeast, water, salt and 25 ml oil into a smooth dough; cover and rise until doubled, about 60 minutes.",
+          "it": "Impasta farina, lievito, acqua, sale e 25 ml di olio fino a ottenere un composto liscio; copri e fai lievitare circa 60 minuti."
+        },
+        {
+          "en": "Wilt spinach, squeeze dry and chop; mix with finely chopped onion, sumac, lemon juice and remaining oil.",
+          "it": "Fai appassire gli spinaci, strizzali e tritali; mescola con cipolla tritata, sommacco, succo di limone e olio rimasto."
+        },
+        {
+          "en": "Roll dough into small rounds, add filling, pinch into sealed triangles and bake at 200°C for 20–25 minutes until golden.",
+          "it": "Stendi l’impasto in piccoli dischi, aggiungi il ripieno, chiudi a triangolo sigillando bene e cuoci a 200 °C per 20–25 minuti fino a doratura."
+        }
+      ]
+    },
+    {
+      "slug": "spaghetti-aglio-olio",
+      "title_en": "Spaghetti aglio e olio",
+      "title_it": "Spaghetti aglio e olio",
+      "description_en": "Classic Italian pasta tossed with garlic, olive oil, parsley and chili.",
+      "description_it": "Classica pasta italiana con aglio, olio, prezzemolo e peperoncino.",
+      "cuisine": "Italian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "parsley",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "chili_flakes",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook spaghetti in salted boiling water until al dente; reserve a cup of pasta water before draining.",
+          "it": "Cuoci gli spaghetti in acqua bollente salata finché sono al dente; conserva una tazza di acqua di cottura prima di scolarli."
+        },
+        {
+          "en": "Warm sliced garlic in olive oil over low heat until fragrant and pale golden; add chili without burning the garlic.",
+          "it": "Scalda l’aglio a fettine nell’olio a fuoco basso finché è profumato e appena dorato; aggiungi il peperoncino senza bruciare l’aglio."
+        },
+        {
+          "en": "Toss pasta with the flavored oil and a little cooking water until glossy; add parsley and serve.",
+          "it": "Salta la pasta con l’olio aromatizzato e poca acqua di cottura fino a renderla lucida; aggiungi il prezzemolo e servi."
+        }
+      ]
+    },
+    {
+      "slug": "pasta-alla-norma-style",
+      "title_en": "Pasta alla Norma-style eggplant",
+      "title_it": "Pasta con melanzane alla Norma",
+      "description_en": "A home-style variation of Sicilian tomato and eggplant pasta, finished with ricotta.",
+      "description_it": "Variante casalinga della pasta siciliana al pomodoro e melanzane, completata con ricotta.",
+      "cuisine": "Italian",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "qty": 380,
+          "unit": "g"
+        },
+        {
+          "id": "eggplant",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "basil",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "ricotta",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cube eggplant, toss with part of the oil and roast at 220°C for 25 minutes until browned.",
+          "it": "Taglia le melanzane a cubetti, condiscile con parte dell’olio e arrostiscile a 220 °C per 25 minuti fino a doratura."
+        },
+        {
+          "en": "Gently cook garlic in the remaining oil, add tomato passata and simmer; cook pasta separately until al dente.",
+          "it": "Fai insaporire delicatamente l’aglio nell’olio rimasto, aggiungi la passata e cuoci a fuoco dolce; lessa la pasta al dente."
+        },
+        {
+          "en": "Combine pasta, sauce, eggplant and basil; serve with crumbled ricotta.",
+          "it": "Unisci pasta, salsa, melanzane e basilico; servi con ricotta sbriciolata."
+        }
+      ]
+    },
+    {
+      "slug": "tuscan-white-bean-rosemary-toast",
+      "title_en": "Tuscan-style white bean toast",
+      "title_it": "Crostoni toscani con fagioli e rosmarino",
+      "description_en": "Toasted bread topped with warm white beans, garlic and rosemary.",
+      "description_it": "Pane tostato con fagioli bianchi caldi, aglio e rosmarino.",
+      "cuisine": "Italian",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "bread",
+          "qty": 8,
+          "unit": "pcs"
+        },
+        {
+          "id": "cannellini_beans",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "rosemary",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 40,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Toast bread slices until golden; drain and rinse cooked cannellini beans.",
+          "it": "Tosta le fette di pane fino a doratura; scola e sciacqua i fagioli cannellini già cotti."
+        },
+        {
+          "en": "Gently warm garlic and rosemary in olive oil, then add beans and mash part of them with a little water.",
+          "it": "Scalda delicatamente aglio e rosmarino nell’olio, poi aggiungi i fagioli e schiacciane una parte con poca acqua."
+        },
+        {
+          "en": "Spoon warm beans over the toast, finish with lemon juice and black pepper, and serve at once.",
+          "it": "Distribuisci i fagioli caldi sui crostoni, completa con succo di limone e pepe nero e servi subito."
+        }
+      ]
+    },
+    {
+      "slug": "italian-minestrone-beans",
+      "title_en": "Vegetable and bean minestrone",
+      "title_it": "Minestrone di verdure e fagioli",
+      "description_en": "A hearty Italian vegetable soup with cannellini beans and small pasta.",
+      "description_it": "Minestrone italiano ricco di verdure, fagioli cannellini e pasta piccola.",
+      "cuisine": "Italian",
+      "category": "Soup",
+      "diet": "vegan",
+      "prep_minutes": 50,
+      "servings": 6,
+      "ingredients": [
+        {
+          "id": "zucchini",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "celery",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "canned_tomatoes",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "cannellini_beans",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "broth",
+          "qty": 1100,
+          "unit": "ml"
+        },
+        {
+          "id": "pasta",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Dice the vegetables and gently sweat the onion, carrot and celery in olive oil for 7 minutes.",
+          "it": "Taglia le verdure a dadini e fai appassire dolcemente cipolla, carote e sedano nell’olio per 7 minuti."
+        },
+        {
+          "en": "Add zucchini, canned tomatoes and broth; simmer for 20 minutes.",
+          "it": "Aggiungi zucchine, pomodori pelati e brodo; lascia sobbollire per 20 minuti."
+        },
+        {
+          "en": "Stir in drained cooked beans and small pasta; cook until the pasta is tender, adding water if needed.",
+          "it": "Unisci i fagioli già cotti e scolati e la pasta piccola; continua finché la pasta è cotta, aggiungendo acqua se necessario."
+        }
+      ]
+    },
+    {
+      "slug": "caprese-tomato-mozzarella",
+      "title_en": "Caprese tomato and mozzarella salad",
+      "title_it": "Insalata caprese",
+      "description_en": "A simple Italian tomato, mozzarella and basil salad.",
+      "description_it": "Insalata italiana semplice con pomodori, mozzarella e basilico.",
+      "cuisine": "Italian",
+      "category": "Salad",
+      "diet": "vegetarian",
+      "prep_minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "mozzarella",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "basil",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Wash and slice the tomatoes; drain the mozzarella and cut it into similar slices.",
+          "it": "Lava e affetta i pomodori; scola la mozzarella e tagliala in fette simili."
+        },
+        {
+          "en": "Alternate tomato and mozzarella on a platter and scatter the basil leaves over the top.",
+          "it": "Alterna pomodoro e mozzarella su un piatto da portata e distribuisci le foglie di basilico."
+        },
+        {
+          "en": "Season with olive oil, salt and pepper immediately before serving.",
+          "it": "Condisci con olio, sale e pepe poco prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "rosemary-focaccia-basic",
+      "title_en": "Rosemary focaccia",
+      "title_it": "Focaccia al rosmarino",
+      "description_en": "A soft Italian-style tray focaccia finished with rosemary and olive oil.",
+      "description_it": "Focaccia soffice in teglia in stile italiano, con rosmarino e olio d’oliva.",
+      "cuisine": "Italian",
+      "category": "Bread",
+      "diet": "vegan",
+      "prep_minutes": 150,
+      "servings": 8,
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "yeast",
+          "qty": 7,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 350,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "rosemary",
+          "qty": 12,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Mix flour, yeast, lukewarm water, half the olive oil and salt into a sticky dough; cover and rise about 75 minutes.",
+          "it": "Mescola farina, lievito, acqua tiepida, metà olio e sale in un impasto morbido; copri e fai lievitare circa 75 minuti."
+        },
+        {
+          "en": "Spread gently in a well-oiled tray; rest another 25 minutes, then dimple with oiled fingertips.",
+          "it": "Stendi delicatamente in una teglia ben oliata; lascia riposare altri 25 minuti e fai le fossette con le dita unte."
+        },
+        {
+          "en": "Top with rosemary and remaining oil, bake at 220°C for roughly 20–25 minutes until golden.",
+          "it": "Distribuisci rosmarino e olio rimasto, poi cuoci a 220 °C per circa 20–25 minuti fino a doratura."
+        }
+      ]
+    },
+    {
+      "slug": "broccoli-pesto-pasta",
+      "title_en": "Broccoli pesto pasta",
+      "title_it": "Pasta con broccoli e pesto",
+      "description_en": "A quick pasta dish combining tender broccoli and basil pesto.",
+      "description_it": "Pasta veloce con broccoli teneri e pesto al basilico.",
+      "cuisine": "Italian",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "qty": 380,
+          "unit": "g"
+        },
+        {
+          "id": "broccoli",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "pesto",
+          "qty": 110,
+          "unit": "g"
+        },
+        {
+          "id": "parmesan",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 15,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut broccoli into florets and cook in salted water until just tender; reserve cooking water.",
+          "it": "Dividi i broccoli in cimette e lessali in acqua salata finché sono appena teneri; conserva l’acqua di cottura."
+        },
+        {
+          "en": "Cook pasta until al dente; drain and combine with broccoli, pesto and a splash of cooking water.",
+          "it": "Cuoci la pasta al dente; scolala e mescolala con broccoli, pesto e un po’ di acqua di cottura."
+        },
+        {
+          "en": "Finish with olive oil and Parmesan, adjusting the texture with more water if needed.",
+          "it": "Completa con olio e parmigiano, aggiungendo altra acqua se necessario per ottenere una salsa cremosa."
+        }
+      ]
+    },
+    {
+      "slug": "cacio-e-pepe-pecorino",
+      "title_en": "Cacio e pepe",
+      "title_it": "Cacio e pepe",
+      "description_en": "Roman-style pasta with Pecorino and black pepper, made with pasta water.",
+      "description_it": "Pasta in stile romano con pecorino e pepe nero, mantecata con acqua di cottura.",
+      "cuisine": "Italian",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "pecorino",
+          "qty": 140,
+          "unit": "g"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook pasta in lightly salted boiling water; reserve a generous mug of starchy cooking water.",
+          "it": "Cuoci la pasta in acqua bollente poco salata; conserva una tazza abbondante di acqua di cottura ricca di amido."
+        },
+        {
+          "en": "Toast freshly ground pepper briefly in a pan with a little pasta water; stir grated pecorino with lukewarm water into a paste off the heat.",
+          "it": "Tosta brevemente il pepe macinato in padella con poca acqua di cottura; mescola il pecorino grattugiato con acqua tiepida fino a creare una crema, fuori dal fuoco."
+        },
+        {
+          "en": "Toss drained pasta with pepper, then add the cheese paste off the heat, loosening gradually with water to avoid clumps.",
+          "it": "Mescola la pasta scolata con il pepe, poi incorpora la crema di formaggio fuori dal fuoco, aggiungendo acqua poco per volta per evitare grumi."
+        }
+      ]
+    },
+    {
+      "slug": "baked-eggplant-parmigiana",
+      "title_en": "Baked eggplant parmigiana",
+      "title_it": "Parmigiana di melanzane al forno",
+      "description_en": "An oven-baked version of layered eggplant, tomato, mozzarella and Parmesan.",
+      "description_it": "Variante al forno di melanzane a strati con pomodoro, mozzarella e parmigiano.",
+      "cuisine": "Italian",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 85,
+      "servings": 6,
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "mozzarella",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "parmesan",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "basil",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Slice eggplant, brush lightly with oil and roast at 210°C for 20–25 minutes, turning once.",
+          "it": "Affetta le melanzane, spennellale con poco olio e arrostiscile a 210 °C per 20–25 minuti, girandole una volta."
+        },
+        {
+          "en": "Simmer tomato passata with garlic for 15 minutes; drain and tear the mozzarella.",
+          "it": "Fai sobbollire la passata con l’aglio per 15 minuti; scola e spezzetta la mozzarella."
+        },
+        {
+          "en": "Layer sauce, eggplant, mozzarella, Parmesan and basil in a baking dish; bake at 190°C for 25–30 minutes and rest before serving.",
+          "it": "Alterna salsa, melanzane, mozzarella, parmigiano e basilico in una pirofila; cuoci a 190 °C per 25–30 minuti e lascia riposare prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "eggless-tiramisu-cream",
+      "title_en": "Egg-free tiramisu-style dessert",
+      "title_it": "Dolce tipo tiramisù senza uova",
+      "description_en": "An egg-free tiramisu-style dessert with coffee-soaked biscuits and mascarpone cream.",
+      "description_it": "Dolce ispirato al tiramisù senza uova, con biscotti al caffè e crema al mascarpone.",
+      "cuisine": "Italian",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 275,
+      "servings": 6,
+      "ingredients": [
+        {
+          "id": "ladyfingers",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "mascarpone",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "heavy_cream",
+          "qty": 250,
+          "unit": "ml"
+        },
+        {
+          "id": "coffee",
+          "qty": 280,
+          "unit": "ml"
+        },
+        {
+          "id": "sugar",
+          "qty": 75,
+          "unit": "g"
+        },
+        {
+          "id": "cocoa_powder",
+          "qty": 20,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Brew the coffee and allow it to cool completely. Whip cold cream with sugar and gently fold into mascarpone.",
+          "it": "Prepara il caffè e lascialo raffreddare del tutto. Monta la panna fredda con lo zucchero e incorporala delicatamente al mascarpone."
+        },
+        {
+          "en": "Dip ladyfingers briefly into cooled coffee and arrange one layer in a small dish; cover with half the cream.",
+          "it": "Immergi velocemente i savoiardi nel caffè freddo e forma uno strato in una pirofila; copri con metà crema."
+        },
+        {
+          "en": "Repeat the layers, dust with cocoa and refrigerate for at least 4 hours before serving.",
+          "it": "Ripeti gli strati, spolvera con il cacao e conserva in frigorifero per almeno 4 ore prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "bulgur-chickpea-stuffed-peppers",
+      "title_en": "Bulgur and chickpea stuffed peppers",
+      "title_it": "Peperoni ripieni di bulgur e ceci",
+      "description_en": "Syrian-inspired bulgur and chickpea stuffed peppers.",
+      "description_it": "Peperoni ripieni ispirati alla cucina siriana con bulgur e ceci.",
+      "cuisine": "Syrian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pepper",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "bulgur",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 40,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "water",
+          "qty": 300,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Halve and deseed peppers; cook bulgur in hot water following package directions.",
+          "it": "Taglia a metà i peperoni ed elimina i semi; cuoci il bulgur in acqua calda seguendo le indicazioni sulla confezione."
+        },
+        {
+          "en": "Soften diced onion in a little oil and combine with bulgur, drained cooked chickpeas, chopped tomato, parsley and lemon.",
+          "it": "Fai appassire la cipolla a dadini in poco olio e mescolala con bulgur, ceci già cotti e scolati, pomodoro tritato, prezzemolo e limone."
+        },
+        {
+          "en": "Fill pepper halves, drizzle with remaining oil and bake covered at 190°C for 25 minutes, then uncovered until tender.",
+          "it": "Riempi i mezzi peperoni, aggiungi l’olio rimasto e cuoci coperti a 190 °C per 25 minuti, poi scopri finché sono teneri."
+        }
+      ]
+    },
+    {
+      "slug": "ful-medames-lemon-fava",
+      "title_en": "Ful medames — lemon fava beans",
+      "title_it": "Ful medames — fave al limone",
+      "description_en": "Egyptian-style breakfast fava beans warmed with lemon and cumin.",
+      "description_it": "Fave da colazione in stile egiziano con limone e cumino.",
+      "cuisine": "Egyptian",
+      "category": "Breakfast",
+      "diet": "vegan",
+      "prep_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "fava_beans",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "parsley",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Use fully cooked or canned fava beans; drain if canned, reserving a little liquid.",
+          "it": "Usa fave completamente cotte o in scatola; scola quelle in scatola conservando un po’ del liquido."
+        },
+        {
+          "en": "Heat the beans with a splash of water, cumin and crushed garlic; mash about a third for a creamy texture.",
+          "it": "Scalda le fave con un goccio d’acqua, cumino e aglio schiacciato; schiacciane circa un terzo per renderle cremose."
+        },
+        {
+          "en": "Stir in lemon juice and salt; finish with olive oil and parsley.",
+          "it": "Aggiungi succo di limone e sale; completa con olio d’oliva e prezzemolo."
+        }
+      ]
+    },
+    {
+      "slug": "baked-chickpea-herb-patties",
+      "title_en": "Baked chickpea herb patties",
+      "title_it": "Polpette al forno di ceci ed erbe",
+      "description_en": "Palestinian-falafel-inspired baked chickpea and herb patties; not traditional deep-fried falafel.",
+      "description_it": "Polpette al forno di ceci ed erbe ispirate al falafel palestinese; non sono i falafel tradizionali fritti.",
+      "cuisine": "Palestinian",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "chickpea_flour",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "cilantro",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Drain cooked chickpeas well and pulse with herbs, garlic, cumin and salt to form a coarse mixture.",
+          "it": "Scola molto bene i ceci cotti e frullali a impulsi con erbe, aglio, cumino e sale fino a ottenere un composto grossolano."
+        },
+        {
+          "en": "Mix in chickpea flour, form small patties with damp hands and brush with olive oil.",
+          "it": "Incorpora la farina di ceci, forma piccole polpette con le mani umide e spennellale con olio."
+        },
+        {
+          "en": "Bake at 210°C for 20–25 minutes, turning once, until firm and browned; serve warm.",
+          "it": "Cuoci a 210 °C per 20–25 minuti, girandole una volta, finché sono sode e dorate; servi calde."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1338 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "cuisine": "Austrian",
+      "slug": "kaiserschmarrn-austrian",
+      "title_en": "Austrian Kaiserschmarrn",
+      "title_it": "Kaiserschmarrn austriaco",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 35,
+      "servings": 4,
+      "description_en": "Austrian fluffy shredded pancake with raisins and powdered sugar.",
+      "description_it": "Frittata dolce austriaca soffice, spezzettata con uvetta e zucchero a velo.",
+      "steps": [
+        {
+          "en": "Separate eggs; whisk yolks with milk and flour and fold in beaten whites and raisins.",
+          "it": "Separa le uova; mescola tuorli con latte e farina e incorpora albumi montati e uvetta."
+        },
+        {
+          "en": "Pour into a buttered pan and cook gently until set underneath; flip in sections.",
+          "it": "Versa in padella imburrata e cuoci dolcemente fino a base rassodata; gira a pezzi."
+        },
+        {
+          "en": "Tear into bite-size pieces, lightly caramelize with butter and sugar and dust with powdered sugar.",
+          "it": "Spezza in bocconi, caramella leggermente con burro e zucchero e spolvera di zucchero a velo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 240,
+          "unit": "ml"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "sugar",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 65,
+          "unit": "g"
+        },
+        {
+          "id": "raisins",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "powdered_sugar",
+          "qty": 25,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Polish",
+      "slug": "pierogi-ruskie-polish",
+      "title_en": "Polish pierogi ruskie",
+      "title_it": "Pierogi ruskie polacchi",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 80,
+      "servings": 4,
+      "description_en": "Polish dumplings filled with potatoes, fresh cheese and onions.",
+      "description_it": "Ravioli polacchi ripieni di patate, formaggio fresco e cipolle.",
+      "steps": [
+        {
+          "en": "Mix flour and warm water into a pliable dough and rest covered.",
+          "it": "Impasta farina e acqua tiepida fino a pasta elastica e riposa coperto."
+        },
+        {
+          "en": "Mash boiled potatoes with quark and browned onion; roll dough and cut circles.",
+          "it": "Schiaccia patate lessate con quark e cipolla dorata; stendi la pasta e ritaglia cerchi."
+        },
+        {
+          "en": "Fill, seal and boil pierogi until they float and cook through; toss with butter and onion.",
+          "it": "Farcisci, chiudi e lessa i pierogi finché galleggiano e cuociono; condisci con burro e cipolla."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 220,
+          "unit": "ml"
+        },
+        {
+          "id": "potato",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "quark",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "butter",
+          "qty": 65,
+          "unit": "g"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Polish",
+      "slug": "barszcz-czerwony-polish",
+      "title_en": "Polish red beet barszcz",
+      "title_it": "Barszcz polacco di barbabietola",
+      "category": "Soup",
+      "diet": "vegan",
+      "prep_minutes": 65,
+      "servings": 4,
+      "description_en": "Polish clear beetroot broth with a gently tart finish.",
+      "description_it": "Brodo polacco limpido di barbabietola dal gusto delicatamente acidulo.",
+      "steps": [
+        {
+          "en": "Peel and slice beets and carrots; soften onion and garlic lightly in a pot.",
+          "it": "Pela e affetta barbabietole e carote; fai appassire leggermente cipolla e aglio in pentola."
+        },
+        {
+          "en": "Add stock, beets, bay and pepper and simmer until vegetables are tender.",
+          "it": "Aggiungi brodo, barbabietole, alloro e pepe e cuoci fino a verdure tenere."
+        },
+        {
+          "en": "Strain for a clear soup or keep pieces; add vinegar gradually and serve warm.",
+          "it": "Filtra per brodo limpido o lascia le verdure; aggiungi aceto gradualmente e servi caldo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "beetroot",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "vegetable_stock",
+          "qty": 1100,
+          "unit": "ml"
+        },
+        {
+          "id": "apple_cider_vinegar",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "bay_leaves",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Ukrainian",
+      "slug": "ukrainian-borshch",
+      "title_en": "Ukrainian borshch",
+      "title_it": "Borshch ucraino",
+      "category": "Soup",
+      "diet": "none",
+      "prep_minutes": 85,
+      "servings": 4,
+      "description_en": "Ukrainian beet, cabbage and beef soup served with sour cream.",
+      "description_it": "Zuppa ucraina di barbabietola, cavolo e manzo con panna acida.",
+      "steps": [
+        {
+          "en": "Simmer beef in water or stock until tender; skim foam as needed.",
+          "it": "Cuoci il manzo in acqua o brodo fino a tenerezza; elimina la schiuma."
+        },
+        {
+          "en": "Cook chopped beetroot, cabbage, potato, carrots and onion with tomato paste in the broth until soft.",
+          "it": "Cuoci barbabietole, cavolo, patate, carote e cipolla tritate con concentrato nel brodo fino a morbidezza."
+        },
+        {
+          "en": "Season, rest briefly and serve with sour cream and dill.",
+          "it": "Condisci, riposa brevemente e servi con panna acida e aneto."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "beetroot",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "white_cabbage",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "potato",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "beef",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "sour_cream",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "dill",
+          "qty": 15,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Ukrainian",
+      "slug": "ukrainian-cherry-varenyky",
+      "title_en": "Ukrainian cherry varenyky",
+      "title_it": "Varenyky ucraini alle ciliegie",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 75,
+      "servings": 4,
+      "description_en": "Ukrainian fruit dumplings with cherries and a light sweet filling.",
+      "description_it": "Ravioli dolci ucraini alle ciliegie con ripieno leggermente zuccherato.",
+      "steps": [
+        {
+          "en": "Knead flour and warm water into smooth dough, cover and rest 20 minutes.",
+          "it": "Impasta farina e acqua tiepida fino a pasta liscia, copri e riposa 20 minuti."
+        },
+        {
+          "en": "Pit cherries and mix with sugar; roll dough thin and cut small circles.",
+          "it": "Snocciola le ciliegie e mescola con zucchero; stendi sottile e ritaglia dischi."
+        },
+        {
+          "en": "Fill, seal securely and simmer in gently boiling water until dough is tender; serve with butter and sour cream.",
+          "it": "Farcisci, sigilla e lessa a leggero bollore fino a pasta cotta; servi con burro e panna acida."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 360,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 190,
+          "unit": "ml"
+        },
+        {
+          "id": "cherries",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "sour_cream",
+          "qty": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Hungarian",
+      "slug": "hungarian-beef-goulash",
+      "title_en": "Hungarian beef goulash",
+      "title_it": "Gulasch ungherese di manzo",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 130,
+      "servings": 4,
+      "description_en": "Hungarian paprika-rich beef stew with potatoes and caraway.",
+      "description_it": "Stufato ungherese di manzo con paprica, patate e carvi.",
+      "steps": [
+        {
+          "en": "Brown diced beef with onion; briefly bloom sweet paprika off direct heat to avoid burning.",
+          "it": "Rosola manzo a cubetti e cipolla; fuori dal fuoco fai profumare brevemente la paprica senza bruciarla."
+        },
+        {
+          "en": "Add tomatoes, stock and caraway and simmer covered until beef is nearly tender.",
+          "it": "Unisci pomodori, brodo e carvi e stufa coperto finché il manzo è quasi tenero."
+        },
+        {
+          "en": "Add potatoes and carrots and simmer until everything is soft and the sauce is rich.",
+          "it": "Aggiungi patate e carote e cuoci fino a verdure morbide e salsa ricca."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "beef",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "potato",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "sweet_paprika",
+          "qty": 3,
+          "unit": "tbsp"
+        },
+        {
+          "id": "caraway",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "beef_stock",
+          "qty": 1000,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Hungarian",
+      "slug": "hungarian-langos",
+      "title_en": "Hungarian lángos",
+      "title_it": "Lángos ungherese",
+      "category": "Bread",
+      "diet": "vegetarian",
+      "prep_minutes": 95,
+      "servings": 4,
+      "description_en": "Hungarian fried flatbread traditionally served with garlic and sour cream; cheese variation.",
+      "description_it": "Focaccia ungherese fritta con aglio e panna acida; variante al formaggio.",
+      "steps": [
+        {
+          "en": "Mix flour, warm milk, yeast, sugar and water as needed into soft dough; let rise until doubled.",
+          "it": "Impasta farina, latte tiepido, lievito, zucchero e acqua quanto basta; lascia lievitare fino al raddoppio."
+        },
+        {
+          "en": "Stretch small rounds with oiled hands and fry until both sides are golden.",
+          "it": "Allarga dischi con mani unte e friggi fino a doratura dei due lati."
+        },
+        {
+          "en": "Drain and brush with crushed garlic, then add sour cream and grated cheese.",
+          "it": "Scola, spennella con aglio schiacciato e aggiungi panna acida e formaggio grattugiato."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 420,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 210,
+          "unit": "ml"
+        },
+        {
+          "id": "active_dry_yeast",
+          "qty": 7,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 10,
+          "unit": "g"
+        },
+        {
+          "id": "sour_cream",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "cheddar",
+          "qty": 160,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 450,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Croatian",
+      "slug": "croatian-blitva-potatoes",
+      "title_en": "Croatian blitva with potatoes",
+      "title_it": "Blitva croata con patate",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 40,
+      "servings": 4,
+      "description_en": "Dalmatian-style chard and potatoes with garlic and olive oil.",
+      "description_it": "Bietole e patate in stile dalmata con aglio e olio.",
+      "steps": [
+        {
+          "en": "Peel and dice potatoes and boil until tender.",
+          "it": "Pela e taglia le patate a dadini e lessale fino a morbidezza."
+        },
+        {
+          "en": "Add chopped chard to the pot for the last few minutes; drain thoroughly.",
+          "it": "Aggiungi bietole tritate negli ultimi minuti; scola molto bene."
+        },
+        {
+          "en": "Warm sliced garlic in olive oil, toss with potatoes and greens and finish with lemon.",
+          "it": "Scalda aglio a fette nell’olio, condisci patate e verdure e completa con limone."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "swiss_chard",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "potato",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 70,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "Croatian",
+      "slug": "croatian-pasticada",
+      "title_en": "Dalmatian pašticada",
+      "title_it": "Pašticada dalmata",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 210,
+      "servings": 4,
+      "description_en": "Dalmatian slow-cooked beef with wine, prunes and a sweet-tart sauce.",
+      "description_it": "Manzo dalmata a lunga cottura con vino, prugne e salsa agrodolce.",
+      "steps": [
+        {
+          "en": "Marinate beef chilled with wine, vinegar and aromatics if time allows; pat dry.",
+          "it": "Marina il manzo in frigo con vino, aceto e aromi se possibile; asciuga."
+        },
+        {
+          "en": "Brown beef, add onions, carrots, tomato paste, marinade and prunes and braise gently until very tender.",
+          "it": "Rosola la carne, aggiungi cipolle, carote, concentrato, marinata e prugne e stufa dolcemente fino a tenerezza."
+        },
+        {
+          "en": "Slice meat and reduce the cooking sauce; serve over gnocchi or polenta.",
+          "it": "Affetta la carne e riduci la salsa; servi su gnocchi o polenta."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "beef",
+          "qty": 950,
+          "unit": "g"
+        },
+        {
+          "id": "prunes",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "red_wine",
+          "qty": 450,
+          "unit": "ml"
+        },
+        {
+          "id": "red_wine_vinegar",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "cloves",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 60,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "Swedish",
+      "slug": "swedish-meatballs-gravy",
+      "title_en": "Swedish meatballs with gravy",
+      "title_it": "Polpettine svedesi con salsa",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 55,
+      "servings": 4,
+      "description_en": "Swedish-style small meatballs in creamy gravy.",
+      "description_it": "Polpettine in stile svedese con salsa cremosa.",
+      "steps": [
+        {
+          "en": "Soak breadcrumbs in milk, mix with mince, grated onion and egg and shape small balls.",
+          "it": "Ammolla pangrattato nel latte, unisci macinato, cipolla grattugiata e uovo e forma palline."
+        },
+        {
+          "en": "Brown meatballs in butter, then finish cooking until they reach 71°C inside.",
+          "it": "Rosola le polpettine nel burro, poi porta a cottura fino a 71 °C al centro."
+        },
+        {
+          "en": "Add stock and cream to the pan juices and simmer into gravy; return meatballs to coat.",
+          "it": "Aggiungi brodo e panna ai succhi e riduci in salsa; rimetti le polpette per condirle."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "ground_beef",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "ground_lamb",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "breadcrumbs",
+          "qty": 95,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 120,
+          "unit": "ml"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "eggs",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "heavy_cream",
+          "qty": 200,
+          "unit": "ml"
+        },
+        {
+          "id": "beef_stock",
+          "qty": 350,
+          "unit": "ml"
+        },
+        {
+          "id": "butter",
+          "qty": 45,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Swedish",
+      "slug": "swedish-cinnamon-buns",
+      "title_en": "Swedish kanelbullar",
+      "title_it": "Kanelbullar svedesi alla cannella",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 140,
+      "servings": 4,
+      "description_en": "Swedish soft cinnamon buns with cardamom-scented dough.",
+      "description_it": "Girelle svedesi alla cannella con impasto profumato al cardamomo.",
+      "steps": [
+        {
+          "en": "Knead flour, warm milk, yeast, some butter, sugar and cardamom into soft dough; rise until doubled.",
+          "it": "Impasta farina, latte tiepido, lievito, parte del burro, zucchero e cardamomo; lievita al raddoppio."
+        },
+        {
+          "en": "Roll dough, spread with remaining butter, cinnamon and sugar, then roll and cut buns.",
+          "it": "Stendi, spalma burro restante con cannella e zucchero, arrotola e taglia le girelle."
+        },
+        {
+          "en": "Proof again, brush with beaten egg and bake at 200°C for 12–16 minutes until golden.",
+          "it": "Fai lievitare ancora, spennella con uovo e cuoci a 200 °C per 12–16 minuti fino a doratura."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 490,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 250,
+          "unit": "ml"
+        },
+        {
+          "id": "active_dry_yeast",
+          "qty": 8,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 140,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 3,
+          "unit": "tsp"
+        },
+        {
+          "id": "cardamom",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "eggs",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "Irish",
+      "slug": "irish-colcannon",
+      "title_en": "Irish colcannon potatoes",
+      "title_it": "Colcannon irlandese",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 40,
+      "servings": 4,
+      "description_en": "Irish mashed potatoes with cabbage and spring onions.",
+      "description_it": "Purè irlandese di patate con verza e cipollotti.",
+      "steps": [
+        {
+          "en": "Boil potatoes until very tender and mash smooth with warm milk and butter.",
+          "it": "Lessa le patate fino a morbidezza e schiacciale con latte caldo e burro."
+        },
+        {
+          "en": "Cook finely shredded cabbage in a little water until soft and drain well.",
+          "it": "Cuoci la verza affettata sottilmente in poca acqua fino a morbidezza e scola bene."
+        },
+        {
+          "en": "Fold cabbage and sliced spring onions into mash and serve warm.",
+          "it": "Incorpora verza e cipollotti affettati al purè e servi caldo."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "savoy_cabbage",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 95,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 180,
+          "unit": "ml"
+        },
+        {
+          "id": "spring_onion",
+          "qty": 4,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "British",
+      "slug": "british-shepherds-pie",
+      "title_en": "British shepherd’s pie",
+      "title_it": "Shepherd’s pie britannico",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 90,
+      "servings": 4,
+      "description_en": "British lamb and vegetable bake topped with browned mashed potatoes.",
+      "description_it": "Sformato britannico di agnello e verdure coperto con purè dorato.",
+      "steps": [
+        {
+          "en": "Brown lamb with onion and carrots; add peas, stock and tomato paste and reduce until thick.",
+          "it": "Rosola agnello con cipolla e carote; unisci piselli, brodo e concentrato e restringi."
+        },
+        {
+          "en": "Boil potatoes and mash with butter and milk.",
+          "it": "Lessa le patate e schiacciale con burro e latte."
+        },
+        {
+          "en": "Spread filling in a dish, cover with mashed potatoes, score the top and bake at 200°C for 25 minutes.",
+          "it": "Distribuisci il ripieno in teglia, copri con purè, incidi la superficie e cuoci a 200 °C per 25 minuti."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "ground_lamb",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "potato",
+          "qty": 900,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "peas",
+          "qty": 170,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "beef_stock",
+          "qty": 450,
+          "unit": "ml"
+        },
+        {
+          "id": "butter",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 120,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "cuisine": "British",
+      "slug": "british-scones",
+      "title_en": "British plain scones",
+      "title_it": "Scones britannici",
+      "category": "Bread",
+      "diet": "vegetarian",
+      "prep_minutes": 30,
+      "servings": 4,
+      "description_en": "British tea-time scones, lightly sweet and tender.",
+      "description_it": "Scones britannici da tè, leggermente dolci e morbidi.",
+      "steps": [
+        {
+          "en": "Rub cold butter into self-raising flour, then stir in sugar and milk to make a soft dough.",
+          "it": "Sfrega burro freddo nella farina autolievitante, poi unisci zucchero e latte fino a impasto morbido."
+        },
+        {
+          "en": "Pat dough 2.5 cm thick and cut rounds without twisting the cutter.",
+          "it": "Appiattisci a 2,5 cm e ritaglia dischi senza ruotare il tagliapasta."
+        },
+        {
+          "en": "Brush with beaten egg and bake at 210°C for 12–15 minutes until risen and golden.",
+          "it": "Spennella con uovo sbattuto e cuoci a 210 °C per 12–15 minuti fino a gonfi e dorati."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "self_raising_flour",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 75,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 180,
+          "unit": "ml"
+        },
+        {
+          "id": "sugar",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 1,
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "cuisine": "Dutch",
+      "slug": "dutch-stamppot-kale",
+      "title_en": "Dutch kale stamppot",
+      "title_it": "Stamppot olandese al cavolo",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 45,
+      "servings": 4,
+      "description_en": "Dutch mashed potatoes combined with kale and mustard.",
+      "description_it": "Purè olandese di patate con cavolo riccio e senape.",
+      "steps": [
+        {
+          "en": "Boil diced potatoes in lightly salted water until almost soft.",
+          "it": "Lessa le patate a pezzi in acqua poco salata fin quasi a morbidezza."
+        },
+        {
+          "en": "Add chopped kale and cook until tender; drain well.",
+          "it": "Unisci cavolo riccio tritato e cuoci fino a tenerezza; scola bene."
+        },
+        {
+          "en": "Mash with butter, warm milk and mustard and serve immediately.",
+          "it": "Schiaccia con burro, latte caldo e senape e servi subito."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "kale",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 180,
+          "unit": "ml"
+        },
+        {
+          "id": "mustard",
+          "qty": 15,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Belgian",
+      "slug": "belgian-beef-stoofvlees",
+      "title_en": "Belgian stoofvlees beef stew",
+      "title_it": "Stoofvlees belga di manzo",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 170,
+      "servings": 4,
+      "description_en": "Belgian beef stew slowly braised with beer, onions and mustard.",
+      "description_it": "Stufato belga di manzo brasato lentamente con birra, cipolle e senape.",
+      "steps": [
+        {
+          "en": "Brown beef in butter; soften sliced onions in the same pot.",
+          "it": "Rosola il manzo nel burro; fai appassire le cipolle affettate nella stessa pentola."
+        },
+        {
+          "en": "Return beef, add beer, thyme and sugar, and lay mustard-spread bread over the surface.",
+          "it": "Rimetti la carne, aggiungi birra, timo e zucchero e appoggia pane spalmato di senape sopra."
+        },
+        {
+          "en": "Cover and simmer gently for around 2½ hours until the meat is tender and bread dissolves into the sauce.",
+          "it": "Copri e stufa dolcemente circa due ore e mezza finché carne tenera e pane sciolto nella salsa."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "beef",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "beer",
+          "qty": 550,
+          "unit": "ml"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "mustard",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "sourdough_bread",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "thyme",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "butter",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "id": "brown_sugar",
+          "qty": 20,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Romanian",
+      "slug": "romanian-sarmale",
+      "title_en": "Romanian sarmale cabbage rolls",
+      "title_it": "Sarmale rumeni di cavolo",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 140,
+      "servings": 4,
+      "description_en": "Romanian cabbage rolls with pork and rice in a tomato-rich braise.",
+      "description_it": "Involtini rumeni di cavolo con maiale e riso, brasati al pomodoro.",
+      "steps": [
+        {
+          "en": "Rinse sauerkraut leaves if very salty; mix pork, rinsed rice, chopped onion and paprika.",
+          "it": "Sciacqua le foglie di crauti se molto salate; mescola maiale, riso sciacquato, cipolla e paprica."
+        },
+        {
+          "en": "Wrap small portions in leaves and pack closely in a pot with extra cabbage.",
+          "it": "Avvolgi piccole porzioni nelle foglie e disponi strette in pentola con cavolo extra."
+        },
+        {
+          "en": "Add tomato sauce and water, cover and simmer for 1½–2 hours until rice and pork are fully cooked.",
+          "it": "Aggiungi pomodoro e acqua, copri e stufa 1½–2 ore finché riso e maiale sono completamente cotti."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "sauerkraut",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "ground_pork",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "rice",
+          "qty": 160,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "smoked_paprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 350,
+          "unit": "ml"
+        },
+        {
+          "id": "thyme",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Czech",
+      "slug": "czech-kulajda",
+      "title_en": "Czech kulajda mushroom soup",
+      "title_it": "Kulajda ceca ai funghi",
+      "category": "Soup",
+      "diet": "vegetarian",
+      "prep_minutes": 55,
+      "servings": 4,
+      "description_en": "Czech creamy mushroom and potato soup with dill and eggs.",
+      "description_it": "Zuppa ceca cremosa di funghi e patate con aneto e uova.",
+      "steps": [
+        {
+          "en": "Sauté mushrooms in butter; add stock and diced potatoes and simmer until tender.",
+          "it": "Salta i funghi nel burro; aggiungi brodo e patate a cubetti e cuoci fino a morbidezza."
+        },
+        {
+          "en": "Whisk sour cream with a little hot broth, then stir back into soup without hard boiling.",
+          "it": "Stempera la panna acida con poco brodo caldo, poi incorporala senza bollire forte."
+        },
+        {
+          "en": "Add dill and vinegar to taste; top each bowl with a fully cooked or safely prepared egg.",
+          "it": "Unisci aneto e aceto a piacere; completa ogni ciotola con uovo ben cotto o preparato in sicurezza."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "wild_mushrooms",
+          "qty": 280,
+          "unit": "g"
+        },
+        {
+          "id": "sour_cream",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "dill",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "white_wine_vinegar",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "vegetable_stock",
+          "qty": 900,
+          "unit": "ml"
+        },
+        {
+          "id": "butter",
+          "qty": 35,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "cuisine": "Swiss",
+      "slug": "swiss-rosti-potatoes",
+      "title_en": "Swiss rösti potatoes",
+      "title_it": "Rösti svizzero di patate",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 40,
+      "servings": 4,
+      "description_en": "Swiss crisp potato cake with a tender center.",
+      "description_it": "Torta svizzera di patate croccante fuori e morbida dentro.",
+      "steps": [
+        {
+          "en": "Coarsely grate peeled potatoes and squeeze out excess moisture.",
+          "it": "Grattugia grossolanamente le patate pelate e strizzale per eliminare l’acqua."
+        },
+        {
+          "en": "Heat butter in a wide nonstick pan, press potatoes into a cake and cook gently until golden underneath.",
+          "it": "Scalda il burro in padella antiaderente, compatta le patate a tortino e cuoci dolcemente fino a base dorata."
+        },
+        {
+          "en": "Invert carefully with a plate, cook the other side until crisp and serve immediately.",
+          "it": "Capovolgi con un piatto, dora l’altro lato e servi subito."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Danish",
+      "slug": "danish-frikadeller",
+      "title_en": "Danish frikadeller patties",
+      "title_it": "Frikadeller danesi",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 50,
+      "servings": 4,
+      "description_en": "Danish pan-fried pork patties with onion and a tender interior.",
+      "description_it": "Polpette danesi di maiale cotte in padella con cipolla, morbide all’interno.",
+      "steps": [
+        {
+          "en": "Combine minced pork with grated onion, egg, flour and milk; chill mixture briefly.",
+          "it": "Mescola maiale macinato con cipolla grattugiata, uovo, farina e latte; raffredda brevemente."
+        },
+        {
+          "en": "Shape oval patties with a spoon and brown in butter over medium heat.",
+          "it": "Forma polpette ovali col cucchiaio e rosolale nel burro a fuoco medio."
+        },
+        {
+          "en": "Turn and cook through until the center reaches a safe temperature; rest briefly before serving.",
+          "it": "Gira e cuoci bene al centro fino a temperatura sicura; riposa brevemente prima di servire."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "ground_pork",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "eggs",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "flour",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 160,
+          "unit": "ml"
+        },
+        {
+          "id": "butter",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "cuisine": "Norwegian",
+      "slug": "norwegian-fiskekaker",
+      "title_en": "Norwegian fish cakes",
+      "title_it": "Fiskekaker norvegesi",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 45,
+      "servings": 4,
+      "description_en": "Norwegian white-fish cakes with mild seasoning and a tender texture.",
+      "description_it": "Polpette norvegesi di pesce bianco dal gusto delicato e consistenza morbida.",
+      "steps": [
+        {
+          "en": "Chop chilled cod and blend briefly with egg, starch, milk and grated onion.",
+          "it": "Trita il merluzzo freddo e frulla brevemente con uovo, fecola, latte e cipolla grattugiata."
+        },
+        {
+          "en": "Shape fish cakes with wet hands and chill for 10 minutes.",
+          "it": "Forma polpette con mani bagnate e riposa in frigo 10 minuti."
+        },
+        {
+          "en": "Pan-fry gently in butter until golden and cooked through; finish with dill.",
+          "it": "Cuoci dolcemente nel burro fino a doratura e completa cottura; completa con aneto."
+        }
+      ],
+      "ingredients": [
+        {
+          "id": "cod",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 140,
+          "unit": "ml"
+        },
+        {
+          "id": "potato_starch",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "butter",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "dill",
+          "qty": 15,
+          "unit": "g"
+        }
+      ]
+    }
+  ]
+}

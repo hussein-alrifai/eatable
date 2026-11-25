@@ -1,0 +1,1655 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "slug": "baharat-roasted-cauliflower",
+      "title_en": "Baharat roasted cauliflower",
+      "title_it": "Cavolfiore arrosto al baharat",
+      "description_en": "Lebanese-inspired roasted cauliflower with baharat and lemon.",
+      "description_it": "Cavolfiore arrosto ispirato alla cucina libanese con baharat e limone.",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "cauliflower",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "baharat",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 0.75,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut cauliflower into evenly sized florets and dry well after washing.",
+          "it": "Dividi il cavolfiore in cimette regolari e asciugale bene dopo averle lavate."
+        },
+        {
+          "en": "Toss with olive oil, baharat, crushed garlic and salt; spread on a large tray.",
+          "it": "Condisci con olio, baharat, aglio schiacciato e sale; disponi su una teglia ampia."
+        },
+        {
+          "en": "Roast at 220°C for 25–30 minutes until browned and tender; squeeze lemon over before serving.",
+          "it": "Arrostisci a 220 °C per 25–30 minuti finché è dorato e tenero; aggiungi succo di limone prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "shawarma-chicken-traybake",
+      "title_en": "Chicken shawarma-inspired tray bake",
+      "title_it": "Pollo al forno ispirato allo shawarma",
+      "description_en": "Lebanese-shawarma-inspired oven chicken, not a rotisserie shawarma.",
+      "description_it": "Pollo al forno ispirato allo shawarma libanese, non cotto allo spiedo.",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken_thigh",
+          "qty": 750,
+          "unit": "g"
+        },
+        {
+          "id": "yogurt",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "paprika",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 25,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Mix yogurt, lemon, garlic, cumin, paprika, turmeric and oil; coat the chicken and refrigerate for 20 minutes.",
+          "it": "Mescola yogurt, limone, aglio, cumino, paprica, curcuma e olio; condisci il pollo e lascia marinare in frigorifero per 20 minuti."
+        },
+        {
+          "en": "Arrange chicken in a single layer and roast at 220°C for roughly 25–30 minutes, turning once.",
+          "it": "Disponi il pollo in un solo strato e arrostisci a 220 °C per circa 25–30 minuti, girandolo una volta."
+        },
+        {
+          "en": "Check the thickest piece reaches 74°C; rest briefly and slice, discarding the raw marinade.",
+          "it": "Controlla che il pezzo più spesso raggiunga 74 °C; lascia riposare e affetta, eliminando la marinata cruda."
+        }
+      ]
+    },
+    {
+      "slug": "couscous-roasted-vegetables",
+      "title_en": "Couscous with roasted vegetables",
+      "title_it": "Cous cous con verdure arrostite",
+      "description_en": "Moroccan-inspired couscous with roasted vegetables and chickpeas.",
+      "description_it": "Cous cous ispirato alla cucina marocchina con verdure arrosto e ceci.",
+      "cuisine": "Moroccan",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "couscous",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "zucchini",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "eggplant",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 330,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Dice the vegetables, toss with half the oil and roast at 220°C for 25 minutes until tender.",
+          "it": "Taglia le verdure a dadini, condiscile con metà olio e arrostiscile a 220 °C per 25 minuti finché sono tenere."
+        },
+        {
+          "en": "Pour hot water over couscous, cover for 5 minutes, then fluff with a fork according to the package directions.",
+          "it": "Versa acqua calda sul cous cous, copri per 5 minuti, poi sgrana con una forchetta seguendo le indicazioni sulla confezione."
+        },
+        {
+          "en": "Combine with drained cooked chickpeas, roasted vegetables, remaining oil, lemon juice and parsley.",
+          "it": "Unisci ceci già cotti e scolati, verdure arrostite, olio rimasto, succo di limone e prezzemolo."
+        }
+      ]
+    },
+    {
+      "slug": "chana-masala-chickpeas",
+      "title_en": "Chana masala — spiced chickpeas",
+      "title_it": "Chana masala — ceci speziati",
+      "description_en": "Indian-style chickpeas simmered in a tomato, ginger and garam masala sauce.",
+      "description_it": "Ceci in stile indiano cotti in salsa di pomodoro, zenzero e garam masala.",
+      "cuisine": "Indian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "canned_tomatoes",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "ginger",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "garam_masala",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Soften chopped onion in oil, then add grated ginger, garlic, turmeric and garam masala for 1 minute.",
+          "it": "Fai appassire la cipolla tritata nell’olio, poi aggiungi zenzero grattugiato, aglio, curcuma e garam masala per 1 minuto."
+        },
+        {
+          "en": "Add chopped canned tomatoes and simmer 10 minutes to develop the sauce.",
+          "it": "Aggiungi i pomodori pelati tagliati e lascia sobbollire per 10 minuti per insaporire la salsa."
+        },
+        {
+          "en": "Add fully cooked, drained chickpeas and simmer another 10–15 minutes; adjust salt and serve.",
+          "it": "Unisci i ceci completamente cotti e scolati e lascia cuocere altri 10–15 minuti; regola di sale e servi."
+        }
+      ]
+    },
+    {
+      "slug": "red-lentil-dal-tadka-style",
+      "title_en": "Red lentil dal",
+      "title_it": "Dal di lenticchie rosse",
+      "description_en": "A simple Indian-inspired red lentil dal with ginger, cumin and turmeric.",
+      "description_it": "Dal semplice ispirato alla cucina indiana con lenticchie rosse, zenzero, cumino e curcuma.",
+      "cuisine": "Indian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "red_lentils",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "ginger",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "water",
+          "qty": 900,
+          "unit": "ml"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 25,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse the lentils until the water runs mostly clear; chop onion, garlic, ginger and tomatoes.",
+          "it": "Sciacqua le lenticchie finché l’acqua è quasi limpida; trita cipolla, aglio, zenzero e pomodori."
+        },
+        {
+          "en": "Cook onion in oil until softened; add garlic, ginger, cumin and turmeric, stirring briefly.",
+          "it": "Cuoci la cipolla nell’olio finché si ammorbidisce; aggiungi aglio, zenzero, cumino e curcuma mescolando brevemente."
+        },
+        {
+          "en": "Add lentils, tomatoes and water, simmer 20–25 minutes until soft and creamy, adding water if needed.",
+          "it": "Unisci lenticchie, pomodori e acqua; cuoci per 20–25 minuti finché sono morbide e cremose, aggiungendo acqua se necessario."
+        }
+      ]
+    },
+    {
+      "slug": "aloo-gobi-potato-cauliflower",
+      "title_en": "Aloo gobi — potato and cauliflower",
+      "title_it": "Aloo gobi — patate e cavolfiore",
+      "description_en": "Indian-style potatoes and cauliflower with turmeric and cumin.",
+      "description_it": "Patate e cavolfiore in stile indiano con curcuma e cumino.",
+      "cuisine": "Indian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "cauliflower",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut potatoes into small cubes and cauliflower into florets of similar size.",
+          "it": "Taglia le patate a cubetti piccoli e il cavolfiore in cimette di dimensioni simili."
+        },
+        {
+          "en": "Soften onion and garlic in oil; add cumin and turmeric, then tomatoes and vegetables.",
+          "it": "Fai appassire cipolla e aglio nell’olio; aggiungi cumino e curcuma, poi pomodori e verdure."
+        },
+        {
+          "en": "Cover and cook on medium-low heat for 25–30 minutes, stirring and adding splashes of water until everything is tender.",
+          "it": "Copri e cuoci a fuoco medio-basso per 25–30 minuti, mescolando e aggiungendo poca acqua finché tutto è tenero."
+        }
+      ]
+    },
+    {
+      "slug": "spinach-coconut-chickpea-curry",
+      "title_en": "Spinach and chickpea coconut curry",
+      "title_it": "Curry di ceci e spinaci al cocco",
+      "description_en": "A weeknight chickpea curry with spinach, coconut milk and curry spices.",
+      "description_it": "Curry veloce di ceci con spinaci, latte di cocco e spezie.",
+      "cuisine": "Indian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "spinach",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "coconut_milk",
+          "qty": 400,
+          "unit": "ml"
+        },
+        {
+          "id": "curry",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "ginger",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 25,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Soften chopped onion in oil; add garlic, grated ginger and curry powder for 1 minute.",
+          "it": "Fai appassire la cipolla tritata nell’olio; aggiungi aglio, zenzero grattugiato e curry in polvere per 1 minuto."
+        },
+        {
+          "en": "Pour in coconut milk and add drained, cooked chickpeas; simmer gently for 12 minutes.",
+          "it": "Versa il latte di cocco e unisci i ceci già cotti e scolati; lascia sobbollire delicatamente per 12 minuti."
+        },
+        {
+          "en": "Stir in spinach and cook until wilted and hot; taste and adjust seasoning before serving.",
+          "it": "Aggiungi gli spinaci e cuoci finché appassiscono e sono ben caldi; assaggia e regola il condimento prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "creamy-tikka-style-chicken",
+      "title_en": "Creamy tikka-style chicken",
+      "title_it": "Pollo cremoso in stile tikka",
+      "description_en": "A simplified chicken curry inspired by Indian tikka masala flavors.",
+      "description_it": "Curry di pollo semplificato ispirato ai sapori del tikka masala indiano.",
+      "cuisine": "Indian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken_breast",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "yogurt",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "garam_masala",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "heavy_cream",
+          "qty": 120,
+          "unit": "ml"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "ginger",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 25,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut chicken into pieces and coat with yogurt and half the garam masala; refrigerate for 20 minutes.",
+          "it": "Taglia il pollo a pezzi e condiscilo con yogurt e metà garam masala; marina in frigorifero per 20 minuti."
+        },
+        {
+          "en": "Cook chicken in oil in batches until lightly browned; add garlic, ginger, remaining spice and passata.",
+          "it": "Rosola il pollo nell’olio in più riprese; aggiungi aglio, zenzero, spezie rimaste e passata."
+        },
+        {
+          "en": "Simmer until chicken reaches 74°C, then stir in cream and heat through without vigorous boiling.",
+          "it": "Lascia sobbollire finché il pollo raggiunge 74 °C, poi incorpora la panna e scalda senza bollire vigorosamente."
+        }
+      ]
+    },
+    {
+      "slug": "ginger-sesame-tofu-rice-bowl",
+      "title_en": "Ginger sesame tofu rice bowls",
+      "title_it": "Ciotole di riso con tofu, zenzero e sesamo",
+      "description_en": "Japanese-inspired rice bowls with sautéed tofu, broccoli and ginger soy dressing.",
+      "description_it": "Ciotole di riso ispirate al Giappone con tofu saltato, broccoli e salsa di soia allo zenzero.",
+      "cuisine": "Japanese",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "tofu",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "broccoli",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "ginger",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "soy_sauce",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "sesame_oil",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "sesame_seeds",
+          "qty": 12,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook rice as directed; press tofu dry and cut into cubes; blanch broccoli briefly until just tender.",
+          "it": "Cuoci il riso come indicato; asciuga bene il tofu e taglialo a cubetti; sbollenta brevemente i broccoli finché sono appena teneri."
+        },
+        {
+          "en": "Sear tofu in sesame oil until browned, then add grated ginger and garlic, stirring briefly.",
+          "it": "Rosola il tofu nell’olio di sesamo fino a doratura, poi aggiungi zenzero e aglio grattugiati, mescolando brevemente."
+        },
+        {
+          "en": "Add broccoli and soy sauce, toss until hot, and serve over rice sprinkled with sesame seeds.",
+          "it": "Aggiungi broccoli e salsa di soia, salta finché tutto è caldo e servi sul riso con semi di sesamo."
+        }
+      ]
+    },
+    {
+      "slug": "ginger-teriyaki-salmon-rice",
+      "title_en": "Ginger teriyaki-style salmon rice",
+      "title_it": "Salmone al riso in stile teriyaki",
+      "description_en": "Salmon glazed with soy, ginger and honey, served over rice.",
+      "description_it": "Salmone glassato con soia, zenzero e miele, servito sul riso.",
+      "cuisine": "Japanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "salmon",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "rice",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "soy_sauce",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "honey",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "ginger",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "sesame_seeds",
+          "qty": 12,
+          "unit": "g"
+        },
+        {
+          "id": "sunflower_oil",
+          "qty": 15,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook rinsed rice according to package directions; grate ginger and garlic.",
+          "it": "Cuoci il riso sciacquato secondo le indicazioni sulla confezione; grattugia zenzero e aglio."
+        },
+        {
+          "en": "Mix soy sauce, honey, ginger and garlic. Sear salmon in a lightly oiled pan, then add the glaze.",
+          "it": "Mescola salsa di soia, miele, zenzero e aglio. Rosola il salmone in padella leggermente oliata, poi aggiungi la glassa."
+        },
+        {
+          "en": "Cook until the salmon reaches 63°C and the sauce coats it; serve over rice with sesame seeds.",
+          "it": "Cuoci finché il salmone raggiunge 63 °C e la salsa lo riveste; servi sul riso con semi di sesamo."
+        }
+      ]
+    },
+    {
+      "slug": "tuna-mayo-onigiri-rice-balls",
+      "title_en": "Tuna onigiri rice balls",
+      "title_it": "Onigiri di riso al tonno",
+      "description_en": "Japanese-style rice balls filled with tuna and mayonnaise, wrapped in nori.",
+      "description_it": "Polpette di riso in stile giapponese ripiene di tonno e maionese, avvolte nell’alga nori.",
+      "cuisine": "Japanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "canned_tuna",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "mayonnaise",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "nori_sheets",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "water",
+          "qty": 550,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse rice and cook with water until tender and slightly sticky; cool only enough to handle safely.",
+          "it": "Sciacqua il riso e cuocilo nell’acqua finché è tenero e leggermente appiccicoso; lascia intiepidire solo quanto basta per maneggiarlo."
+        },
+        {
+          "en": "Drain tuna thoroughly and mix with mayonnaise; prepare nori strips.",
+          "it": "Scola bene il tonno e mescolalo con la maionese; prepara strisce di alga nori."
+        },
+        {
+          "en": "With clean damp hands, place tuna inside rice portions and shape into triangles; wrap with nori and eat promptly or refrigerate immediately.",
+          "it": "Con mani pulite e umide, inserisci il tonno nelle porzioni di riso e forma triangoli; avvolgi con nori e consuma presto oppure refrigera subito."
+        }
+      ]
+    },
+    {
+      "slug": "mexican-corn-lime-cups",
+      "title_en": "Mexican-inspired corn and lime cups",
+      "title_it": "Bicchierini di mais e lime in stile messicano",
+      "description_en": "A quick corn salad inspired by elote flavors with yogurt, chili, lime and cheese.",
+      "description_it": "Insalata veloce di mais ispirata ai sapori dell’elote, con yogurt, peperoncino, lime e formaggio.",
+      "cuisine": "Mexican",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "corn",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "yogurt",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "feta",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "lime",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chili_flakes",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "cilantro",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 10,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook fresh corn kernels or heat canned corn until fully hot, then drain well.",
+          "it": "Cuoci i chicchi di mais freschi oppure scalda bene quelli in scatola, poi scola accuratamente."
+        },
+        {
+          "en": "Mix yogurt, lime juice, chili flakes and finely chopped cilantro.",
+          "it": "Mescola yogurt, succo di lime, peperoncino in fiocchi e coriandolo tritato."
+        },
+        {
+          "en": "Toss warm corn with the sauce, spoon into cups and top with crumbled feta.",
+          "it": "Mescola il mais caldo con la salsa, distribuisci in bicchierini e completa con feta sbriciolata."
+        }
+      ]
+    },
+    {
+      "slug": "black-bean-tacos-lime",
+      "title_en": "Black bean tacos",
+      "title_it": "Tacos con fagioli neri",
+      "description_en": "Easy vegetarian tacos with seasoned black beans, tomato and lime.",
+      "description_it": "Tacos vegetariani facili con fagioli neri speziati, pomodoro e lime.",
+      "cuisine": "Mexican",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "black_beans",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "tortilla",
+          "qty": 8,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "red_onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "paprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "lime",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 20,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Drain and rinse cooked black beans, then warm with oil, cumin and paprika in a pan.",
+          "it": "Scola e sciacqua i fagioli neri già cotti, poi scaldali in padella con olio, cumino e paprica."
+        },
+        {
+          "en": "Dice tomatoes and onion; toss with lime juice.",
+          "it": "Taglia pomodori e cipolla a dadini e condisci con succo di lime."
+        },
+        {
+          "en": "Warm tortillas in a dry pan and fill with beans and fresh vegetables; serve immediately.",
+          "it": "Scalda le tortillas in una padella asciutta e farciscile con fagioli e verdure fresche; servi subito."
+        }
+      ]
+    },
+    {
+      "slug": "pico-de-gallo-salsa",
+      "title_en": "Pico de gallo tomato salsa",
+      "title_it": "Pico de gallo — salsa di pomodoro",
+      "description_en": "A fresh Mexican chopped tomato salsa with coriander and lime.",
+      "description_it": "Salsa messicana fresca di pomodoro a pezzetti con coriandolo e lime.",
+      "cuisine": "Mexican",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "red_onion",
+          "qty": 0.5,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "lime",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "jalapeno",
+          "qty": 0.5,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Dice tomatoes and onion into small even pieces; finely chop the jalapeño.",
+          "it": "Taglia pomodori e cipolla in pezzetti piccoli e regolari; trita finemente il jalapeño."
+        },
+        {
+          "en": "Chop coriander and mix all vegetables in a bowl.",
+          "it": "Trita il coriandolo e mescola tutte le verdure in una ciotola."
+        },
+        {
+          "en": "Add fresh lime juice and salt, then taste and adjust the heat before serving.",
+          "it": "Aggiungi succo di lime fresco e sale, poi assaggia e regola il piccante prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "cheesy-chicken-quesadillas",
+      "title_en": "Chicken and cheese quesadillas",
+      "title_it": "Quesadillas con pollo e formaggio",
+      "description_en": "Mexican-style tortillas filled with cooked chicken, peppers and melted cheese.",
+      "description_it": "Tortillas in stile messicano farcite con pollo cotto, peperoni e formaggio fuso.",
+      "cuisine": "Mexican",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken_breast",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "tortilla",
+          "qty": 8,
+          "unit": "pcs"
+        },
+        {
+          "id": "cheddar",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "pepper",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "paprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "sunflower_oil",
+          "qty": 20,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Dice chicken and vegetables; sauté onion and pepper in a little oil, then add chicken, cumin and paprika.",
+          "it": "Taglia a dadini pollo e verdure; salta cipolla e peperone in poco olio, poi aggiungi pollo, cumino e paprica."
+        },
+        {
+          "en": "Cook chicken until it reaches 74°C and the vegetables are tender; let filling cool slightly.",
+          "it": "Cuoci il pollo finché raggiunge 74 °C e le verdure sono tenere; lascia intiepidire leggermente il ripieno."
+        },
+        {
+          "en": "Fill half of each tortilla with chicken and cheese, fold and toast on both sides until golden and the cheese melts.",
+          "it": "Farcisci metà di ogni tortilla con pollo e formaggio, piega e tosta su entrambi i lati finché è dorata e il formaggio si scioglie."
+        }
+      ]
+    },
+    {
+      "slug": "vegetarian-three-vegetable-chili",
+      "title_en": "Vegetarian bean and corn chili",
+      "title_it": "Chili vegetariano di fagioli e mais",
+      "description_en": "A hearty tomato chili with beans, corn and smoky spices.",
+      "description_it": "Chili al pomodoro sostanzioso con fagioli, mais e spezie affumicate.",
+      "cuisine": "Mexican",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 45,
+      "servings": 5,
+      "ingredients": [
+        {
+          "id": "kidney_beans",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "black_beans",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "canned_tomatoes",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "corn",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "smoked_paprika",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 30,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Use fully cooked or canned beans, rinsing canned beans before cooking.",
+          "it": "Usa fagioli completamente cotti o in scatola, sciacquando quelli in scatola prima della preparazione."
+        },
+        {
+          "en": "Soften onion and garlic in oil; stir in cumin and smoked paprika, then add tomatoes and corn.",
+          "it": "Fai appassire cipolla e aglio nell’olio; aggiungi cumino e paprica affumicata, poi pomodori e mais."
+        },
+        {
+          "en": "Add beans and simmer for 25 minutes, stirring occasionally, until thick; season to taste.",
+          "it": "Unisci i fagioli e lascia sobbollire per 25 minuti, mescolando ogni tanto, finché si addensa; regola il condimento."
+        }
+      ]
+    },
+    {
+      "slug": "tzatziki-dill-cucumber",
+      "title_en": "Tzatziki cucumber yogurt dip",
+      "title_it": "Tzatziki — salsa di yogurt e cetriolo",
+      "description_en": "A cooling Greek yogurt dip with grated cucumber, garlic and dill.",
+      "description_it": "Salsa greca fresca di yogurt con cetriolo grattugiato, aglio e aneto.",
+      "cuisine": "Greek",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "yogurt",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "cucumber",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "dill",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 20,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Grate cucumber and squeeze firmly to remove excess water.",
+          "it": "Grattugia il cetriolo e strizzalo bene per eliminare l’acqua in eccesso."
+        },
+        {
+          "en": "Mix yogurt with cucumber, grated garlic, chopped dill, lemon juice and salt.",
+          "it": "Mescola yogurt, cetriolo, aglio grattugiato, aneto tritato, succo di limone e sale."
+        },
+        {
+          "en": "Drizzle with olive oil and chill briefly before serving.",
+          "it": "Condisci con un filo d’olio e lascia raffreddare brevemente prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "spanakopita-filo-triangles",
+      "title_en": "Spanakopita spinach and feta triangles",
+      "title_it": "Triangoli di spanakopita con spinaci e feta",
+      "description_en": "Greek-inspired crisp filo pastries with spinach and feta filling.",
+      "description_it": "Fagottini croccanti di pasta fillo ispirati alla cucina greca con ripieno di spinaci e feta.",
+      "cuisine": "Greek",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 55,
+      "servings": 6,
+      "ingredients": [
+        {
+          "id": "filo_pastry",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "spinach",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "feta",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "dill",
+          "qty": 10,
+          "unit": "g"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook spinach until wilted, squeeze out all water, then mix with crumbled feta, egg, dill and pepper.",
+          "it": "Cuoci gli spinaci finché appassiscono, strizzali molto bene e mescolali con feta sbriciolata, uovo, aneto e pepe."
+        },
+        {
+          "en": "Cut filo into strips, brush lightly with oil, add filling and fold into sealed triangles.",
+          "it": "Taglia la pasta fillo a strisce, spennella con poco olio, aggiungi il ripieno e ripiega formando triangoli chiusi."
+        },
+        {
+          "en": "Bake at 190°C for 25–30 minutes until deeply golden and the filling is cooked through.",
+          "it": "Cuoci a 190 °C per 25–30 minuti finché sono ben dorati e il ripieno è completamente cotto."
+        }
+      ]
+    },
+    {
+      "slug": "greek-lemon-orzo-chickpeas",
+      "title_en": "Lemon orzo with chickpeas",
+      "title_it": "Risoni al limone con ceci",
+      "description_en": "A Mediterranean-style orzo pasta dish with chickpeas, parsley and lemon.",
+      "description_it": "Piatto mediterraneo di pasta risoni con ceci, prezzemolo e limone.",
+      "cuisine": "Greek",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "orzo_pasta",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "chickpeas",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "lemon",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook orzo pasta in salted water until al dente; reserve a little cooking water.",
+          "it": "Cuoci la pasta risoni in acqua salata finché è al dente; conserva poca acqua di cottura."
+        },
+        {
+          "en": "Warm drained, cooked chickpeas in olive oil with garlic and a little lemon zest.",
+          "it": "Scalda i ceci già cotti e scolati nell’olio con aglio e poca scorza di limone."
+        },
+        {
+          "en": "Toss in orzo, lemon juice and chopped parsley, adding cooking water to coat evenly.",
+          "it": "Aggiungi risoni, succo di limone e prezzemolo tritato, unendo un po’ d’acqua di cottura per amalgamare."
+        }
+      ]
+    },
+    {
+      "slug": "spanish-spinach-chickpeas",
+      "title_en": "Spanish-style spinach and chickpeas",
+      "title_it": "Spinaci e ceci in stile spagnolo",
+      "description_en": "A Spanish-inspired sauté of chickpeas, spinach, garlic and smoked paprika.",
+      "description_it": "Preparazione ispirata alla cucina spagnola con ceci, spinaci, aglio e paprica affumicata.",
+      "cuisine": "Spanish",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "spinach",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "smoked_paprika",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "bread",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "white_vinegar",
+          "qty": 15,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook bread crumbs in a little olive oil until golden; set aside, then soften sliced garlic in the same pan.",
+          "it": "Rosola il pane sbriciolato in poco olio fino a doratura; mettilo da parte e fai insaporire l’aglio a fette nella stessa padella."
+        },
+        {
+          "en": "Add spinach and cook until wilted, then stir in drained cooked chickpeas and smoked paprika.",
+          "it": "Aggiungi gli spinaci e cuoci finché appassiscono, poi unisci ceci già cotti e scolati e paprica affumicata."
+        },
+        {
+          "en": "Add a splash of vinegar, mix in the toasted crumbs and serve hot.",
+          "it": "Aggiungi un goccio di aceto, incorpora il pane tostato e servi caldo."
+        }
+      ]
+    },
+    {
+      "slug": "gazpacho-cold-tomato-soup",
+      "title_en": "Gazpacho — chilled tomato soup",
+      "title_it": "Gazpacho — zuppa fredda di pomodoro",
+      "description_en": "A chilled Spanish tomato and vegetable soup with olive oil.",
+      "description_it": "Zuppa fredda spagnola di pomodoro e verdure con olio d’oliva.",
+      "cuisine": "Spanish",
+      "category": "Soup",
+      "diet": "vegan",
+      "prep_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "cucumber",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "pepper",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "bread",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "white_vinegar",
+          "qty": 20,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.75,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Chop tomatoes, cucumber and pepper; soak bread briefly in a little cold water and squeeze it.",
+          "it": "Taglia pomodori, cetriolo e peperone; ammolla brevemente il pane in poca acqua fredda e strizzalo."
+        },
+        {
+          "en": "Blend vegetables, bread, garlic, olive oil, vinegar and salt until very smooth.",
+          "it": "Frulla verdure, pane, aglio, olio, aceto e sale fino a ottenere una crema liscia."
+        },
+        {
+          "en": "Chill thoroughly and adjust acidity and salt before serving cold.",
+          "it": "Raffredda bene in frigorifero e regola acidità e sale prima di servire freddo."
+        }
+      ]
+    },
+    {
+      "slug": "patatas-bravas-baked",
+      "title_en": "Baked patatas bravas",
+      "title_it": "Patatas bravas al forno",
+      "description_en": "Oven-crisp potatoes with a smoky tomato and paprika sauce.",
+      "description_it": "Patate croccanti al forno con salsa di pomodoro e paprica affumicata.",
+      "cuisine": "Spanish",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "smoked_paprika",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "chili_flakes",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 0.75,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut potatoes into bite-size chunks, dry well, toss with oil and salt and roast at 220°C for 35–40 minutes.",
+          "it": "Taglia le patate a bocconi, asciugale bene, condiscile con olio e sale e arrostiscile a 220 °C per 35–40 minuti."
+        },
+        {
+          "en": "Warm garlic in a small pan with a little oil; add passata, paprika and chili and simmer 10 minutes.",
+          "it": "Scalda l’aglio in una padellina con poco olio; aggiungi passata, paprica e peperoncino e cuoci per 10 minuti."
+        },
+        {
+          "en": "Spoon warm sauce over crisp potatoes just before serving.",
+          "it": "Versa la salsa calda sulle patate croccanti poco prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "thai-inspired-coconut-tofu-curry",
+      "title_en": "Thai-inspired coconut tofu curry",
+      "title_it": "Curry di tofu al cocco ispirato alla Thailandia",
+      "description_en": "Thai-inspired tofu and vegetable coconut curry with red curry paste.",
+      "description_it": "Curry di tofu e verdure al cocco ispirato alla cucina thailandese con pasta di curry rosso.",
+      "cuisine": "Thai",
+      "category": "Main",
+      "diet": "unknown",
+      "prep_minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tofu",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "coconut_milk",
+          "qty": 400,
+          "unit": "ml"
+        },
+        {
+          "id": "red_curry_paste",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "broccoli",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "soy_sauce",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "sunflower_oil",
+          "qty": 20,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut tofu and vegetables into bite-size pieces; check that the curry paste suits your dietary needs.",
+          "it": "Taglia tofu e verdure a bocconi; controlla che la pasta di curry sia adatta alle tue esigenze alimentari."
+        },
+        {
+          "en": "Gently fry curry paste in oil for 1 minute, then add coconut milk, tofu and carrots.",
+          "it": "Fai insaporire delicatamente la pasta di curry nell’olio per 1 minuto, poi aggiungi latte di cocco, tofu e carote."
+        },
+        {
+          "en": "Simmer 10 minutes, add broccoli and cook until tender; season with soy sauce and serve hot.",
+          "it": "Lascia sobbollire per 10 minuti, aggiungi i broccoli e cuoci finché sono teneri; condisci con salsa di soia e servi caldo."
+        }
+      ]
+    },
+    {
+      "slug": "apple-cinnamon-overnight-oats",
+      "title_en": "Apple cinnamon overnight oats",
+      "title_it": "Porridge freddo di avena, mela e cannella",
+      "description_en": "British-porridge-inspired overnight oats with apples and cinnamon; a modern variation.",
+      "description_it": "Avena ammollata con mele e cannella ispirata al porridge britannico; variante moderna.",
+      "cuisine": "British",
+      "category": "Breakfast",
+      "diet": "vegetarian",
+      "prep_minutes": 490,
+      "servings": 2,
+      "ingredients": [
+        {
+          "id": "oats",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 240,
+          "unit": "ml"
+        },
+        {
+          "id": "apple",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "chia_seeds",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "honey",
+          "qty": 15,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Combine oats, milk, chia seeds, cinnamon and honey in a covered container.",
+          "it": "Mescola avena, latte, semi di chia, cannella e miele in un contenitore con coperchio."
+        },
+        {
+          "en": "Refrigerate for at least 8 hours to allow the oats and chia to soften.",
+          "it": "Lascia in frigorifero per almeno 8 ore, così avena e chia si ammorbidiscono."
+        },
+        {
+          "en": "Dice the apple just before serving and mix it in; keep refrigerated until ready to eat.",
+          "it": "Taglia la mela a dadini poco prima di servire e incorporala; conserva in frigorifero fino al consumo."
+        }
+      ]
+    },
+    {
+      "slug": "ratatouille-french-vegetables",
+      "title_en": "Ratatouille-style summer vegetables",
+      "title_it": "Verdure estive in stile ratatouille",
+      "description_en": "French-inspired ratatouille of eggplant, zucchini, peppers and tomato.",
+      "description_it": "Ratatouille ispirata alla cucina francese con melanzane, zucchine, peperoni e pomodoro.",
+      "cuisine": "French",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "zucchini",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "pepper",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "thyme",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 0.75,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cut eggplant, zucchini, pepper and tomato into similar pieces; slice onion and mince garlic.",
+          "it": "Taglia melanzana, zucchine, peperoni e pomodori in pezzi simili; affetta la cipolla e trita l’aglio."
+        },
+        {
+          "en": "Soften onion in olive oil, then add eggplant and peppers and cook for 10 minutes.",
+          "it": "Fai appassire la cipolla nell’olio, poi aggiungi melanzana e peperoni e cuoci per 10 minuti."
+        },
+        {
+          "en": "Add zucchini, tomatoes, garlic, thyme and salt; cover and simmer 25–30 minutes until all vegetables are tender.",
+          "it": "Unisci zucchine, pomodori, aglio, timo e sale; copri e cuoci a fuoco dolce per 25–30 minuti finché le verdure sono tenere."
+        }
+      ]
+    }
+  ]
+}
