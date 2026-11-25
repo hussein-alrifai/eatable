@@ -1,0 +1,1279 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "slug": "iranian-ghormeh-sabzi",
+      "title_en": "Ghormeh Sabzi",
+      "title_it": "Ghormeh sabzi, stufato persiano alle erbe",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 190,
+      "servings": 6,
+      "description_en": "A slow-cooked Iranian herb stew with beef, kidney beans and tangy dried limes.",
+      "description_it": "Stufato iraniano a cottura lenta con erbe, manzo, fagioli rossi e lime essiccati.",
+      "ingredients": [
+        {
+          "id": "sabzi_ghormeh_mix",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "beef_chuck",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "canned_kidney_beans",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "black_lime",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 900,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse and finely chop the herb mix if fresh; cook it slowly in some oil until dark green and aromatic, without burning.",
+          "it": "Lava e trita finemente le erbe se fresche; falle appassire lentamente in parte dell'olio finché diventano verde scuro e profumate, senza bruciarle."
+        },
+        {
+          "en": "Brown diced beef with onions and turmeric; add herbs, water and pierced dried limes, then cover and simmer gently for about 2 hours.",
+          "it": "Rosola il manzo a cubetti con cipolle e curcuma; aggiungi erbe, acqua e lime essiccati forati, poi copri e cuoci dolcemente per circa 2 ore."
+        },
+        {
+          "en": "Add drained canned beans during the last 30 minutes; cook until beef is tender and sauce thickens. Serve with steamed rice.",
+          "it": "Unisci i fagioli in scatola scolati negli ultimi 30 minuti; cuoci finché il manzo è tenero e il sugo si addensa. Servi con riso al vapore."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-fesenjan-chicken",
+      "title_en": "Fesenjan with Chicken",
+      "title_it": "Fesenjan persiano con pollo",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 165,
+      "servings": 6,
+      "description_en": "Iranian chicken stew in a rich, gently tart walnut and pomegranate sauce.",
+      "description_it": "Stufato iraniano di pollo con salsa densa di noci e melassa di melagrana.",
+      "ingredients": [
+        {
+          "id": "chicken_thigh",
+          "qty": 900,
+          "unit": "g"
+        },
+        {
+          "id": "walnuts",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "pomegranate_molasses",
+          "qty": 150,
+          "unit": "ml"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "sugar",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 750,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Grind the walnuts finely; cook the chopped onions with oil and turmeric until soft and lightly golden.",
+          "it": "Trita finemente le noci; cuoci le cipolle con olio e curcuma finché sono morbide e appena dorate."
+        },
+        {
+          "en": "Add walnuts and water; simmer gently for 45 minutes, stirring periodically so the walnuts release their oil.",
+          "it": "Aggiungi noci e acqua; fai sobbollire per 45 minuti, mescolando ogni tanto affinché le noci rilascino il loro olio."
+        },
+        {
+          "en": "Add pomegranate molasses and chicken; simmer until chicken is fully cooked and the sauce darkens and thickens, about 60–75 minutes. Balance tartness with sugar only if needed.",
+          "it": "Unisci melassa di melagrana e pollo; cuoci fino a completa cottura del pollo e finché la salsa si scurisce e addensa, circa 60–75 minuti. Regola l'acidità con zucchero solo se necessario."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-khoresh-gheimeh",
+      "title_en": "Khoresh Gheymeh",
+      "title_it": "Khoresh gheymeh con piselli spezzati",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 160,
+      "servings": 6,
+      "description_en": "A tomato and dried-lime beef stew with split peas, finished with crisp potato sticks.",
+      "description_it": "Stufato di manzo, pomodoro, piselli gialli spezzati e lime essiccato con patatine croccanti.",
+      "ingredients": [
+        {
+          "id": "beef_chuck",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "yellow_split_peas",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "black_lime",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "potato",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 75,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 1100,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse and briefly parboil the split peas; soften chopped onions with turmeric and brown the beef.",
+          "it": "Sciacqua e sbollenta brevemente i piselli spezzati; fai appassire le cipolle con curcuma e rosola il manzo."
+        },
+        {
+          "en": "Stir in tomato paste, peas, water and pierced dried limes; cover and simmer gently for about 2 hours until meat and peas are tender.",
+          "it": "Incorpora concentrato di pomodoro, piselli, acqua e lime essiccati forati; copri e cuoci dolcemente per circa 2 ore finché carne e piselli sono teneri."
+        },
+        {
+          "en": "Cut potatoes into thin sticks and fry or roast until crisp; place over the finished stew immediately before serving.",
+          "it": "Taglia le patate a bastoncini e friggile oppure arrostiscile fino a renderle croccanti; distribuiscile sullo stufato appena prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-zereshk-polo-morgh",
+      "title_en": "Zereshk Polo ba Morgh",
+      "title_it": "Zereshk polo con pollo",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 130,
+      "servings": 6,
+      "description_en": "Saffron rice with tart barberries and tender braised chicken, a festive Iranian classic.",
+      "description_it": "Riso allo zafferano e crespino con pollo brasato, classico piatto festivo iraniano.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_thigh",
+          "qty": 900,
+          "unit": "g"
+        },
+        {
+          "id": "barberries",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "butter",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 1,
+          "unit": "tbsp"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 700,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Soak and rinse rice; parboil in salted water until the grains have a firm center, drain and steam covered until fluffy.",
+          "it": "Metti il riso in ammollo e risciacqualo; sbollentalo in acqua salata finché i chicchi hanno il cuore ancora sodo, scolalo e termina la cottura a vapore con il coperchio."
+        },
+        {
+          "en": "Brown chicken with onion, tomato paste and water; cover and braise gently until fully cooked and tender.",
+          "it": "Rosola il pollo con cipolla, concentrato e acqua; copri e brasalo a fuoco dolce finché è ben cotto e tenero."
+        },
+        {
+          "en": "Bloom saffron in hot water; briefly warm washed barberries in butter with a little sugar. Mix a portion of rice with saffron, top with barberries and serve beside chicken.",
+          "it": "Metti lo zafferano in infusione in acqua calda; scalda brevemente il crespino lavato nel burro con poco zucchero. Colora una parte del riso con lo zafferano, completa con il crespino e servi con il pollo."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-tahchin-morgh",
+      "title_en": "Tahchin-e Morgh",
+      "title_it": "Tahchin di riso allo zafferano e pollo",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 135,
+      "servings": 6,
+      "description_en": "An Iranian baked saffron-yogurt rice cake with a crisp golden crust and chicken filling.",
+      "description_it": "Timballo iraniano di riso allo zafferano e yogurt, con crosta dorata e ripieno di pollo.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 480,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_breast",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "yogurt",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "barberries",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook chicken with onion until fully cooked; shred. Parboil rinsed rice until still slightly firm, then drain.",
+          "it": "Cuoci il pollo con la cipolla fino a completa cottura e sfilaccialo. Sbollenta il riso risciacquato lasciandolo leggermente al dente, poi scolalo."
+        },
+        {
+          "en": "Mix yogurt, eggs, bloomed saffron, oil and salt; coat the rice. Press half into a well-oiled baking dish and layer with chicken and barberries.",
+          "it": "Mescola yogurt, uova, zafferano infuso, olio e sale; condisci il riso. Pressane metà in una pirofila ben unta e aggiungi pollo e crespino."
+        },
+        {
+          "en": "Cover with remaining rice, press gently and bake at 190°C for 55–65 minutes until the base is deeply golden and the center is hot; unmould after resting.",
+          "it": "Copri con il riso restante, compatta leggermente e cuoci a 190 °C per 55–65 minuti, finché la base è ben dorata e il centro caldo; capovolgi dopo un breve riposo."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-ash-reshteh",
+      "title_en": "Ash Reshteh",
+      "title_it": "Ash reshteh, zuppa persiana di erbe e legumi",
+      "cuisine": "Iranian",
+      "category": "Soup",
+      "diet": "vegetarian",
+      "prep_minutes": 110,
+      "servings": 6,
+      "description_en": "A thick herb, bean and noodle soup traditionally garnished with kashk, fried onions and dried mint.",
+      "description_it": "Zuppa densa di erbe, legumi e tagliatelle, tradizionalmente con kashk, cipolle e menta secca.",
+      "ingredients": [
+        {
+          "id": "reshteh_noodles",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "canned_chickpeas",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "canned_kidney_beans",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "green_lentils",
+          "qty": 160,
+          "unit": "g"
+        },
+        {
+          "id": "spinach",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "cilantro",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "kashk",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "dried_mint",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "water",
+          "qty": 1700,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook the rinsed lentils in water until nearly tender; add drained beans and chopped greens and simmer for 25 minutes.",
+          "it": "Cuoci le lenticchie sciacquate in acqua finché sono quasi morbide; aggiungi legumi scolati e verdure tritate e fai sobbollire per 25 minuti."
+        },
+        {
+          "en": "Add reshteh noodles and cook until tender and the soup thickens; stir often to prevent sticking.",
+          "it": "Unisci le tagliatelle reshteh e cuoci finché sono morbide e la zuppa si addensa; mescola spesso per evitare che si attacchino."
+        },
+        {
+          "en": "Fry sliced onions until caramelized, warm dried mint briefly in oil, then garnish the bowls with onions, mint oil and kashk.",
+          "it": "Friggi le cipolle affettate fino a caramellarle, scalda brevemente la menta secca nell'olio e completa le ciotole con cipolle, olio alla menta e kashk."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-mirza-ghasemi",
+      "title_en": "Mirza Ghasemi",
+      "title_it": "Mirza ghasemi, melanzane affumicate",
+      "cuisine": "Iranian",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 60,
+      "servings": 4,
+      "description_en": "A smoky northern Iranian eggplant dip cooked with tomatoes, garlic and eggs.",
+      "description_it": "Crema iraniana di melanzane affumicate con pomodoro, aglio e uova.",
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "eggs",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Char the eggplants over a flame or roast until very soft; cool, peel and roughly chop the flesh.",
+          "it": "Abbrustolisci le melanzane sulla fiamma oppure arrostiscile finché sono molto morbide; falle raffreddare, sbucciale e trita la polpa."
+        },
+        {
+          "en": "Soften minced garlic with turmeric in oil, add chopped tomatoes and cook until most liquid evaporates; mix in eggplant.",
+          "it": "Fai insaporire l'aglio tritato con curcuma nell'olio, aggiungi i pomodori e cuoci fino a far evaporare quasi tutto il liquido; unisci le melanzane."
+        },
+        {
+          "en": "Make spaces in the mixture, add eggs and stir gently until completely set; serve warm with flatbread.",
+          "it": "Crea degli spazi nel composto, aggiungi le uova e mescola delicatamente finché sono ben rapprese; servi tiepido con pane piatto."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-kashk-bademjan",
+      "title_en": "Kashk-e Bademjan",
+      "title_it": "Kashk-e bademjan, crema di melanzane",
+      "cuisine": "Iranian",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 80,
+      "servings": 6,
+      "description_en": "Slow-cooked eggplant spread with fermented kashk, walnuts, onions and dried mint.",
+      "description_it": "Crema di melanzane cotte lentamente con kashk fermentato, noci, cipolle e menta essiccata.",
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 950,
+          "unit": "g"
+        },
+        {
+          "id": "kashk",
+          "qty": 170,
+          "unit": "g"
+        },
+        {
+          "id": "walnuts",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "dried_mint",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 75,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 180,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Peel and roast or pan-cook eggplants until soft and lightly browned; mash them.",
+          "it": "Sbuccia e arrostisci oppure cuoci in padella le melanzane finché sono morbide e leggermente dorate; schiacciale."
+        },
+        {
+          "en": "Caramelize sliced onions; reserve a little for topping and add the rest to eggplant with garlic and water. Cook until thick.",
+          "it": "Caramella le cipolle affettate; tienine da parte un po' per guarnire e aggiungi le altre alle melanzane con aglio e acqua. Cuoci fino ad addensare."
+        },
+        {
+          "en": "Stir in kashk and chopped walnuts and heat through; garnish with remaining onions and briefly fried dried mint.",
+          "it": "Incorpora kashk e noci tritate e scalda bene; completa con cipolle tenute da parte e menta secca soffritta brevemente."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-kuku-sabzi",
+      "title_en": "Kuku Sabzi",
+      "title_it": "Kuku sabzi, frittata alle erbe persiana",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 45,
+      "servings": 4,
+      "description_en": "An intensely green Iranian herb frittata, traditionally served in wedges.",
+      "description_it": "Frittata iraniana ricca di erbe aromatiche, servita a spicchi.",
+      "ingredients": [
+        {
+          "id": "parsley",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "cilantro",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "dill",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "chives",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 6,
+          "unit": "pcs"
+        },
+        {
+          "id": "walnuts",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 40,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Wash, dry and finely chop the herbs; beat eggs with turmeric and salt.",
+          "it": "Lava, asciuga e trita finemente le erbe; sbatti le uova con curcuma e sale."
+        },
+        {
+          "en": "Combine herbs, eggs and chopped walnuts, then pour into a lightly oiled skillet or baking dish.",
+          "it": "Mescola erbe, uova e noci tritate, poi versa in una padella o pirofila leggermente unta."
+        },
+        {
+          "en": "Cook covered on low heat, turning carefully, or bake at 180°C until fully set; cut into wedges.",
+          "it": "Cuoci coperto a fuoco basso, girando con cura, oppure inforna a 180 °C finché il centro è ben rappreso; taglia a spicchi."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-joojeh-kabab",
+      "title_en": "Joojeh Kabab",
+      "title_it": "Joojeh kabab, spiedini persiani di pollo",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 260,
+      "servings": 4,
+      "description_en": "Saffron and lemon-marinated Iranian chicken skewers, often served with grilled tomatoes.",
+      "description_it": "Spiedini iraniani di pollo marinati con zafferano e limone, serviti con pomodori grigliati.",
+      "ingredients": [
+        {
+          "id": "boneless_chicken_thigh",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "yogurt",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "tomato",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Bloom saffron in a little hot water. Toss chicken pieces with sliced onion, yogurt, lemon juice, saffron and oil; refrigerate for at least 3 hours.",
+          "it": "Metti lo zafferano in infusione in poca acqua calda. Mescola il pollo a pezzi con cipolla affettata, yogurt, limone, zafferano e olio; lascia marinare in frigo per almeno 3 ore."
+        },
+        {
+          "en": "Thread chicken on skewers and grill over medium-high heat, turning regularly, until the pieces are fully cooked.",
+          "it": "Infila il pollo negli spiedini e griglialo a fuoco medio-alto, girando spesso, fino a completa cottura."
+        },
+        {
+          "en": "Grill halved tomatoes alongside and serve with rice or lavash.",
+          "it": "Griglia a parte i pomodori tagliati a metà e servi con riso oppure lavash."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-kabab-koobideh",
+      "title_en": "Kabab Koobideh",
+      "title_it": "Kabab koobideh persiano",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 100,
+      "servings": 4,
+      "description_en": "Juicy Iranian ground-meat skewers with grated onion, served with tomato and sumac.",
+      "description_it": "Spiedini iraniani di carne macinata e cipolla grattugiata, serviti con pomodoro e sommacco.",
+      "ingredients": [
+        {
+          "id": "ground_beef",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "ground_lamb",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "salt",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "sumac",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "tomato",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 20,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Grate onions and squeeze out almost all the juice; knead with ground meats, salt and pepper until sticky, then chill for 30 minutes.",
+          "it": "Grattugia le cipolle e strizzale bene; impastale con le carni macinate, sale e pepe finché il composto è compatto, poi raffredda in frigorifero per 30 minuti."
+        },
+        {
+          "en": "Press meat evenly around wide metal skewers with moist hands and grill over steady high heat, turning once the exterior firms.",
+          "it": "Compatta la carne attorno a spiedini metallici larghi con le mani umide e griglia a fuoco alto e costante, girando quando l'esterno si rassoda."
+        },
+        {
+          "en": "Cook the minced meat completely through, grill tomatoes and finish with sumac before serving.",
+          "it": "Cuoci completamente la carne macinata anche all'interno, griglia i pomodori e completa con sommacco prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-baghali-polo-mahicheh",
+      "title_en": "Baghali Polo ba Mahicheh",
+      "title_it": "Baghali polo con stinco d'agnello",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 230,
+      "servings": 4,
+      "description_en": "Fragrant dill and fava-bean rice with slowly braised lamb shanks.",
+      "description_it": "Riso profumato all'aneto e alle fave con stinchi d'agnello brasati lentamente.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "baby_fava_beans",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "dill",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "lamb_shank",
+          "qty": 1200,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "butter",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 1000,
+          "unit": "ml"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Brown the lamb shanks with onions and turmeric; add water and simmer covered for 2½–3 hours until the meat is tender.",
+          "it": "Rosola gli stinchi con cipolle e curcuma; aggiungi acqua e cuoci coperto per 2 ore e mezza–3 ore finché la carne diventa tenera."
+        },
+        {
+          "en": "Parboil rinsed rice until just firm; drain and layer it with dill, tender fava beans and butter, then steam covered for 40 minutes.",
+          "it": "Sbollenta il riso risciacquato lasciandolo al dente; scolalo e alterna strati di riso, aneto, fave tenere e burro, poi cuoci a vapore coperto per 40 minuti."
+        },
+        {
+          "en": "Bloom saffron and stir into a little rice. Serve the lamb with its reduced braising sauce and the herb rice.",
+          "it": "Metti lo zafferano in infusione e mescolalo a poco riso. Servi l'agnello con il fondo di cottura ristretto e il riso alle erbe."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-sabzi-polo-mahi",
+      "title_en": "Sabzi Polo ba Mahi",
+      "title_it": "Sabzi polo con pesce",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 105,
+      "servings": 4,
+      "description_en": "Iranian herb rice paired with crisp lemon-saffron fish, often served for Nowruz.",
+      "description_it": "Riso iraniano alle erbe con pesce al limone e zafferano, spesso preparato per Nowruz.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 420,
+          "unit": "g"
+        },
+        {
+          "id": "dill",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "id": "cilantro",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "sea_bass",
+          "qty": 700,
+          "unit": "g"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "id": "lemon",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Parboil rinsed rice until still firm; drain and steam with finely chopped herbs for about 40 minutes.",
+          "it": "Sbollenta il riso risciacquato lasciandolo ancora sodo; scolalo e cuoci a vapore con le erbe tritate finemente per circa 40 minuti."
+        },
+        {
+          "en": "Pat fish dry, season with salt and bloomed saffron, then pan-fry or bake until cooked through and the flesh flakes easily.",
+          "it": "Asciuga il pesce, condiscilo con sale e zafferano infuso, quindi cuocilo in padella o in forno finché è ben cotto e la carne si sfalda facilmente."
+        },
+        {
+          "en": "Serve the fish beside the herb rice with lemon wedges.",
+          "it": "Servi il pesce accanto al riso alle erbe con spicchi di limone."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-adas-polo",
+      "title_en": "Adas Polo",
+      "title_it": "Adas polo, riso con lenticchie e uvetta",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 95,
+      "servings": 4,
+      "description_en": "A comforting Iranian rice dish with lentils, sweet raisins and caramelized onions.",
+      "description_it": "Riso iraniano con lenticchie, uvetta dolce e cipolle caramellate.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "green_lentils",
+          "qty": 210,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "raisins",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Simmer lentils until just tender and drain; parboil the rinsed rice separately until the grains remain firm.",
+          "it": "Lessa le lenticchie finché sono appena morbide e scolale; sbollenta a parte il riso risciacquato lasciando i chicchi sodi."
+        },
+        {
+          "en": "Caramelize sliced onions with oil and turmeric; briefly warm raisins with cinnamon.",
+          "it": "Caramella le cipolle affettate con olio e curcuma; scalda brevemente l'uvetta con cannella."
+        },
+        {
+          "en": "Layer rice and lentils in a pot and steam covered for 35–40 minutes; finish with onions and raisins.",
+          "it": "Alterna riso e lenticchie in pentola e cuoci a vapore coperto per 35–40 minuti; completa con cipolle e uvetta."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-loobia-polo",
+      "title_en": "Loobia Polo",
+      "title_it": "Loobia polo, riso persiano con fagiolini",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 120,
+      "servings": 6,
+      "description_en": "Steamed Iranian rice layered with green beans, beef and a tomato-spice sauce.",
+      "description_it": "Riso iraniano a strati con fagiolini, manzo e salsa di pomodoro speziata.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "green_beans",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 350,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Sauté onions and beef with turmeric; add chopped green beans, tomato paste and water, and cook until beans are tender and sauce is thick.",
+          "it": "Rosola cipolle e manzo con curcuma; aggiungi fagiolini tagliati, concentrato e acqua e cuoci finché i fagiolini sono teneri e il sugo denso."
+        },
+        {
+          "en": "Parboil rinsed rice until almost cooked, then drain.",
+          "it": "Sbollenta il riso risciacquato finché è quasi cotto, poi scolalo."
+        },
+        {
+          "en": "Layer rice with the beef-bean sauce and cinnamon; steam covered over gentle heat for 35–45 minutes.",
+          "it": "Alterna strati di riso e sugo di manzo e fagiolini con cannella; cuoci a vapore coperto a fuoco basso per 35–45 minuti."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-salad-shirazi",
+      "title_en": "Salad Shirazi",
+      "title_it": "Insalata shirazi persiana",
+      "cuisine": "Iranian",
+      "category": "Salad",
+      "diet": "vegan",
+      "prep_minutes": 20,
+      "servings": 4,
+      "description_en": "A finely diced Iranian cucumber, tomato and onion salad with citrus and dried mint.",
+      "description_it": "Insalata iraniana di cetriolo, pomodoro e cipolla a dadini fini, con agrumi e menta secca.",
+      "ingredients": [
+        {
+          "id": "lebanese_cucumber",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "lime_juice",
+          "qty": 40,
+          "unit": "ml"
+        },
+        {
+          "id": "dried_mint",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 20,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Dice cucumbers, tomatoes and onion into small even cubes.",
+          "it": "Taglia cetrioli, pomodori e cipolla a cubetti piccoli e regolari."
+        },
+        {
+          "en": "Mix lime juice, olive oil, dried mint and salt into a dressing.",
+          "it": "Mescola succo di lime, olio, menta secca e sale per ottenere un condimento."
+        },
+        {
+          "en": "Dress just before serving so the vegetables remain crisp.",
+          "it": "Condisci poco prima di servire per mantenere le verdure croccanti."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-mast-o-khiar",
+      "title_en": "Mast-o Khiar",
+      "title_it": "Mast-o khiar, yogurt persiano al cetriolo",
+      "cuisine": "Iranian",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 15,
+      "servings": 4,
+      "description_en": "Iranian yogurt and cucumber with mint, walnuts and a hint of rose.",
+      "description_it": "Salsa iraniana di yogurt e cetriolo con menta, noci e un tocco di rosa.",
+      "ingredients": [
+        {
+          "id": "strained_yogurt",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "cucumber",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "dried_mint",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "walnuts",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "rose_petals",
+          "qty": 2,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Grate the cucumber and squeeze away excess water.",
+          "it": "Grattugia il cetriolo e strizzalo per eliminare l'acqua in eccesso."
+        },
+        {
+          "en": "Fold cucumber, dried mint, finely chopped walnuts and salt into chilled yogurt.",
+          "it": "Incorpora allo yogurt freddo cetriolo, menta secca, noci tritate finemente e sale."
+        },
+        {
+          "en": "Garnish sparingly with edible rose petals and serve cold.",
+          "it": "Guarnisci con pochi petali di rosa commestibili e servi freddo."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-sholeh-zard",
+      "title_en": "Sholeh Zard",
+      "title_it": "Sholeh zard, budino persiano allo zafferano",
+      "cuisine": "Iranian",
+      "category": "Dessert",
+      "diet": "vegan",
+      "prep_minutes": 105,
+      "servings": 6,
+      "description_en": "A fragrant Iranian rice pudding scented with saffron, rosewater and cardamom.",
+      "description_it": "Budino iraniano di riso profumato con zafferano, acqua di rose e cardamomo.",
+      "ingredients": [
+        {
+          "id": "short_grain_rice",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "rose_water",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "cardamom",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "slivered_almonds",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 1700,
+          "unit": "ml"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse rice and simmer in water, stirring regularly, until very soft and beginning to break down.",
+          "it": "Sciacqua il riso e cuocilo in acqua, mescolando spesso, finché diventa molto morbido e inizia a sfaldarsi."
+        },
+        {
+          "en": "Add sugar and saffron bloomed in warm water; keep stirring over low heat until creamy.",
+          "it": "Aggiungi zucchero e zafferano infuso in acqua tiepida; continua a mescolare a fuoco basso fino a ottenere una crema."
+        },
+        {
+          "en": "Stir in rosewater, cardamom and almonds; spoon into bowls and decorate with cinnamon before chilling.",
+          "it": "Incorpora acqua di rose, cardamomo e mandorle; versa nelle ciotole e decora con cannella prima di raffreddare."
+        }
+      ]
+    }
+  ]
+}

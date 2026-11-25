@@ -1,0 +1,1199 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "slug": "iranian-dizi-abgoosht",
+      "title_en": "Dizi (Abgoosht)",
+      "title_it": "Dizi abgoosht, zuppa persiana di agnello",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 250,
+      "servings": 6,
+      "description_en": "A hearty Iranian lamb, chickpea and potato stew traditionally served as broth and mashed solids.",
+      "description_it": "Ricco stufato iraniano di agnello, ceci e patate, servito tradizionalmente come brodo e composto schiacciato.",
+      "ingredients": [
+        {
+          "id": "lamb_shoulder",
+          "qty": 900,
+          "unit": "g"
+        },
+        {
+          "id": "canned_chickpeas",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "canned_white_beans",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "potato",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "black_lime",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "water",
+          "qty": 1900,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Place lamb, onions, turmeric, tomatoes and water in a large pot; simmer gently for 2½–3 hours until the lamb is tender.",
+          "it": "Metti agnello, cipolle, curcuma, pomodori e acqua in una pentola grande; fai sobbollire per 2 ore e mezza–3 ore finché l'agnello diventa tenero."
+        },
+        {
+          "en": "Add pierced dried limes and potatoes; when almost cooked, add drained canned legumes and simmer until everything is tender.",
+          "it": "Aggiungi lime essiccati forati e patate; quando sono quasi cotti, unisci i legumi in scatola scolati e fai sobbollire finché tutto è tenero."
+        },
+        {
+          "en": "Ladle broth into bowls with bread; separately mash the meat and solids into a coarse paste and serve alongside.",
+          "it": "Distribuisci il brodo nelle ciotole con il pane; schiaccia a parte carne e ingredienti solidi fino a ottenere un composto rustico e servilo accanto."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-khoresh-karafs",
+      "title_en": "Khoresh Karafs",
+      "title_it": "Khoresh karafs, stufato persiano al sedano",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 160,
+      "servings": 6,
+      "description_en": "A tangy Iranian celery and parsley stew with tender pieces of lamb.",
+      "description_it": "Stufato iraniano dal gusto fresco di sedano e prezzemolo con agnello tenero.",
+      "ingredients": [
+        {
+          "id": "lamb_shoulder",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "celery",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "mint",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 900,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Brown lamb with onion and turmeric; add water and simmer gently for about an hour.",
+          "it": "Rosola l'agnello con cipolla e curcuma; aggiungi acqua e fai sobbollire dolcemente per circa un'ora."
+        },
+        {
+          "en": "Sauté chopped celery, parsley and mint until aromatic, then add them to the lamb.",
+          "it": "Salta in padella sedano, prezzemolo e menta tritati fino a sprigionare il profumo, poi uniscili all'agnello."
+        },
+        {
+          "en": "Continue simmering until the meat and celery are tender; finish with lemon juice and adjust salt.",
+          "it": "Continua a cuocere finché carne e sedano diventano teneri; completa con succo di limone e regola di sale."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-khoresh-bademjan",
+      "title_en": "Khoresh Bademjan",
+      "title_it": "Khoresh bademjan, stufato di melanzane",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 170,
+      "servings": 6,
+      "description_en": "Iranian lamb and eggplant stew simmered with tomatoes and sour grape juice.",
+      "description_it": "Stufato iraniano di agnello e melanzane con pomodoro e agresto.",
+      "ingredients": [
+        {
+          "id": "lamb_shoulder",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "eggplant",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "verjuice",
+          "qty": 70,
+          "unit": "ml"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 650,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Brown lamb with onions and turmeric; add tomato paste, tomatoes and water, then simmer until the lamb becomes tender.",
+          "it": "Rosola l'agnello con cipolle e curcuma; aggiungi concentrato, pomodori e acqua, poi fai sobbollire finché l'agnello è tenero."
+        },
+        {
+          "en": "Slice and salt eggplants, pat dry and roast or pan-fry until golden.",
+          "it": "Affetta e sala le melanzane, asciugale e arrostiscile oppure friggile in padella fino a doratura."
+        },
+        {
+          "en": "Add eggplants and verjuice to the stew for the last 20–30 minutes, keeping the pieces intact; serve with rice.",
+          "it": "Unisci le melanzane e l'agresto allo stufato negli ultimi 20–30 minuti, senza rompere i pezzi; servi con riso."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-albaloo-polo",
+      "title_en": "Albaloo Polo",
+      "title_it": "Albaloo polo, riso persiano alle amarene",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 115,
+      "servings": 6,
+      "description_en": "A jewel-like Iranian sour-cherry rice with saffron and toasted nuts.",
+      "description_it": "Riso iraniano alle amarene, zafferano e frutta secca tostata.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "sour_cherries_frozen",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "butter",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "slivered_pistachios",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "slivered_almonds",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 200,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Simmer pitted sour cherries with sugar and a little water briefly until syrupy; remove the fruit with a slotted spoon.",
+          "it": "Fai sobbollire brevemente le amarene snocciolate con zucchero e poca acqua fino a ottenere uno sciroppo; preleva la frutta con un mestolo forato."
+        },
+        {
+          "en": "Parboil rinsed rice until slightly firm, drain and layer with cherries, then steam covered for 40 minutes.",
+          "it": "Sbollenta il riso risciacquato lasciandolo leggermente sodo, scolalo e alterna strati con le amarene, poi cuoci a vapore coperto per 40 minuti."
+        },
+        {
+          "en": "Bloom saffron, tint some rice and decorate with pistachios, almonds and a little cherry syrup.",
+          "it": "Metti lo zafferano in infusione, colora una parte del riso e decora con pistacchi, mandorle e poco sciroppo di amarene."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-kuku-sibzamini",
+      "title_en": "Kuku Sibzamini",
+      "title_it": "Kuku sibzamini, frittelle persiane di patate",
+      "cuisine": "Iranian",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 50,
+      "servings": 4,
+      "description_en": "Golden Iranian potato patties seasoned with turmeric and onion.",
+      "description_it": "Frittelle iraniane di patate dorate, insaporite con curcuma e cipolla.",
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "flour",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 70,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Boil potatoes until tender and mash; cool enough to handle, then mix with grated, squeezed onion.",
+          "it": "Lessa le patate finché sono tenere e schiacciale; falle intiepidire, poi unisci la cipolla grattugiata e strizzata."
+        },
+        {
+          "en": "Add eggs, flour, turmeric and salt, then shape into small flat patties.",
+          "it": "Aggiungi uova, farina, curcuma e sale, poi forma polpettine piatte."
+        },
+        {
+          "en": "Pan-fry in shallow oil until golden on both sides and fully set in the center; drain briefly.",
+          "it": "Friggi in poco olio finché sono dorate su entrambi i lati e ben cotte al centro; scolale brevemente."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-kalam-polo-shirazi",
+      "title_en": "Kalam Polo Shirazi",
+      "title_it": "Kalam polo shirazi, riso con cavolo ed erbe",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 115,
+      "servings": 6,
+      "description_en": "Shiraz-style rice layered with cabbage, fresh herbs and tiny spiced meatballs.",
+      "description_it": "Riso di Shiraz a strati con cavolo, erbe fresche e piccole polpette speziate.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "white_cabbage",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 75,
+          "unit": "g"
+        },
+        {
+          "id": "dill",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "fresh_tarragon",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 70,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Mix ground beef with one grated, squeezed onion and seasoning; shape very small meatballs and brown them thoroughly.",
+          "it": "Mescola la carne macinata con una cipolla grattugiata e strizzata e le spezie; forma polpettine molto piccole e falle rosolare bene."
+        },
+        {
+          "en": "Sauté shredded cabbage with the second onion until tender; mix in the chopped herbs.",
+          "it": "Salta il cavolo a striscioline con la seconda cipolla finché è tenero; unisci le erbe tritate."
+        },
+        {
+          "en": "Parboil the rice, drain and layer with cabbage, herbs and meatballs; steam covered for 40 minutes until hot throughout.",
+          "it": "Sbollenta il riso, scolalo e alterna strati con cavolo, erbe e polpettine; cuoci a vapore coperto per 40 minuti finché è tutto ben caldo."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-torshi-liteh",
+      "title_en": "Torshi Liteh",
+      "title_it": "Torshi liteh, verdure sottaceto persiane",
+      "cuisine": "Iranian",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 50,
+      "servings": 10,
+      "description_en": "Finely chopped Iranian vegetable pickle flavoured with vinegar and dried herbs.",
+      "description_it": "Sottaceto persiano di verdure tritate finemente, aromatizzato con aceto ed erbe secche.",
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "cauliflower",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "carrot",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "white_vinegar",
+          "qty": 500,
+          "unit": "ml"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "dried_tarragon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Chop eggplant, cauliflower and carrots very finely; cook eggplant briefly in vinegar until soft, then cool.",
+          "it": "Trita finemente melanzane, cavolfiore e carote; cuoci brevemente le melanzane nell'aceto finché sono morbide, poi raffreddale."
+        },
+        {
+          "en": "Combine all vegetables with garlic, herbs, turmeric, salt and enough vinegar to cover in a clean nonreactive container.",
+          "it": "Mescola tutte le verdure con aglio, erbe, curcuma, sale e aceto sufficiente a coprirle in un recipiente pulito non reattivo."
+        },
+        {
+          "en": "Refrigerate promptly and let flavours develop at least 24 hours; keep refrigerated and consume within a few days, not as a shelf-stable preserve.",
+          "it": "Riponi subito in frigorifero e lascia insaporire almeno 24 ore; conserva al freddo e consuma entro pochi giorni, senza considerarlo una conserva a temperatura ambiente."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-nan-barbari",
+      "title_en": "Nan-e Barbari",
+      "title_it": "Nan-e barbari, pane piatto persiano",
+      "cuisine": "Iranian",
+      "category": "Bread",
+      "diet": "vegan",
+      "prep_minutes": 160,
+      "servings": 6,
+      "description_en": "A long, soft-centered Iranian flatbread with distinctive grooves and sesame.",
+      "description_it": "Pane piatto iraniano dalla mollica morbida, con solchi caratteristici e sesamo.",
+      "ingredients": [
+        {
+          "id": "bread_flour",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 330,
+          "unit": "ml"
+        },
+        {
+          "id": "instant_yeast",
+          "qty": 7,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "white_sesame",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 15,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Mix flour, yeast, sugar, salt and water; knead until elastic and leave covered to rise until nearly doubled.",
+          "it": "Mescola farina, lievito, zucchero, sale e acqua; impasta fino a elasticità e lascia lievitare coperto finché quasi raddoppia."
+        },
+        {
+          "en": "Divide into two oblong loaves, rest, then press long parallel grooves into each. Brush with a thin slurry of flour and water and sprinkle sesame.",
+          "it": "Dividi in due pani allungati, fai riposare, poi incidi lunghi solchi paralleli. Spennella con una pastella sottile di farina e acqua e cospargi di sesamo."
+        },
+        {
+          "en": "Bake on a very hot preheated tray or stone at 230°C for 15–20 minutes until golden and cooked through.",
+          "it": "Cuoci su teglia o pietra ben preriscaldata a 230 °C per 15–20 minuti, finché il pane è dorato e cotto internamente."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-doogh-mint",
+      "title_en": "Doogh with Mint",
+      "title_it": "Doogh persiano alla menta",
+      "cuisine": "Iranian",
+      "category": "Drink",
+      "diet": "vegetarian",
+      "prep_minutes": 10,
+      "servings": 4,
+      "description_en": "A chilled Iranian yogurt drink diluted with water and flavoured with mint.",
+      "description_it": "Bevanda iraniana fredda a base di yogurt, acqua e menta.",
+      "ingredients": [
+        {
+          "id": "yogurt",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 500,
+          "unit": "ml"
+        },
+        {
+          "id": "dried_mint",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Whisk chilled yogurt with cold water until smooth and pourable.",
+          "it": "Sbatti lo yogurt freddo con acqua fredda fino a renderlo liscio e fluido."
+        },
+        {
+          "en": "Stir in dried mint and a small pinch of salt; adjust the dilution to taste.",
+          "it": "Incorpora menta secca e un pizzico di sale; regola la diluizione a piacere."
+        },
+        {
+          "en": "Serve immediately over ice or chill thoroughly before drinking.",
+          "it": "Servi subito con ghiaccio oppure raffredda bene prima di bere."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-mast-o-musir",
+      "title_en": "Mast-o Musir",
+      "title_it": "Mast-o musir, yogurt persiano allo scalogno",
+      "cuisine": "Iranian",
+      "category": "Mezze",
+      "diet": "vegetarian",
+      "prep_minutes": 30,
+      "servings": 4,
+      "description_en": "Creamy Iranian yogurt dip with finely chopped shallots and a mild tang.",
+      "description_it": "Crema di yogurt iraniana con scalogno tritato e delicata nota pungente.",
+      "ingredients": [
+        {
+          "id": "strained_yogurt",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "shallot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 15,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "black_pepper",
+          "qty": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Mince the shallots very finely; briefly soak in cool water to soften their sharpness, then drain and dry.",
+          "it": "Trita gli scalogni molto finemente; lasciali brevemente in acqua fredda per attenuarne il sapore pungente, poi scolali e asciugali."
+        },
+        {
+          "en": "Mix shallots with yogurt, lemon juice, salt and pepper.",
+          "it": "Mescola gli scalogni con yogurt, succo di limone, sale e pepe."
+        },
+        {
+          "en": "Chill for at least 15 minutes and serve with bread or grilled dishes.",
+          "it": "Lascia riposare in frigorifero almeno 15 minuti e servi con pane o pietanze alla griglia."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-shirini-berenji",
+      "title_en": "Shirini Berenji",
+      "title_it": "Shirini berenji, biscotti persiani di riso",
+      "cuisine": "Iranian",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 95,
+      "servings": 8,
+      "description_en": "Delicate Iranian rice-flour cookies scented with rosewater and cardamom.",
+      "description_it": "Delicati biscotti iraniani di farina di riso profumati all'acqua di rose e cardamomo.",
+      "ingredients": [
+        {
+          "id": "rice_flour",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "powdered_sugar",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "ghee",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "egg_yolk",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "rose_water",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "cardamom",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "poppy_seeds",
+          "qty": 15,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cream ghee with powdered sugar, then beat in egg yolks, rosewater and cardamom.",
+          "it": "Lavora il ghee con lo zucchero a velo, poi incorpora tuorli, acqua di rose e cardamomo."
+        },
+        {
+          "en": "Mix in rice flour to form a tender dough; chill until firm enough to shape.",
+          "it": "Unisci la farina di riso fino a ottenere un impasto delicato; raffreddalo finché può essere modellato."
+        },
+        {
+          "en": "Shape small rounds, mark gently and top with poppy seeds; bake at 160°C for 15–20 minutes without deep browning, then cool completely.",
+          "it": "Forma dischetti, incidili delicatamente e cospargi semi di papavero; cuoci a 160 °C per 15–20 minuti senza scurirli troppo, poi lasciali raffreddare completamente."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-kuku-bademjan",
+      "title_en": "Kuku Bademjan",
+      "title_it": "Kuku bademjan, frittata persiana di melanzane",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 70,
+      "servings": 4,
+      "description_en": "A rustic Iranian eggplant and egg frittata with onion and turmeric.",
+      "description_it": "Frittata rustica iraniana di melanzane, uova, cipolla e curcuma.",
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 750,
+          "unit": "g"
+        },
+        {
+          "id": "eggs",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "flour",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Roast diced eggplant until tender and golden; sauté onion and garlic with turmeric.",
+          "it": "Arrostisci le melanzane a cubetti finché sono morbide e dorate; rosola cipolla e aglio con curcuma."
+        },
+        {
+          "en": "Beat eggs with flour and salt; fold in eggplant and onions.",
+          "it": "Sbatti le uova con farina e sale; incorpora melanzane e cipolle."
+        },
+        {
+          "en": "Cook gently in an oiled skillet or bake at 180°C until firm in the middle; rest before slicing.",
+          "it": "Cuoci delicatamente in padella unta oppure inforna a 180 °C finché il centro è sodo; lascia riposare prima di affettare."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-kotlet-sibzamini",
+      "title_en": "Kotlet-e Sibzamini",
+      "title_it": "Kotlet persiani di carne e patate",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 75,
+      "servings": 4,
+      "description_en": "Crisp Iranian beef and potato patties seasoned with onion and turmeric.",
+      "description_it": "Polpette iraniane croccanti di manzo e patate, con cipolla e curcuma.",
+      "ingredients": [
+        {
+          "id": "ground_beef",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "potato",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "eggs",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "breadcrumbs",
+          "qty": 75,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 80,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Grate raw peeled potatoes and onion and squeeze very dry; combine with beef, eggs, turmeric and breadcrumbs.",
+          "it": "Grattugia patate crude sbucciate e cipolla e strizza bene; mescola con manzo, uova, curcuma e pangrattato."
+        },
+        {
+          "en": "Form thin oval patties and chill for 15 minutes so they hold their shape.",
+          "it": "Forma polpette ovali sottili e falle rassodare in frigorifero per 15 minuti."
+        },
+        {
+          "en": "Shallow-fry on both sides until dark golden and the ground beef is fully cooked in the center.",
+          "it": "Friggi in poco olio da entrambi i lati finché sono ben dorate e la carne macinata è completamente cotta al centro."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-shirin-polo",
+      "title_en": "Shirin Polo",
+      "title_it": "Shirin polo, riso persiano dolce e speziato",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 115,
+      "servings": 6,
+      "description_en": "Iranian festive rice with orange zest, saffron, almonds and pistachios.",
+      "description_it": "Riso festivo iraniano con scorza d'arancia, zafferano, mandorle e pistacchi.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "orange_zest",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "slivered_almonds",
+          "qty": 65,
+          "unit": "g"
+        },
+        {
+          "id": "slivered_pistachios",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "sugar",
+          "qty": 95,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "rose_water",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 150,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Blanch fresh orange zest in changing water to soften bitterness; simmer briefly with sugar and a little water to glaze.",
+          "it": "Sbollenta la scorza fresca d'arancia cambiando l'acqua per attenuarne l'amaro; falla sobbollire brevemente con zucchero e poca acqua per glassarla."
+        },
+        {
+          "en": "Parboil rinsed rice until slightly firm, drain, then steam covered with butter for 35–40 minutes.",
+          "it": "Sbollenta il riso risciacquato lasciandolo leggermente sodo, scolalo e cuoci a vapore coperto con burro per 35–40 minuti."
+        },
+        {
+          "en": "Bloom saffron and mix through part of the rice; layer with orange zest, almonds, pistachios and a little rosewater.",
+          "it": "Metti lo zafferano in infusione e mescolalo a una parte del riso; alterna con scorza d'arancia, mandorle, pistacchi e poca acqua di rose."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-baghali-ghatogh",
+      "title_en": "Baghali Ghatogh",
+      "title_it": "Baghali ghatogh, stufato di fave e aneto",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 55,
+      "servings": 4,
+      "description_en": "Northern Iranian fava-bean and dill stew with garlic and gently cooked eggs.",
+      "description_it": "Stufato del nord dell'Iran di fave e aneto, con aglio e uova cotte dolcemente.",
+      "ingredients": [
+        {
+          "id": "baby_fava_beans",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "dill",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "eggs",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "turmeric",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "butter",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 300,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook finely chopped garlic and dill briefly in butter with turmeric without browning.",
+          "it": "Cuoci brevemente aglio e aneto tritati nel burro con curcuma, senza farli scurire."
+        },
+        {
+          "en": "Add tender fava beans and water and simmer until soft, adding a splash of water if needed.",
+          "it": "Aggiungi fave tenere e acqua e fai sobbollire finché diventano morbide, aggiungendo poca acqua se necessario."
+        },
+        {
+          "en": "Crack eggs over the surface, cover and cook gently until whites and yolks are safely set; serve with rice.",
+          "it": "Rompi le uova sulla superficie, copri e cuoci delicatamente finché albumi e tuorli sono ben rappresi; servi con riso."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-nan-e-sangak-toast",
+      "title_en": "Sangak Bread with Herbs and Cheese",
+      "title_it": "Pane sangak con erbe e formaggio",
+      "cuisine": "Iranian",
+      "category": "Breakfast",
+      "diet": "unknown",
+      "prep_minutes": 15,
+      "servings": 4,
+      "description_en": "Iranian breakfast-style sangak flatbread with fresh herbs, walnuts and white cheese.",
+      "description_it": "Colazione iraniana con pane sangak, erbe fresche, noci e formaggio bianco.",
+      "ingredients": [
+        {
+          "id": "sangak_bread",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "feta",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "walnuts",
+          "qty": 85,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "mint",
+          "qty": 25,
+          "unit": "g"
+        },
+        {
+          "id": "cucumber",
+          "qty": 200,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Warm the sangak bread briefly, without drying it out.",
+          "it": "Scalda brevemente il pane sangak senza farlo seccare."
+        },
+        {
+          "en": "Wash and dry the herbs; slice the cucumber and break the cheese into small pieces.",
+          "it": "Lava e asciuga le erbe; affetta il cetriolo e spezzetta il formaggio."
+        },
+        {
+          "en": "Serve the bread with cheese, herbs, cucumber and walnuts for assembling at the table.",
+          "it": "Servi il pane con formaggio, erbe, cetriolo e noci da comporre a tavola."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-saffron-tahdig",
+      "title_en": "Persian Potato Tahdig",
+      "title_it": "Tahdig persiano di patate",
+      "cuisine": "Iranian",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 95,
+      "servings": 4,
+      "description_en": "A fragrant Iranian rice pot with a crisp golden potato crust on the bottom.",
+      "description_it": "Pentola di riso iraniano profumato con una crosta croccante di patate sul fondo.",
+      "ingredients": [
+        {
+          "id": "persian_rice",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "potato",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "saffron",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 150,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Soak and rinse rice; parboil until grains are still firm, then drain thoroughly.",
+          "it": "Metti il riso in ammollo e risciacqualo; sbollentalo lasciando i chicchi ancora sodi, poi scolalo bene."
+        },
+        {
+          "en": "Coat the pot with oil and a little saffron water; arrange thin potato slices across the base and mound rice on top.",
+          "it": "Ungi la pentola con olio e poca acqua allo zafferano; disponi sul fondo fette sottili di patata e versa il riso sopra."
+        },
+        {
+          "en": "Cover with a cloth-lined lid and steam over low heat for 40–50 minutes; unmould carefully to reveal the golden crust.",
+          "it": "Copri con un coperchio avvolto in un panno e cuoci a vapore a fuoco basso per 40–50 minuti; capovolgi con cautela per mostrare la crosta dorata."
+        }
+      ]
+    },
+    {
+      "slug": "iranian-ash-e-jo",
+      "title_en": "Ash-e Jo",
+      "title_it": "Ash-e jo, zuppa persiana d'orzo",
+      "cuisine": "Iranian",
+      "category": "Soup",
+      "diet": "vegetarian",
+      "prep_minutes": 115,
+      "servings": 6,
+      "description_en": "Thick Iranian barley soup with legumes, herbs and tangy kashk.",
+      "description_it": "Zuppa iraniana densa di orzo, legumi, erbe e kashk dal gusto acidulo.",
+      "ingredients": [
+        {
+          "id": "barley",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "canned_chickpeas",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "green_lentils",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "spinach",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "kashk",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "dried_mint",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 1700,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse barley and lentils and simmer in water until the barley is tender, roughly 60–80 minutes.",
+          "it": "Sciacqua orzo e lenticchie e falli sobbollire in acqua finché l'orzo diventa tenero, circa 60–80 minuti."
+        },
+        {
+          "en": "Add chopped onion, spinach, parsley and drained chickpeas; cook another 20 minutes, stirring as the soup thickens.",
+          "it": "Aggiungi cipolla tritata, spinaci, prezzemolo e ceci scolati; cuoci ancora 20 minuti, mescolando mentre la zuppa si addensa."
+        },
+        {
+          "en": "Finish with warm kashk and dried mint briefly heated in oil; serve hot.",
+          "it": "Completa con kashk tiepido e menta secca scaldata brevemente nell'olio; servi caldo."
+        }
+      ]
+    }
+  ]
+}

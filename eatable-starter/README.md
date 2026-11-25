@@ -1,29 +1,31 @@
-# Eatable v29 — Admin-selected homepage photo
+# Eatable v30 — Persian & Lebanese Expansion
 
-## Install in order
-1. Supabase → SQL Editor → New query. Run `sql/13_homepage_hero.sql`.
-2. In GitHub replace **only** `src/app.js` with `src/app.js` from this package. Optionally update `eatable-version.txt`. Keep your current `src/recipes.js`, `src/bulk-import.js`, and `src/curated-editor.js` from your v28.2/v28.1 fixes.
-3. Commit, wait until Vercel Production is Ready, then hard-refresh the website.
-4. Sign in as admin at `https://cookwitheatable.com/en/admin` and click **Homepage Photo** (or visit `/en/admin-hero`).
-5. Choose a published recipe with a public photograph and Save. If none appears, first publish at least one curated recipe and its photo. Refresh the homepage, also in a private window, and verify English and Italian display the same photo.
+This additive package is based on **Eatable v28.2 (white-screen hotfix)** and the v29 website state.
 
-## Functionality
-- Site-wide, persisted choice in Supabase; all visitors see the same photograph.
-- Uses a **published recipe's existing public photograph**, not a new upload. Upload and publish photos through Curated Recipe Editor first.
-- Published curated recipes and approved community recipes are eligible if `state.catalog` contains a public photo.
-- The admin panel lists **published recipes with public photos** only.
-- A missing/unpublished selected recipe falls back to Eatable branded illustration, not random pasta.
-- "Automatic" restores the previous old photo-selection logic; before the first selection it is the default.
-- "Branded artwork" shows the Eatable illustration with no recipe photo.
-- Both `/en` and `/it` use the same database setting. No extra Vercel environment variables.
+**Contents**: 173 new bilingual ingredient IDs, 36 Iranian/Persian and 41 Lebanese recipes, four unpublished recipe-import batches.
 
-## Safety
-- A single new table and policies; existing recipes, login, photos, reviews, and importer are unchanged.
-- Public SELECT; admin-only INSERT/UPDATE protected by `eatable_is_admin()` from existing migrations.
-- An absent migration or network error only causes a warning/fallback, not a white screen.
-- This file comes from the latest v26 `src/app.js` source available in the previous project. If you edited `src/app.js` locally since v26, merge using `src/app.patch` instead of replacing it wholesale.
+## Install — follow in order
 
-## Checks
-- `node --input-type=module --check < src/app.js`
-- The patch does not touch the 3 national-cuisine importer files.
-- Testing against a live production Supabase project was **not** performed.
+1. **Github/Vercel:** Replace ONLY `src/recipes.js` with the provided `src/recipes.js` from this package. This begins from the fixed v28.2 module and adds the `Iranian` cuisine filter. **Do not use the v28 or v28.1 recipes.js**, as those removed required app exports and previously caused a white screen.
+2. `src/bulk-import.js` and `src/curated-editor.js` are included as the known working **v28.1** versions for compatibility and offline testing. **If your deployed files are already v28.1, do not replace them**. If your importer still uses a hard-coded old cuisine list, replace `src/bulk-import.js` with this one; preserve any later independent edits by merging.
+3. Deploy and hard refresh the site. Confirm the homepage still works and the **Iranian (Persian) 🇮🇷** nationality option appears in Explore / Admin Editor.
+4. **Supabase → SQL Editor**: run `ingredients/05_add_v30_ingredients.sql` after the v27 and v28 ingredient scripts. It is insert-only and safe to re-run (`ON CONFLICT (id) DO NOTHING`).
+5. **Eatable Admin → Batch Recipe Import**: `https://cookwitheatable.com/en/admin-import` and preview each JSON separately. Confirm no 'Unsupported cuisine' or 'Unknown ingredient ID' warning.
+6. Import the batches one by one (sizes below). Every entry is imported **unpublished**, does not overwrite existing slugs, and includes no images.
+7. **Admin → Curated Recipes**: `https://cookwitheatable.com/en/admin-curated`. Review accuracy, translations, dietary labels, ingredients and food safety, add your own photo and then publish individually.
+
+| Recipe batch | Count |
+|---|---:|
+| `recipes/recipes-v30-iranian-01.json` | 18 |
+| `recipes/recipes-v30-iranian-02.json` | 18 |
+| `recipes/recipes-v30-lebanese-01.json` | 21 |
+| `recipes/recipes-v30-lebanese-02.json` | 20 |
+
+**No other source files need modification.** Do not touch `src/app.js` from v29, other site modules, Supabase policies, or Vercel environment variables.
+
+Run `node tests/validate-pack.mjs` from the extracted root to validate against Eatable's actual importer rules.
+
+## Accuracy
+
+Ingredient IDs were compared against the v9 base, v27 and v28 vocabulary files, and recipe slugs against existing v27/v28 import packs. Actual production contents may differ.
+Recipes are **original editorial drafts rather than kitchen-tested instructions**. See `docs/EDITORIAL_REVIEW.md` before approving.

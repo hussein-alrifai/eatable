@@ -23,6 +23,7 @@ export const ingredients = ingredientRows.map(([id,en,it])=>({id,name:{en,it}}))
 export const ingredientById=Object.fromEntries(ingredients.map(i=>[i.id,i]));
 export const cuisines=[
  {id:'Lebanese',name:{en:'Lebanese',it:'Libanese'},flag:'🇱🇧'},
+ {id:'Iranian',name:{en:'Iranian (Persian)',it:'Iraniana (persiana)'},flag:'🇮🇷'},
  {id:'Syrian',name:{en:'Syrian',it:'Siriana'},flag:'🇸🇾'},
  {id:'Palestinian',name:{en:'Palestinian',it:'Palestinese'},flag:'🇵🇸'},
  {id:'Jordanian',name:{en:'Jordanian',it:'Giordana'},flag:'🇯🇴'},

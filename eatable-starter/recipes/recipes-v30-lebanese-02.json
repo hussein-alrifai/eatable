@@ -1,0 +1,1340 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "slug": "lebanese-meghli",
+      "title_en": "Meghli",
+      "title_it": "Meghli libanese, budino speziato di riso",
+      "cuisine": "Lebanese",
+      "category": "Dessert",
+      "diet": "vegan",
+      "prep_minutes": 60,
+      "servings": 8,
+      "description_en": "A Lebanese rice-flour pudding with caraway, cinnamon and nuts, traditionally served at births.",
+      "description_it": "Budino libanese di farina di riso, carvi, cannella e frutta secca, tradizionalmente servito per le nascite.",
+      "ingredients": [
+        {
+          "id": "rice_flour",
+          "qty": 170,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "caraway",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "water",
+          "qty": 1400,
+          "unit": "ml"
+        },
+        {
+          "id": "walnuts",
+          "qty": 65,
+          "unit": "g"
+        },
+        {
+          "id": "pistachios",
+          "qty": 65,
+          "unit": "g"
+        },
+        {
+          "id": "coconut_flakes",
+          "qty": 50,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Whisk rice flour, sugar, ground caraway and cinnamon with some cold water until smooth.",
+          "it": "Mescola farina di riso, zucchero, carvi macinato e cannella con parte dell'acqua fredda fino a renderli lisci."
+        },
+        {
+          "en": "Add remaining water and cook over medium-low heat, whisking constantly, until thick and glossy.",
+          "it": "Aggiungi l'acqua restante e cuoci a fuoco medio-basso mescolando continuamente finché il composto è denso e lucido."
+        },
+        {
+          "en": "Pour into small bowls, cool and refrigerate; decorate with chopped nuts and coconut before serving.",
+          "it": "Versa in ciotoline, lascia raffreddare e riponi in frigorifero; decora con frutta secca tritata e cocco prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-namoura",
+      "title_en": "Lebanese Namoura",
+      "title_it": "Namoura libanese allo sciroppo",
+      "cuisine": "Lebanese",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 95,
+      "servings": 10,
+      "description_en": "Moist Lebanese semolina cake soaked in fragrant orange-blossom syrup.",
+      "description_it": "Torta libanese morbida di semola imbevuta di sciroppo ai fiori d'arancio.",
+      "ingredients": [
+        {
+          "id": "semolina_coarse",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "yogurt",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 280,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "baking_powder",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "orange_blossom_water",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 350,
+          "unit": "ml"
+        },
+        {
+          "id": "almonds",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 20,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Mix semolina, yogurt, melted butter, baking powder and half the sugar; spread evenly in a greased baking dish and score diamonds.",
+          "it": "Mescola semola, yogurt, burro fuso, lievito e metà dello zucchero; stendi in una teglia unta e incidi a rombi."
+        },
+        {
+          "en": "Press an almond into each diamond and bake at 180°C for 35–40 minutes until golden and cooked in the center.",
+          "it": "Premi una mandorla su ogni rombo e cuoci a 180 °C per 35–40 minuti finché è dorata e cotta al centro."
+        },
+        {
+          "en": "Boil remaining sugar with water and lemon to make a light syrup; add orange-blossom water off heat and pour over the hot cake. Let absorb fully.",
+          "it": "Fai bollire lo zucchero rimasto con acqua e limone per ottenere uno sciroppo leggero; aggiungi l'acqua di fiori d'arancio fuori dal fuoco e versalo sulla torta calda. Lascia assorbire completamente."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-atayef-ashta",
+      "title_en": "Atayef with Ashta",
+      "title_it": "Atayef libanesi con ashta",
+      "cuisine": "Lebanese",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 100,
+      "servings": 8,
+      "description_en": "Small Lebanese folded pancakes filled with cream and topped with pistachios and syrup.",
+      "description_it": "Piccole crespelle libanesi ripiegate, farcite di crema e decorate con pistacchi e sciroppo.",
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 260,
+          "unit": "g"
+        },
+        {
+          "id": "semolina_fine",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "id": "instant_yeast",
+          "qty": 5,
+          "unit": "g"
+        },
+        {
+          "id": "baking_powder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "sugar",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "milk",
+          "qty": 250,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 370,
+          "unit": "ml"
+        },
+        {
+          "id": "ashta",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "pistachios",
+          "qty": 75,
+          "unit": "g"
+        },
+        {
+          "id": "orange_blossom_water",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 15,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Whisk flour, semolina, yeast, baking powder, a little sugar, water and milk; let the batter rest until bubbly.",
+          "it": "Sbatti farina, semola, lievito, lievito per dolci, poco zucchero, acqua e latte; lascia riposare la pastella finché compaiono bollicine."
+        },
+        {
+          "en": "Cook small pancakes on one side only, until the surface dries and bubbles set; cool briefly, pinch into half-moons and fill the open ends with chilled ashta.",
+          "it": "Cuoci piccole crespelle solo da un lato finché la superficie si asciuga e le bolle si fissano; fai intiepidire, chiudi a mezzaluna e farcisci le estremità aperte con ashta fredda."
+        },
+        {
+          "en": "Prepare syrup from remaining sugar, water, lemon and orange-blossom water; garnish pancakes with pistachios and drizzle syrup just before serving.",
+          "it": "Prepara uno sciroppo con zucchero restante, acqua, limone e acqua di fiori d'arancio; guarnisci le crespelle con pistacchi e versa lo sciroppo poco prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-halawet-el-jeben",
+      "title_en": "Halawet el Jeben",
+      "title_it": "Halawet el jeben, rotolini dolci al formaggio",
+      "cuisine": "Lebanese",
+      "category": "Dessert",
+      "diet": "unknown",
+      "prep_minutes": 85,
+      "servings": 8,
+      "description_en": "Soft Levantine-style Lebanese cheese and semolina rolls filled with ashta.",
+      "description_it": "Morbidi rotolini libanesi di formaggio e semola ripieni di ashta.",
+      "ingredients": [
+        {
+          "id": "mozzarella",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "semolina_fine",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 210,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 380,
+          "unit": "ml"
+        },
+        {
+          "id": "rose_water",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "orange_blossom_water",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "ashta",
+          "qty": 420,
+          "unit": "g"
+        },
+        {
+          "id": "pistachios",
+          "qty": 65,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Dissolve sugar in water and warm gently; add semolina and stir until thick, then incorporate shredded low-moisture mozzarella until smooth and elastic.",
+          "it": "Sciogli lo zucchero nell'acqua e scalda dolcemente; aggiungi semola e mescola fino ad addensare, poi incorpora mozzarella a bassa umidità grattugiata finché il composto è liscio ed elastico."
+        },
+        {
+          "en": "Perfume with rosewater and orange-blossom water; roll the warm cheese dough thinly between lightly moistened sheets.",
+          "it": "Profuma con acqua di rose e fiori d'arancio; stendi sottilmente l'impasto di formaggio ancora caldo tra fogli leggermente inumiditi."
+        },
+        {
+          "en": "Cut strips, add chilled ashta and roll up; garnish with pistachios and chill. Use a little extra syrup for serving if desired.",
+          "it": "Taglia delle strisce, aggiungi ashta fredda e arrotola; decora con pistacchi e raffredda. Servi con altro sciroppo, se desiderato."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-kishk-manoushe",
+      "title_en": "Kishk Manoushe",
+      "title_it": "Manoushe libanese al kishk",
+      "cuisine": "Lebanese",
+      "category": "Bread",
+      "diet": "vegetarian",
+      "prep_minutes": 125,
+      "servings": 6,
+      "description_en": "A Lebanese flatbread topped with tangy kishk, olive oil, onion and tomato.",
+      "description_it": "Focaccia libanese con kishk acidulo, olio d'oliva, cipolla e pomodoro.",
+      "ingredients": [
+        {
+          "id": "bread_flour",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "instant_yeast",
+          "qty": 7,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 300,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 90,
+          "unit": "ml"
+        },
+        {
+          "id": "kishk",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Knead flour, yeast, water, a little olive oil and salt; leave covered to rise for about one hour.",
+          "it": "Impasta farina, lievito, acqua, poco olio e sale; lascia lievitare coperto per circa un'ora."
+        },
+        {
+          "en": "Stir kishk with remaining oil and enough water to spread; add finely chopped onion and tomato.",
+          "it": "Mescola il kishk con l'olio restante e acqua sufficiente per spalmarlo; unisci cipolla e pomodoro tritati finemente."
+        },
+        {
+          "en": "Roll dough into rounds, spread topping thinly and bake at 230°C for 10–14 minutes until the crust is crisp and the topping heated through.",
+          "it": "Stendi l'impasto in dischi, distribuisci un velo di condimento e cuoci a 230 °C per 10–14 minuti finché la base è croccante e il condimento ben caldo."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-beef-shawarma",
+      "title_en": "Lebanese Beef Shawarma",
+      "title_it": "Shawarma libanese di manzo",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 220,
+      "servings": 6,
+      "description_en": "Thinly sliced Lebanese beef marinated with warm spices, lemon and vinegar.",
+      "description_it": "Manzo libanese a fettine sottili marinato con spezie calde, limone e aceto.",
+      "ingredients": [
+        {
+          "id": "beef",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "yogurt",
+          "qty": 120,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "white_vinegar",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "shawarma_spice",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "pita",
+          "qty": 6,
+          "unit": "pcs"
+        },
+        {
+          "id": "pickles",
+          "qty": 180,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Slice beef very thinly against the grain and coat with yogurt, lemon, vinegar, garlic and shawarma spice; marinate covered in the refrigerator for at least 2 hours.",
+          "it": "Affetta il manzo molto sottile controfibra e condiscilo con yogurt, limone, aceto, aglio e spezie shawarma; marina coperto in frigorifero per almeno 2 ore."
+        },
+        {
+          "en": "Cook in batches in a very hot pan with oil so the beef browns rather than steams, until safely cooked.",
+          "it": "Cuoci in più riprese in una padella molto calda con olio in modo da rosolare il manzo senza lessarlo, fino a cottura sicura."
+        },
+        {
+          "en": "Wrap in warm pita with pickles and optional garlic sauce; serve immediately.",
+          "it": "Avvolgi nella pita calda con sottaceti e, a piacere, salsa all'aglio; servi subito."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-hindbeh-bzeit",
+      "title_en": "Hindbeh bi Zeit",
+      "title_it": "Hindbeh bi zeit, cicoria libanese",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 65,
+      "servings": 4,
+      "description_en": "Tender Lebanese dandelion or chicory greens with caramelized onions and lemon.",
+      "description_it": "Verdure amare libanesi, tarassaco o cicoria, con cipolle caramellate e limone.",
+      "ingredients": [
+        {
+          "id": "dandelion_greens",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 100,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 80,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Wash bitter greens thoroughly and boil briefly in plenty of water until tender; drain and squeeze lightly.",
+          "it": "Lava con cura le verdure amare e lessale brevemente in abbondante acqua finché sono tenere; scola e strizza leggermente."
+        },
+        {
+          "en": "Slice onions and fry slowly in olive oil until dark golden and sweet.",
+          "it": "Affetta le cipolle e friggile lentamente nell'olio d'oliva finché sono dorate scure e dolci."
+        },
+        {
+          "en": "Toss greens with part of the onions and lemon juice; top with the remaining onions and serve warm or at room temperature.",
+          "it": "Mescola le verdure con parte delle cipolle e succo di limone; completa con le cipolle rimaste e servi caldo o a temperatura ambiente."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-shorbet-freekeh",
+      "title_en": "Shorbet Freekeh",
+      "title_it": "Shorbet freekeh, zuppa libanese di grano verde",
+      "cuisine": "Lebanese",
+      "category": "Soup",
+      "diet": "none",
+      "prep_minutes": 90,
+      "servings": 6,
+      "description_en": "A warming Lebanese roasted-green-wheat soup with shredded chicken and aromatic spices.",
+      "description_it": "Zuppa libanese di grano verde tostato con pollo sfilacciato e spezie aromatiche.",
+      "ingredients": [
+        {
+          "id": "green_wheat_freekeh",
+          "qty": 260,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_breast",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "carrot",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chicken_stock",
+          "qty": 1400,
+          "unit": "ml"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 40,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 45,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Softly cook chopped onion and carrot in olive oil; add stock, chicken and spices.",
+          "it": "Fai appassire cipolla e carota tritate nell'olio d'oliva; aggiungi brodo, pollo e spezie."
+        },
+        {
+          "en": "Simmer until chicken is fully cooked; remove and shred, then add rinsed freekeh to the broth and simmer until tender.",
+          "it": "Fai sobbollire finché il pollo è completamente cotto; toglilo e sfilaccialo, poi aggiungi il freekeh risciacquato al brodo e cuoci finché è tenero."
+        },
+        {
+          "en": "Return chicken to the soup, warm through and finish with lemon juice.",
+          "it": "Rimetti il pollo nella zuppa, scalda bene e completa con succo di limone."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-arayes-kafta",
+      "title_en": "Arayes Kafta",
+      "title_it": "Arayes kafta, pita libanese ripiena di carne",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 45,
+      "servings": 4,
+      "description_en": "Crisp Lebanese pita sandwiches filled with spiced minced beef and parsley.",
+      "description_it": "Pita libanesi croccanti ripiene di manzo macinato speziato e prezzemolo.",
+      "ingredients": [
+        {
+          "id": "pita",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 75,
+          "unit": "g"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 40,
+          "unit": "ml"
+        },
+        {
+          "id": "tomato",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Finely grate onion and combine with beef, chopped parsley, seven-spice and salt.",
+          "it": "Grattugia finemente la cipolla e mescolala con manzo, prezzemolo tritato, sette spezie e sale."
+        },
+        {
+          "en": "Split pita pockets and spread a thin, even layer of the raw meat mixture inside each one; brush lightly with oil.",
+          "it": "Apri le pita a tasca e spalma uno strato sottile e uniforme di carne cruda all'interno; spennella con poco olio."
+        },
+        {
+          "en": "Grill or bake at 210°C, turning once, until the bread is crisp and the minced beef is completely cooked in the center.",
+          "it": "Griglia oppure cuoci a 210 °C, girando una volta, finché il pane è croccante e il manzo macinato è completamente cotto al centro."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-kafta-tahini-bake",
+      "title_en": "Kafta with Tahini Sauce",
+      "title_it": "Kafta libanese al forno con tahina",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 75,
+      "servings": 6,
+      "description_en": "Baked Lebanese kafta meat patties in a smooth lemon-tahini sauce.",
+      "description_it": "Polpette libanesi di kafta al forno in salsa cremosa di tahina e limone.",
+      "ingredients": [
+        {
+          "id": "ground_beef",
+          "qty": 700,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "parsley",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "tahini",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 120,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 330,
+          "unit": "ml"
+        },
+        {
+          "id": "potato",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Knead ground beef with finely grated onion, parsley and seven-spice; shape small oval patties.",
+          "it": "Impasta il manzo macinato con cipolla grattugiata finemente, prezzemolo e sette spezie; forma piccole polpette ovali."
+        },
+        {
+          "en": "Arrange patties with sliced potatoes in an oiled baking dish and bake at 200°C until partly cooked.",
+          "it": "Disponi le polpette con patate affettate in una teglia unta e cuoci a 200 °C finché sono parzialmente cotte."
+        },
+        {
+          "en": "Whisk tahini with lemon juice and water until pourable, pour over the dish and bake until potatoes are tender and the meat is fully cooked.",
+          "it": "Sbatti tahina con limone e acqua finché diventa fluida, versa nella teglia e cuoci fino a quando le patate sono tenere e la carne è completamente cotta."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-kaak-bi-tahini",
+      "title_en": "Kaak bi Tahini",
+      "title_it": "Kaak bi tahini, biscotti libanesi al sesamo",
+      "cuisine": "Lebanese",
+      "category": "Dessert",
+      "diet": "vegan",
+      "prep_minutes": 55,
+      "servings": 8,
+      "description_en": "Crisp Lebanese tahini biscuits with a rich sesame aroma.",
+      "description_it": "Biscotti libanesi croccanti alla tahina dal ricco aroma di sesamo.",
+      "ingredients": [
+        {
+          "id": "flour",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "tahini",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 140,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "baking_powder",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "white_sesame",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 50,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Beat tahini with sugar and oil, then mix in flour, baking powder and enough water to bind a soft dough.",
+          "it": "Lavora tahina con zucchero e olio, poi incorpora farina, lievito e acqua sufficiente a ottenere un impasto morbido."
+        },
+        {
+          "en": "Form small rounds or rings and roll lightly in sesame seeds.",
+          "it": "Forma piccoli dischi o anelli e passali leggermente nei semi di sesamo."
+        },
+        {
+          "en": "Bake at 175°C for 15–18 minutes until just golden; let cool completely for a crisp texture.",
+          "it": "Cuoci a 175 °C per 15–18 minuti fino a leggera doratura; lascia raffreddare completamente per ottenere una consistenza croccante."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-sahlab",
+      "title_en": "Lebanese Sahlab",
+      "title_it": "Sahlab libanese al latte",
+      "cuisine": "Lebanese",
+      "category": "Drink",
+      "diet": "vegetarian",
+      "prep_minutes": 20,
+      "servings": 4,
+      "description_en": "A thick, warming Lebanese milk drink perfumed with orange-blossom water and cinnamon.",
+      "description_it": "Bevanda libanese calda e densa al latte, profumata ai fiori d'arancio e cannella.",
+      "ingredients": [
+        {
+          "id": "milk",
+          "qty": 900,
+          "unit": "ml"
+        },
+        {
+          "id": "cornstarch",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 75,
+          "unit": "g"
+        },
+        {
+          "id": "orange_blossom_water",
+          "qty": 20,
+          "unit": "ml"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "pistachios",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "coconut_flakes",
+          "qty": 25,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Whisk cornstarch and sugar into cold milk until completely smooth.",
+          "it": "Mescola amido di mais e zucchero nel latte freddo finché non restano grumi."
+        },
+        {
+          "en": "Heat gently while whisking constantly until thick enough to coat a spoon; remove from heat and add orange-blossom water.",
+          "it": "Scalda dolcemente mescolando continuamente finché è abbastanza denso da velare un cucchiaio; togli dal fuoco e aggiungi acqua di fiori d'arancio."
+        },
+        {
+          "en": "Pour into cups and top with cinnamon, crushed pistachios and coconut; serve warm.",
+          "it": "Versa nelle tazze e completa con cannella, pistacchi tritati e cocco; servi caldo."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-kibbet-batata",
+      "title_en": "Kibbet Batata",
+      "title_it": "Kibbet batata, kibbeh libanese di patate",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "vegetarian",
+      "prep_minutes": 110,
+      "servings": 6,
+      "description_en": "Lebanese vegetarian potato and bulgur kibbeh with onions and warm spices.",
+      "description_it": "Kibbeh libanese vegetariana di patate e bulgur con cipolle e spezie calde.",
+      "ingredients": [
+        {
+          "id": "potato",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "fine_bulgur",
+          "qty": 260,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 90,
+          "unit": "ml"
+        },
+        {
+          "id": "walnuts",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Boil potatoes until tender and mash; soak fine bulgur, drain thoroughly and knead with potato and seasoning.",
+          "it": "Lessa le patate finché sono tenere e schiacciale; ammolla il bulgur fine, scolalo bene e impastalo con patate e spezie."
+        },
+        {
+          "en": "Caramelize chopped onions in oil with chopped walnuts and parsley to make a filling.",
+          "it": "Caramella le cipolle tritate nell'olio con noci tritate e prezzemolo per preparare il ripieno."
+        },
+        {
+          "en": "Press half the potato-bulgur mix into an oiled dish, add filling, cover with remaining mixture and bake at 190°C for 35–40 minutes until golden and hot.",
+          "it": "Stendi metà dell'impasto di patate e bulgur in una teglia unta, distribuisci il ripieno, copri con il resto e cuoci a 190 °C per 35–40 minuti finché è dorata e calda."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-jallab-drink",
+      "title_en": "Jallab",
+      "title_it": "Jallab libanese",
+      "cuisine": "Lebanese",
+      "category": "Drink",
+      "diet": "vegan",
+      "prep_minutes": 10,
+      "servings": 4,
+      "description_en": "A chilled Lebanese date-and-grape molasses drink with rosewater and pine nuts.",
+      "description_it": "Bevanda libanese fredda a base di melassa di datteri e uva, acqua di rose e pinoli.",
+      "ingredients": [
+        {
+          "id": "date_syrup",
+          "qty": 120,
+          "unit": "ml"
+        },
+        {
+          "id": "grape_molasses",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "rose_water",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 950,
+          "unit": "ml"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 35,
+          "unit": "g"
+        },
+        {
+          "id": "raisins",
+          "qty": 45,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Whisk date syrup and grape molasses with cold water until fully dissolved.",
+          "it": "Mescola sciroppo di datteri e melassa d'uva con acqua fredda finché sono sciolti."
+        },
+        {
+          "en": "Add rosewater and chill thoroughly.",
+          "it": "Aggiungi acqua di rose e raffredda bene."
+        },
+        {
+          "en": "Pour into glasses over ice and finish with pine nuts and raisins.",
+          "it": "Versa nei bicchieri con ghiaccio e completa con pinoli e uvetta."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-tarator-tahini",
+      "title_en": "Lebanese Tarator Sauce",
+      "title_it": "Salsa tarator libanese alla tahina",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 10,
+      "servings": 6,
+      "description_en": "A classic Lebanese tahini, garlic and lemon sauce for fish, falafel and vegetables.",
+      "description_it": "Classica salsa libanese di tahina, aglio e limone per pesce, falafel e verdure.",
+      "ingredients": [
+        {
+          "id": "tahini",
+          "qty": 180,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 95,
+          "unit": "ml"
+        },
+        {
+          "id": "garlic",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "water",
+          "qty": 150,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 0.75,
+          "unit": "tsp"
+        },
+        {
+          "id": "parsley",
+          "qty": 25,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Crush garlic with salt until smooth, then combine with tahini and lemon juice.",
+          "it": "Schiaccia l'aglio con il sale fino a ottenere una crema, poi mescolalo con tahina e limone."
+        },
+        {
+          "en": "Add cold water little by little, whisking through the initial thickening until smooth and pourable.",
+          "it": "Aggiungi acqua fredda poco alla volta, continuando a sbattere anche quando si addensa inizialmente, finché la salsa è liscia e fluida."
+        },
+        {
+          "en": "Fold in finely chopped parsley and serve fresh or refrigerate promptly.",
+          "it": "Incorpora prezzemolo tritato finemente e servi subito oppure riponi prontamente in frigorifero."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-kabis-lift",
+      "title_en": "Kabis Lift (Pickled Turnips)",
+      "title_it": "Kabis lift, rape sottaceto libanesi",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 30,
+      "servings": 8,
+      "description_en": "Bright pink Lebanese refrigerated turnip pickles coloured naturally with beetroot.",
+      "description_it": "Rape sottaceto libanesi rosa acceso, colorate naturalmente con barbabietola e conservate in frigorifero.",
+      "ingredients": [
+        {
+          "id": "turnip",
+          "qty": 750,
+          "unit": "g"
+        },
+        {
+          "id": "beetroot",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "white_vinegar",
+          "qty": 500,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 500,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 2,
+          "unit": "tbsp"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Peel turnips and beets, cut into sticks and place in a clean glass container with garlic.",
+          "it": "Sbuccia rape e barbabietole, tagliale a bastoncini e mettile in un recipiente di vetro pulito con l'aglio."
+        },
+        {
+          "en": "Heat water, vinegar and salt until dissolved, cool slightly and pour over vegetables until fully submerged.",
+          "it": "Scalda acqua, aceto e sale finché si scioglie, lascia intiepidire e versa sulle verdure fino a coprirle completamente."
+        },
+        {
+          "en": "Cool promptly and refrigerate for at least 48 hours before tasting; keep refrigerated, not as a shelf-stable preserve.",
+          "it": "Raffredda prontamente e lascia in frigorifero almeno 48 ore prima di assaggiare; conserva sempre al freddo, non come conserva da dispensa."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-loubieh-bi-lahme",
+      "title_en": "Loubieh bi Lahme",
+      "title_it": "Loubieh bi lahme, fagiolini libanesi con carne",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 105,
+      "servings": 6,
+      "description_en": "A Lebanese green bean and beef stew with garlic and tomatoes.",
+      "description_it": "Stufato libanese di fagiolini e manzo con aglio e pomodoro.",
+      "ingredients": [
+        {
+          "id": "green_beans",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "beef_chuck",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 650,
+          "unit": "ml"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Brown diced beef with chopped onion and seven-spice, add water and simmer until nearly tender.",
+          "it": "Rosola il manzo a cubetti con cipolla tritata e sette spezie, aggiungi acqua e fai sobbollire finché è quasi tenero."
+        },
+        {
+          "en": "Add trimmed green beans, tomato passata and garlic, then cover and simmer until beans and beef are fully tender.",
+          "it": "Unisci fagiolini mondati, passata e aglio, poi copri e cuoci finché fagiolini e manzo sono completamente teneri."
+        },
+        {
+          "en": "Reduce sauce to a spoonable consistency and serve with plain rice.",
+          "it": "Fai restringere il sugo fino a una consistenza da cucchiaio e servi con riso bianco."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-kibbeh-sajiyyeh",
+      "title_en": "Kibbeh Sajiyyeh",
+      "title_it": "Kibbeh sajiyyeh in padella",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 75,
+      "servings": 4,
+      "description_en": "Lebanese pan-fried kibbeh patties with bulgur, minced beef and aromatic spice.",
+      "description_it": "Polpette libanesi di kibbeh cotte in padella con bulgur, manzo macinato e spezie.",
+      "ingredients": [
+        {
+          "id": "fine_bulgur",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Soak fine bulgur in cool water, drain and squeeze dry; knead with minced beef, finely grated onion and spices.",
+          "it": "Ammolla il bulgur fine in acqua fresca, scolalo e strizzalo; impastalo con manzo macinato, cipolla grattugiata e spezie."
+        },
+        {
+          "en": "Shape into flat patties and press a few pine nuts on the surface.",
+          "it": "Forma polpette piatte e premi alcuni pinoli sulla superficie."
+        },
+        {
+          "en": "Pan-fry in olive oil on both sides until richly browned and the ground beef is completely cooked through.",
+          "it": "Friggi in padella con olio d'oliva da entrambi i lati finché sono ben dorate e il manzo macinato completamente cotto."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-znood-el-sit",
+      "title_en": "Znood el Sit",
+      "title_it": "Znood el sit, dolci libanesi alla crema",
+      "cuisine": "Lebanese",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 75,
+      "servings": 8,
+      "description_en": "Crisp Lebanese filo pastry rolls filled with ashta and soaked lightly in scented syrup.",
+      "description_it": "Involtini croccanti libanesi di pasta filo ripieni di ashta e bagnati con sciroppo profumato.",
+      "ingredients": [
+        {
+          "id": "filo_pastry",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "ashta",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "sugar",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 250,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 20,
+          "unit": "ml"
+        },
+        {
+          "id": "orange_blossom_water",
+          "qty": 25,
+          "unit": "ml"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 300,
+          "unit": "ml"
+        },
+        {
+          "id": "pistachios",
+          "qty": 75,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Boil sugar, water and lemon for 8–10 minutes to form a light syrup; add orange-blossom water off the heat and cool.",
+          "it": "Fai bollire zucchero, acqua e limone per 8–10 minuti per ottenere uno sciroppo leggero; aggiungi acqua di fiori d'arancio fuori dal fuoco e fai raffreddare."
+        },
+        {
+          "en": "Fill layered strips of filo with chilled ashta and fold into well-sealed rolls.",
+          "it": "Farcisci strisce sovrapposte di pasta filo con ashta fredda e ripiegale in involtini ben sigillati."
+        },
+        {
+          "en": "Fry in controlled batches until crisp and golden; drain and briefly dip in cooled syrup. Garnish with pistachios.",
+          "it": "Friggi in piccole quantità finché sono croccanti e dorati; scolali e immergili brevemente nello sciroppo freddo. Decora con pistacchi."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-burghul-bi-banadoura",
+      "title_en": "Burghul bi Banadoura",
+      "title_it": "Burghul bi banadoura, bulgur libanese al pomodoro",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 50,
+      "servings": 4,
+      "description_en": "A simple Lebanese tomato bulgur pilaf with onions and chickpeas.",
+      "description_it": "Pilaf libanese semplice di bulgur al pomodoro con cipolle e ceci.",
+      "ingredients": [
+        {
+          "id": "coarse_bulgur",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "canned_chickpeas",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 600,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Soften chopped onions in olive oil, then add tomato paste and diced tomatoes until slightly reduced.",
+          "it": "Fai appassire le cipolle tritate nell'olio d'oliva, poi aggiungi concentrato e pomodori a dadini e lascia restringere leggermente."
+        },
+        {
+          "en": "Add rinsed bulgur, drained chickpeas, water and salt; stir once and bring to a simmer.",
+          "it": "Unisci bulgur sciacquato, ceci scolati, acqua e sale; mescola una volta e porta a sobbollire."
+        },
+        {
+          "en": "Cover and cook gently until bulgur is tender and liquid is absorbed; rest five minutes before fluffing.",
+          "it": "Copri e cuoci dolcemente finché il bulgur è tenero e il liquido assorbito; lascia riposare cinque minuti prima di sgranare."
+        }
+      ]
+    }
+  ]
+}

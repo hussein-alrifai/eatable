@@ -1,0 +1,1498 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "slug": "lebanese-sfiha-baalbakieh",
+      "title_en": "Baalbek-Style Sfiha",
+      "title_it": "Sfiha di Baalbek con carne",
+      "cuisine": "Lebanese",
+      "category": "Bread",
+      "diet": "none",
+      "prep_minutes": 150,
+      "servings": 6,
+      "description_en": "Open-faced Lebanese meat pastries with spiced lamb, tomatoes and pine nuts.",
+      "description_it": "Focaccine aperte libanesi con agnello speziato, pomodoro e pinoli.",
+      "ingredients": [
+        {
+          "id": "bread_flour",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "instant_yeast",
+          "qty": 7,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 320,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "ground_lamb",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "pomegranate_molasses",
+          "qty": 30,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 2,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Knead flour, yeast, water, half the oil and salt to a soft dough; cover and let rise for 60–75 minutes.",
+          "it": "Impasta farina, lievito, acqua, metà dell'olio e sale fino a ottenere un impasto morbido; copri e lascia lievitare 60–75 minuti."
+        },
+        {
+          "en": "Combine lamb with finely chopped onion, drained chopped tomato, pine nuts, seven-spice and pomegranate molasses.",
+          "it": "Mescola l'agnello con cipolla tritata finemente, pomodoro tritato e scolato, pinoli, sette spezie e melassa di melagrana."
+        },
+        {
+          "en": "Divide dough into small rounds, spread a thin layer of meat filling and bake at 220°C for 12–16 minutes until the dough is golden and the meat is fully cooked.",
+          "it": "Dividi l'impasto in dischi, distribuisci un velo di ripieno e cuoci a 220 °C per 12–16 minuti finché la pasta è dorata e la carne completamente cotta."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-mujadara-hamra",
+      "title_en": "Mujadara Hamra",
+      "title_it": "Mujadara hamra di bulgur e lenticchie",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 75,
+      "servings": 4,
+      "description_en": "A dark, deeply caramelized Lebanese lentil and bulgur dish with browned onions.",
+      "description_it": "Piatto libanese scuro di lenticchie e bulgur con cipolle ben caramellate.",
+      "ingredients": [
+        {
+          "id": "brown_lentils",
+          "qty": 260,
+          "unit": "g"
+        },
+        {
+          "id": "coarse_bulgur",
+          "qty": 230,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 100,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 1000,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Slice onions thinly and cook slowly in oil until very dark brown but not burned; reserve some crisp onions for serving.",
+          "it": "Affetta finemente le cipolle e cuocile lentamente nell'olio finché sono bruno scuro ma non bruciate; tienine da parte alcune croccanti."
+        },
+        {
+          "en": "Add rinsed lentils and water to the remaining onions; simmer until lentils are nearly tender.",
+          "it": "Aggiungi lenticchie sciacquate e acqua alle cipolle rimaste; fai sobbollire finché le lenticchie sono quasi tenere."
+        },
+        {
+          "en": "Stir in coarse bulgur, cover and simmer until grains absorb the liquid; rest 10 minutes and top with reserved onions.",
+          "it": "Unisci il bulgur grosso, copri e cuoci finché assorbe il liquido; lascia riposare 10 minuti e completa con le cipolle tenute da parte."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-mujadara-rice",
+      "title_en": "Lebanese Mujadara with Rice",
+      "title_it": "Mujadara libanese di riso e lenticchie",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 65,
+      "servings": 4,
+      "description_en": "Lebanese lentils and rice topped generously with sweet fried onions.",
+      "description_it": "Lenticchie e riso libanesi con abbondanti cipolle fritte dolci.",
+      "ingredients": [
+        {
+          "id": "brown_lentils",
+          "qty": 230,
+          "unit": "g"
+        },
+        {
+          "id": "long_grain_rice",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 90,
+          "unit": "ml"
+        },
+        {
+          "id": "cumin",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "water",
+          "qty": 950,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook lentils in water until about three-quarters tender; strain and reserve the cooking liquid.",
+          "it": "Cuoci le lenticchie in acqua finché sono quasi tenere; scolale conservando il liquido di cottura."
+        },
+        {
+          "en": "Caramelize sliced onions slowly in olive oil; reserve half for topping.",
+          "it": "Caramella lentamente le cipolle affettate nell'olio d'oliva; metti da parte la metà per guarnire."
+        },
+        {
+          "en": "Combine lentils, rinsed rice, remaining onions and enough reserved liquid to cook the rice; cover until tender, rest and garnish with onions.",
+          "it": "Unisci lenticchie, riso risciacquato, cipolle rimaste e liquido di cottura sufficiente per il riso; copri fino a cottura, fai riposare e guarnisci con le cipolle."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-freekeh-chicken-pilaf",
+      "title_en": "Freekeh with Chicken and Nuts",
+      "title_it": "Freekeh libanese con pollo e frutta secca",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 100,
+      "servings": 6,
+      "description_en": "Nutty green wheat pilaf topped with seasoned chicken, almonds and pine nuts.",
+      "description_it": "Pilaf di grano verde tostato con pollo speziato, mandorle e pinoli.",
+      "ingredients": [
+        {
+          "id": "green_wheat_freekeh",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_thigh",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chicken_stock",
+          "qty": 1100,
+          "unit": "ml"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "almonds",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "ghee",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Sauté onion in ghee, brown the chicken and season with seven-spice; add stock and simmer until chicken is fully cooked.",
+          "it": "Soffriggi la cipolla nel ghee, rosola il pollo e condisci con sette spezie; aggiungi brodo e cuoci finché il pollo è completamente cotto."
+        },
+        {
+          "en": "Remove chicken, add rinsed freekeh to the broth and cook covered until tender, adjusting liquid as needed.",
+          "it": "Togli il pollo, unisci il freekeh risciacquato al brodo e cuoci coperto finché è tenero, regolando il liquido se necessario."
+        },
+        {
+          "en": "Toast almonds and pine nuts, fluff the freekeh and serve with chicken and nuts on top.",
+          "it": "Tosta mandorle e pinoli, sgrana il freekeh e servilo con pollo e frutta secca sopra."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-yakhnet-batata",
+      "title_en": "Yakhnet Batata",
+      "title_it": "Yakhnet batata, stufato libanese di patate",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 135,
+      "servings": 6,
+      "description_en": "Lebanese tomato-based beef and potato stew, served with rice.",
+      "description_it": "Stufato libanese di patate e manzo al pomodoro, servito con riso.",
+      "ingredients": [
+        {
+          "id": "beef_chuck",
+          "qty": 700,
+          "unit": "g"
+        },
+        {
+          "id": "potato",
+          "qty": 800,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 750,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Brown cubed beef with chopped onions and seven-spice; add water and simmer for about an hour until nearly tender.",
+          "it": "Rosola il manzo a cubetti con cipolle tritate e sette spezie; aggiungi acqua e fai sobbollire per circa un'ora finché è quasi tenero."
+        },
+        {
+          "en": "Add tomato passata, paste and cubed potatoes, then simmer gently until the potatoes and beef are soft.",
+          "it": "Aggiungi passata, concentrato e patate a cubetti, quindi cuoci dolcemente finché patate e manzo sono morbidi."
+        },
+        {
+          "en": "Adjust seasoning and serve hot with Lebanese vermicelli rice.",
+          "it": "Regola di sale e servi caldo con riso libanese ai vermicelli."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-yakhnet-sbanekh",
+      "title_en": "Yakhnet Sbanekh",
+      "title_it": "Yakhnet sbanekh, spinaci con carne",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 85,
+      "servings": 4,
+      "description_en": "A lemony Lebanese spinach stew with minced beef and toasted pine nuts.",
+      "description_it": "Stufato libanese di spinaci al limone con carne macinata e pinoli tostati.",
+      "ingredients": [
+        {
+          "id": "spinach",
+          "qty": 850,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 4,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 65,
+          "unit": "g"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 75,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 350,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cook minced beef with diced onion until browned and fully cooked; set aside.",
+          "it": "Cuoci il manzo macinato con cipolla a cubetti fino a rosolatura e completa cottura; metti da parte."
+        },
+        {
+          "en": "Sauté garlic and coriander leaves briefly, then wilt spinach in batches; add beef and water and simmer gently for 20 minutes.",
+          "it": "Soffriggi brevemente aglio e coriandolo, poi fai appassire gli spinaci in più riprese; aggiungi carne e acqua e cuoci dolcemente per 20 minuti."
+        },
+        {
+          "en": "Finish with lemon juice and toasted pine nuts; serve with rice.",
+          "it": "Completa con succo di limone e pinoli tostati; servi con riso."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-bamieh-bi-lahme",
+      "title_en": "Bamieh bi Lahme",
+      "title_it": "Bamieh bi lahme, gombo con carne",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 135,
+      "servings": 6,
+      "description_en": "Lebanese okra and beef braised in a bright tomato-garlic sauce.",
+      "description_it": "Gombo e manzo libanesi brasati in salsa di pomodoro e aglio.",
+      "ingredients": [
+        {
+          "id": "okra",
+          "qty": 700,
+          "unit": "g"
+        },
+        {
+          "id": "beef_chuck",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 6,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 650,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Brown beef with onions, add water and simmer until the meat is close to tender.",
+          "it": "Rosola il manzo con le cipolle, aggiungi acqua e fai sobbollire finché la carne è quasi tenera."
+        },
+        {
+          "en": "Sauté okra separately to keep its shape; add it to the beef with tomato passata and simmer until soft.",
+          "it": "Salta in padella il gombo a parte per mantenerne la forma; uniscilo alla carne con la passata e cuoci finché è morbido."
+        },
+        {
+          "en": "Fry garlic and fresh coriander briefly in a little oil, stir into the stew with lemon juice and serve over rice.",
+          "it": "Soffriggi brevemente aglio e coriandolo fresco in poco olio, incorporali allo stufato con succo di limone e servi sul riso."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-malfouf-mahshi",
+      "title_en": "Malfouf Mahshi",
+      "title_it": "Malfouf mahshi, involtini libanesi di cavolo",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 160,
+      "servings": 6,
+      "description_en": "Tender Lebanese cabbage rolls filled with rice and beef, cooked with garlic and lemon.",
+      "description_it": "Involtini libanesi di cavolo ripieni di riso e manzo, cotti con aglio e limone.",
+      "ingredients": [
+        {
+          "id": "white_cabbage",
+          "qty": 1200,
+          "unit": "g"
+        },
+        {
+          "id": "short_grain_rice",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 8,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 110,
+          "unit": "ml"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 900,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Separate cabbage leaves and blanch until flexible, trimming the thick ribs.",
+          "it": "Separa le foglie di cavolo e sbollentale finché sono flessibili, eliminando le coste più dure."
+        },
+        {
+          "en": "Mix rinsed raw rice with ground beef, seven-spice and a little oil; place a small amount in each leaf and roll firmly without overstuffing.",
+          "it": "Mescola riso crudo risciacquato con manzo macinato, sette spezie e poco olio; distribuisci una piccola quantità su ogni foglia e arrotola senza riempire troppo."
+        },
+        {
+          "en": "Pack rolls tightly in a pot with garlic, water and lemon; weigh down with a plate, simmer covered for 60–75 minutes until rice and meat are fully cooked.",
+          "it": "Disponi gli involtini ben stretti in pentola con aglio, acqua e limone; appoggia un piatto sopra e cuoci coperto per 60–75 minuti finché riso e carne sono completamente cotti."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-kousa-mahshi-rice-meat",
+      "title_en": "Kousa Mahshi",
+      "title_it": "Kousa mahshi, zucchine libanesi ripiene",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 130,
+      "servings": 6,
+      "description_en": "Small Lebanese courgettes stuffed with spiced rice and minced meat in tomato broth.",
+      "description_it": "Zucchine piccole libanesi ripiene di riso e carne speziata in brodo di pomodoro.",
+      "ingredients": [
+        {
+          "id": "mini_zucchini",
+          "qty": 1200,
+          "unit": "g"
+        },
+        {
+          "id": "short_grain_rice",
+          "qty": 260,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 5,
+          "unit": "pcs"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 650,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Core zucchini carefully, leaving the bottoms intact; rinse rice and mix with beef, seven-spice and oil.",
+          "it": "Scava con cura le zucchine lasciando il fondo integro; risciacqua il riso e mescolalo con manzo, sette spezie e olio."
+        },
+        {
+          "en": "Fill each zucchini no more than two-thirds full to allow the rice to expand; arrange in a deep pot.",
+          "it": "Riempi ogni zucchina per non più di due terzi per lasciare spazio al riso; disponile in una pentola profonda."
+        },
+        {
+          "en": "Cover with tomato passata, water and garlic; simmer gently for 60–75 minutes until rice, meat and zucchini are completely cooked.",
+          "it": "Copri con passata, acqua e aglio; cuoci dolcemente per 60–75 minuti finché riso, carne e zucchine sono completamente cotti."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-warak-enab-bi-zeit",
+      "title_en": "Warak Enab bi Zeit",
+      "title_it": "Warak enab bi zeit, foglie di vite vegetariane",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "vegan",
+      "prep_minutes": 160,
+      "servings": 6,
+      "description_en": "Lebanese vine-leaf rolls filled with rice, parsley, tomatoes, mint and lemon.",
+      "description_it": "Involtini libanesi di foglie di vite ripieni di riso, prezzemolo, pomodoro, menta e limone.",
+      "ingredients": [
+        {
+          "id": "brined_grape_leaves",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "short_grain_rice",
+          "qty": 320,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 130,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 350,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "mint",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 150,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 110,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 800,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse brined vine leaves well; mix soaked, drained raw rice with finely chopped herbs, tomatoes, onion, lemon juice and part of the oil.",
+          "it": "Risciacqua bene le foglie di vite in salamoia; mescola riso crudo ammollato e scolato con erbe, pomodori, cipolla, limone e parte dell'olio."
+        },
+        {
+          "en": "Add a small spoonful of filling to each leaf and roll compactly, leaving room for rice expansion.",
+          "it": "Metti un cucchiaino di ripieno su ogni foglia e arrotola strettamente, lasciando spazio al riso per gonfiarsi."
+        },
+        {
+          "en": "Layer tightly in a pot, pour over remaining oil, water and lemon juice, weigh down and simmer covered about 60–75 minutes until rice is cooked; cool before serving.",
+          "it": "Disponi gli involtini ben stretti in pentola, aggiungi olio, acqua e limone rimanenti, tienili fermi con un piatto e cuoci coperto circa 60–75 minuti finché il riso è cotto; lascia raffreddare prima di servire."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-warak-enab-bi-lahme",
+      "title_en": "Warak Enab bi Lahme",
+      "title_it": "Warak enab bi lahme, foglie di vite con carne",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 175,
+      "servings": 6,
+      "description_en": "Lebanese grape leaves stuffed with rice and ground lamb, simmered with lemon.",
+      "description_it": "Foglie di vite libanesi ripiene di riso e agnello macinato, cotte con limone.",
+      "ingredients": [
+        {
+          "id": "brined_grape_leaves",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "short_grain_rice",
+          "qty": 280,
+          "unit": "g"
+        },
+        {
+          "id": "ground_lamb",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "lamb_ribs",
+          "qty": 550,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 140,
+          "unit": "ml"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "water",
+          "qty": 900,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 45,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse vine leaves; mix soaked, drained rice with ground lamb, spices and oil.",
+          "it": "Risciacqua le foglie di vite; mescola riso ammollato e scolato con agnello macinato, spezie e olio."
+        },
+        {
+          "en": "Line a heavy pot with lamb ribs, then roll rice-meat portions tightly in leaves and stack them in layers.",
+          "it": "Rivesti il fondo di una pentola robusta con costine d'agnello, poi arrotola piccole porzioni di ripieno nelle foglie e disponile a strati."
+        },
+        {
+          "en": "Add water and lemon, weigh the rolls down with a plate and simmer gently for 75–90 minutes until rice and both meats are fully cooked.",
+          "it": "Aggiungi acqua e limone, tieni fermi gli involtini con un piatto e cuoci dolcemente per 75–90 minuti finché riso ed entrambe le carni sono completamente cotti."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-mloukhieh-chicken",
+      "title_en": "Lebanese Mloukhieh with Chicken",
+      "title_it": "Mloukhieh libanese con pollo",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 130,
+      "servings": 6,
+      "description_en": "Lebanese jute-leaf stew with chicken, coriander and garlic, served with rice.",
+      "description_it": "Stufato libanese di foglie di molokhia con pollo, coriandolo e aglio, servito con riso.",
+      "ingredients": [
+        {
+          "id": "molokhia_leaves",
+          "qty": 700,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_thigh",
+          "qty": 900,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 8,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_stock",
+          "qty": 1200,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 75,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 50,
+          "unit": "ml"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Simmer chicken with onions and stock until fully cooked; remove the chicken and strain the broth.",
+          "it": "Fai sobbollire il pollo con cipolle e brodo fino a completa cottura; togli il pollo e filtra il brodo."
+        },
+        {
+          "en": "Add washed molokhia leaves to the hot broth and cook gently until tender, without boiling vigorously.",
+          "it": "Aggiungi al brodo caldo le foglie di molokhia lavate e cuoci dolcemente finché sono tenere, senza bollire con forza."
+        },
+        {
+          "en": "Sauté garlic and cilantro, stir into the greens and finish with lemon; serve with shredded chicken and rice.",
+          "it": "Soffriggi aglio e coriandolo, incorporali alle verdure e completa con limone; servi con pollo sfilacciato e riso."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-maghmour-eggplant",
+      "title_en": "Maghmour (Lebanese Moussaka)",
+      "title_it": "Maghmour, moussaka libanese di melanzane",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "vegan",
+      "prep_minutes": 90,
+      "servings": 6,
+      "description_en": "Lebanese olive-oil eggplant and chickpea stew in tomato sauce, excellent warm or chilled.",
+      "description_it": "Stufato libanese di melanzane e ceci al pomodoro e olio d'oliva, ottimo caldo o freddo.",
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "qty": 900,
+          "unit": "g"
+        },
+        {
+          "id": "canned_chickpeas",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "tomato_passata",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "garlic",
+          "qty": 6,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 100,
+          "unit": "ml"
+        },
+        {
+          "id": "tomato_paste",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 250,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Cube eggplants, toss with some oil and roast at 210°C until soft and golden.",
+          "it": "Taglia le melanzane a cubetti, condiscile con parte dell'olio e arrostiscile a 210 °C finché sono morbide e dorate."
+        },
+        {
+          "en": "Slowly cook onions and garlic, add tomato paste and passata, then simmer to develop flavour.",
+          "it": "Cuoci lentamente cipolle e aglio, aggiungi concentrato e passata, quindi fai sobbollire per insaporire."
+        },
+        {
+          "en": "Fold in drained chickpeas and roasted eggplant, add water if needed and simmer gently for 20 minutes; serve warm or chilled.",
+          "it": "Incorpora ceci scolati e melanzane arrostite, aggiungi acqua se serve e cuoci dolcemente per 20 minuti; servi caldo o freddo."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-riz-a-djej",
+      "title_en": "Riz a Djej",
+      "title_it": "Riz a djej, riso libanese con pollo",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 100,
+      "servings": 6,
+      "description_en": "Lebanese spiced rice with chicken, minced meat and toasted nuts.",
+      "description_it": "Riso libanese speziato con pollo, carne macinata e frutta secca tostata.",
+      "ingredients": [
+        {
+          "id": "long_grain_rice",
+          "qty": 480,
+          "unit": "g"
+        },
+        {
+          "id": "chicken_thigh",
+          "qty": 950,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 280,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "chicken_stock",
+          "qty": 900,
+          "unit": "ml"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "cinnamon",
+          "qty": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "id": "pine_nuts",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "almonds",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "id": "ghee",
+          "qty": 60,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Simmer chicken with onion and stock until completely cooked; reserve broth and shred chicken.",
+          "it": "Cuoci il pollo con cipolla e brodo fino a completa cottura; conserva il brodo e sfilaccia il pollo."
+        },
+        {
+          "en": "Brown minced beef in ghee with seven-spice and cinnamon; add rinsed rice and reserved stock, then cook covered until the rice is tender.",
+          "it": "Rosola la carne macinata nel ghee con sette spezie e cannella; aggiungi riso risciacquato e brodo conservato, poi cuoci coperto finché il riso è tenero."
+        },
+        {
+          "en": "Top the rice with chicken and toasted almonds and pine nuts; serve hot.",
+          "it": "Distribuisci sul riso il pollo, le mandorle e i pinoli tostati; servi caldo."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-fatayer-jibneh",
+      "title_en": "Fatayer Jibneh",
+      "title_it": "Fatayer jibneh, fagottini libanesi al formaggio",
+      "cuisine": "Lebanese",
+      "category": "Bread",
+      "diet": "unknown",
+      "prep_minutes": 150,
+      "servings": 6,
+      "description_en": "Tender Lebanese cheese pastries with parsley and nigella seeds.",
+      "description_it": "Fagottini libanesi morbidi al formaggio con prezzemolo e semi di nigella.",
+      "ingredients": [
+        {
+          "id": "bread_flour",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "instant_yeast",
+          "qty": 7,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 280,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "akkawi_cheese",
+          "qty": 380,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 70,
+          "unit": "g"
+        },
+        {
+          "id": "nigella_seeds",
+          "qty": 2,
+          "unit": "tsp"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Knead flour, yeast, water, oil and salt; let the dough rise covered until doubled, about one hour.",
+          "it": "Impasta farina, lievito, acqua, olio e sale; fai lievitare coperto fino al raddoppio, circa un'ora."
+        },
+        {
+          "en": "Desalt akkawi cheese if necessary and crumble with chopped parsley and nigella seeds.",
+          "it": "Dissala il formaggio akkawi se necessario e sbriciolalo con prezzemolo tritato e semi di nigella."
+        },
+        {
+          "en": "Fill small dough rounds, close securely and bake at 200°C for 15–20 minutes until golden.",
+          "it": "Farcisci piccoli dischi di impasto, richiudili bene e cuoci a 200 °C per 15–20 minuti fino a doratura."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-rakakat-jibneh",
+      "title_en": "Rakakat Jibneh",
+      "title_it": "Rakakat jibneh, sigari croccanti al formaggio",
+      "cuisine": "Lebanese",
+      "category": "Mezze",
+      "diet": "unknown",
+      "prep_minutes": 45,
+      "servings": 6,
+      "description_en": "Crisp Lebanese pastry rolls filled with melted white cheese and parsley.",
+      "description_it": "Involtini croccanti libanesi di pasta sottile ripieni di formaggio bianco e prezzemolo.",
+      "ingredients": [
+        {
+          "id": "filo_pastry",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "akkawi_cheese",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "id": "mozzarella",
+          "qty": 150,
+          "unit": "g"
+        },
+        {
+          "id": "parsley",
+          "qty": 45,
+          "unit": "g"
+        },
+        {
+          "id": "vegetable_oil",
+          "qty": 180,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Desalt akkawi if needed, then mix with shredded mozzarella and chopped parsley.",
+          "it": "Dissala l'akkawi se serve, poi mescolalo con mozzarella grattugiata e prezzemolo tritato."
+        },
+        {
+          "en": "Cut filo into strips, put a little filling at one end and roll into tight cigars, sealing the edges with water.",
+          "it": "Taglia la pasta filo a strisce, metti poco ripieno su un'estremità e arrotola formando sigari stretti, sigillando i bordi con acqua."
+        },
+        {
+          "en": "Shallow-fry in moderate oil until golden, or brush with oil and bake at 200°C until crisp; serve warm.",
+          "it": "Friggi in olio moderatamente caldo fino a doratura, oppure spennella con olio e inforna a 200 °C fino a croccantezza; servi tiepido."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-kibbeh-arnabieh",
+      "title_en": "Kibbeh Arnabieh",
+      "title_it": "Kibbeh arnabieh, kibbeh in salsa di agrumi e tahina",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 150,
+      "servings": 6,
+      "description_en": "A traditional Lebanese kibbeh dish simmered in a citrus and tahini sauce.",
+      "description_it": "Piatto tradizionale libanese di kibbeh in salsa di agrumi e tahina.",
+      "ingredients": [
+        {
+          "id": "fine_bulgur",
+          "qty": 280,
+          "unit": "g"
+        },
+        {
+          "id": "ground_beef",
+          "qty": 600,
+          "unit": "g"
+        },
+        {
+          "id": "onion",
+          "qty": 2,
+          "unit": "pcs"
+        },
+        {
+          "id": "seven_spice",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "tahini",
+          "qty": 250,
+          "unit": "g"
+        },
+        {
+          "id": "bitter_orange_juice",
+          "qty": 280,
+          "unit": "ml"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 140,
+          "unit": "ml"
+        },
+        {
+          "id": "water",
+          "qty": 650,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 40,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Soak and drain fine bulgur, then knead thoroughly with half the beef, one onion and spices; form small oval kibbeh.",
+          "it": "Ammolla e scola il bulgur fine, poi impastalo bene con metà del manzo, una cipolla e le spezie; forma piccole kibbeh ovali."
+        },
+        {
+          "en": "Brown the remaining beef with the other onion and use as a filling if desired; poach the kibbeh gently until the meat is completely cooked.",
+          "it": "Rosola il manzo restante con l'altra cipolla e usalo come ripieno se desiderato; cuoci dolcemente le kibbeh nel liquido finché la carne è completamente cotta."
+        },
+        {
+          "en": "Whisk tahini with orange and lemon juices and water; warm over low heat while stirring, add cooked kibbeh and simmer gently without vigorous boiling.",
+          "it": "Sbatti la tahina con succhi d'arancia e limone e acqua; scalda a fuoco basso mescolando, aggiungi le kibbeh cotte e lascia sobbollire senza bollire forte."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-samak-harra",
+      "title_en": "Samak Harra",
+      "title_it": "Samak harra, pesce libanese piccante",
+      "cuisine": "Lebanese",
+      "category": "Main",
+      "diet": "none",
+      "prep_minutes": 70,
+      "servings": 4,
+      "description_en": "Lebanese baked fish with a punchy garlic, coriander, walnut and chili dressing.",
+      "description_it": "Pesce libanese al forno con salsa intensa di aglio, coriandolo, noci e peperoncino.",
+      "ingredients": [
+        {
+          "id": "whole_sea_bass",
+          "qty": 1200,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 7,
+          "unit": "pcs"
+        },
+        {
+          "id": "cilantro",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "walnuts",
+          "qty": 90,
+          "unit": "g"
+        },
+        {
+          "id": "tahini",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 100,
+          "unit": "ml"
+        },
+        {
+          "id": "chili",
+          "qty": 1,
+          "unit": "pcs"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 65,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Clean and dry the whole fish, season and bake at 200°C until the thickest part is fully cooked.",
+          "it": "Pulisci e asciuga il pesce intero, condiscilo e cuoci a 200 °C finché la parte più spessa è completamente cotta."
+        },
+        {
+          "en": "Blend garlic, coriander, walnuts, chili, tahini, lemon juice and oil to make a spoonable sauce, adding a splash of water if necessary.",
+          "it": "Frulla aglio, coriandolo, noci, peperoncino, tahina, limone e olio per ottenere una salsa da versare, aggiungendo poca acqua se necessario."
+        },
+        {
+          "en": "Spoon the sauce over the hot fish and return to the oven briefly, then serve with rice or bread.",
+          "it": "Distribuisci la salsa sul pesce caldo e rimetti brevemente in forno, poi servi con riso oppure pane."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-foul-moudammas",
+      "title_en": "Lebanese Foul Moudammas",
+      "title_it": "Foul moudammas alla libanese",
+      "cuisine": "Lebanese",
+      "category": "Breakfast",
+      "diet": "vegan",
+      "prep_minutes": 30,
+      "servings": 4,
+      "description_en": "Warm Lebanese fava beans dressed with garlic, lemon and olive oil.",
+      "description_it": "Fave calde alla libanese condite con aglio, limone e olio d'oliva.",
+      "ingredients": [
+        {
+          "id": "cooked_fava_beans",
+          "qty": 500,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 70,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 70,
+          "unit": "ml"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "parsley",
+          "qty": 55,
+          "unit": "g"
+        },
+        {
+          "id": "tomato",
+          "qty": 220,
+          "unit": "g"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Use fully cooked fava beans; warm gently with a little water and mash some to make a creamy base.",
+          "it": "Usa fave già cotte completamente; scaldale dolcemente con poca acqua e schiacciane alcune per creare una base cremosa."
+        },
+        {
+          "en": "Mix crushed garlic, lemon juice, cumin and salt into the beans.",
+          "it": "Incorpora alle fave aglio schiacciato, succo di limone, cumino e sale."
+        },
+        {
+          "en": "Finish with chopped parsley, tomato and generous olive oil; serve warm with bread.",
+          "it": "Completa con prezzemolo e pomodoro tritati e abbondante olio d'oliva; servi caldo con pane."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-balila-chickpeas",
+      "title_en": "Balila Lebanese Chickpeas",
+      "title_it": "Balila, ceci caldi alla libanese",
+      "cuisine": "Lebanese",
+      "category": "Breakfast",
+      "diet": "vegan",
+      "prep_minutes": 25,
+      "servings": 4,
+      "description_en": "Comforting Lebanese warm chickpeas with cumin, garlic and lemon.",
+      "description_it": "Ceci libanesi caldi e confortanti con cumino, aglio e limone.",
+      "ingredients": [
+        {
+          "id": "canned_chickpeas",
+          "qty": 650,
+          "unit": "g"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "unit": "pcs"
+        },
+        {
+          "id": "cumin",
+          "qty": 1,
+          "unit": "tsp"
+        },
+        {
+          "id": "lemon_juice",
+          "qty": 55,
+          "unit": "ml"
+        },
+        {
+          "id": "olive_oil",
+          "qty": 60,
+          "unit": "ml"
+        },
+        {
+          "id": "parsley",
+          "qty": 30,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 150,
+          "unit": "ml"
+        },
+        {
+          "id": "salt",
+          "qty": 1,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rinse chickpeas and heat them gently in water with cumin until warmed throughout.",
+          "it": "Risciacqua i ceci e scaldali dolcemente in acqua con cumino finché sono ben caldi."
+        },
+        {
+          "en": "Crush garlic with salt and stir into the chickpeas with lemon juice.",
+          "it": "Schiaccia l'aglio con il sale e incorporalo ai ceci con succo di limone."
+        },
+        {
+          "en": "Ladle into bowls with a little cooking liquid; garnish with olive oil and parsley.",
+          "it": "Distribuisci nelle ciotole con poco liquido di cottura; completa con olio d'oliva e prezzemolo."
+        }
+      ]
+    },
+    {
+      "slug": "lebanese-maamoul-dates",
+      "title_en": "Maamoul with Dates",
+      "title_it": "Maamoul libanesi ai datteri",
+      "cuisine": "Lebanese",
+      "category": "Dessert",
+      "diet": "vegetarian",
+      "prep_minutes": 160,
+      "servings": 12,
+      "description_en": "Tender semolina Lebanese cookies with sweet date filling and a hint of rosewater.",
+      "description_it": "Biscotti libanesi friabili di semola con ripieno dolce di datteri e un tocco di acqua di rose.",
+      "ingredients": [
+        {
+          "id": "semolina_fine",
+          "qty": 450,
+          "unit": "g"
+        },
+        {
+          "id": "flour",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "id": "butter",
+          "qty": 230,
+          "unit": "g"
+        },
+        {
+          "id": "date_paste",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "id": "rose_water",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "orange_blossom_water",
+          "qty": 35,
+          "unit": "ml"
+        },
+        {
+          "id": "sugar",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "id": "instant_yeast",
+          "qty": 4,
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "qty": 85,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "en": "Rub softened butter into semolina and flour; add sugar, yeast, floral waters and enough water to make a soft dough. Rest covered.",
+          "it": "Lavora il burro morbido con semola e farina; aggiungi zucchero, lievito, acque aromatiche e acqua sufficiente per un impasto morbido. Fai riposare coperto."
+        },
+        {
+          "en": "Divide dough and date paste into small balls; flatten each dough ball, insert date filling and seal carefully.",
+          "it": "Dividi impasto e pasta di datteri in palline; appiattisci ogni pallina di impasto, inserisci il ripieno e richiudi con cura."
+        },
+        {
+          "en": "Shape or stamp the cookies and bake at 180°C for 15–20 minutes until just lightly golden; cool before serving.",
+          "it": "Modella o stampa i biscotti e cuoci a 180 °C per 15–20 minuti finché sono appena dorati; lascia raffreddare prima di servire."
+        }
+      ]
+    }
+  ]
+}

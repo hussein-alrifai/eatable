@@ -1,0 +1,1044 @@
+{
+  "version": 1,
+  "count": 173,
+  "ingredients": [
+    {
+      "id": "barberries",
+      "name_en": "Dried barberries (zereshk)",
+      "name_it": "Crespino essiccato (zereshk)",
+      "group": "Persian pantry"
+    },
+    {
+      "id": "sour_cherries_dried",
+      "name_en": "Dried sour cherries",
+      "name_it": "Amarene essiccate",
+      "group": "Persian pantry"
+    },
+    {
+      "id": "sour_cherries_fresh",
+      "name_en": "Fresh sour cherries",
+      "name_it": "Amarene fresche",
+      "group": "Persian produce"
+    },
+    {
+      "id": "kashk",
+      "name_en": "Kashk (fermented dried yogurt whey)",
+      "name_it": "Kashk (siero di yogurt fermentato)",
+      "group": "Persian dairy"
+    },
+    {
+      "id": "reshteh_noodles",
+      "name_en": "Reshteh soup noodles",
+      "name_it": "Tagliatelle reshteh per zuppa",
+      "group": "Persian pantry"
+    },
+    {
+      "id": "persian_rice",
+      "name_en": "Persian long-grain rice",
+      "name_it": "Riso persiano a chicco lungo",
+      "group": "Persian pantry"
+    },
+    {
+      "id": "verjuice",
+      "name_en": "Verjuice (unripe grape juice)",
+      "name_it": "Agresto (succo d'uva acerba)",
+      "group": "Persian condiments"
+    },
+    {
+      "id": "golpar",
+      "name_en": "Persian hogweed spice (golpar)",
+      "name_it": "Spezie golpar (panace persiana)",
+      "group": "Persian spices"
+    },
+    {
+      "id": "advieh",
+      "name_en": "Persian advieh spice blend",
+      "name_it": "Miscela di spezie persiana advieh",
+      "group": "Persian spices"
+    },
+    {
+      "id": "advieh_polo",
+      "name_en": "Persian rice spice blend (advieh polo)",
+      "name_it": "Miscela persiana per riso (advieh polo)",
+      "group": "Persian spices"
+    },
+    {
+      "id": "dried_dill",
+      "name_en": "Dried dill",
+      "name_it": "Aneto essiccato",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "dried_parsley",
+      "name_en": "Dried parsley",
+      "name_it": "Prezzemolo essiccato",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "dried_tarragon",
+      "name_en": "Dried tarragon",
+      "name_it": "Dragoncello essiccato",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "dried_cilantro",
+      "name_en": "Dried coriander leaves",
+      "name_it": "Coriandolo fresco essiccato",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "dried_chives",
+      "name_en": "Dried chives",
+      "name_it": "Erba cipollina essiccata",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "dried_celery_leaves",
+      "name_en": "Dried celery leaves",
+      "name_it": "Foglie di sedano essiccate",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "fresh_tarragon",
+      "name_en": "Fresh tarragon",
+      "name_it": "Dragoncello fresco",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "fresh_savory",
+      "name_en": "Fresh summer savory",
+      "name_it": "Santoreggia fresca",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "fresh_cress",
+      "name_en": "Fresh garden cress",
+      "name_it": "Crescione da giardino fresco",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "fresh_fenugreek_leaves",
+      "name_en": "Fresh fenugreek leaves",
+      "name_it": "Foglie fresche di fieno greco",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "persian_basil",
+      "name_en": "Persian basil (reyhan)",
+      "name_it": "Basilico persiano (reyhan)",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "persian_mint",
+      "name_en": "Persian mint (pooneh)",
+      "name_it": "Menta persiana (pooneh)",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "sabzi_ghormeh_mix",
+      "name_en": "Ghormeh sabzi herb mix",
+      "name_it": "Miscela di erbe per ghormeh sabzi",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "sabzi_polo_mix",
+      "name_en": "Sabzi polo herb mix",
+      "name_it": "Miscela di erbe per sabzi polo",
+      "group": "Persian herbs"
+    },
+    {
+      "id": "split_yellow_lentils",
+      "name_en": "Yellow split lentils",
+      "name_it": "Lenticchie gialle spezzate",
+      "group": "Persian pantry"
+    },
+    {
+      "id": "roasted_chickpea_flour",
+      "name_en": "Roasted chickpea flour",
+      "name_it": "Farina di ceci tostata",
+      "group": "Persian pantry"
+    },
+    {
+      "id": "lamb_neck",
+      "name_en": "Lamb neck",
+      "name_it": "Collo d'agnello",
+      "group": "Persian meat"
+    },
+    {
+      "id": "lamb_leg",
+      "name_en": "Lamb leg",
+      "name_it": "Coscia d'agnello",
+      "group": "Persian meat"
+    },
+    {
+      "id": "beef_chuck",
+      "name_en": "Beef chuck",
+      "name_it": "Reale di manzo",
+      "group": "Persian meat"
+    },
+    {
+      "id": "beef_short_ribs",
+      "name_en": "Beef short ribs",
+      "name_it": "Costine di manzo",
+      "group": "Persian meat"
+    },
+    {
+      "id": "lamb_fat",
+      "name_en": "Lamb tail fat or suet",
+      "name_it": "Grasso di coda d'agnello o sugna",
+      "group": "Persian meat"
+    },
+    {
+      "id": "fresh_fava_pods",
+      "name_en": "Fresh fava bean pods",
+      "name_it": "Baccelli di fave fresche",
+      "group": "Persian produce"
+    },
+    {
+      "id": "baby_fava_beans",
+      "name_en": "Small tender fava beans",
+      "name_it": "Favette tenere",
+      "group": "Persian produce"
+    },
+    {
+      "id": "raw_green_almonds",
+      "name_en": "Fresh green almonds",
+      "name_it": "Mandorle verdi fresche",
+      "group": "Persian produce"
+    },
+    {
+      "id": "purslane",
+      "name_en": "Purslane leaves",
+      "name_it": "Foglie di portulaca",
+      "group": "Persian greens"
+    },
+    {
+      "id": "angelica_powder",
+      "name_en": "Ground angelica root",
+      "name_it": "Radice di angelica macinata",
+      "group": "Persian spices"
+    },
+    {
+      "id": "black_tea",
+      "name_en": "Black tea leaves",
+      "name_it": "Foglie di tè nero",
+      "group": "Persian drinks"
+    },
+    {
+      "id": "rose_tea",
+      "name_en": "Rosebud herbal tea",
+      "name_it": "Tisana di boccioli di rosa",
+      "group": "Persian drinks"
+    },
+    {
+      "id": "saffron_rock_candy",
+      "name_en": "Saffron rock candy (nabat)",
+      "name_it": "Cristalli di zucchero allo zafferano (nabat)",
+      "group": "Persian sweets"
+    },
+    {
+      "id": "rose_jam",
+      "name_en": "Rose petal jam",
+      "name_it": "Confettura di petali di rosa",
+      "group": "Persian sweets"
+    },
+    {
+      "id": "carrot_jam",
+      "name_en": "Carrot jam",
+      "name_it": "Confettura di carote",
+      "group": "Persian sweets"
+    },
+    {
+      "id": "saffron_syrup",
+      "name_en": "Saffron syrup",
+      "name_it": "Sciroppo allo zafferano",
+      "group": "Persian sweets"
+    },
+    {
+      "id": "slivered_pistachios",
+      "name_en": "Slivered pistachios",
+      "name_it": "Pistacchi a filetti",
+      "group": "Persian sweets"
+    },
+    {
+      "id": "slivered_almonds",
+      "name_en": "Slivered almonds",
+      "name_it": "Mandorle a filetti",
+      "group": "Persian sweets"
+    },
+    {
+      "id": "sour_plum",
+      "name_en": "Sour plums (alucheh)",
+      "name_it": "Prugne acerbe aspre (alucheh)",
+      "group": "Persian produce"
+    },
+    {
+      "id": "dried_sour_plums",
+      "name_en": "Dried sour plums",
+      "name_it": "Prugne aspre essiccate",
+      "group": "Persian pantry"
+    },
+    {
+      "id": "persian_pickled_vegetables",
+      "name_en": "Persian mixed pickles (torshi)",
+      "name_it": "Sottaceti misti persiani (torshi)",
+      "group": "Persian condiments"
+    },
+    {
+      "id": "lavash_bread",
+      "name_en": "Lavash flatbread",
+      "name_it": "Pane lavash",
+      "group": "Persian breads"
+    },
+    {
+      "id": "barbari_bread",
+      "name_en": "Barbari flatbread",
+      "name_it": "Pane barbari",
+      "group": "Persian breads"
+    },
+    {
+      "id": "sangak_bread",
+      "name_en": "Sangak whole-wheat flatbread",
+      "name_it": "Pane integrale sangak",
+      "group": "Persian breads"
+    },
+    {
+      "id": "sheermal_bread",
+      "name_en": "Persian saffron milk bread (sheermal)",
+      "name_it": "Pane persiano al latte e zafferano (sheermal)",
+      "group": "Persian breads"
+    },
+    {
+      "id": "fresh_zaatar",
+      "name_en": "Fresh za'atar (wild thyme)",
+      "name_it": "Za'atar fresco (timo selvatico)",
+      "group": "Lebanese herbs"
+    },
+    {
+      "id": "fresh_oregano",
+      "name_en": "Fresh oregano",
+      "name_it": "Origano fresco",
+      "group": "Lebanese herbs"
+    },
+    {
+      "id": "fresh_marjoram",
+      "name_en": "Fresh marjoram",
+      "name_it": "Maggiorana fresca",
+      "group": "Lebanese herbs"
+    },
+    {
+      "id": "chard_leaves",
+      "name_en": "Swiss chard leaves",
+      "name_it": "Foglie di bietola",
+      "group": "Lebanese greens"
+    },
+    {
+      "id": "dandelion_greens",
+      "name_en": "Dandelion greens",
+      "name_it": "Foglie di tarassaco",
+      "group": "Lebanese greens"
+    },
+    {
+      "id": "mallow_leaves",
+      "name_en": "Mallow leaves (khubeizeh)",
+      "name_it": "Foglie di malva (khubeizeh)",
+      "group": "Lebanese greens"
+    },
+    {
+      "id": "wild_chicory",
+      "name_en": "Wild chicory greens",
+      "name_it": "Cicoria selvatica",
+      "group": "Lebanese greens"
+    },
+    {
+      "id": "green_chickpeas",
+      "name_en": "Fresh green chickpeas",
+      "name_it": "Ceci verdi freschi",
+      "group": "Lebanese produce"
+    },
+    {
+      "id": "mini_zucchini",
+      "name_en": "Small stuffing zucchini (kousa)",
+      "name_it": "Zucchine piccole da farcire (kousa)",
+      "group": "Lebanese produce"
+    },
+    {
+      "id": "baby_eggplants",
+      "name_en": "Small stuffing eggplants",
+      "name_it": "Melanzane piccole da farcire",
+      "group": "Lebanese produce"
+    },
+    {
+      "id": "fresh_grape_leaves",
+      "name_en": "Fresh vine leaves",
+      "name_it": "Foglie di vite fresche",
+      "group": "Lebanese produce"
+    },
+    {
+      "id": "brined_grape_leaves",
+      "name_en": "Vine leaves in brine",
+      "name_it": "Foglie di vite in salamoia",
+      "group": "Lebanese pantry"
+    },
+    {
+      "id": "tamarind_syrup",
+      "name_en": "Tamarind syrup",
+      "name_it": "Sciroppo di tamarindo",
+      "group": "Lebanese condiments"
+    },
+    {
+      "id": "lebanese_cucumber",
+      "name_en": "Small Lebanese cucumbers",
+      "name_it": "Cetriolini libanesi",
+      "group": "Lebanese produce"
+    },
+    {
+      "id": "green_almond_pickles",
+      "name_en": "Pickled green almonds",
+      "name_it": "Mandorle verdi sottaceto",
+      "group": "Lebanese condiments"
+    },
+    {
+      "id": "lebanese_seven_spice",
+      "name_en": "Lebanese seven-spice blend",
+      "name_it": "Miscela libanese di sette spezie",
+      "group": "Lebanese spices"
+    },
+    {
+      "id": "shawarma_spice",
+      "name_en": "Shawarma spice blend",
+      "name_it": "Miscela di spezie per shawarma",
+      "group": "Lebanese spices"
+    },
+    {
+      "id": "kafta_spice",
+      "name_en": "Kafta seasoning",
+      "name_it": "Spezie per kafta",
+      "group": "Lebanese spices"
+    },
+    {
+      "id": "raw_kishk_powder",
+      "name_en": "Dried kishk powder",
+      "name_it": "Kishk in polvere",
+      "group": "Lebanese pantry"
+    },
+    {
+      "id": "ankabot_rice",
+      "name_en": "Short grain Egyptian rice for stuffing",
+      "name_it": "Riso egiziano a chicco corto per ripieni",
+      "group": "Lebanese pantry"
+    },
+    {
+      "id": "lebanese_kaak",
+      "name_en": "Lebanese sesame ka'ak bread",
+      "name_it": "Pane ka'ak libanese al sesamo",
+      "group": "Lebanese breads"
+    },
+    {
+      "id": "shrak_bread",
+      "name_en": "Thin shrak flatbread",
+      "name_it": "Pane sottile shrak",
+      "group": "Lebanese breads"
+    },
+    {
+      "id": "lebanese_pine_honey",
+      "name_en": "Lebanese pine honey",
+      "name_it": "Miele di pino libanese",
+      "group": "Lebanese sweets"
+    },
+    {
+      "id": "date_paste",
+      "name_en": "Date paste",
+      "name_it": "Pasta di datteri",
+      "group": "Lebanese sweets"
+    },
+    {
+      "id": "orange_blossom_syrup",
+      "name_en": "Orange blossom syrup",
+      "name_it": "Sciroppo ai fiori d'arancio",
+      "group": "Lebanese sweets"
+    },
+    {
+      "id": "rose_syrup",
+      "name_en": "Rose syrup",
+      "name_it": "Sciroppo di rosa",
+      "group": "Lebanese sweets"
+    },
+    {
+      "id": "pistachio_cream",
+      "name_en": "Pistachio paste",
+      "name_it": "Pasta di pistacchio",
+      "group": "Lebanese sweets"
+    },
+    {
+      "id": "cabbage_leaves",
+      "name_en": "Whole cabbage leaves",
+      "name_it": "Foglie di cavolo intere",
+      "group": "Vegetables"
+    },
+    {
+      "id": "purple_carrot",
+      "name_en": "Purple carrot",
+      "name_it": "Carota viola",
+      "group": "Vegetables"
+    },
+    {
+      "id": "yellow_carrot",
+      "name_en": "Yellow carrot",
+      "name_it": "Carota gialla",
+      "group": "Vegetables"
+    },
+    {
+      "id": "watercress",
+      "name_en": "Watercress",
+      "name_it": "Crescione d'acqua",
+      "group": "Vegetables"
+    },
+    {
+      "id": "mustard_greens",
+      "name_en": "Mustard greens",
+      "name_it": "Foglie di senape",
+      "group": "Vegetables"
+    },
+    {
+      "id": "collard_greens",
+      "name_en": "Collard greens",
+      "name_it": "Cavolo a foglia",
+      "group": "Vegetables"
+    },
+    {
+      "id": "beet_greens",
+      "name_en": "Beet greens",
+      "name_it": "Foglie di barbabietola",
+      "group": "Vegetables"
+    },
+    {
+      "id": "turnip_greens",
+      "name_en": "Turnip greens",
+      "name_it": "Cime di rapa",
+      "group": "Vegetables"
+    },
+    {
+      "id": "okra_frozen",
+      "name_en": "Frozen okra",
+      "name_it": "Gombo surgelato",
+      "group": "Vegetables"
+    },
+    {
+      "id": "bamboo_shoots",
+      "name_en": "Bamboo shoots",
+      "name_it": "Germogli di bambù",
+      "group": "Vegetables"
+    },
+    {
+      "id": "lotus_root",
+      "name_en": "Lotus root",
+      "name_it": "Radice di loto",
+      "group": "Vegetables"
+    },
+    {
+      "id": "lotus_seeds",
+      "name_en": "Lotus seeds",
+      "name_it": "Semi di loto",
+      "group": "Legumes & grains"
+    },
+    {
+      "id": "lotus_flour",
+      "name_en": "Lotus root flour",
+      "name_it": "Farina di radice di loto",
+      "group": "Flours"
+    },
+    {
+      "id": "white_sesame",
+      "name_en": "White sesame seeds",
+      "name_it": "Semi di sesamo bianchi",
+      "group": "Seeds"
+    },
+    {
+      "id": "black_sesame",
+      "name_en": "Black sesame seeds",
+      "name_it": "Semi di sesamo neri",
+      "group": "Seeds"
+    },
+    {
+      "id": "hemp_seeds",
+      "name_en": "Hemp seeds",
+      "name_it": "Semi di canapa",
+      "group": "Seeds"
+    },
+    {
+      "id": "flaxseeds",
+      "name_en": "Flaxseeds",
+      "name_it": "Semi di lino",
+      "group": "Seeds"
+    },
+    {
+      "id": "poppy_seeds",
+      "name_en": "Poppy seeds",
+      "name_it": "Semi di papavero",
+      "group": "Seeds"
+    },
+    {
+      "id": "almond_milk",
+      "name_en": "Unsweetened almond milk",
+      "name_it": "Latte di mandorla non zuccherato",
+      "group": "Plant-based dairy"
+    },
+    {
+      "id": "oat_milk",
+      "name_en": "Oat milk",
+      "name_it": "Latte d'avena",
+      "group": "Plant-based dairy"
+    },
+    {
+      "id": "soy_milk",
+      "name_en": "Soy milk",
+      "name_it": "Latte di soia",
+      "group": "Plant-based dairy"
+    },
+    {
+      "id": "rice_milk",
+      "name_en": "Rice milk",
+      "name_it": "Latte di riso",
+      "group": "Plant-based dairy"
+    },
+    {
+      "id": "coconut_yogurt",
+      "name_en": "Coconut yogurt",
+      "name_it": "Yogurt di cocco",
+      "group": "Plant-based dairy"
+    },
+    {
+      "id": "buffalo_mozzarella",
+      "name_en": "Buffalo mozzarella",
+      "name_it": "Mozzarella di bufala",
+      "group": "Dairy"
+    },
+    {
+      "id": "sheep_yogurt",
+      "name_en": "Sheep milk yogurt",
+      "name_it": "Yogurt di pecora",
+      "group": "Dairy"
+    },
+    {
+      "id": "goat_yogurt",
+      "name_en": "Goat milk yogurt",
+      "name_it": "Yogurt di capra",
+      "group": "Dairy"
+    },
+    {
+      "id": "goat_milk",
+      "name_en": "Goat milk",
+      "name_it": "Latte di capra",
+      "group": "Dairy"
+    },
+    {
+      "id": "sheep_milk",
+      "name_en": "Sheep milk",
+      "name_it": "Latte di pecora",
+      "group": "Dairy"
+    },
+    {
+      "id": "rice_flour",
+      "name_en": "Rice flour",
+      "name_it": "Farina di riso",
+      "group": "Flours"
+    },
+    {
+      "id": "tapioca_pearls",
+      "name_en": "Tapioca pearls",
+      "name_it": "Perle di tapioca",
+      "group": "Grains"
+    },
+    {
+      "id": "wheat_gluten",
+      "name_en": "Vital wheat gluten",
+      "name_it": "Glutine vitale di frumento",
+      "group": "Flours"
+    },
+    {
+      "id": "corn_tortillas",
+      "name_en": "Corn tortillas",
+      "name_it": "Tortillas di mais",
+      "group": "Bread"
+    },
+    {
+      "id": "soba_noodles",
+      "name_en": "Soba noodles",
+      "name_it": "Noodles soba",
+      "group": "Noodles"
+    },
+    {
+      "id": "udon_noodles",
+      "name_en": "Udon noodles",
+      "name_it": "Noodles udon",
+      "group": "Noodles"
+    },
+    {
+      "id": "sweet_potato_noodles",
+      "name_en": "Sweet potato starch noodles",
+      "name_it": "Vermicelli di fecola di patata dolce",
+      "group": "Noodles"
+    },
+    {
+      "id": "chili_oil",
+      "name_en": "Chili oil",
+      "name_it": "Olio al peperoncino",
+      "group": "Condiments"
+    },
+    {
+      "id": "chili_crisp",
+      "name_en": "Chili crisp",
+      "name_it": "Condimento croccante al peperoncino",
+      "group": "Condiments"
+    },
+    {
+      "id": "black_vinegar",
+      "name_en": "Chinese black vinegar",
+      "name_it": "Aceto nero cinese",
+      "group": "Condiments"
+    },
+    {
+      "id": "mirin",
+      "name_en": "Mirin seasoning",
+      "name_it": "Mirin da cucina",
+      "group": "Condiments"
+    },
+    {
+      "id": "yuzu_juice",
+      "name_en": "Yuzu juice",
+      "name_it": "Succo di yuzu",
+      "group": "Condiments"
+    },
+    {
+      "id": "palm_sugar",
+      "name_en": "Palm sugar",
+      "name_it": "Zucchero di palma",
+      "group": "Sweeteners"
+    },
+    {
+      "id": "demerara_sugar",
+      "name_en": "Demerara sugar",
+      "name_it": "Zucchero demerara",
+      "group": "Sweeteners"
+    },
+    {
+      "id": "cane_syrup",
+      "name_en": "Sugar cane syrup",
+      "name_it": "Sciroppo di canna da zucchero",
+      "group": "Sweeteners"
+    },
+    {
+      "id": "blackstrap_molasses",
+      "name_en": "Blackstrap molasses",
+      "name_it": "Melassa nera",
+      "group": "Sweeteners"
+    },
+    {
+      "id": "semolina_flour",
+      "name_en": "Fine semolina flour",
+      "name_it": "Farina di semola fine",
+      "group": "Flours"
+    },
+    {
+      "id": "shredded_coconut",
+      "name_en": "Shredded coconut",
+      "name_it": "Cocco grattugiato",
+      "group": "Baking"
+    },
+    {
+      "id": "coconut_sugar",
+      "name_en": "Coconut sugar",
+      "name_it": "Zucchero di cocco",
+      "group": "Sweeteners"
+    },
+    {
+      "id": "matcha_powder",
+      "name_en": "Matcha green tea powder",
+      "name_it": "Tè matcha in polvere",
+      "group": "Tea & drinks"
+    },
+    {
+      "id": "hibiscus_flower",
+      "name_en": "Dried hibiscus flowers",
+      "name_it": "Fiori di ibisco essiccati",
+      "group": "Tea & drinks"
+    },
+    {
+      "id": "lime_zest",
+      "name_en": "Lime zest",
+      "name_it": "Scorza di lime",
+      "group": "Fruits"
+    },
+    {
+      "id": "lime_leaves",
+      "name_en": "Makrut lime leaves",
+      "name_it": "Foglie di lime makrut",
+      "group": "Herbs"
+    },
+    {
+      "id": "lemongrass",
+      "name_en": "Lemongrass stalks",
+      "name_it": "Gambi di citronella",
+      "group": "Herbs"
+    },
+    {
+      "id": "fresh_galangal",
+      "name_en": "Fresh galangal",
+      "name_it": "Galanga fresca",
+      "group": "Herbs"
+    },
+    {
+      "id": "fresh_turmeric",
+      "name_en": "Fresh turmeric root",
+      "name_it": "Radice di curcuma fresca",
+      "group": "Herbs"
+    },
+    {
+      "id": "starfruit",
+      "name_en": "Starfruit (carambola)",
+      "name_it": "Carambola",
+      "group": "Fruits"
+    },
+    {
+      "id": "persimmon",
+      "name_en": "Persimmon",
+      "name_it": "Cachi",
+      "group": "Fruits"
+    },
+    {
+      "id": "quince",
+      "name_en": "Quince",
+      "name_it": "Cotogna",
+      "group": "Fruits"
+    },
+    {
+      "id": "passion_fruit",
+      "name_en": "Passion fruit",
+      "name_it": "Frutto della passione",
+      "group": "Fruits"
+    },
+    {
+      "id": "guava",
+      "name_en": "Guava",
+      "name_it": "Guava",
+      "group": "Fruits"
+    },
+    {
+      "id": "lychee",
+      "name_en": "Lychee",
+      "name_it": "Litchi",
+      "group": "Fruits"
+    },
+    {
+      "id": "kumquat",
+      "name_en": "Kumquat",
+      "name_it": "Kumquat",
+      "group": "Fruits"
+    },
+    {
+      "id": "pomegranate_arils",
+      "name_en": "Pomegranate arils",
+      "name_it": "Arilli di melagrana",
+      "group": "Fruits"
+    },
+    {
+      "id": "fig_jam",
+      "name_en": "Fig jam",
+      "name_it": "Confettura di fichi",
+      "group": "Preserves"
+    },
+    {
+      "id": "cherry_jam",
+      "name_en": "Cherry jam",
+      "name_it": "Confettura di ciliegie",
+      "group": "Preserves"
+    },
+    {
+      "id": "prune_juice",
+      "name_en": "Prune juice",
+      "name_it": "Succo di prugna",
+      "group": "Drinks"
+    },
+    {
+      "id": "raw_cacao_nibs",
+      "name_en": "Cacao nibs",
+      "name_it": "Granella di cacao crudo",
+      "group": "Baking"
+    },
+    {
+      "id": "white_chocolate",
+      "name_en": "White chocolate",
+      "name_it": "Cioccolato bianco",
+      "group": "Baking"
+    },
+    {
+      "id": "milk_chocolate",
+      "name_en": "Milk chocolate",
+      "name_it": "Cioccolato al latte",
+      "group": "Baking"
+    },
+    {
+      "id": "carob_powder",
+      "name_en": "Carob powder",
+      "name_it": "Farina di carrube",
+      "group": "Baking"
+    },
+    {
+      "id": "pecans",
+      "name_en": "Pecans",
+      "name_it": "Noci pecan",
+      "group": "Nuts"
+    },
+    {
+      "id": "brazil_nuts",
+      "name_en": "Brazil nuts",
+      "name_it": "Noci brasiliane",
+      "group": "Nuts"
+    },
+    {
+      "id": "pine_nut_oil",
+      "name_en": "Pine nut oil",
+      "name_it": "Olio di pinoli",
+      "group": "Oil"
+    },
+    {
+      "id": "walnut_oil",
+      "name_en": "Walnut oil",
+      "name_it": "Olio di noci",
+      "group": "Oil"
+    },
+    {
+      "id": "avocado_oil",
+      "name_en": "Avocado oil",
+      "name_it": "Olio di avocado",
+      "group": "Oil"
+    },
+    {
+      "id": "grape_seed_oil",
+      "name_en": "Grapeseed oil",
+      "name_it": "Olio di vinaccioli",
+      "group": "Oil"
+    },
+    {
+      "id": "coconut_oil",
+      "name_en": "Coconut oil",
+      "name_it": "Olio di cocco",
+      "group": "Oil"
+    },
+    {
+      "id": "beef_brisket",
+      "name_en": "Beef brisket",
+      "name_it": "Punta di petto di manzo",
+      "group": "Meat"
+    },
+    {
+      "id": "chicken_drumsticks",
+      "name_en": "Chicken drumsticks",
+      "name_it": "Fusi di pollo",
+      "group": "Meat"
+    },
+    {
+      "id": "whole_chicken",
+      "name_en": "Whole chicken",
+      "name_it": "Pollo intero",
+      "group": "Meat"
+    },
+    {
+      "id": "whole_trout",
+      "name_en": "Whole trout",
+      "name_it": "Trota intera",
+      "group": "Seafood"
+    },
+    {
+      "id": "whole_sea_bass",
+      "name_en": "Whole sea bass",
+      "name_it": "Branzino intero",
+      "group": "Seafood"
+    },
+    {
+      "id": "whole_sea_bream",
+      "name_en": "Whole sea bream",
+      "name_it": "Orata intera",
+      "group": "Seafood"
+    },
+    {
+      "id": "salmon_fillets",
+      "name_en": "Salmon fillets",
+      "name_it": "Filetti di salmone",
+      "group": "Seafood"
+    },
+    {
+      "id": "boneless_chicken_thigh",
+      "name_en": "Boneless chicken thighs",
+      "name_it": "Sovracosce di pollo disossate",
+      "group": "Meat"
+    },
+    {
+      "id": "canned_white_beans",
+      "name_en": "Canned white beans",
+      "name_it": "Fagioli bianchi in scatola",
+      "group": "Legumes"
+    },
+    {
+      "id": "canned_chickpeas",
+      "name_en": "Canned chickpeas",
+      "name_it": "Ceci in scatola",
+      "group": "Legumes"
+    },
+    {
+      "id": "frozen_peas",
+      "name_en": "Frozen peas",
+      "name_it": "Piselli surgelati",
+      "group": "Legumes"
+    },
+    {
+      "id": "cooked_beets",
+      "name_en": "Cooked beets",
+      "name_it": "Barbabietole cotte",
+      "group": "Vegetables"
+    },
+    {
+      "id": "cooked_lentils",
+      "name_en": "Cooked lentils",
+      "name_it": "Lenticchie cotte",
+      "group": "Legumes"
+    },
+    {
+      "id": "canned_kidney_beans",
+      "name_en": "Canned kidney beans",
+      "name_it": "Fagioli rossi in scatola",
+      "group": "Legumes"
+    },
+    {
+      "id": "cooked_fava_beans",
+      "name_en": "Fully cooked fava beans",
+      "name_it": "Fave già cotte",
+      "group": "Lebanese pantry"
+    },
+    {
+      "id": "sour_cherries_frozen",
+      "name_en": "Frozen sour cherries (pitted)",
+      "name_it": "Amarene surgelate snocciolate",
+      "group": "Persian produce"
+    },
+    {
+      "id": "egg_yolk",
+      "name_en": "Egg yolks",
+      "name_it": "Tuorli d'uovo",
+      "group": "Baking"
+    },
+    {
+      "id": "bitter_orange_juice",
+      "name_en": "Bitter orange (Seville orange) juice",
+      "name_it": "Succo d'arancia amara (arancia di Siviglia)",
+      "group": "Lebanese condiments"
+    },
+    {
+      "id": "date_syrup",
+      "name_en": "Date syrup",
+      "name_it": "Sciroppo di datteri",
+      "group": "Lebanese sweets"
+    }
+  ]
+}
