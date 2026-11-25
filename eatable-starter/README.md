@@ -1,31 +1,36 @@
-# Eatable v30 — Persian & Lebanese Expansion
+# Eatable v30.1 — FIX: 18/18 Iranian recipes invalid in Batch Preview
 
-This additive package is based on **Eatable v28.2 (white-screen hotfix)** and the v29 website state.
+This replaces the **v30 content bundle** with an **import-diagnostics hotfix**.
+It does not publish recipes, alter your photos, or replace your v29 homepage code.
 
-**Contents**: 173 new bilingual ingredient IDs, 36 Iranian/Persian and 41 Lebanese recipes, four unpublished recipe-import batches.
+## Why the screenshot shows 0 ready / 18 invalid
 
-## Install — follow in order
+There are two separate blockers:
+1. `Unsupported cuisine: Iranian` — the currently deployed `src/recipes.js` has not registered the Iranian cuisine yet (or the browser is running an old deployment).
+2. `Check ingredient selection, quantity and units` — the validator gives the same generic message when even one ingredient ID is not in the live vocabulary. Usually the v30 ingredient SQL has not yet been run or the page hasn't reloaded since it was run. Earlier v27/v28 ingredient SQL scripts may also be missing.
 
-1. **Github/Vercel:** Replace ONLY `src/recipes.js` with the provided `src/recipes.js` from this package. This begins from the fixed v28.2 module and adds the `Iranian` cuisine filter. **Do not use the v28 or v28.1 recipes.js**, as those removed required app exports and previously caused a white screen.
-2. `src/bulk-import.js` and `src/curated-editor.js` are included as the known working **v28.1** versions for compatibility and offline testing. **If your deployed files are already v28.1, do not replace them**. If your importer still uses a hard-coded old cuisine list, replace `src/bulk-import.js` with this one; preserve any later independent edits by merging.
-3. Deploy and hard refresh the site. Confirm the homepage still works and the **Iranian (Persian) 🇮🇷** nationality option appears in Explore / Admin Editor.
-4. **Supabase → SQL Editor**: run `ingredients/05_add_v30_ingredients.sql` after the v27 and v28 ingredient scripts. It is insert-only and safe to re-run (`ON CONFLICT (id) DO NOTHING`).
-5. **Eatable Admin → Batch Recipe Import**: `https://cookwitheatable.com/en/admin-import` and preview each JSON separately. Confirm no 'Unsupported cuisine' or 'Unknown ingredient ID' warning.
-6. Import the batches one by one (sizes below). Every entry is imported **unpublished**, does not overwrite existing slugs, and includes no images.
-7. **Admin → Curated Recipes**: `https://cookwitheatable.com/en/admin-curated`. Review accuracy, translations, dietary labels, ingredients and food safety, add your own photo and then publish individually.
+The original local batch test included *planned* IDs and could not verify what was really installed in Supabase.
 
-| Recipe batch | Count |
-|---|---:|
-| `recipes/recipes-v30-iranian-01.json` | 18 |
-| `recipes/recipes-v30-iranian-02.json` | 18 |
-| `recipes/recipes-v30-lebanese-01.json` | 21 |
-| `recipes/recipes-v30-lebanese-02.json` | 20 |
+## Fix in exact order
 
-**No other source files need modification.** Do not touch `src/app.js` from v29, other site modules, Supabase policies, or Vercel environment variables.
+1. **GitHub project:** replace ONLY `src/recipes.js` and `src/bulk-import.js` with the files under `src/` in this ZIP. Do **not** replace `src/app.js` — leave v29 homepage controls intact. Do **not** replace `src/curated-editor.js` unless your version is older and incompatible.
+2. Commit, deploy on Vercel, and ensure the latest deployment is marked **Ready**.
+3. **Supabase SQL Editor:** run `ingredients/05_add_v30_ingredients.sql`. This is insert-only and uses `ON CONFLICT (id) DO NOTHING`. It assumes the earlier v27/v28 ingredient migrations have already been installed.
+4. **Supabase SQL Editor:** run `diagnostics/01_check_recipe_ingredient_ids.sql`. You want `ids_missing = 0`. If any IDs are listed, confirm that the earlier v27/v28 ingredient scripts were applied. Check each missing ID before inserting; do not rename it in a recipe merely to bypass validation.
+5. Refresh your live Eatable website with Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac). Log in as an administrator and revisit `/en/admin-import`.
+6. Upload `recipes/recipes-v30-iranian-01.json` again. Expect 18 valid new draft candidates if none of their slugs already exist in the live database. With the improved importer, any remaining missing ingredient IDs are shown explicitly.
+7. When the preview reads valid, import; proceed with the other three batches. Review drafts and add photographs before publishing.
 
-Run `node tests/validate-pack.mjs` from the extracted root to validate against Eatable's actual importer rules.
+## Included
 
-## Accuracy
+- `src/recipes.js`: from v30 / v28.2 white-screen-safe version with Iranian nationality added.
+- `src/bulk-import.js`: same v28.1 import logic, but invalid rows now show the actual missing ingredient IDs and/or unsupported cuisine; all validation and draft-only behavior remains in force.
+- `ingredients/05_add_v30_ingredients.sql`: original 173 bilingual ingredients.
+- `diagnostics/01_check_recipe_ingredient_ids.sql`: read-only live SQL check for every ingredient needed by the 77 new recipes.
+- All 77 original bilingual draft recipes, instructions, and editorial review notes.
 
-Ingredient IDs were compared against the v9 base, v27 and v28 vocabulary files, and recipe slugs against existing v27/v28 import packs. Actual production contents may differ.
-Recipes are **original editorial drafts rather than kitchen-tested instructions**. See `docs/EDITORIAL_REVIEW.md` before approving.
+## Important
+
+The missing ingredient validation cannot be repaired by changing the JSON alone. It depends on the **live database's vocabulary and the code actually deployed**. Never disable validation or change `Iranian` to `Other` to make the import pass.
+
+The check is performed locally against both the planned full vocabulary (all 77 valid) and an intentionally incomplete vocabulary (missing IDs must be called out by name).

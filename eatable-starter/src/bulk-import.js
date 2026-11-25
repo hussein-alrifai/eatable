@@ -36,8 +36,15 @@ export function parseRecipeImport(raw,vocabulary,existing=[]){
  const existingSet=new Set(existing),slugsSeen=new Set();
  return doc.recipes.map((source,index)=>{
   const recipe=cleanRecipe(source);
-  let error=validateCurated(recipe,vocabulary);
-  if(!error&&!supportedCuisines.has(recipe.cuisine))error=`Unsupported cuisine: ${recipe.cuisine || '(empty)'}.`;
+  // Surface environment/setup failures before generic editorial validation.
+  // A recipe can be structurally sound while the live database is missing
+  // ingredient IDs, or while the deployed cuisine module is outdated.
+  const availableIds=new Set(vocabulary.map(i=>i.id));
+  const unknownIds=[...new Set(recipe.ingredients.map(i=>i.id).filter(id=>!availableIds.has(id)))];
+  const issues=[];
+  if(!supportedCuisines.has(recipe.cuisine))issues.push(`Unsupported cuisine: ${recipe.cuisine || '(empty)'}. Deploy the v30 src/recipes.js and reload Eatable.`);
+  if(unknownIds.length)issues.push(`Unknown ingredient ID${unknownIds.length===1?'':'s'}: ${unknownIds.join(', ')}. Run the required ingredient SQL scripts in Supabase, then reload Eatable.`);
+  let error=issues.length?issues.join(' '):validateCurated(recipe,vocabulary);
   if(!error&&!categories.has(recipe.category))error=`Unsupported category: ${recipe.category || '(empty)'}.`;
   if(!error&&!allowedDiets.has(recipe.diet))error=`Unsupported diet: ${recipe.diet || '(empty)'}.`;
   if(!error&&slugsSeen.has(recipe.slug))error='Repeated slug inside this file.';
