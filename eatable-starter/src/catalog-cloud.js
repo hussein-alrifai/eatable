@@ -1,14 +1,27 @@
 import {getCloudClient} from './cloud.js';
 
 const db=()=>{const c=getCloudClient();if(!c)throw Error('Connect Supabase first.');return c;};
-export const getCuratedCatalog=()=>db().from('eatable_curated_recipes').select('*').eq('published',true).order('title_en').limit(500);
+// Read the entire published catalog in stable pages, not only the first 500 recipes.
+export async function getCuratedCatalog(){
+ const pageSize=500, maxRows=20000, rows=[];
+ for(let offset=0;offset<=maxRows;offset+=pageSize){
+  const {data,error}=await db().from('eatable_curated_recipes')
+   .select('*').eq('published',true).order('slug',{ascending:true})
+   .range(offset,offset+pageSize-1);
+  if(error)return {data:null,error};
+  if(!Array.isArray(data))return {data:null,error:new Error('Published recipes response is not an array.')};
+  rows.push(...data);
+  if(data.length<pageSize)return {data:rows,error:null};
+ }
+ return {data:null,error:new Error('Published recipe catalog exceeds 20,000 rows; use server-side search for larger catalogs.')};
+}
 // Fetch the complete ingredient vocabulary in deterministic pages.
 // A single .limit(500) silently excludes valid IDs once the catalog grows.
 export async function getIngredientVocabulary(){
  const pageSize=500;
  const maxRows=10000;
  const rows=[];
- for(let offset=0;offset<maxRows;offset+=pageSize){
+ for(let offset=0;offset<=maxRows;offset+=pageSize){
   const {data,error}=await db().from('eatable_ingredients')
    .select('id,name_en,name_it')
    .order('id',{ascending:true})

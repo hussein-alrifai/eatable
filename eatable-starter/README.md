@@ -1,43 +1,31 @@
-# Eatable v30.3 — Complete ingredient catalog pagination fix
+# Eatable v30.6 — Ingredient matching + honest ranking
 
-## Confirmed code defect
-The deployed application (v9 onward) fetches ingredients using
-`.order('name_en').limit(500)` in `src/catalog-cloud.js`.
-After the v27, v28 and v30 catalog expansions, that silently omits
-ingredients later in the alphabet, even when those ingredients exist
-in Supabase. Admin > Import then incorrectly reports those IDs as unknown.
+## Root causes verified against v30.5 source
+1. Only a few ingredient families were mapped. Generic choices (tomato, chickpeas, bulgur, cucumber, eggplant, etc.) did not match common canonical variants used by v27/v28/v30 imports.
+2. The ingredient result cards displayed `matched/recipe-total`, not `matched/selected-total`, which made the intended "more of what I have" order difficult to verify.
+3. Homepage input only resolved one ingredient at a time; comma-separated lists were rejected.
+4. `getCuratedCatalog()` still had `.limit(500)`, silently excluding later published recipes once the database grows. This was *not* solved by the v30.3 ingredient vocabulary pagination.
 
-## Apply (recommended, preserves ALL other changes)
-1. In your Eatable GitHub repository, open `src/catalog-cloud.js`.
-2. Locate the **one** `export const getIngredientVocabulary=...` function.
-3. Replace **just that function** with the code in `replacement-only.js`.
-   This avoids overwriting any unrelated modifications to that module.
-4. Commit, deploy the existing project on Vercel, and wait for the new
-   deployment to show Ready.
-5. Hard reload the website (Ctrl+Shift+R). In Admin > Import, choose the
-   same original Iranian batch JSON again: pre-existing preview rows do
-   not automatically revalidate after a reload.
+## Install — GitHub / Vercel
+1. Back up your CURRENT `src/recipes.js`, `src/app.js`, and `src/catalog-cloud.js` before making changes.
+2. Replace those exact files with the copies from `src/` in this ZIP. `src/app.js` is based on v30.5 and contains v29 homepage-photo support. `src/catalog-cloud.js` is based on v30.3 and preserves all other exports, including the ingredient pagination (and fixes the exactly 10,000 rows edge case). If you've modified these files since v30.5 or v30.3, merge the changes instead of overwriting.
+3. Commit and deploy to Vercel. Hard-refresh using Ctrl+Shift+R.
+4. No SQL migration and no recipe re-import are required.
 
-If your `src/catalog-cloud.js` still exactly matches the older original,
-`src/catalog-cloud.js` in this archive is a complete drop-in replacement.
-For a customized app, the one-function edit above is safer.
+## Expected search
+- Homepage: type `chicken, rice, onion` and press Find Recipes; all three are added as chips.
+- Single word: `tomato`, `chickpeas`, `bulgur`, `eggplant`, `cucumber`, `rice`, `beef`, `lentils` match their known varieties.
+- Recipes are sorted by *number of selected ingredient types used*, descending; then percentage of recipe ingredients present; then exact matches, missing count, preparation time and title.
+- 0-match recipes are excluded whenever any ingredient is selected.
+- Each recipe card shows BOTH: `Uses X of your Y ingredients` and `Recipe ingredients matched: X/Z`.
 
-## Diagnostic
-Run `diagnostics/01_verify_database_ingredients.sql` (read only) in
-the SAME Supabase project referenced by your live Vercel environment.
-If `missing_id` rows appear, run the existing v30.2 repair SQL; pagination
-alone cannot create missing database records. If zero missing rows appear,
-the problem was the frontend cap. The two fixes are complementary.
+## Culinary caution
+Varieties/cuts and prepared forms are not always identical. Such matches retain a visible `Check variety/cut` notice and missing-ingredient detail. For safety and recipe accuracy there is no substring matching; e.g., chicken != chicken stock/liver, rice != rice flour/noodles, tomato != tomato paste, egg != egg yolk.
 
-## Why this works
-The replacement reads pages of 500 in stable ID order until the final
-short page; it preserves the original `{data, error}` response shape
-required by `refreshCommunity()` and the subsequent `mergeVocabulary()`.
-It stops at 10,000 records with an explicit error instead of silently
-using an incomplete list. No change to app.js, recipes, photos, admins,
-accounts, or existing records is necessary.
+## Tests
+Run `node --test tests/*.test.mjs` with Node 22+ from the unpacked root. Tests include real imported v28 and v30 recipe data, selected-ingredient ranking, negative-match checks, search parsing and catalog paging.
 
-## Local tests
-`node tests/test-pagination.mjs` checks both multiple pages and errors.
-No external dependencies. This test exercises the query semantics using
-a fake Supabase client rather than contacting your live project.
+## Limitations
+- The published community-recipe endpoint may still return the first 100 community recipes; this package fixes the curated published catalog only. Review community pagination separately if needed.
+- Unpublished recipes and unindexed community submissions are not searchable by design.
+- This package is locally tested against recovered v30.5 code and published import fixtures; it has not been verified against the live Vercel/Supabase deployment.

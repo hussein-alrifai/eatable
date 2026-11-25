@@ -126,17 +126,18 @@ const searchAliases = {
  basil:['basilico fresco','fresh basil'],
  mint:['menta fresca','fresh mint']
 };
-function ingredientTerms(item){
- return [...new Set([item.name.en,item.name.it,item.id.replaceAll('_',' '),...(searchAliases[item.id]||[])].filter(Boolean).map(normalize))];
-}
 export function ingredientMatches(query){
  const value=normalize(query);
  if(!value) return [];
  return ingredients.map(item=>{
-  const terms=ingredientTerms(item);
-  const score=terms.some(t=>t===value)?0:terms.some(t=>t.startsWith(value))?1:terms.some(t=>t.includes(value))?2:3;
+  const canonical=[item.name.en,item.name.it,item.id.replaceAll('_',' ')].filter(Boolean).map(normalize);
+  const aliases=(searchAliases[item.id]||[]).map(normalize);
+  // An actual ingredient's name outranks a generic ingredient's search alias.
+  const score=canonical.includes(value)?0:aliases.includes(value)?1:
+   canonical.some(t=>t.startsWith(value))?2:aliases.some(t=>t.startsWith(value))?3:
+   canonical.some(t=>t.includes(value))?4:aliases.some(t=>t.includes(value))?5:6;
   return {item,score};
- }).filter(x=>x.score!==3).sort((a,b)=>a.score-b.score||a.item.name.en.localeCompare(b.item.name.en))
+ }).filter(x=>x.score!==6).sort((a,b)=>a.score-b.score||a.item.name.en.localeCompare(b.item.name.en))
  .slice(0,8).map(x=>x.item);
 }
 
@@ -155,15 +156,104 @@ export function substitutionFor(missingId, selected){
  const suggested=(swapRules[missingId]||[]).find(s=>available.has(s.id));
  return suggested?{missingId,availableId:suggested.id,note:suggested.note}:null;
 }
+// v30.6: verified ingredient families, derived from the v27/v28/v30 vocabulary.
+// Matching is about the *food* a visitor has, not substring similarity:
+// "rice" must NEVER match rice flour/noodles/vinegar; "chicken" must NEVER
+// match chicken stock/liver; and "tomato" must NEVER silently mean paste.
+// A generic ingredient matches a specific variety and vice versa. Two
+// distinct specific varieties DO NOT match each other.
+// Keep this as an explicit allowlist: newly imported ingredients do not gain
+// unsafe equivalence from their names alone.
+export const ingredientFamilies = {
+ chicken:['chicken_breast','chicken_thigh','boneless_chicken_thigh','chicken_drumsticks','chicken_wings','whole_chicken'],
+ rice:['basmati_rice','brown_rice','arborio_rice','short_grain_rice','long_grain_rice','jasmine_rice','sella_rice','persian_rice','ankabot_rice'],
+ pasta:['spaghetti','penne','orzo_pasta'],
+ beef:['ground_beef','beef_shank','beef_chuck','beef_short_ribs','beef_brisket'],
+ lamb:['ground_lamb','lamb_shank','lamb_shoulder','lamb_ribs','lamb_neck','lamb_leg'],
+ tomato:['cherry_tomatoes','canned_tomatoes','tomato_passata'],
+ onion:['red_onion'],
+ pepper:['red_pepper'],
+ potato:[], // Sweet potato, potato starch and potato noodles are not equivalent.
+ garlic:[], // Garlic powder and toum are not identical to fresh cloves.
+ lemon:['lemon_juice'], // A fresh lemon can be squeezed; check equivalent quantity.
+ chickpeas:['canned_chickpeas'], // Canned vs dried requires different preparation.
+ lentils:['green_lentils','red_lentils','black_lentils','brown_lentils','cooked_lentils'],
+ kidney_beans:['canned_kidney_beans'],
+ white_beans:['canned_white_beans'],
+ fava_beans:['cooked_fava_beans','baby_fava_beans','dried_fava_beans'],
+ eggplant:['baby_eggplants'],
+ zucchini:['mini_zucchini'],
+ cucumber:['lebanese_cucumber'],
+ mushrooms:['button_mushrooms','wild_mushrooms','portobello','porcini','chanterelles'],
+ olives:['green_olives','black_olives'],
+ bulgur:['fine_bulgur','coarse_bulgur'],
+ peas:['frozen_peas'],
+ butter:['salted_butter','unsalted_butter'],
+ semolina:['durum_semolina','semolina_fine','semolina_coarse','semolina_flour'],
+ sesame_seeds:['white_sesame','black_sesame'],
+ cumin:['cumin_seed'],
+ carrot:['purple_carrot','yellow_carrot'],
+ mint:['persian_mint'],
+ basil:['persian_basil']
+};
+// Not every item in a family is a drop-in replacement. Results label these
+// as a variety/preparation match; users must check the ingredient line.
+function relatedIngredient(availableId,requiredId){
+ return (ingredientFamilies[availableId]||[]).includes(requiredId) ||
+        (ingredientFamilies[requiredId]||[]).includes(availableId);
+}
+// Use a two-stage, one-to-one assignment: exact ID first, then a related
+// variety. A single selected ingredient never satisfies multiple recipe lines.
+function matchRequired(required,selected){
+ const available=new Set(selected),matched=new Set(),familyMatches=[];
+ let exactCount=0;
+ for(const item of required){
+  if(available.has(item.id)){
+   matched.add(item.id);available.delete(item.id);exactCount++;
+  }
+ }
+ for(const item of required){
+  if(matched.has(item.id))continue;
+  const selectedId=[...available].find(id=>relatedIngredient(id,item.id));
+  if(selectedId){matched.add(item.id);available.delete(selectedId);familyMatches.push({selectedId,requiredId:item.id});}
+ }
+ return {missing:required.filter(item=>!matched.has(item.id)),exactCount,familyMatches,matchedSelected:[...selected].filter(id=>!available.has(id))};
+}
+// Accept a comma/semicolon-separated list in the homepage search field.
+// Never invent IDs for unrecognized text; report it to the user instead.
+export function resolveIngredientInput(value,alreadySelected=[]){
+ const tokens=String(value||'').split(/[,;\n]+/).map(x=>x.trim()).filter(Boolean);
+ const additions=[],unknown=[];
+ const existing=new Set(alreadySelected||[]);
+ for(const term of tokens){
+  const candidates=ingredientMatches(term);
+  // Repeated typed ingredients are not errors.
+  const best=candidates[0];
+  if(!best){unknown.push(term);continue;}
+  if(!existing.has(best.id)){additions.push(best.id);existing.add(best.id);}
+ }
+ return {additions,unknown};
+}
+
 export function matchRecipes(selected,filters={},collection=recipes){
- const set=new Set(selected), hasIngredients=set.size>0;
+ const set=new Set(selected||[]), hasIngredients=set.size>0;
  return collection.filter(r=>(!filters.diet||filters.diet==='all'||filters.diet===r.diet||filters.diet==='vegetarian'&&r.diet==='vegan')&&(!filters.cuisine||filters.cuisine==='all'||r.cuisine===filters.cuisine)&&(!filters.maxTime||r.time<=Number(filters.maxTime)))
  .map(recipe=>{
-  const required=Array.isArray(recipe.ingredients)?recipe.ingredients:[];
-  const missing=required.filter(i=>!set.has(i.id));
+  // Search coverage uses distinct ingredients; two recipe lines with the
+  // same ingredient must not require two different pantry selections.
+  const required=[...new Map((Array.isArray(recipe.ingredients)?recipe.ingredients:[])
+   .filter(i=>i&&typeof i.id==='string').map(i=>[i.id,i])).values()];
+  const {missing,exactCount,familyMatches,matchedSelected}=matchRequired(required,set);
   const matchCount=required.length-missing.length;
   const substitutions=missing.map(i=>substitutionFor(i.id,set)).filter(Boolean);
-  return {...recipe,missing,matchCount,matchPercent:required.length?Math.round(100*matchCount/required.length):0,
+  return {...recipe,missing,matchCount,exactCount,familyMatches,matchedSelected,selectedTotal:set.size,
+   matchPercent:required.length?Math.round(100*matchCount/required.length):0,
    totalRequired:required.length,substitutions,categoryScore:hasIngredients?(missing.length===0?0:missing.length<=2?1:2):2};
- }).sort((a,b)=>hasIngredients?(a.categoryScore-b.categoryScore||a.missing.length-b.missing.length||b.matchCount-a.matchCount||a.time-b.time):a.name.en.localeCompare(b.name.en));
+ })
+ // Zero matches are irrelevant to ingredient search, even when other recipes
+ // are available. Empty selection keeps the normal browsing experience.
+ .filter(recipe=>!hasIngredients||recipe.matchCount>0)
+ .sort((a,b)=>hasIngredients?
+   (b.matchCount-a.matchCount||b.matchPercent-a.matchPercent||b.exactCount-a.exactCount||a.missing.length-b.missing.length||a.time-b.time||String(a.name?.en||a.id).localeCompare(String(b.name?.en||b.id))):
+   String(a.name?.en||a.id).localeCompare(String(b.name?.en||b.id)));
 }

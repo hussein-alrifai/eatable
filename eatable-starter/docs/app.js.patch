@@ -1,0 +1,53 @@
+--- a/src/app.js
++++ b/src/app.js
+@@ -14,7 +14,7 @@
+ import {getPublished,getMySubmissions,getAdminSubmissions,getIsAdmin,submitCommunityRecipe,reviseCommunityRecipe,moderateRecipe} from './community-cloud.js';
+ import {uploadPrivatePhoto,removePrivatePhoto,getPrivatePhotoUrl,getPublicPhotoUrl,publishPhoto,removePublicPhoto,validatePhoto} from './photo-cloud.js';
+ import {isCloudConfigured,getCloudClient,initializeCloud,signIn,signUp,signOut,requestPasswordReset,updatePassword,readFavorites,addFavorite,removeFavorite} from './cloud.js';
+-import { recipes,ingredients,ingredientById,cuisines,getRecipe,getCuisine,ingredientMatches,matchRecipes,substitutionFor,normalize } from './recipes.js';
++import { recipes,ingredients,ingredientById,cuisines,getRecipe,getCuisine,ingredientMatches,resolveIngredientInput,matchRecipes,substitutionFor,normalize } from './recipes.js';
+ import {requiredMissing,shoppingLinesForRecipe,canonicalIngredientId} from './kitchen.js';
+ import {cookText,clampCookingStep,readCookingProgress,writeCookingProgress,clearCookingProgress} from './cooking-mode.js';
+ import {fetchKitchen,insertPantry,deletePantry,insertShopping,updateShoppingChecked,deleteShopping,moveToPantry} from './kitchen-cloud.js';
+@@ -121,7 +121,7 @@
+  const swapHtml=swaps.length?`<div class="v10-swaps"><strong>${mt('swaps')}:</strong> ${swaps.slice(0,2).map(x=>`${label(ingredientById[x.missingId]?.name||x.missingId)} → ${label(ingredientById[x.availableId]?.name||x.availableId)}`).join(' · ')}</div>`:'';
+  const familyMatches=matching?(info.familyMatches||[]):[];
+  const familyHtml=familyMatches.length?`<div class="v10-swaps"><strong>${language()==='it'?'Varietà da verificare':'Check variety/cut'}:</strong> ${familyMatches.slice(0,2).map(x=>`${label(ingredientById[x.selectedId]?.name||x.selectedId)} → ${label(ingredientById[x.requiredId]?.name||x.requiredId)}`).join(' · ')}</div>`:'';
+- return `<article class="recipe-card"><a href="${dishLink(r)}" data-link aria-label="${esc(r.name[language()]||r.name.en)}">${foodImage(r)}<div class="card-content"><div class="card-top"><span>${cuisineLabel(r)}</span><span>${r.diet==='vegan'?'🌱':r.diet==='vegetarian'?'🥬':''}</span></div><h3>${label(r.name)}</h3><p>${label(r.description)}</p><div class="card-meta"><span>◷ ${r.time} ${tr('minutes')}</span><span>${esc(tr('seeRecipe'))} →</span></div>${discoveryBadge(r)}${matching?`<div class="v10-coverage"><span>${info.matchCount}/${info.totalRequired} ${mt('coverage')}</span><strong>${info.matchPercent}%</strong></div><div class="v10-meter" aria-hidden="true"><span style="width:${info.matchPercent}%"></span></div><div class="missing-note">${missing.length===0?mt('complete'):`<strong>${mt('missing')}:</strong> ${missingLabel}`}</div>${swapHtml}${familyHtml}`:''}</div></a></article>`;
++ return `<article class="recipe-card"><a href="${dishLink(r)}" data-link aria-label="${esc(r.name[language()]||r.name.en)}">${foodImage(r)}<div class="card-content"><div class="card-top"><span>${cuisineLabel(r)}</span><span>${r.diet==='vegan'?'🌱':r.diet==='vegetarian'?'🥬':''}</span></div><h3>${label(r.name)}</h3><p>${label(r.description)}</p><div class="card-meta"><span>◷ ${r.time} ${tr('minutes')}</span><span>${esc(tr('seeRecipe'))} →</span></div>${discoveryBadge(r)}${matching?`<div class="v10-coverage"><span>${language()==='it'?`Usa ${info.matchCount} di ${info.selectedTotal} ingredienti scelti`:`Uses ${info.matchCount} of your ${info.selectedTotal} ingredients`}</span><strong>${info.matchPercent}%</strong></div><div class="muted small">${language()==='it'?`Ingredienti della ricetta: ${info.matchCount}/${info.totalRequired}`:`Recipe ingredients matched: ${info.matchCount}/${info.totalRequired}`}</div><div class="v10-meter" aria-hidden="true"><span style="width:${info.matchPercent}%"></span></div><div class="missing-note">${missing.length===0?mt('complete'):`<strong>${mt('missing')}:</strong> ${missingLabel}`}</div>${swapHtml}${familyHtml}`:''}</div></a></article>`;
+ }
+ function home(){
+  const preferred=['fattet-hummus','pasta-pomodoro','chickpea-curry','fattoush'].map(getAnyRecipe).filter(Boolean);
+@@ -159,7 +159,7 @@
+       recipes:all
+     }]
+   : [{title:tr('featured'),desc:tr('noIngredient'),recipes:all.slice(0,12)}];
+- return shell(`${pageHero('Eatable · '+tr('getStarted'),tr('cookTitle'),tr('cookSubtitle'))}<div class="container search-layout"><div>${ingredientPicker()}${filters()}</div><div>${state.catalogError?`<div class="notice">${esc(ct('catalogFallback'))}: ${esc(state.catalogError)}</div>`:''}<div class="results-count">${all.length} ${tr('results')}</div><p class="v10-disclaimer">${mt('matchNote')}</p>${state.showSubstitutions&&hasSelection?`<p class="v10-disclaimer">${mt('swapNotice')}</p>`:''}${all.length?groups.filter(group=>group.recipes.length).map(group=>`<section class="results-group"><div class="results-group-header"><div><h2>${group.title}</h2><p>${group.desc}</p></div><span class="pill">${group.recipes.length}</span></div><div class="grid-recipes">${group.recipes.map(r=>card(r,r)).join('')}</div></section>`).join(''):`<div class="empty"><h3>${tr('noResults')}</h3><p>${tr('tryAgain')}</p><button class="btn btn-outline space-top" data-action="reset-filters">${tr('reset')}</button></div>`}</div></div>`,'cook');
++ return shell(`${pageHero('Eatable · '+tr('getStarted'),tr('cookTitle'),tr('cookSubtitle'))}<div class="container search-layout"><div>${ingredientPicker()}${filters()}</div><div>${state.catalogError?`<div class="notice">${esc(ct('catalogFallback'))}: ${esc(state.catalogError)}</div>`:''}<div class="results-count">${all.length} ${tr('results')}</div>${hasSelection?`<p class="v10-disclaimer">${language()==='it'?'Ordine: numero di ingredienti scelti usati (dal più alto), poi percentuale della ricetta.':'Sorted by number of your selected ingredients used (highest first), then recipe match percentage.'}</p>`:''}<p class="v10-disclaimer">${mt('matchNote')}</p>${state.showSubstitutions&&hasSelection?`<p class="v10-disclaimer">${mt('swapNotice')}</p>`:''}${all.length?groups.filter(group=>group.recipes.length).map(group=>`<section class="results-group"><div class="results-group-header"><div><h2>${group.title}</h2><p>${group.desc}</p></div><span class="pill">${group.recipes.length}</span></div><div class="grid-recipes">${group.recipes.map(r=>card(r,r)).join('')}</div></section>`).join(''):`<div class="empty"><h3>${tr('noResults')}</h3><p>${tr('tryAgain')}</p><button class="btn btn-outline space-top" data-action="reset-filters">${tr('reset')}</button></div>`}</div></div>`,'cook');
+ }
+ 
+ function explore(){
+@@ -561,7 +561,7 @@
+      if(r){event.preventDefault();if(event.key==='ArrowLeft')changeCookingStep(r,Math.max(0,state.cookingStep-1));else if(state.cookingStep<r.steps.length-1)changeCookingStep(r,state.cookingStep+1);return;}
+    }
+  }
+- if(event.key==='Escape'){const target=event.target.closest('.field-wrap');target?.querySelector('.suggestions')?.classList.add('hidden');if(state.cookingStep!==null){state.cookingStep=null;render()}}if(event.key==='Enter'&&event.target.matches('[data-ingredient-input]')){event.preventDefault();const first=ingredientMatches(event.target.value).find(i=>!state.selected.includes(i.id));if(first){state.selected.push(first.id);save();render();document.getElementById(event.target.id)?.focus()}else toast(tr('errorIngredient'))}});
++ if(event.key==='Escape'){const target=event.target.closest('.field-wrap');target?.querySelector('.suggestions')?.classList.add('hidden');if(state.cookingStep!==null){state.cookingStep=null;render()}}if(event.key==='Enter'&&event.target.matches('[data-ingredient-input]')){event.preventDefault();const entry=resolveIngredientInput(event.target.value,state.selected);if(entry.additions.length){state.selected.push(...entry.additions);save();render();document.getElementById(event.target.id)?.focus()}if(entry.unknown.length)toast(`${tr('errorIngredient')}: ${entry.unknown.join(', ')}`)}});
+ document.addEventListener('change',async event=>{
+  if(event.target.id==='eatable-hero-select'){
+    state.heroDraftId=event.target.value;
+@@ -1062,11 +1062,9 @@
+  switch(name){case 'auth-view':state.authView=action.dataset.mode||'signin';render();break;case 'sign-out':signOut().then(({error})=>{if(error)throw error;toast(at('logoutSuccess'));navigate(path('account'))}).catch(e=>toast(e.message||at('cloudFailed')));break;case 'menu':state.menuOpen=!state.menuOpen;render();break;case 'language':{const rest=active().join('/');const other=language()==='en'?'it':'en';history.pushState(null,'',`/${other}${rest?'/'+rest:''}`+location.search);render();break}case 'add-ingredient':if(id&&!state.selected.includes(id)){state.selected.push(id);save();render()}break;case 'remove-ingredient':state.selected=state.selected.filter(x=>x!==id);save();render();break;case 'clear':state.selected=[];save();render();break;case 'find':{
+    const typed=document.getElementById('input-hero')?.value?.trim()||'';
+    if(typed){
+-     const picked=ingredientMatches(typed).find(item=>!state.selected.includes(item.id));
+-     if(picked){state.selected.push(picked.id);save();}
+-     else if(!ingredientMatches(typed).some(item=>state.selected.includes(item.id))){
+-       toast(tr('errorIngredient'));break;
+-     }
++     const entry=resolveIngredientInput(typed,state.selected);
++     if(entry.unknown.length){toast(`${tr('errorIngredient')}: ${entry.unknown.join(', ')}`);break;}
++     if(entry.additions.length){state.selected.push(...entry.additions);save();}
+    }
+    navigate(path('cook'));break;
+   }case 'reset-filters':state.filters={diet:'all',cuisine:'all',maxTime:''};render();break;case 'favorite':{
