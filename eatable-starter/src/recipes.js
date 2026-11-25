@@ -95,16 +95,74 @@ export const recipes=rows.map(r=>({
 export const getRecipe=id=>recipes.find(r=>r.id===id);
 export const getCuisine=id=>cuisines.find(c=>c.id===id);
 export const normalize=s=>(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim().replace(/[^\p{L}\p{N}]+/gu,' ');
+// Public search aliases only. The canonical ingredient ID remains unchanged in Supabase.
+// Never equate different ingredients here: culinary alternatives are suggestions below.
+const searchAliases = {
+ chicken:['chicken breast','chicken thighs','pollo','petto di pollo'],
+ rice:['riso','white rice','brown rice','basmati rice','riso basmati'],
+ tomato:['tomatoes','pomodori','pomodoro','fresh tomato','pomodori freschi'],
+ onion:['onions','cipolle','yellow onion','red onion','cipolla rossa'],
+ potato:['potatoes','patate','patata'],
+ garlic:['garlic cloves','aglio','spicchi di aglio','spicchi d aglio'],
+ olive_oil:['extra virgin olive oil','evoo','olio evo','olio extravergine di oliva'],
+ lemon:['lemons','limoni','limone'],
+ lime:['limes','lime'],
+ chickpeas:['chickpea','ceci','cece','garbanzo beans','garbanzos'],
+ cilantro:['coriander leaves','fresh coriander','cilantro leaves','coriandolo fresco','foglie di coriandolo'],
+ parsley:['fresh parsley','prezzemolo fresco','flat leaf parsley'],
+ spring_onion:['scallion','scallions','green onion','green onions','spring onions','cipollotti','cipollotto'],
+ yogurt:['natural yogurt','plain yoghurt','yoghurt bianco','yogurt naturale'],
+ flour:['wheat flour','farina di grano','all purpose flour'],
+ pepper:['bell peppers','bell pepper','peperoni','peperone'],
+ chili:['chili peppers','chilli','chilli pepper','peperoncini','peperoncino'],
+ mushrooms:['mushroom','funghi','fungo'],
+ eggs:['egg','uovo','uova'],
+ lentils:['lentil','lenticchia','lenticchie'],
+ peas:['pea','pisello','piselli'],
+ olives:['olive','oliva'],
+ tortilla:['tortilla','wrap','wraps'],
+ pasta:['spaghetti','penne','maccheroni'],
+ basil:['basilico fresco','fresh basil'],
+ mint:['menta fresca','fresh mint']
+};
+function ingredientTerms(item){
+ return [...new Set([item.name.en,item.name.it,item.id.replaceAll('_',' '),...(searchAliases[item.id]||[])].filter(Boolean).map(normalize))];
+}
 export function ingredientMatches(query){
- const value=normalize(query); if(!value)return [];
- return ingredients.filter(item=>normalize(item.name.en).includes(value)||normalize(item.name.it).includes(value)||item.id.replaceAll('_',' ').includes(value)).slice(0,8);
+ const value=normalize(query);
+ if(!value) return [];
+ return ingredients.map(item=>{
+  const terms=ingredientTerms(item);
+  const score=terms.some(t=>t===value)?0:terms.some(t=>t.startsWith(value))?1:terms.some(t=>t.includes(value))?2:3;
+  return {item,score};
+ }).filter(x=>x.score!==3).sort((a,b)=>a.score-b.score||a.item.name.en.localeCompare(b.item.name.en))
+ .slice(0,8).map(x=>x.item);
+}
+
+// Directional, conservative culinary suggestions (NOT exact ingredient matches).
+// This list intentionally avoids swaps involving dairy, gluten, nuts or animal protein.
+const swapRules = {
+ lemon:[{id:'lime',note:{en:'Lime is more aromatic; adjust the amount to taste.',it:'Il lime è più aromatico; regola la quantità a gusto.'}}],
+ lime:[{id:'lemon',note:{en:'Lemon changes the citrus flavor; adjust to taste.',it:'Il limone cambia il gusto agrumato; regola a piacere.'}}],
+ cilantro:[{id:'parsley',note:{en:'Parsley changes the characteristic flavor of the dish.',it:'Il prezzemolo cambia il sapore caratteristico del piatto.'}}],
+ parsley:[{id:'cilantro',note:{en:'Coriander leaves have a distinctive, stronger flavor.',it:'Il coriandolo fresco ha un sapore distinto e più intenso.'}}],
+ onion:[{id:'spring_onion',note:{en:'Spring onions are milder; cooking results may differ.',it:'I cipollotti sono più delicati; la cottura può variare.'}}],
+ spring_onion:[{id:'onion',note:{en:'Regular onions taste stronger and need different cooking time.',it:'La cipolla comune è più intensa e richiede tempi diversi.'}}]
+};
+export function substitutionFor(missingId, selected){
+ const available=new Set(selected);
+ const suggested=(swapRules[missingId]||[]).find(s=>available.has(s.id));
+ return suggested?{missingId,availableId:suggested.id,note:suggested.note}:null;
 }
 export function matchRecipes(selected,filters={},collection=recipes){
- const set=new Set(selected);
- const hasIngredients=set.size>0;
+ const set=new Set(selected), hasIngredients=set.size>0;
  return collection.filter(r=>(!filters.diet||filters.diet==='all'||filters.diet===r.diet||filters.diet==='vegetarian'&&r.diet==='vegan')&&(!filters.cuisine||filters.cuisine==='all'||r.cuisine===filters.cuisine)&&(!filters.maxTime||r.time<=Number(filters.maxTime)))
  .map(recipe=>{
-  const missing=recipe.ingredients.filter(i=>!set.has(i.id));
-  return {...recipe,missing,matchCount:recipe.ingredients.length-missing.length,categoryScore:hasIngredients?(missing.length===0?0:missing.length<=2?1:2):2};
+  const required=Array.isArray(recipe.ingredients)?recipe.ingredients:[];
+  const missing=required.filter(i=>!set.has(i.id));
+  const matchCount=required.length-missing.length;
+  const substitutions=missing.map(i=>substitutionFor(i.id,set)).filter(Boolean);
+  return {...recipe,missing,matchCount,matchPercent:required.length?Math.round(100*matchCount/required.length):0,
+   totalRequired:required.length,substitutions,categoryScore:hasIngredients?(missing.length===0?0:missing.length<=2?1:2):2};
  }).sort((a,b)=>hasIngredients?(a.categoryScore-b.categoryScore||a.missing.length-b.missing.length||b.matchCount-a.matchCount||a.time-b.time):a.name.en.localeCompare(b.name.en));
 }
