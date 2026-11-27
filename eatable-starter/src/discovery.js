@@ -6,7 +6,7 @@ export function curatedFromDb(r){
   return {
     id:r.slug, source:'curated', name:{en:r.title_en,it:r.title_it||r.title_en},
     description:{en:r.description_en,it:r.description_it||r.description_en},
-    cuisine:r.cuisine,category:r.category,diet:r.diet,time:r.prep_minutes,
+    cuisine:r.cuisine,category:r.category,diet:r.diet,time:r.prep_minutes,prep_time_minutes:r.prep_time_minutes??null,cook_time_minutes:r.cook_time_minutes??null,kcal_per_serving:r.kcal_per_serving??null,
     serves:r.servings, ingredients:Array.isArray(r.ingredients)?r.ingredients:[],
     steps:Array.isArray(r.steps)?r.steps:[],
     emoji:r.emoji||'🍲', theme:r.theme||'cream',public_photo_path:r.public_photo_path||null,searchable:true
@@ -33,7 +33,7 @@ export function communityFromDb(r,index){
     name:{en:r.title_en,it:r.title_it||r.title_en},
     description:{en:r.description_en,it:r.description_it||r.description_en},
     cuisine:index?.cuisine||matchedCuisine?.id||'Other',diet:index?.diet||'unknown',
-    category:r.category,time:r.prep_minutes,serves:r.servings,
+    category:r.category,time:r.prep_minutes,serves:r.servings,prep_time_minutes:r.prep_time_minutes??null,cook_time_minutes:r.cook_time_minutes??null,kcal_per_serving:r.kcal_per_serving??null,
     rawIngredients:raw,
     ingredients:indexed?ids.map(id=>({id,qty:null,unit:''})):[],
     steps:(Array.isArray(r.steps)?r.steps:[]).map(s=>({en:String(s),it:String(s)})),
