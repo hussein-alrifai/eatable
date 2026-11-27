@@ -1,0 +1,19 @@
+--- v30.6/src/recipes.js
++++ v31/src/recipes.js
+@@ -1,3 +1,4 @@
++import {additionalNationalCuisines} from './national-cuisines.js';
+ // Curated demonstration content. These are intentionally short examples, not production-tested recipes.
+ // Each ingredient ID is stable across languages and can become a database foreign key.
+ const ingredientRows = [
+@@ -64,8 +65,9 @@
+  {id:'Indian',name:{en:'Indian',it:'Indiana'},flag:'🇮🇳'},
+  {id:'Japanese',name:{en:'Japanese',it:'Giapponese'},flag:'🇯🇵'},
+  {id:'Mexican',name:{en:'Mexican',it:'Messicana'},flag:'🇲🇽'},
+- {id:'Thai',name:{en:'Thai',it:'Thailandese'},flag:'🇹🇭'}
+-];
++ {id:'Thai',name:{en:'Thai',it:'Thailandese'},flag:'🇹🇭'},
++  ...additionalNationalCuisines.filter(c=>!new Set(['🇦🇪','🇦🇹','🇧🇪','🇧🇭','🇨🇭','🇨🇿','🇩🇪','🇩🇰','🇩🇿','🇪🇬','🇪🇸','🇫🇷','🇬🇧','🇬🇷','🇭🇷','🇭🇺','🇮🇪','🇮🇳','🇮🇶','🇮🇷','🇮🇹','🇯🇴','🇯🇵','🇰🇼','🇱🇧','🇲🇦','🇲🇽','🇳🇱','🇳🇴','🇴🇲','🇵🇱','🇵🇸','🇵🇹','🇷🇴','🇸🇦','🇸🇩','🇸🇪','🇸🇾','🇹🇭','🇹🇳','🇹🇷','🇺🇦','🇾🇪']).has(c.flag))
++].sort((a,b)=>a.name.en.localeCompare(b.name.en));
+ const rows = [
+  {id:'hummus',title:['Classic hummus','Hummus classico'],cuisine:'Lebanese',emoji:'🫘',theme:'ochre',diet:'vegan',time:15,category:'Mezze',description:['Silky chickpeas blended with tahini, lemon and garlic.','Ceci cremosi frullati con tahina, limone e aglio.'],items:'chickpeas:400:g,tahini:60:g,lemon:1:pcs,garlic:1:pcs,olive_oil:25:ml,salt:1:tsp,water:50:ml',steps:[['Drain the chickpeas, reserving a little liquid.','Scola i ceci e conserva un po’ di liquido.'],['Blend chickpeas, tahini, lemon juice and garlic until smooth. Add water gradually.','Frulla ceci, tahina, succo di limone e aglio fino a ottenere una crema. Aggiungi acqua gradualmente.'],['Season, spread in a bowl and finish with olive oil.','Regola di sale, distribuisci in una ciotola e completa con olio d’oliva.']]},
+  {id:'fattoush',title:['Fattoush salad','Insalata fattoush'],cuisine:'Lebanese',emoji:'🥗',theme:'green',diet:'vegan',time:20,category:'Salad',description:['Fresh vegetables, bright lemon and crispy pita.','Verdure fresche, limone e pita croccante.'],items:'tomato:3:pcs,cucumber:1:pcs,lettuce:1:pcs,pita:2:pcs,lemon:1:pcs,olive_oil:40:ml,sumac:2:tsp,mint:10:g',steps:[['Wash and chop the vegetables into bite-sized pieces.','Lava e taglia le verdure a bocconcini.'],['Toast pieces of pita bread until crisp.','Tosta il pane pita a pezzetti finché diventa croccante.'],['Toss the vegetables with lemon, oil, sumac and mint. Add pita immediately before serving.','Condisci le verdure con limone, olio, sommacco e menta. Aggiungi la pita poco prima di servire.']]},

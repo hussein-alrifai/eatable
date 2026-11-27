@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {getCuratedCatalog,getIngredientVocabulary} from './catalog-cloud.js';
+import {getCuratedCatalog,getIngredientVocabulary,getAdminCuratedCatalog,getAdminCuratedMedia} from './catalog-cloud.js';
 function mockResponse(records){
  return {from:()=>({
    select(){return this},eq(){return this},order(){return this},
@@ -22,4 +22,14 @@ test('ingredient pagination is retained, including exactly 10000 ingredients',as
  const result=await getIngredientVocabulary();
  assert.equal(result.error,null);
  assert.equal(result.data.length,10000);
+});
+
+test('admin curated recipes and photo metadata load beyond old 500-row cap',async()=>{
+ const rows=Array.from({length:1301},(_,i)=>({slug:`recipe-${String(i).padStart(5,'0')}`,updated_at:`2026-11-${String((i%27)+1).padStart(2,'0')}T00:00:00Z`}));
+ globalThis.__mockCloudClient=mockResponse(rows);
+ const curated=await getAdminCuratedCatalog();
+ const photos=await getAdminCuratedMedia();
+ assert.equal(curated.error,null);assert.equal(photos.error,null);
+ assert.equal(curated.data.length,1301);assert.equal(photos.data.length,1301);
+ assert.ok(curated.data[0].updated_at>=curated.data.at(-1).updated_at);
 });

@@ -1,1 +1,1 @@
-{"name":"eatable-v30-6-search-fix","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.mjs"}}
+{"type":"module","private":true,"scripts":{"test":"node --test tests/*.test.mjs"}}
